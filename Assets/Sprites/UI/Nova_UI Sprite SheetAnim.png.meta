@@ -1,0 +1,636 @@
+fileFormatVersion: 2
+guid: d034449590d2e6d408b58d55247626a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6083510539206627542
+    second: Nova_UI Sprite SheetAnim_0
+  - first:
+      213: -2492032331032816145
+    second: Nova_UI Sprite SheetAnim_1
+  - first:
+      213: -5867017212343271439
+    second: Nova_UI Sprite SheetAnim_2
+  - first:
+      213: -993122582324033594
+    second: Nova_UI Sprite SheetAnim_3
+  - first:
+      213: 2840971638499815173
+    second: Nova_UI Sprite SheetAnim_4
+  - first:
+      213: 3724594638843035324
+    second: Nova_UI Sprite SheetAnim_5
+  - first:
+      213: -4969320682395278087
+    second: Nova_UI Sprite SheetAnim_6
+  - first:
+      213: 7067922815711799974
+    second: Nova_UI Sprite SheetAnim_7
+  - first:
+      213: -1397241697531954713
+    second: Nova_UI Sprite SheetAnim_8
+  - first:
+      213: 6931810940162844671
+    second: Nova_UI Sprite SheetAnim_9
+  - first:
+      213: -1687988752087398816
+    second: Nova_UI Sprite SheetAnim_10
+  - first:
+      213: 1071657315162949745
+    second: Nova_UI Sprite SheetAnim_11
+  - first:
+      213: 5782481128198432874
+    second: Nova_UI Sprite SheetAnim_12
+  - first:
+      213: 1927357481295123108
+    second: Nova_UI Sprite SheetAnim_13
+  - first:
+      213: -7008009119686539456
+    second: Nova_UI Sprite SheetAnim_14
+  - first:
+      213: 8449110073352759312
+    second: Nova_UI Sprite SheetAnim_15
+  - first:
+      213: -6294917373677481669
+    second: Nova_UI Sprite SheetAnim_16
+  - first:
+      213: -1489005778734400759
+    second: Nova_UI Sprite SheetAnim_17
+  - first:
+      213: 7760378678879617978
+    second: Nova_UI Sprite SheetAnim_18
+  - first:
+      213: 1350165415832000701
+    second: Nova_UI Sprite SheetAnim_19
+  - first:
+      213: -5096080890728607033
+    second: Nova_UI Sprite SheetAnim_20
+  - first:
+      213: -7680444334147100784
+    second: Nova_UI Sprite SheetAnim_21
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 204
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 820
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d091c48a98fc6450800000000000000
+      internalID: 6083510539206627542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 820
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5100c5cc58a6dd0800000000000000
+      internalID: -2492032331032816145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 820
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff3d2f1eea249ea0800000000000000
+      internalID: -5867017212343271439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_3
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 820
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7482ee548b732f0800000000000000
+      internalID: -993122582324033594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_4
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 820
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50fadb137a82d6720800000000000000
+      internalID: 2840971638499815173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_5
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 820
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe309c171b60b330800000000000000
+      internalID: 3724594638843035324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_6
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 820
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4e3defa2d690bb0800000000000000
+      internalID: -4969320682395278087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_7
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 820
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa616a7a5e461260800000000000000
+      internalID: 7067922815711799974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_8
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 820
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e97e3934100c9ce0800000000000000
+      internalID: -1397241697531954713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_9
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 820
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7a292e25db23060800000000000000
+      internalID: 6931810940162844671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 565
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1788c3776aa4fde00800000000000000
+      internalID: 1071657315162949745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_12
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 565
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68eaaef2ff7f3050800000000000000
+      internalID: 5782481128198432874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_13
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 565
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a299cbea695fba10800000000000000
+      internalID: 1927357481295123108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_14
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 565
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047c26ee5dc8ebe90800000000000000
+      internalID: -7008009119686539456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_15
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 565
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018ad5ea8d4414570800000000000000
+      internalID: 8449110073352759312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_16
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 565
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31d4832006f3a8a0800000000000000
+      internalID: -6294917373677481669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_17
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 565
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b3802222df55be0800000000000000
+      internalID: -1489005778734400759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_10
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 368
+        width: 78
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066c9fe5c2f0398e0800000000000000
+      internalID: -1687988752087398816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_18
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 368
+        width: 78
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3822dca4762bb60800000000000000
+      internalID: 7760378678879617978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_19
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 368
+        width: 78
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db81faeca40ccb210800000000000000
+      internalID: 1350165415832000701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_20
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 368
+        width: 78
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c217791e651749b0800000000000000
+      internalID: -5096080890728607033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Sprite SheetAnim_21
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 368
+        width: 78
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f10022294996590800000000000000
+      internalID: -7680444334147100784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

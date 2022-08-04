@@ -1,0 +1,633 @@
+fileFormatVersion: 2
+guid: 01e43852af03f15478fe762106ba3eb9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 805081935797487229
+    second: Nova_Nubes Sprite Sheet_0
+  - first:
+      213: 7117413763401517388
+    second: Nova_Nubes Sprite Sheet_1
+  - first:
+      213: 2472985344166430741
+    second: Nova_Nubes Sprite Sheet_2
+  - first:
+      213: -5760728499637152801
+    second: Nova_Nubes Sprite Sheet_3
+  - first:
+      213: 5961732372782351441
+    second: Nova_Nubes Sprite Sheet_4
+  - first:
+      213: 4907166064918905172
+    second: Nova_Nubes Sprite Sheet_5
+  - first:
+      213: -7924996910029638548
+    second: Nova_Nubes Sprite Sheet_6
+  - first:
+      213: -3905714627654433205
+    second: Nova_Nubes Sprite Sheet_7
+  - first:
+      213: -5965988145927217594
+    second: Nova_Nubes Sprite Sheet_8
+  - first:
+      213: 4949941339106668692
+    second: Nova_Nubes Sprite Sheet_Particulas 1
+  - first:
+      213: 709879486445063854
+    second: Nova_Nubes Sprite Sheet_Particulas 2
+  - first:
+      213: -8474970131668324067
+    second: Nova_Nubes Sprite Sheet_Particulas 3
+  - first:
+      213: -2591428308026646578
+    second: Nova_Nubes Sprite Sheet_12
+  - first:
+      213: 8824539593943920971
+    second: Nova_Nubes Sprite Sheet_13
+  - first:
+      213: 1585442954850175358
+    second: Nova_Nubes Sprite Sheet_14
+  - first:
+      213: 1130800661157177302
+    second: Nova_Nubes Sprite Sheet_15
+  - first:
+      213: 5833723400825451408
+    second: Nova_Nubes Sprite Sheet_16
+  - first:
+      213: 6263015768852931474
+    second: Nova_Nubes Sprite Sheet_17
+  - first:
+      213: -2485897869602360646
+    second: Nova_Nubes Sprite Sheet_18
+  - first:
+      213: -7738940323751263938
+    second: Nova_Nubes Sprite Sheet_19
+  - first:
+      213: 4231665645679950263
+    second: Nova_Nubes Sprite Sheet_20
+  - first:
+      213: -4168198705334036515
+    second: Nova_Nubes Sprite Sheet_Particulas 4
+  - first:
+      213: 8649292679893911020
+    second: Nova_Nubes Sprite Sheet_Particulas 5
+  - first:
+      213: -4251504584214283785
+    second: Nova_Nubes Sprite Sheet_Particulas 6
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 203
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d760b4e41c93c2b00800000000000000
+      internalID: 805081935797487229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49060fab1226c260800000000000000
+      internalID: 7117413763401517388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51889cd611fc15220800000000000000
+      internalID: 2472985344166430741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd398a383f7cd00b0800000000000000
+      internalID: -5760728499637152801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15483a5a1045cb250800000000000000
+      internalID: 5961732372782351441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451c7596981c91440800000000000000
+      internalID: 4907166064918905172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c647d9b7c41c40290800000000000000
+      internalID: -7924996910029638548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b464c905d3d1cc9c0800000000000000
+      internalID: -3905714627654433205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e11d3f36d843da0800000000000000
+      internalID: -5965988145927217594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_Particulas 1
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49079780c69b1b440800000000000000
+      internalID: 4949941339106668692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_Particulas 2
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae05eeb1aff9d900800000000000000
+      internalID: 709879486445063854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_Particulas 3
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d113ddb419bd26a80800000000000000
+      internalID: -8474970131668324067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf1e2f0fa5690cd0800000000000000
+      internalID: -2591428308026646578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41b56b9100177a70800000000000000
+      internalID: 8824539593943920971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e798d77a7ff900610800000000000000
+      internalID: 1585442954850175358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7ec08c53961bf00800000000000000
+      internalID: 1130800661157177302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093b510568c85f050800000000000000
+      internalID: 5833723400825451408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293262da8a3bae650800000000000000
+      internalID: 6263015768852931474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab27376fe01508dd0800000000000000
+      internalID: -2485897869602360646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e310cd837c2c99490800000000000000
+      internalID: -7738940323751263938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Nubes Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b93af20c75e9ba30800000000000000
+      internalID: 4231665645679950263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

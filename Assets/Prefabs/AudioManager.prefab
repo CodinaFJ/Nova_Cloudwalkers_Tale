@@ -1,0 +1,256 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4760499739259852692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4760499739259852694}
+  - component: {fileID: 4760499739259852693}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4760499739259852694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4760499739259852692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4760499739259852693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4760499739259852692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7fe80b3d345fdc4eae783fe0e6cc629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: StarTake1
+    clip: {fileID: 8300000, guid: 700fb8d713f29bc4989356280b4a7d9e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StarTake2
+    clip: {fileID: 8300000, guid: 080f28b782c18a14cbfb853f997495d8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepCloud1
+    clip: {fileID: 8300000, guid: d5934c8abcacbaf4387e9c106f53a464, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepCloud2
+    clip: {fileID: 8300000, guid: e8cb0f47face9744193396b9cd007e9d, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepCloud3
+    clip: {fileID: 8300000, guid: 07eb2c09e375ebb40ac16569f1b3fcf2, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepCloud4
+    clip: {fileID: 8300000, guid: fb5ddf21eec5e68428016d26fd394c2b, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepCloud5
+    clip: {fileID: 8300000, guid: 1e3e304841d23a741980f16c46b0ad45, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepCrystal1
+    clip: {fileID: 8300000, guid: 7df97b3e56f5ee94fba25328565b64d9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepCrystal2
+    clip: {fileID: 8300000, guid: 348e61406465cea478b3416648ae4863, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepCrystal3
+    clip: {fileID: 8300000, guid: 6f6b71545fc73a046a490ebacda7ec67, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepCrystal4
+    clip: {fileID: 8300000, guid: 3bdc3b93e164b7b449499776408b74ee, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepStone1
+    clip: {fileID: 8300000, guid: 27645e93881e32c4b9802344dc7165f3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepStone2
+    clip: {fileID: 8300000, guid: c54c6cf7de1ac5844a28217b5d3450a0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepStone3
+    clip: {fileID: 8300000, guid: 2a6388682efafea4c982cb2d58674a44, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StepStone4
+    clip: {fileID: 8300000, guid: 6c8e609ad09ef9b4190d7ba0e4ea3384, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloudCollision
+    clip: {fileID: 8300000, guid: 78ea9fc17fb67704eae83944aabfef20, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloudConnect
+    clip: {fileID: 8300000, guid: 3e0b670be326bd548b68588f8b428c7e, type: 3}
+    volume: 0.665
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloudStormy
+    clip: {fileID: 8300000, guid: a3fe4784655f30a459f739aec106f070, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloudSwipe_Loop
+    clip: {fileID: 8300000, guid: 320539b455ea89d4ba82c6239586c9f0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: CloudSwipe_Release
+    clip: {fileID: 8300000, guid: 6d3f4efe14977ef4197391aaec53cb92, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloudSwipe_Tap1
+    clip: {fileID: 8300000, guid: a392884b42ed41349a1569ce63cb993d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloudSwipe_Tap2
+    clip: {fileID: 8300000, guid: e0e44e980cb2e6f42923f29f756defaa, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloudSwipe_Tap3
+    clip: {fileID: 8300000, guid: 85f6398cad191d7439f70271d9a43935, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CrystalBreak
+    clip: {fileID: 8300000, guid: 7692628452703f94083544b11914b852, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LevelExit
+    clip: {fileID: 8300000, guid: 96975c5c3a5a86146924b283dbc2979d, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ResetCancel
+    clip: {fileID: 8300000, guid: 6e44552a351e041469ee9d75e0e3072e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ResetComplete
+    clip: {fileID: 8300000, guid: b4125a8b78248174c8f68a568d247c6d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ResetProgress
+    clip: {fileID: 8300000, guid: 67ca554b33782d74592826dc42f3af2b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WrongAction
+    clip: {fileID: 8300000, guid: ab785b53f1ff7934f990886e53d81c26, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  musics:
+  - name: Main Theme
+    clip: {fileID: 8300000, guid: be75bdbab4f029d4eba96660518d22f0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: World1
+    clip: {fileID: 8300000, guid: 73cf20935a273d849a12b62334ca24e6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: World2
+    clip: {fileID: 8300000, guid: 3562946212b1c144e97ac740aebd2cac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  ambients:
+  - name: AmbientWind
+    clip: {fileID: 8300000, guid: 455d504cefce8bc48b4c95a4b4c83132, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: AmbientOcean
+    clip: {fileID: 8300000, guid: 08d38bb9433a5d54c9d25b7f4a6bc2d5, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  musicMixerGroup: {fileID: 3328788449262456128, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
+  sfxMixerGroup: {fileID: 8705665391241937590, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
+  ambientMixerGroup: {fileID: 5171551400734837472, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
+  fadeDuration: 1

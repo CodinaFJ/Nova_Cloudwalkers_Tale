@@ -1,0 +1,924 @@
+fileFormatVersion: 2
+guid: 440ea983ab6bf5b41b494774cd1b437b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 784003346523004931
+    second: Mural01_Pared 01
+  - first:
+      213: -7600100651430590569
+    second: Mural01_Pared 02
+  - first:
+      213: -371479906523199293
+    second: Mural01_Piedra 01
+  - first:
+      213: -3203450094451028848
+    second: Mural01_Piedra 02
+  - first:
+      213: 4921326261630092356
+    second: Mural01_EstrellaGota
+  - first:
+      213: -6001987370186409827
+    second: Mural01_Piedra 03
+  - first:
+      213: 4911950641769692531
+    second: Mural01_Gota rastro
+  - first:
+      213: -6809902124080386333
+    second: Mural01_Estrella 07
+  - first:
+      213: -1951790831366541764
+    second: Mural01_Estrella 03
+  - first:
+      213: 2230750854871298878
+    second: Mural01_Estrella 04
+  - first:
+      213: 2974269794186413561
+    second: Mural01_Estrella 06
+  - first:
+      213: -2068972625782114063
+    second: Mural01_Estrella 10
+  - first:
+      213: 6975692199716056342
+    second: Mural01_Estrella 01
+  - first:
+      213: -6299676073745834488
+    second: Mural01_Estrella 02
+  - first:
+      213: 1482407186564606388
+    second: Mural01_Estrella 05
+  - first:
+      213: 8898706373102571835
+    second: Mural01_Estrella 09
+  - first:
+      213: 2120499972642330887
+    second: Mural01_Estrella 11
+  - first:
+      213: 1669366749021000438
+    second: Mural01_Estrella 08
+  - first:
+      213: 2802454224359820086
+    second: Mural01_Estrella 12
+  - first:
+      213: -4238764222759447051
+    second: Mural01_Estrella 14
+  - first:
+      213: 2810200245067030658
+    second: Mural01_Estrella 13
+  - first:
+      213: 2307859303621257331
+    second: Mural01_Estrella 15
+  - first:
+      213: -9050433242285606156
+    second: Mural01_Estrella 16
+  - first:
+      213: -5108674777938923972
+    second: Mural01_GotaRaiz
+  - first:
+      213: -7633863278001615520
+    second: Mural01_Estrella 20
+  - first:
+      213: -7563504676383892237
+    second: Mural01_Estrella 19
+  - first:
+      213: -8184323492357876613
+    second: Mural01_Estrella 18
+  - first:
+      213: -4235862841983145659
+    second: Mural01_Estrella 17
+  - first:
+      213: 2039486248699053063
+    second: Mural01_Estrella 22
+  - first:
+      213: 2887333015676948758
+    second: Mural01_Estrella 21
+  - first:
+      213: 6777193036895893405
+    second: Mural01_Estrella 23
+  - first:
+      213: 5677556428517217366
+    second: Mural01_Estrella 24
+  - first:
+      213: 3407495861605231520
+    second: Mural01_Estrella 25
+  - first:
+      213: 6153731364375029106
+    second: Mural01_Estrella 26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 204
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mural01_Pared 01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2602
+        width: 3816
+        height: 1494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300a83cc3e651ea00800000000000000
+      internalID: 784003346523004931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Pared 02
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1124
+        width: 4096
+        height: 1442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797c34e79b4078690800000000000000
+      internalID: -7600100651430590569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Piedra 01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 730
+        width: 1305
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c84d724efc38daf0800000000000000
+      internalID: -371479906523199293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Piedra 02
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 730
+        width: 1863
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c0e889c1f0b83d0800000000000000
+      internalID: -3203450094451028848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_EstrellaGota
+      rect:
+        serializedVersion: 2
+        x: 3497
+        y: 199
+        width: 583
+        height: 838
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444434029201c4440800000000000000
+      internalID: 4921326261630092356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Piedra 03
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 118
+        width: 1290
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9878a56948a4bca0800000000000000
+      internalID: -6001987370186409827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Gota rastro
+      rect:
+        serializedVersion: 2
+        x: 2495
+        y: 680
+        width: 752
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d3fe48511ca2440800000000000000
+      internalID: 4911950641769692531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 07
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 580
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eea20b391e5e71a0800000000000000
+      internalID: -6809902124080386333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 03
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 564
+        width: 154
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e68847498d9e4e0800000000000000
+      internalID: -1951790831366541764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 04
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 540
+        width: 172
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33b00f551835fe10800000000000000
+      internalID: 2230750854871298878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 06
+      rect:
+        serializedVersion: 2
+        x: 2152
+        y: 581
+        width: 93
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5c7a49e9ab64920800000000000000
+      internalID: 2974269794186413561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 10
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 529
+        width: 125
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8ff36db588943e0800000000000000
+      internalID: -2068972625782114063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 01
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 584
+        width: 72
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61de98ac813aec060800000000000000
+      internalID: 6975692199716056342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 02
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 547
+        width: 100
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e1a50fcfd0398a0800000000000000
+      internalID: -6299676073745834488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 05
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 559
+        width: 159
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b96ba76b71929410800000000000000
+      internalID: 1482407186564606388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 09
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 540
+        width: 106
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3198498c4e8e7b70800000000000000
+      internalID: 8898706373102571835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 11
+      rect:
+        serializedVersion: 2
+        x: 2828
+        y: 517
+        width: 84
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709529f7d778d6d10800000000000000
+      internalID: 2120499972642330887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 08
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 542
+        width: 95
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2de3ba638ca2710800000000000000
+      internalID: 1669366749021000438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 12
+      rect:
+        serializedVersion: 2
+        x: 2949
+        y: 543
+        width: 94
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b824ed44154e620800000000000000
+      internalID: 2802454224359820086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 14
+      rect:
+        serializedVersion: 2
+        x: 2953
+        y: 344
+        width: 115
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5d9c7b562ec25c0800000000000000
+      internalID: -4238764222759447051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 13
+      rect:
+        serializedVersion: 2
+        x: 2876
+        y: 392
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280afeadb36dff620800000000000000
+      internalID: 2810200245067030658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 15
+      rect:
+        serializedVersion: 2
+        x: 3096
+        y: 350
+        width: 92
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378ecef1fc9270020800000000000000
+      internalID: 2307859303621257331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 16
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 379
+        width: 57
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fafd2adae6666280800000000000000
+      internalID: -9050433242285606156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_GotaRaiz
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 16
+        width: 1493
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ee3fb3b575a19b0800000000000000
+      internalID: -5108674777938923972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 20
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 216
+        width: 108
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d80da6bc11f0690800000000000000
+      internalID: -7633863278001615520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 19
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 235
+        width: 60
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcd12be198090790800000000000000
+      internalID: -7563504676383892237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 18
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 237
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74df1765217b6e80800000000000000
+      internalID: -8184323492357876613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 17
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 218
+        width: 71
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549615210313735c0800000000000000
+      internalID: -4235862841983145659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 22
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 84
+        width: 70
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704400200f5bd4c10800000000000000
+      internalID: 2039486248699053063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 21
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 96
+        width: 75
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6119eab741ed11820800000000000000
+      internalID: 2887333015676948758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 23
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 148
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d973e62f82d6d0e50800000000000000
+      internalID: 6777193036895893405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 24
+      rect:
+        serializedVersion: 2
+        x: 3144
+        y: 148
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6541102ad7bbace40800000000000000
+      internalID: 5677556428517217366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 25
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 143
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abe794be6bd94f20800000000000000
+      internalID: 3407495861605231520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural01_Estrella 26
+      rect:
+        serializedVersion: 2
+        x: 3256
+        y: 140
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275e0c07212766550800000000000000
+      internalID: 6153731364375029106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

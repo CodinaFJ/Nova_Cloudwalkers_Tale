@@ -1,0 +1,1119 @@
+fileFormatVersion: 2
+guid: ddd43aed853dac04288a52cc576a6fc9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5669881225348482478
+    second: Mapa_LineaPuntos_MuyCorta
+  - first:
+      213: -806193765621264062
+    second: Mapa_LineaPuntos_MuyCorta
+  - first:
+      213: -6142882032450959616
+    second: Nova_UI N Fragmentos Recuadro
+  - first:
+      213: 6716395864609592497
+    second: Mapa_LineaPuntos_Corta
+  - first:
+      213: -1495384408759985468
+    second: Nova_UI SelectorOpciones
+  - first:
+      213: -6341532055901536491
+    second: Nova_UI Mapa niveldesbloq2
+  - first:
+      213: -9090541133299846955
+    second: Nova_UI Flecha Hoover
+  - first:
+      213: -3760029123626453181
+    second: Nova_UI Click Derecho
+  - first:
+      213: 2517905258480674060
+    second: Nova_UI Recuadro Texto
+  - first:
+      213: 4028630143027810011
+    second: Nova_UI N Fragmentos RecuadroGrande
+  - first:
+      213: -3247535877328238051
+    second: Nova_UI Casilla Hoover
+  - first:
+      213: -7241878439815926241
+    second: Nova_UI Casilla
+  - first:
+      213: 5816646689237614421
+    second: Nova_UI Casilla Click
+  - first:
+      213: -3103593408490090269
+    second: Nova_UI SteamBoton
+  - first:
+      213: -7531541391728863858
+    second: Nova_UI SteamBoton Hoover
+  - first:
+      213: 7876730897602997755
+    second: Nova_UI NovaEstrella
+  - first:
+      213: 394653568775284233
+    second: Nova_UI Menu icono Hoover
+  - first:
+      213: 3253030660798202881
+    second: Nova_UI Deshacer icono Hoover
+  - first:
+      213: 4047773083792360383
+    second: Nova_UI Menu icono Click
+  - first:
+      213: 7056478922987834077
+    second: Nova_UI Deshacer icono Click
+  - first:
+      213: 182779330967423271
+    second: Nova_UI Candado cerrado
+  - first:
+      213: 5608850119652856679
+    second: Nova_UI Candado abierto
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 204
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nova_UI WASD negro
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1845
+        width: 290
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002954e2547add420800000000000000
+      internalID: 2656463270789353984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI WASD blanco
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1845
+        width: 295
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bc1cf529ee13a50800000000000000
+      internalID: 6499238049711508346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Click
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1881
+        width: 101
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef993a8e66f74d80800000000000000
+      internalID: -8266367636389388311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Menu icono
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1872
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00755cc3b7e65efc0800000000000000
+      internalID: -3466242862612130048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Deshacer icono
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1872
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c51bccf53bb9a6d0800000000000000
+      internalID: -2978643837980043837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI N Fragmentos total
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 1982
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39d18c279cccb3a0800000000000000
+      internalID: -6648214000246859462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Menu selector
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1968
+        width: 575
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a31135e243df390800000000000000
+      internalID: -7783007207459571171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Cursor blanco
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 2014
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a55dbe2bc9d59040800000000000000
+      internalID: 4653865256643024288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa linea cont
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1917
+        width: 644
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a01a63db7fcd3af0800000000000000
+      internalID: -414947459913346905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa linea puntos
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1861
+        width: 644
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eccb02e6b8051470800000000000000
+      internalID: 8364601464480058600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI MenuBoton Normal
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1752
+        width: 218
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ab1f1e2238b6650800000000000000
+      internalID: 6227215095612684897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UI Mapa \xFAltimo nivel"
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 1653
+        width: 120
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a1a4ec527454b60800000000000000
+      internalID: 7729662563151649345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa selector nivel
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1655
+        width: 116
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d70e10041c3927b0800000000000000
+      internalID: -5248597834124621869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa nivel completado
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1675
+        width: 78
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5ab4da6e901b830800000000000000
+      internalID: 4085057223356294640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa nivel desbloqueado
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1677
+        width: 78
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061488058518d5540800000000000000
+      internalID: 4998293377759330656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa nivel bloqueado
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1680
+        width: 73
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19159ceddd5f0270800000000000000
+      internalID: 8218891052712794395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Menu recuadro
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1557
+        height: 1557
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bb370aced9831b0800000000000000
+      internalID: -5676613690670728358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Cursor negro
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 2014
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a727cd0198051b0800000000000000
+      internalID: -5669881225348482478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI N Fragmentos Recuadro
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 1686
+        width: 414
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00781ae765910caa0800000000000000
+      internalID: -6142882032450959616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mapa_LineaPuntos_MuyCorta
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1861
+        width: 144
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2419204aa03dfc4f0800000000000000
+      internalID: -806193765621264062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mapa_LineaPuntos_Corta
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1861
+        width: 264
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b415f0347e653d50800000000000000
+      internalID: 6716395864609592497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI MenuBoton Click
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1676
+        width: 218
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e238bf7104dcd30800000000000000
+      internalID: 4453286078287392262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI MenuBoton Hoove
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 218
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9f0dd2c422d1300800000000000000
+      internalID: 224373267019921842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UI BarraOpciones Vac\xEDa"
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 1777
+        width: 561
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538f83946b71edd70800000000000000
+      internalID: 9069712771250714677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI BarraOpciones Llena
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 1748
+        width: 561
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75214063f23480980800000000000000
+      internalID: -8572528020650978729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI SelectorOpciones
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 1969
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca14399dc35f3be0800000000000000
+      internalID: -1495384408759985468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa niveldesbloq2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1576
+        width: 78
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f7c3ca13a5ef7a0800000000000000
+      internalID: -6341532055901536491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Flecha Hoover
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 2004
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0f595c009e7d180800000000000000
+      internalID: -9090541133299846955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Click Derecho
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 1816
+        width: 97
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3473f1dfe61b1dbc0800000000000000
+      internalID: -3760029123626453181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Recuadro Texto
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 0
+        width: 2227
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0524ddfd7561f220800000000000000
+      internalID: 2517905258480674060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI N Fragmentos RecuadroGrande
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 1620
+        width: 590
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde8a9e35c198e730800000000000000
+      internalID: 4028630143027810011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Flecha
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 2004
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804956e2e1dbf5050800000000000000
+      internalID: 5791555583146824712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Flecha Click
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 2004
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419a0d56f990da520800000000000000
+      internalID: 2714836730586900756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Casilla Hoover
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 1964
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a8384635f6ee2d0800000000000000
+      internalID: -3247535877328238051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Casilla
+      rect:
+        serializedVersion: 2
+        x: 2033
+        y: 1974
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e26389dedaf7b90800000000000000
+      internalID: -7241878439815926241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Casilla Click
+      rect:
+        serializedVersion: 2
+        x: 2197
+        y: 1974
+        width: 68
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55fb5ff8851e8b050800000000000000
+      internalID: 5816646689237614421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI SteamBoton
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 1430
+        width: 901
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e054bf0d32dde4d0800000000000000
+      internalID: -3103593408490090269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI SteamBoton Hoover
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 1742
+        width: 901
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8599de02079a7790800000000000000
+      internalID: -7531541391728863858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI NovaEstrella
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 1732
+        width: 179
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd68f6c405cf4d60800000000000000
+      internalID: 7876730897602997755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Menu icono Hoover
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 1872
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906e03074571a7500800000000000000
+      internalID: 394653568775284233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Deshacer icono Hoover
+      rect:
+        serializedVersion: 2
+        x: 2606
+        y: 1872
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104c4549626152d20800000000000000
+      internalID: 3253030660798202881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Menu icono Click
+      rect:
+        serializedVersion: 2
+        x: 2778
+        y: 1872
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3c4d67c249c2830800000000000000
+      internalID: 4047773083792360383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Deshacer icono Click
+      rect:
+        serializedVersion: 2
+        x: 2950
+        y: 1872
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda88b19136ade160800000000000000
+      internalID: 7056478922987834077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Candado cerrado
+      rect:
+        serializedVersion: 2
+        x: 2269
+        y: 1946
+        width: 97
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729c89645dc598200800000000000000
+      internalID: 182779330967423271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Candado abierto
+      rect:
+        serializedVersion: 2
+        x: 2157
+        y: 1833
+        width: 97
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763d0548773a6dd40800000000000000
+      internalID: 5608850119652856679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

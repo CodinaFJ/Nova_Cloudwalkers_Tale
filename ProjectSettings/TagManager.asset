@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Shade
+  - ActiveLevel
+  - Star
+  - UI_anim
+  - Part_mov
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Transition/Blur
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Particles_bottom
+    uniqueID: 3256949483
+    locked: 0
+  - name: Shadows Layout
+    uniqueID: 1424579157
+    locked: 0
+  - name: Top Layout
+    uniqueID: 399705075
+    locked: 0
+  - name: Stars
+    uniqueID: 3886726967
+    locked: 0
+  - name: Door
+    uniqueID: 3123776301
+    locked: 0
+  - name: Shadows
+    uniqueID: 2233883079
+    locked: 0
+  - name: Player
+    uniqueID: 2686076535
+    locked: 0
+  - name: UI
+    uniqueID: 2071266915
+    locked: 0
+  - name: Particles
+    uniqueID: 825917939
+    locked: 0
+  - name: Front Layout
+    uniqueID: 284287631
+    locked: 0

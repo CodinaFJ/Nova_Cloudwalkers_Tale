@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5612496735822045236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5941517198446457994}
+  m_Layer: 0
+  m_Name: Pathfinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5941517198446457994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5612496735822045236}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8754337548083080888}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8754337548083080889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8754337548083080888}
+  - component: {fileID: 8754337548083080891}
+  - component: {fileID: 8754337548083080890}
+  - component: {fileID: 497658075462273915}
+  m_Layer: 0
+  m_Name: Matrix Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8754337548083080888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754337548083080889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5941517198446457994}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8754337548083080891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754337548083080889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e4ba91331b3b848b904172e5c34460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueForBorder: -9
+  valueForCloud: 0
+  valueForFloor: 999
+  valueForItemSpikedFloor: 999
+  valueForCrystalFloor: 998
+  valueWhiteCloudMechanic: 1
+  valueGreyCloudMechanic: 2
+  valueCrystalCloudMechanic: 3
+  valueCrystalFloorCloudMechanic: 5
+  valueThunderCloudMechanic: -1
+  valueSpikedFloorMechanic: -999
+--- !u!114 &8754337548083080890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754337548083080889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f07bdcc6148ae94bb4f750711911c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteCloud: {fileID: 7595971317351752265, guid: 32a317322a0d0f941b9db883af6e2c3b, type: 3}
+  greyCloud: {fileID: 7595971317351752265, guid: 4b79220ade45f0446b34f7ba36aadaf3, type: 3}
+  crystalCloud: {fileID: 7595971317351752265, guid: e4b26a1bb9f171e43875c186907e7d7e, type: 3}
+  thunderCloud: {fileID: 7595971317351752265, guid: a758bbb13b6debd41bb5121278968e39, type: 3}
+  floor: {fileID: 7248920886831589426, guid: 2365b0dea7ee3574799840390db81f8e, type: 3}
+  spikedFloor: {fileID: 7248920886831589426, guid: bc73fda90d3475842920e8cb67b3e2e4, type: 3}
+  crystalFloor: {fileID: 7248920886831589426, guid: f8b6aafd39ddc914aaed277731d1b59a, type: 3}
+  whiteCloudsGrid: {fileID: 0}
+  cloudParent: {fileID: 7275058362957305135, guid: 9026cd34f4270c8458f6834dcae25756, type: 3}
+  floorTilemap: {fileID: 0}
+  spikedFloorTilemap: {fileID: 0}
+--- !u!114 &497658075462273915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754337548083080889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3b731f783d0b34bad2d38773c92e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: World1
+  ambient: AmbientWind

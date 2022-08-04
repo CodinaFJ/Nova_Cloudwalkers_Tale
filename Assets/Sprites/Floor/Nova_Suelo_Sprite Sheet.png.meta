@@ -1,0 +1,1788 @@
+fileFormatVersion: 2
+guid: 7f7314dc98376754dad4206c3af172e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1919932808085651987
+    second: Nova_Suelo_Sprite Sheet_0
+  - first:
+      213: -1373046023522428625
+    second: Nova_Suelo_Sprite Sheet_1
+  - first:
+      213: -3600197302292629395
+    second: Nova_Suelo_Sprite Sheet_2
+  - first:
+      213: -1631769785168630191
+    second: Nova_Suelo_Sprite Sheet_3
+  - first:
+      213: -5608144073080937767
+    second: Nova_Suelo_Sprite Sheet_4
+  - first:
+      213: -7935161825971849609
+    second: Nova_Suelo_Sprite Sheet_5
+  - first:
+      213: 7112838921206967359
+    second: Nova_Suelo_Sprite Sheet_6
+  - first:
+      213: 2141041021244214625
+    second: Nova_Suelo_Sprite Sheet_7
+  - first:
+      213: 3195573933480212235
+    second: Nova_Suelo_Sprite Sheet_8
+  - first:
+      213: -4861637874851882682
+    second: Nova_Suelo_Sprite Sheet_9
+  - first:
+      213: -7520402025775861322
+    second: Nova_Suelo_Sprite Sheet_10
+  - first:
+      213: 5344947610469794199
+    second: Nova_Suelo_Sprite Sheet_11
+  - first:
+      213: -4127522503892928284
+    second: Nova_Suelo_Sprite Sheet_12
+  - first:
+      213: -5115620047451143154
+    second: Nova_Suelo_Sprite Sheet_13
+  - first:
+      213: 7142606785453381196
+    second: Nova_Suelo_Sprite Sheet_14
+  - first:
+      213: 5738276497321611373
+    second: Nova_Suelo_Sprite Sheet_15
+  - first:
+      213: -5013034854591714061
+    second: Nova_Suelo_Sprite Sheet_16
+  - first:
+      213: -5851658758727359240
+    second: Nova_Suelo_Sprite Sheet_17
+  - first:
+      213: -5159603305481561476
+    second: Nova_Suelo_Sprite Sheet_18
+  - first:
+      213: 694747384487582824
+    second: Nova_Suelo_Sprite Sheet_19
+  - first:
+      213: -181463820540194807
+    second: Nova_Suelo_Sprite Sheet_20
+  - first:
+      213: 9116475397919688727
+    second: Nova_Suelo_Sprite Sheet_21
+  - first:
+      213: 8209780442602948532
+    second: Nova_Suelo_Sprite Sheet_22
+  - first:
+      213: 7498883586916705499
+    second: Nova_Suelo_Sprite Sheet_23
+  - first:
+      213: -4847940962496620616
+    second: Nova_Suelo_Sprite Sheet_24
+  - first:
+      213: -2425492305435751688
+    second: Nova_Suelo_Sprite Sheet_25
+  - first:
+      213: -8093583204699837611
+    second: Nova_Suelo_Sprite Sheet_26
+  - first:
+      213: -2940668704644853612
+    second: Nova_Suelo_Sprite Sheet_27
+  - first:
+      213: -7022728122172440438
+    second: Nova_Suelo_Sprite Sheet_28
+  - first:
+      213: 3823047672386439262
+    second: Nova_Suelo_Sprite Sheet_29
+  - first:
+      213: -3764747685045493581
+    second: Nova_Suelo_Sprite Sheet_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 203
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312409a77b8f4aa10800000000000000
+      internalID: 1919932808085651987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29dea39ae5f1fce0800000000000000
+      internalID: -1373046023522428625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d683783d0a7890ec0800000000000000
+      internalID: -3600197302292629395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15eeecf960aca59e0800000000000000
+      internalID: -1631769785168630191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d26cc2cdaedb22b0800000000000000
+      internalID: -5608144073080937767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77635bf8c54a0e190800000000000000
+      internalID: -7935161825971849609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c2d1b3051e5b260800000000000000
+      internalID: 7112838921206967359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d0dc0177186bd10800000000000000
+      internalID: 2141041021244214625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07f596cf85f85c20800000000000000
+      internalID: 3195573933480212235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6495ed26c1ef78cb0800000000000000
+      internalID: -4861637874851882682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1708dc33a22a790800000000000000
+      internalID: -7520402025775861322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791002178811d2a40800000000000000
+      internalID: 5344947610469794199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8f709b62818b6c0800000000000000
+      internalID: -4127522503892928284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3315
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04cec9abaaa109b0800000000000000
+      internalID: -5115620047451143154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c465e393703af1360800000000000000
+      internalID: 7142606785453381196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 3825
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60d3d5521472af40800000000000000
+      internalID: 5738276497321611373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fca8652c5f1e6ab0800000000000000
+      internalID: -5013034854591714061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4a043cc5bbacea0800000000000000
+      internalID: -5851658758727359240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a17d261286568b0800000000000000
+      internalID: -5159603305481561476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c9305b01d34a900800000000000000
+      internalID: 694747384487582824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900dd1ddd9f4b7df0800000000000000
+      internalID: -181463820540194807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7184790c21a348e70800000000000000
+      internalID: 9116475397919688727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b74c45b0dffee170800000000000000
+      internalID: 8209780442602948532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd46d2a34e2611860800000000000000
+      internalID: 7498883586916705499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7d25e4167a8bcb0800000000000000
+      internalID: -4847940962496620616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa0f09599be65ed0800000000000000
+      internalID: -2425492305435751688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b6ccbf4f0ddaf80800000000000000
+      internalID: -8093583204699837611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4901989b465a037d0800000000000000
+      internalID: -2940668704644853612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8004cb1bf14a8e90800000000000000
+      internalID: -7022728122172440438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 3315
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e584af74a913e0530800000000000000
+      internalID: 3823047672386439262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0a3eb4dede0cbc0800000000000000
+      internalID: -3764747685045493581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec6503936589b070800000000000000
+      internalID: 8122670065654263008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d170af6876da4f70800000000000000
+      internalID: 9172379403850641872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d35a78013757c60800000000000000
+      internalID: 7815279243203788093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71526d1adeb2652e0800000000000000
+      internalID: -2137472673518312169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8585597aa1fb4b0800000000000000
+      internalID: -5422586119263332158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c484a8541e57f6680800000000000000
+      internalID: -8759653139817543604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c2502b72d80c170800000000000000
+      internalID: 8196706523444227151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938e383c219506a90800000000000000
+      internalID: -7322755056979941319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53cd94ed8ee74280800000000000000
+      internalID: -9059009832239119524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfdb9a158a80a5d0800000000000000
+      internalID: -3053288243075489851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23216fe0f09e215f0800000000000000
+      internalID: -787310733951626702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04ef148f3c25e610800000000000000
+      internalID: 1649773489812399117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f4201c2897bdc10800000000000000
+      internalID: 2079389255452479259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 824
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26fc11105a81bf50800000000000000
+      internalID: 6895444580970067503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0653f724c5bc2e0800000000000000
+      internalID: -2104486960193773326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1192f378294e250800000000000000
+      internalID: 5973060115378016688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1925d075508907230800000000000000
+      internalID: 3634572047990739601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdc4feae466a8500800000000000000
+      internalID: 399244005104471485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e04efd2dba58b10800000000000000
+      internalID: 1983180133114318373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768e2225f68835fc0800000000000000
+      internalID: -3507309673090717593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad9dac8a125613a0800000000000000
+      internalID: -6695073522056847963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3292369877db74e0800000000000000
+      internalID: -1982754298010627525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46371fc91086c6620800000000000000
+      internalID: 2768702227063337828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5191c0a3b8a14fe0800000000000000
+      internalID: -1206497735708929699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e4ca5a197d16fa0800000000000000
+      internalID: -5809125023781466510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5b80cae740c4560800000000000000
+      internalID: 7299214038159373814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b05e9ec7995a85c0800000000000000
+      internalID: -4212455992910262090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc1e7945f0862230800000000000000
+      internalID: 3613717541999746258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ddd8c8b5702f92c0800000000000000
+      internalID: -4422780619071103533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0105d79519e4a4300800000000000000
+      internalID: 237088316568981520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a372f9aa95f6dfd20800000000000000
+      internalID: 3313927331719882554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 3468
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99bc4cc1463e58cd0800000000000000
+      internalID: -2556387194343994471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de173659cea3a9d80800000000000000
+      internalID: -8243211380155256339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 3876
+        y: 569
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a4435a4726d10b0800000000000000
+      internalID: -5756336495582229950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 314
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4f037d9a79a0450800000000000000
+      internalID: 6055819404668630205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 314
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e045b5adf6ff2aef0800000000000000
+      internalID: -98235385978858482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 314
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d9b063191ccf120800000000000000
+      internalID: 2449045126803856724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 314
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609d1d76a9d44d100800000000000000
+      internalID: 131815614662695174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 314
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849abda0b42b3bfe0800000000000000
+      internalID: -1174399042439108280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 314
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aabe718e889fe730800000000000000
+      internalID: 4030607929345227424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 314
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e50150760e38ebf0800000000000000
+      internalID: -294917578217683480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 314
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d8c2fa8212fee20800000000000000
+      internalID: 3381958303799872819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 314
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a1e1e9f13f7c5a0800000000000000
+      internalID: -6500960219963712943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 314
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b015ae9b18056a90800000000000000
+      internalID: -7321436704502116175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
