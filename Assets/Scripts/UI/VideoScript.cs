@@ -35,8 +35,13 @@ public class VideoScript : MonoBehaviour
         fadeOutDone = true;
         fadingOut = false;
     }
+
+    private void Update() 
+    {
+        if(vid.frame == (long)vid.frameCount) CheckOver(vid);
+    }
     
-    public void CheckOver(UnityEngine.Video.VideoPlayer vp)
+    public void CheckOver(VideoPlayer vp)
     {
         print("Video Is Over");
         FindObjectOfType<LevelLoader>().LoadLevel("LevelSelectorMenu");
