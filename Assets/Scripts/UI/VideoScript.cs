@@ -10,6 +10,8 @@ public class VideoScript : MonoBehaviour
     [SerializeField] Button textButton;
     [SerializeField] float waitForFadeOut = 1f;
     public VideoPlayer vid;
+    double videoLength;
+    double timeElapsed = 0.0;
  
     bool fadeInDone = false;
     bool fadingIn = false;
@@ -28,17 +30,20 @@ public class VideoScript : MonoBehaviour
         vid.url = System.IO.Path.Combine (Application.streamingAssetsPath,"cinematic1.mp4");
 
         vid.Play();     
-        GetComponent<AudioSource>().Play();
+        //GetComponent<AudioSource>().Play();
         vid.loopPointReached += CheckOver;
         fadeInDone = false;
         fadingIn = false;
         fadeOutDone = true;
         fadingOut = false;
+
+        videoLength = vid.clip.length;
     }
 
     private void Update() 
     {
-        if(vid.frame == (long)vid.frameCount) CheckOver(vid);
+        if(timeElapsed > 50) CheckOver(vid);
+        timeElapsed += Time.deltaTime;
     }
     
     public void CheckOver(VideoPlayer vp)
