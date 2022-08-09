@@ -27,7 +27,7 @@ public class PlayerBehavior : MonoBehaviour
     int itemUnderPj;
     int mechanicUnderPj;
 
-    //How many stars have you callected in this leve?
+    //How many stars have you callected in this level?
     public int starsCollected = 0;
 
     //Used by PjInputManager and CloudInputManager to know if the clik action is going to be to move the PJ or to move a cloud - I know is not the best thing you've ever seen
@@ -109,6 +109,7 @@ public class PlayerBehavior : MonoBehaviour
 
         //Recover stars collected on saved state
         starsCollected = _starsCollected;
+        LevelInfo.instance.collectedStars = _starsCollected;
 
         //Set idle state
         running = false;
