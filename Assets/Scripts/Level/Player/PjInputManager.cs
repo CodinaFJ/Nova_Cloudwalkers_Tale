@@ -308,7 +308,7 @@ public class PjInputManager : MonoBehaviour
         pjIdle = true;
     }
 
-    void OnUp()
+    /*void OnUp()
     {
         pjMovementsPress = AddMovement(pjMovementsPress ,2);
     }
@@ -377,7 +377,7 @@ public class PjInputManager : MonoBehaviour
             pjMovementsHold = matrixManager.RemoveNumberFromArray(pjMovementsHold, 1);
         }
         holdRight = false;
-    }
+    }*/
 
     void OnNoIdle()
     {

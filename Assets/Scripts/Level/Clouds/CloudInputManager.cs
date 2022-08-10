@@ -175,7 +175,7 @@ public class CloudInputManager : MonoBehaviour
                 }
                 AudioManager.instance.PlaySound("CloudSwipe_Loop");
 
-                PlayerHand.instance.PutHandOut = true;
+                if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = true;
 
                 //TweenCloudScaleOnSelect();
             }
@@ -424,7 +424,7 @@ public class CloudInputManager : MonoBehaviour
         {
             AudioManager.instance.PlaySound("CloudSwipe_Release");
             AudioManager.instance.Stop("CloudSwipe_Loop");
-            PlayerHand.instance.PutHandOut = false;
+            if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = false;
         }
         wrongActionPlayed = false;
         isSelecting = false;
