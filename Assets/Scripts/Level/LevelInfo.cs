@@ -7,6 +7,7 @@ public class LevelInfo : MonoBehaviour
 {
     public static LevelInfo instance;
 
+    public bool wallLevel = false;
     [HideInInspector]
     public int numberOfStars = 0;
     [HideInInspector]

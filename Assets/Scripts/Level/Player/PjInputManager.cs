@@ -31,7 +31,6 @@ public class PjInputManager : MonoBehaviour
     [SerializeField] float sleepingTime;
     [SerializeField] int movementsMemory = 2;
     [SerializeField] float releaseMouseTolerance = 1f;
-    [SerializeField] bool wallLevel = false;
     
     public static PjInputManager instance;
 
@@ -442,7 +441,7 @@ public class PjInputManager : MonoBehaviour
 
     public void OnReleaseLeftClick()
     {
-        if(Vector3.Magnitude(GetMouseWorldPos() - onClickMouseWorldPos) > releaseMouseTolerance && !wallLevel) return;
+        if(Vector3.Magnitude(GetMouseWorldPos() - onClickMouseWorldPos) > releaseMouseTolerance && !LevelInfo.instance.wallLevel) return;
 
         if(!playerBehavior.clickIsForCloud)
         OnFindPath();
