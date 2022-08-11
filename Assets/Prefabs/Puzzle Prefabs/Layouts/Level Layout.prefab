@@ -5236,6 +5236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268984901488037409}
   - component: {fileID: 268984901488037598}
+  - component: {fileID: 4580394524519988249}
   m_Layer: 0
   m_Name: Level Layout
   m_TagString: Untagged
@@ -5279,6 +5280,22 @@ MonoBehaviour:
   spikedFloorTilemap: {fileID: 268984901572202120}
   cloudsTilemaps: []
   blockTilemap: {fileID: 0}
+--- !u!114 &4580394524519988249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268984901488037408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9150836729bb8ee4587241dd11b5a2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallLevel: 0
+  numberOfStars: 0
+  collectedStars: 0
+  levelCompleted: 0
 --- !u!1 &268984901572202125
 GameObject:
   m_ObjectHideFlags: 0
