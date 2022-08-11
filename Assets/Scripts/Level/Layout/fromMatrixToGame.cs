@@ -33,7 +33,7 @@ public class fromMatrixToGame : MonoBehaviour
     GameObject spikedFloorParent;
 
   
-    InstantiatedCloudBehavior[] cloudsToDeactivate;
+    Transform[] cloudsToDeactivate;
 
 
     void Awake()
@@ -140,7 +140,7 @@ public class fromMatrixToGame : MonoBehaviour
 
     public void ReInstantiateItem (int item)
     {
-        DeactivateItemCloud(item);
+        //DeactivateItemCloud(item);
         for (int i = 0; i < itemsLayoutMatrix.GetLength(0); i++)
         {
             for (int j = 0; j < itemsLayoutMatrix.GetLength(1); j++)
@@ -163,7 +163,7 @@ public class fromMatrixToGame : MonoBehaviour
     {
         if(item != matrixManager.valueForFloor && item != matrixManager.valueForCrystalFloor)
         {
-            cloudsToDeactivate = cloudsParents[item - 1].GetComponentsInChildren<InstantiatedCloudBehavior>();
+            cloudsToDeactivate = cloudsParents[item - 1].GetComponentsInChildren<Transform>();
             DeactivateClouds();
             
         }
@@ -173,14 +173,14 @@ public class fromMatrixToGame : MonoBehaviour
     {
         if(item != matrixManager.valueForFloor && item != matrixManager.valueForCrystalFloor)
         {
-            cloudsToDeactivate = cloudsParents[item - 1].GetComponentsInChildren<InstantiatedCloudBehavior>();
+            cloudsToDeactivate = cloudsParents[item - 1].GetComponentsInChildren<Transform>();
             Invoke("DeactivateClouds",0);
         }
     }
 
     void DeactivateClouds()
     {    
-        foreach (InstantiatedCloudBehavior child in cloudsToDeactivate)
+        foreach (Transform child in cloudsToDeactivate)
         {
             child.gameObject.SetActive(false);
         }
@@ -188,14 +188,14 @@ public class fromMatrixToGame : MonoBehaviour
 
     public void CreateNewCloud()
     {
-        GameObject[] result = new GameObject[cloudsParents.GetLength(0) + 1];
+        GameObject[] result = new GameObject[cloudsParents.Length + 1];
 
-        for (int index = 0; index < cloudsParents.GetLength(0); index++)
+        for (int index = 0; index < cloudsParents.Length; index++)
         {
             result[index] = cloudsParents[index];
         }
 
-        result[cloudsParents.GetLength(0)] = Instantiate(cloudParent);
+        result[cloudsParents.Length] = Instantiate(cloudParent);
 
         cloudsParents = result;
     }
