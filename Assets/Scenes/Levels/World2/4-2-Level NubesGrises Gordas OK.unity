@@ -3729,15 +3729,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1665807945200371708, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
       propertyPath: m_Tiles.Array.data[15].first.y
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1665807945200371708, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
       propertyPath: m_Tiles.Array.data[16].first.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1665807945200371708, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
       propertyPath: m_Tiles.Array.data[16].first.y
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1665807945200371708, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
       propertyPath: m_Tiles.Array.data[17].first.x
@@ -5416,6 +5416,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1665807945200371708, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
+      propertyPath: m_TileMatrixArray.Array.data[4].m_Data.e30
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1665807945200371708, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
       propertyPath: m_TileMatrixArray.Array.data[4].m_Data.e31
       value: 0
       objectReference: {fileID: 0}
@@ -6817,11 +6821,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1665807945200371708, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
       propertyPath: m_Tiles.Array.data[16].second.m_TileMatrixIndex
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1665807945200371708, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
       propertyPath: m_Tiles.Array.data[16].second.m_TileSpriteIndex
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1665807945200371708, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
       propertyPath: m_Tiles.Array.data[17].second.m_TileMatrixIndex

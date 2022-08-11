@@ -16,6 +16,7 @@ public class fromMatrixToGame : MonoBehaviour
     [SerializeField] GameObject cloudParent;
     [SerializeField] Tilemap floorTilemap;
     [SerializeField] Tilemap spikedFloorTilemap;
+    [SerializeField] bool muralLevel = false;
     TilemapRenderer floorTilemapRenderer;
     TilemapRenderer spikedFloorTilemapRenderer;
     Tilemap[] whiteCloudsTilemaps;
@@ -79,8 +80,12 @@ public class fromMatrixToGame : MonoBehaviour
             whiteCloudsTilemapRederers[i].enabled = false;
         }
 
-        floorTilemap.enabled = false;
-        floorTilemapRenderer.enabled = false;
+        if(!muralLevel)
+        {
+            floorTilemap.enabled = false;
+            floorTilemapRenderer.enabled = false;
+        }
+        
 
         spikedFloorTilemap.enabled = false;
         spikedFloorTilemapRenderer.enabled = false;

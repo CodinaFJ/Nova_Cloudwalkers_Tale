@@ -105,6 +105,7 @@ public class MatrixManager : MonoBehaviour
         }
 
         itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.borderTilemap, valueForBorder, itemsLayoutMatrix);
+        if(tilemapsLevelLayout.blockTilemap != null) itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.blockTilemap, valueForBorder, itemsLayoutMatrix);
 
         for (int index = 0; index < tilemapsLevelLayout.cloudsTilemaps.Length; index++)
         {
@@ -114,7 +115,7 @@ public class MatrixManager : MonoBehaviour
 
         itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.floorTilemap, valueForFloor, itemsLayoutMatrix);
         itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.spikedFloorTilemap, valueForItemSpikedFloor, itemsLayoutMatrix);
-
+        
 
         itemsLayoutMatrix = ReduceItemLayoutMatrixToBoundaries(itemsLayoutMatrix);
     }
@@ -142,6 +143,7 @@ public class MatrixManager : MonoBehaviour
 
                 int[] matrixPosition = {(int)(coordinatesOriginMatrix.y - cellPosition.y), (int)(cellPosition.x - coordinatesOriginMatrix.x)};
                 if(tile.name == "CrystalRuleTile" && valueForItem == valueForFloor) itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem - 1;
+                else if(itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] == valueForBorder) continue;
                 else itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem;
             }
         }
@@ -318,6 +320,8 @@ public class MatrixManager : MonoBehaviour
                 if(tile == null) continue;
 
                 int[] matrixPosition = {(int)(coordinatesOriginMatrix.y - cellPosition.y), (int)(cellPosition.x - coordinatesOriginMatrix.x)};
+
+                if(mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] == valueForBorder) continue;
 
                      if(tile.name == "WhiteCloudsRuleTile")              mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueWhiteCloudMechanic;
                 else if(tile.name == "GreyCloudsRuleTile")               mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueGreyCloudMechanic;
