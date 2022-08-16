@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: d587180da593a9f4fb551794e655eabf
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8217148915511614318
+    second: Mural_SpriteSheet 04.02_0
+  - first:
+      213: -632915423614426792
+    second: Mural_SpriteSheet 04.02_1
+  - first:
+      213: 7352417035193994778
+    second: Mural_SpriteSheet 04.02_2
+  - first:
+      213: 3570125674780111289
+    second: Mural_SpriteSheet 04.02_3
+  - first:
+      213: -6772025692468194769
+    second: Mural_SpriteSheet 04.02_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +104,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 04.02_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2196
+        width: 3928
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b5e8ff66d290270800000000000000
+      internalID: 8217148915511614318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 04.02_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 243
+        width: 2246
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851a89a86ce6737f0800000000000000
+      internalID: -632915423614426792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 04.02_2
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 243
+        width: 475
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ec447b658090660800000000000000
+      internalID: 7352417035193994778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 04.02_3
+      rect:
+        serializedVersion: 2
+        x: 2966
+        y: 243
+        width: 263
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b135c8c262ab8130800000000000000
+      internalID: 3570125674780111289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 04.02_4
+      rect:
+        serializedVersion: 2
+        x: 3277
+        y: 247
+        width: 95
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f225d9e238ee402a0800000000000000
+      internalID: -6772025692468194769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

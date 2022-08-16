@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: 5cebe34b60b9cd347892f2b76a386094
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6612370530938129692
+    second: Mural_SpriteSheet 04.01_0
+  - first:
+      213: -614181762974321865
+    second: Mural_SpriteSheet 04.01_1
+  - first:
+      213: 5942037155845759505
+    second: Mural_SpriteSheet 04.01_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +98,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 04.01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2209
+        width: 4096
+        height: 1887
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2fb2439042c34a0800000000000000
+      internalID: -6612370530938129692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 04.01_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 278
+        width: 2186
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733746ec0fcf977f0800000000000000
+      internalID: -614181762974321865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 04.01_2
+      rect:
+        serializedVersion: 2
+        x: 2269
+        y: 278
+        width: 1370
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112eb5c9f4b567250800000000000000
+      internalID: 5942037155845759505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
