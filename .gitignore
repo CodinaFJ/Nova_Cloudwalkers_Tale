@@ -58,6 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
+# Unity User Settings folder
+/UserSettings/
+
+# Visual Studio Code workspace file
+Nova_Cloudwalkers_Tale.code-workspace
