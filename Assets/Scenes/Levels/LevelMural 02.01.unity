@@ -2733,6 +2733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b30049db6cae6242bccd9fd3644ca92, type: 3}
+--- !u!1839735485 &1134085430 stripped
+Tilemap:
+  m_CorrespondingSourceObject: {fileID: 2281865213328110485, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
+  m_PrefabInstance: {fileID: 1041690252086585323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1152248288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15820,7 +15825,7 @@ PrefabInstance:
     - target: {fileID: 1041690251935085931, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: blockTilemap
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1134085430}
     - target: {fileID: 1041690251935085972, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_RootOrder
       value: 3

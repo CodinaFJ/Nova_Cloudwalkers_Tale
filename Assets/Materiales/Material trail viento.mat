@@ -21,19 +21,30 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Material trail viento
-  m_Shader: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: cab9a5ac1919c89479325de0d557ac92, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_153deed7b09349629b26890a92bd706b:
+        m_Texture: {fileID: 2800000, guid: 53cd15fb66125fb49add0c8dd7b78eea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_2924c8bdf7b94dc39ed74f4ebc193897:
+        m_Texture: {fileID: 2800000, guid: 2c93894d9c7e9414c8ff19543a42fe52, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_67888699c48d46fcadde6077cbcc3e9f:
+        m_Texture: {fileID: 2800000, guid: 7c4e40f6827e7ce469b355089ecefa0d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -54,7 +65,29 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_09b089be84b74c1a95d29f602853bf59: 0.0001
+    - Vector1_1b0422c7cdc5466eb73464591d37f83a: 0.1
+    - Vector1_3522e2ec8c8444ee9b06055024c9c6e5: 0.00001
+    - Vector1_377eb7a5881b439a9275f6c74c9e15fc: 0.1
+    - Vector1_428dd2e6980c4c479d51a4b8a97299ff: 0
+    - Vector1_4d42c6539b944a74ab7ecfad8a15aeee: 0.01
+    - Vector1_7b75a35fa7154fae97fd72dd7b8cf357: 0.01
+    - Vector1_804cb3ce78aa45c9af778220f58b36bb: 1
+    - Vector1_8ac0455d4599443388168577036632c9: 0.1
+    - Vector1_f10de36d03f94078b573f102c903a8a0: 0.1
     - _AlphaClip: 0
     - _Blend: 0
     - _Cull: 2
@@ -67,6 +100,11 @@ Material:
     - _Surface: 1
     - _ZWrite: 0
     m_Colors:
+    - Color_1a5bb441bef547029e44312062a13311: {r: 0.1529412, g: 0.2235294, b: 0.3843137, a: 0}
+    - Color_f216aa6c5e024e8aa69099dc60631c1f: {r: 0.2509804, g: 0.4745098, b: 0.6392157, a: 0}
+    - Vector2_00cc3da748b44f98a8040ecaf2e74d32: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_4b143810d1424c3bae85cc66ab47f0a9: {r: 2, g: 2, b: 0, a: 0}
+    - Vector2_ce18df19725c4d4f9797d48dda10140c: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
