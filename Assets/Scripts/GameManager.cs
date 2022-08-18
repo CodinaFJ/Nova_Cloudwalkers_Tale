@@ -24,7 +24,9 @@ public class GameManager : MonoBehaviour
 
     public void OnRestart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        /*SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManager.instance.PlaySound("ResetComplete");*/
+        LevelStateManager.instance.LevelRestart();
         AudioManager.instance.PlaySound("ResetComplete");
     }
 
