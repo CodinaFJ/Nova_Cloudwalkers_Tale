@@ -85,7 +85,7 @@ public class MatrixManager : MonoBehaviour
     {
         tilemapsLevelLayout.FillCloudTilemaps();
 
-        tilemapsLevelLayout.borderTilemap.CompressBounds();
+        //tilemapsLevelLayout.borderTilemap.CompressBounds(); //TODO: check if this is really needed. Generates error in mural level
 
         BoundsInt bounds = tilemapsLevelLayout.borderTilemap.cellBounds;
 
@@ -117,7 +117,7 @@ public class MatrixManager : MonoBehaviour
         itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.spikedFloorTilemap, valueForItemSpikedFloor, itemsLayoutMatrix);
         
 
-        itemsLayoutMatrix = ReduceItemLayoutMatrixToBoundaries(itemsLayoutMatrix);
+        //itemsLayoutMatrix = ReduceItemLayoutMatrixToBoundaries(itemsLayoutMatrix);
     }
 
     public int[,] GetItemsLayoutMatrix()

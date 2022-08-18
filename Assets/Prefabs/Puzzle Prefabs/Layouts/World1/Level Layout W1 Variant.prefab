@@ -25279,6 +25279,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 1665807946566289759, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
+      propertyPath: blockTilemap
+      value: 
+      objectReference: {fileID: 2281865213328110485}
     - target: {fileID: 1665807946566289824, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -27193,3 +27197,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
+--- !u!1839735485 &2281865213328110485 stripped
+Tilemap:
+  m_CorrespondingSourceObject: {fileID: 486424021004881825, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
+  m_PrefabInstance: {fileID: 1831540372246412340}
+  m_PrefabAsset: {fileID: 0}
