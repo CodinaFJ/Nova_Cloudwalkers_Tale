@@ -29,6 +29,9 @@ TextureImporter:
   - first:
       213: 9216554117285786333
     second: Mural_SpriteSheet 02.05_2
+  - first:
+      213: 7925702270699934462
+    second: Mural_SpriteSheet 02.05_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -273,7 +276,7 @@ TextureImporter:
         width: 674
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,7 +297,7 @@ TextureImporter:
         width: 676
         height: 376
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,6 +305,27 @@ TextureImporter:
       bones: []
       spriteID: dd2bbf56327c7ef70800000000000000
       internalID: 9216554117285786333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 2193
+        width: 136
+        height: 1898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef293981930cdfd60800000000000000
+      internalID: 7925702270699934462
       vertices: []
       indices: 
       edges: []
