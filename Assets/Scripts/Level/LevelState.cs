@@ -31,6 +31,7 @@ public class LevelState
         {
             starsCells.Add(star.starCell);
             starsCollected.Add(star.starCollected);
+            
             if(star.starCollected) totalStarsCollected++;
         }
     }

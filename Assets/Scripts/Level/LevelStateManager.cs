@@ -51,14 +51,16 @@ public class LevelStateManager : MonoBehaviour
     public void SaveLevelState()
     {
         levelStateList.Add(new LevelState(matrixManager, playerBehavior, stars));
-        Debug.Log("State saved number: " + levelStateList.Count);
+        //Debug.Log("State saved number: " + levelStateList.Count);
     }
 
+    //Method to save into a volatile variable a spcific state
     public void CaptureSpecificLevelState()
     {
         specificLevelState = new LevelState(matrixManager, playerBehavior, stars);
     }
 
+    //Method to actually save the Specific State captured in previous method and put it in the List of LevelStates
     public void SaveSpecificLevelState()
     {
         if(specificLevelState != null) levelStateList.Add(specificLevelState);
@@ -78,8 +80,6 @@ public class LevelStateManager : MonoBehaviour
         {
             stars[i].LoadLevelStateStar(levelStateList[state].starsCollected[i]);
         }
-        
-        //levelStateList.Remove(levelStateList[state]);
     }
 
     public void OnUndo()
