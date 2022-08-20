@@ -308,6 +308,9 @@ public class PjInputManager : MonoBehaviour
         pjIdle = true;
     }
 
+
+
+    //WHOLE CODE TO ACCEPT WASD CONTROL
     /*void OnUp()
     {
         pjMovementsPress = AddMovement(pjMovementsPress ,2);
@@ -394,14 +397,19 @@ public class PjInputManager : MonoBehaviour
 
         if(matrixManager.InsideLevelMatrix(onClickMatrixCoor) && matrixManager.GetPjMovementMatrix()[onClickMatrixCoor[0], onClickMatrixCoor[1]])
         {
-            if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
+            //if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
 
             Pathfinding pathfinding = new Pathfinding();
             int[] pjMovementsArray = new int[0];
 
             if(playerBehavior.pjCell[0] == onClickMatrixCoor[0] && playerBehavior.pjCell[1] == onClickMatrixCoor[1]) return;
             pjMovementsArray = pathfinding.CalculatePathMovement(playerBehavior.pjCell[0], playerBehavior.pjCell[1], onClickMatrixCoor[0], onClickMatrixCoor[1]);
-            if(pjMovementsArray != null) pjMovementsPress = (int[])pjMovementsArray.Clone();
+            
+            if(pjMovementsArray != null)
+            {
+                pjMovementsPress = (int[])pjMovementsArray.Clone();
+                if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
+            } 
 
             pjAnimationManager.PjClickAnimation(mouseCellCenter);
 
