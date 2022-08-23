@@ -19,15 +19,23 @@ public class GameManager : MonoBehaviour
     private void Start() 
     {
         playerInput = GetComponent<PlayerInput>();
-        //levelLoader = FindObjectOfType<LevelLoader>();
     }
 
     public void OnRestart()
     {
-        /*SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        AudioManager.instance.PlaySound("ResetComplete");*/
+        StartCoroutine(RestartLevelWithCrossfade());
+    }
+
+    IEnumerator RestartLevelWithCrossfade()
+    {
+        levelLoader.FadeOut();
+
+        yield return new WaitForSeconds(1f);
+
         LevelStateManager.instance.LevelRestart();
         AudioManager.instance.PlaySound("ResetComplete");
+
+        levelLoader.FadeIn();
     }
 
     public void PauseGame()
@@ -47,7 +55,6 @@ public class GameManager : MonoBehaviour
     public void ToMap()
     {
         levelLoader.LoadLevel("LevelSelectorMenu");
-        //FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
 
     public void PjToExit()
