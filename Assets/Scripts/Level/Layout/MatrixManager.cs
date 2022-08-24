@@ -622,6 +622,7 @@ public class MatrixManager : MonoBehaviour
                 }
             }
         }
+        
     }
 
     void ReAssignCloudItem(int[] cloudCell, int item, int newCloudItem)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CloudShadowBehavior : MonoBehaviour
 {
@@ -23,9 +24,11 @@ public class CloudShadowBehavior : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
 
         parentCloud = GetComponentInParent<InstantiatedCloudBehavior>();
+        if(parentCloud == null) parentTile = GetComponentInParent<InstantiatedTileBehavior>();
 
         //Needed to select sprite
-        adyacentTilesForShadow = parentCloud.GetAdyacentTilesForShadow();
+        if(parentCloud != null) adyacentTilesForShadow = parentCloud.GetAdyacentTilesForShadow();
+        else adyacentTilesForShadow = parentTile.GetAdyacentTilesForShadow();
 
         SelectCorrectSprite();
     }
@@ -34,7 +37,12 @@ public class CloudShadowBehavior : MonoBehaviour
     {
         //Select and modify sprite to match the position
 
-        transform.localScale = parentCloud.transform.localScale;
+        Transform parent;
+
+        if(parentCloud != null) parent = parentCloud.transform;
+        else parent = parentTile.transform;
+
+        transform.localScale = parent.localScale;
         if (!adyacentTilesForShadow[0] && !adyacentTilesForShadow[1]) mySpriteRenderer.sprite = shadowTile1;
         if (!adyacentTilesForShadow[0] &&  adyacentTilesForShadow[1])
         {
