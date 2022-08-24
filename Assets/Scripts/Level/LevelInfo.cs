@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class LevelInfo : MonoBehaviour
 {
@@ -41,10 +42,22 @@ public class LevelInfo : MonoBehaviour
 
         string[] levelNameParts = LevelName.Split(new char[] {'-'});
 
-       level = int.Parse(levelNameParts[0]);
-       world = int.Parse(levelNameParts[1]);
+        try
+        {
+            level = int.Parse(levelNameParts[0]);
+            world = int.Parse(levelNameParts[1]);
+            Debug.Log("Loaded level: " + level.ToString() + " In world: " + world.ToString());
+        }
+        catch(FormatException e)
+        {
+            Debug.Log("Level Name is not correct. Exception message: " + e.Message);
+        }
+        catch(Exception e)
+        {
+            Debug.Log("Error reading level name: " + e.Message);
+        }
 
-        Debug.Log("Loaded level: " + level.ToString() + " In world: " + world.ToString());
+        
     }
 
     public int GetLevelNumber()
