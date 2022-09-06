@@ -41,4 +41,15 @@ public class LevelLoader : MonoBehaviour
 
         SceneManager.LoadScene(levelName);
     }
+
+    public void FadeOut()
+    {
+        crossfade.Play("Crossfade_Out");
+    }
+
+
+    public void FadeIn()
+    {
+        crossfade.Play("Crossfade_In");
+    }
 }
