@@ -38,10 +38,9 @@ public class fromMatrixToGame : MonoBehaviour
 
     void Awake()
     {
-        matrixManager = FindObjectOfType<MatrixManager>();
         tilemapsLevelLayout = FindObjectOfType<TilemapsLevelLayout>();
-        itemsLayoutMatrix = matrixManager.GetItemsLayoutMatrix();
-        mechanicsLayoutMatrix = matrixManager.GetMechanicsLayoutMatrix();
+        itemsLayoutMatrix = MatrixManager.instance.GetItemsLayoutMatrix();
+        mechanicsLayoutMatrix = MatrixManager.instance.GetMechanicsLayoutMatrix();
 
         whiteCloudsTilemaps = whiteCloudsGrid.GetComponentsInChildren<Tilemap>();
         whiteCloudsTilemapRederers = whiteCloudsGrid.GetComponentsInChildren<TilemapRenderer>();
@@ -89,35 +88,35 @@ public class fromMatrixToGame : MonoBehaviour
 
     void InstantiateWhiteCloud(int i, int j, int whiteCloudNumber)
     {
-        Vector3 itemPosition = matrixManager.FromMatrixIndexToWorld(i, j);
+        Vector3 itemPosition = MatrixManager.instance.FromMatrixIndexToWorld(i, j);
 
         Instantiate(whiteCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
     }
 
     void InstantiateGreyCloud(int i, int j, int whiteCloudNumber)
     {
-        Vector3 itemPosition = matrixManager.FromMatrixIndexToWorld(i, j);
+        Vector3 itemPosition = MatrixManager.instance.FromMatrixIndexToWorld(i, j);
 
         Instantiate(greyCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
     }
 
     void InstantiateCrystalCloud(int i, int j, int whiteCloudNumber)
     {
-        Vector3 itemPosition = matrixManager.FromMatrixIndexToWorld(i, j);
+        Vector3 itemPosition = MatrixManager.instance.FromMatrixIndexToWorld(i, j);
 
         Instantiate(crystalCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
     }
 
     void InstantiateThunderCloud(int i, int j, int whiteCloudNumber)
     {
-        Vector3 itemPosition = matrixManager.FromMatrixIndexToWorld(i, j);
+        Vector3 itemPosition = MatrixManager.instance.FromMatrixIndexToWorld(i, j);
 
         Instantiate(thunderCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
     }
 
     void InstantiateFloor(int i, int j)
     {
-        Vector3 itemPosition = matrixManager.FromMatrixIndexToWorld(i, j);
+        Vector3 itemPosition = MatrixManager.instance.FromMatrixIndexToWorld(i, j);
 
         Instantiate(floor, itemPosition, Quaternion.identity, walkableFloorParent.transform);
 
@@ -125,7 +124,7 @@ public class fromMatrixToGame : MonoBehaviour
 
     void InstantiateCrystalFloor(int i, int j)
     {
-        Vector3 itemPosition = matrixManager.FromMatrixIndexToWorld(i, j);
+        Vector3 itemPosition = MatrixManager.instance.FromMatrixIndexToWorld(i, j);
 
         Instantiate(crystalFloor, itemPosition, Quaternion.identity, walkableFloorParent.transform);
 
@@ -133,7 +132,7 @@ public class fromMatrixToGame : MonoBehaviour
 
     void InstantiateSpikedFloor(int i, int j)
     {
-        Vector3 itemPosition = matrixManager.FromMatrixIndexToWorld(i, j);
+        Vector3 itemPosition = MatrixManager.instance.FromMatrixIndexToWorld(i, j);
 
         Instantiate(spikedFloor, itemPosition, Quaternion.identity, spikedFloorParent.transform);
     }
@@ -161,7 +160,7 @@ public class fromMatrixToGame : MonoBehaviour
 
     public void DeactivateItem(int item)
     {
-        if(item != matrixManager.valueForFloor && item != matrixManager.valueForCrystalFloor)
+        if(item != MatrixManager.instance.valueForFloor && item != MatrixManager.instance.valueForCrystalFloor)
         {
             cloudsToDeactivate = cloudsParents[item - 1].GetComponentsInChildren<Transform>();
             DeactivateClouds();
@@ -171,7 +170,7 @@ public class fromMatrixToGame : MonoBehaviour
 
     public void DeactivateItemCloud(int item)
     {
-        if(item != matrixManager.valueForFloor && item != matrixManager.valueForCrystalFloor)
+        if(item != MatrixManager.instance.valueForFloor && item != MatrixManager.instance.valueForCrystalFloor)
         {
             cloudsToDeactivate = cloudsParents[item - 1].GetComponentsInChildren<Transform>();
             Invoke("DeactivateClouds",0);
@@ -202,23 +201,30 @@ public class fromMatrixToGame : MonoBehaviour
 
     void InstantiateTile(int i, int j)
     {
-        if (mechanicsLayoutMatrix[i,j] == matrixManager.valueWhiteCloudMechanic) InstantiateWhiteCloud(i,j, itemsLayoutMatrix[i,j] - 1);
-        if (mechanicsLayoutMatrix[i,j] == matrixManager.valueGreyCloudMechanic) InstantiateGreyCloud(i,j, itemsLayoutMatrix[i,j] - 1);
-        if (mechanicsLayoutMatrix[i,j] == matrixManager.valueCrystalCloudMechanic) InstantiateCrystalCloud(i,j, itemsLayoutMatrix[i,j] - 1);
-        if (mechanicsLayoutMatrix[i,j] == matrixManager.valueThunderCloudMechanic) InstantiateThunderCloud(i,j, itemsLayoutMatrix[i,j] - 1);
-        if (itemsLayoutMatrix[i,j] ==  matrixManager.valueForFloor)
+        if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueWhiteCloudMechanic) InstantiateWhiteCloud(i,j, itemsLayoutMatrix[i,j] - 1);
+
+        if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueGreyCloudMechanic) InstantiateGreyCloud(i,j, itemsLayoutMatrix[i,j] - 1);
+
+        if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueCrystalCloudMechanic || 
+            mechanicsLayoutMatrix[i,j] == (MatrixManager.instance.valueCrystalCloudMechanic + 1)) InstantiateCrystalCloud(i,j, itemsLayoutMatrix[i,j] - 1);
+
+        if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueThunderCloudMechanic) InstantiateThunderCloud(i,j, itemsLayoutMatrix[i,j] - 1);
+
+        if (itemsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForFloor)
         {
-            if (mechanicsLayoutMatrix[i,j] ==  matrixManager.valueForFloor) InstantiateFloor(i,j);
-            else if (mechanicsLayoutMatrix[i,j] == matrixManager.valueSpikedFloorMechanic) InstantiateFloor(i,j);
+            if (mechanicsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForFloor) InstantiateFloor(i,j);
+            else if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueSpikedFloorMechanic) InstantiateFloor(i,j);
         }
-        if (itemsLayoutMatrix[i,j] ==  matrixManager.valueForCrystalFloor) InstantiateCrystalFloor(i,j);
-        if (mechanicsLayoutMatrix[i,j] == matrixManager.valueSpikedFloorMechanic) InstantiateSpikedFloor(i,j);
+        if (itemsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForCrystalFloor ||
+            itemsLayoutMatrix[i,j] ==  (MatrixManager.instance.valueForCrystalFloor + 1)) InstantiateCrystalFloor(i,j);
+
+        if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueSpikedFloorMechanic) InstantiateSpikedFloor(i,j);
     }
 
     public void LoadLevelLayout()
     {
-        itemsLayoutMatrix = matrixManager.GetItemsLayoutMatrix();
-        mechanicsLayoutMatrix = matrixManager.GetMechanicsLayoutMatrix();
+        itemsLayoutMatrix = MatrixManager.instance.GetItemsLayoutMatrix();
+        mechanicsLayoutMatrix = MatrixManager.instance.GetMechanicsLayoutMatrix();
         foreach(GameObject movParticles in GameObject.FindGameObjectsWithTag("Part_mov"))
         {
             movParticles.SetActive(false);
@@ -234,6 +240,8 @@ public class fromMatrixToGame : MonoBehaviour
         Destroy(spikedFloorParent);
         walkableFloorParent.SetActive(false);
         Destroy(walkableFloorParent);
+
+        numberOfClouds = GetNumberOfClouds(itemsLayoutMatrix);
         
         cloudsParents = new GameObject[numberOfClouds];
         walkableFloorParent = new GameObject("Floor");
@@ -251,14 +259,24 @@ public class fromMatrixToGame : MonoBehaviour
                 InstantiateTile(i, j);
             }
         }
+    }
 
-        /*for (int i = 0; i < numberOfClouds; i++)
+
+    private int GetNumberOfClouds(int[,] itemsLayoutMatrix)
+    {
+        int highestItemInMatrix = 0;
+
+        for (int i = 0; i < itemsLayoutMatrix.GetLength(0); i++)
         {
-            foreach(Transform cloudTile in cloudsParents[i].transform)
+            for (int j = 0; j < itemsLayoutMatrix.GetLength(1); j++)
             {
-                if(cloudTile.GetComponent<InstantiatedCloudBehavior>() != null)
-                cloudTile.GetComponent<InstantiatedCloudBehavior>().SelectCorrectSprite();
+                if(itemsLayoutMatrix[i,j] > 0 && itemsLayoutMatrix[i,j] < 999)
+                {
+                    if(itemsLayoutMatrix[i,j] > highestItemInMatrix) highestItemInMatrix = itemsLayoutMatrix[i,j];
+                }
             }
-        }*/
+        }
+
+        return highestItemInMatrix;
     }
 }
