@@ -454,7 +454,6 @@ public class PjInputManager : MonoBehaviour
 
         if(!playerBehavior.clickIsForCloud)
         OnFindPath();
-        Debug.Log("Click UP");
     }
 
     public void OnLeftClick()
@@ -462,8 +461,6 @@ public class PjInputManager : MonoBehaviour
         playerBehavior.clickIsForCloud = false;
 
         onClickMouseWorldPos = GetMouseWorldPos();
-
-        Debug.Log("Click DOWN");
     }
 
     
