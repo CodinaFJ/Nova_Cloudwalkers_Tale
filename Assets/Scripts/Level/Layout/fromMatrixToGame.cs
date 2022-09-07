@@ -162,26 +162,10 @@ public class fromMatrixToGame : MonoBehaviour
     {
         if(item != MatrixManager.instance.valueForFloor && item != MatrixManager.instance.valueForCrystalFloor)
         {
-            cloudsToDeactivate = cloudsParents[item - 1].GetComponentsInChildren<Transform>();
-            DeactivateClouds();
-            
-        }
-    }
-
-    public void DeactivateItemCloud(int item)
-    {
-        if(item != MatrixManager.instance.valueForFloor && item != MatrixManager.instance.valueForCrystalFloor)
-        {
-            cloudsToDeactivate = cloudsParents[item - 1].GetComponentsInChildren<Transform>();
-            Invoke("DeactivateClouds",0);
-        }
-    }
-
-    void DeactivateClouds()
-    {    
-        foreach (Transform child in cloudsToDeactivate)
-        {
-            child.gameObject.SetActive(false);
+            foreach (Transform child in cloudsParents[item - 1].transform)
+            {
+                child.gameObject.SetActive(false);
+            }
         }
     }
 

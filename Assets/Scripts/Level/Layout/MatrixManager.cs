@@ -467,6 +467,14 @@ public class MatrixManager : MonoBehaviour
     {
         if(AttachGreyCloudInMatrix(item))
         {
+            FromMatrixToGame.ReInstantiateItem(item);
+        }
+    }
+
+    void LoopGreyCloudContact(int item)
+    {
+        if(AttachGreyCloudInMatrix(item))
+        {
             //CloudInputManager.instance.SetCloudMove(false);
             if(!stateSaved)
             {
@@ -475,7 +483,7 @@ public class MatrixManager : MonoBehaviour
                 stateSaved = true;
             }
             
-            FromMatrixToGame.ReInstantiateItem(item);
+            //FromMatrixToGame.ReInstantiateItem(item);
             playerBehavior.UpdateItemUnderPj();
             RefreshCloudsMovementMatrix();
             RefreshPjMovementMatrix();
@@ -496,6 +504,7 @@ public class MatrixManager : MonoBehaviour
     bool AttachGreyCloudInMatrix (int item)
     {
         bool attachingCloud = false;
+        
 
         for (int i = 0; i < itemsLayoutMatrix.GetLength(0); i++)
         {
@@ -554,7 +563,8 @@ public class MatrixManager : MonoBehaviour
 
         if (attachingCloud)
         {
-            SearchGreyCloudContact(item);
+            FromMatrixToGame.DeactivateItem(item);
+            LoopGreyCloudContact(item);
         } 
 
         return attachingCloud;
