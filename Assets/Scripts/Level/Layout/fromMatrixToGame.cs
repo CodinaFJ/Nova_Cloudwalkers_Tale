@@ -215,8 +215,8 @@ public class fromMatrixToGame : MonoBehaviour
             if (mechanicsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForFloor) InstantiateFloor(i,j);
             else if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueSpikedFloorMechanic) InstantiateFloor(i,j);
         }
-        if (itemsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForCrystalFloor ||
-            itemsLayoutMatrix[i,j] ==  (MatrixManager.instance.valueForCrystalFloor + 1)) InstantiateCrystalFloor(i,j);
+        if (mechanicsLayoutMatrix[i,j] ==  MatrixManager.instance.valueCrystalFloorMechanic ||
+            mechanicsLayoutMatrix[i,j] ==  (MatrixManager.instance.valueCrystalFloorMechanic + 1)) InstantiateCrystalFloor(i,j);
 
         if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueSpikedFloorMechanic) InstantiateSpikedFloor(i,j);
     }
