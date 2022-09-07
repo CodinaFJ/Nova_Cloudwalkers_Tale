@@ -131,8 +131,14 @@ public class Pathfinding
     {
         int xDistance = Mathf.Abs(a.x - b.x);
         int yDistance = Mathf.Abs(a.y - b.y);
+
+        int crystalCost = 0;
+
+        if(MatrixManager.instance.GetMechanicsLayoutMatrix()[a.x, a.y] == MatrixManager.instance.valueCrystalCloudMechanic ||
+           MatrixManager.instance.GetMechanicsLayoutMatrix()[a.x, a.y] == MatrixManager.instance.valueForCrystalFloor)
+           crystalCost = 10;
         
-        return (xDistance + yDistance) * MOVE_COST;
+        return ((xDistance + yDistance) * MOVE_COST) + crystalCost;
 
     }
 
