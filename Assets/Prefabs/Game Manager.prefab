@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8159789064767154784}
   - component: {fileID: 5466199777953251671}
   - component: {fileID: 4063350803300844217}
+  - component: {fileID: 713771194}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -101,7 +102,9 @@ MonoBehaviour:
   sleepingTime: 23
   movementsMemory: 3
   releaseMouseTolerance: 0.3
+  wallLevel: 0
   pjMoving: 0
+  onClickMouseWorldPos: {x: 0, y: 0, z: 0}
 --- !u!114 &6719978607187103728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +162,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5804a5db3c466d418533b32c08d4b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &713771194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159789064767154812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbcfa5145614eb849a3a5dbca8e5c10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &477395884

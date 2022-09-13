@@ -11,8 +11,8 @@ public class PjInputManager : MonoBehaviour
     PjInputManager.cs
 
     Description:
-        Read keyboard for PJ movement (WASD and arrows).
-        Values from keyboard are translated into commands and stored in
+        Read keyboard for PJ movement (Click).
+        Values from keyboard/pathfinding are translated into commands and stored in
         command movements arrays (pjMovementsPress and pjMovementsHold)
         Those commands execute movement coroutines which update the position
         of the Player object.
@@ -55,7 +55,8 @@ public class PjInputManager : MonoBehaviour
 
     PjAnimationManager pjAnimationManager;
 
-    Vector3 onClickMouseWorldPos;
+    [HideInInspector]
+    public Vector3 onClickMouseWorldPos;
 
     private void Awake() 
     {
@@ -308,8 +309,90 @@ public class PjInputManager : MonoBehaviour
         pjIdle = true;
     }
 
+    void OnNoIdle()
+    {
+        pjIdle = false;  
+    }
+
+    public void FindPath(Vector3 mouseWorldPos)
+    {
+        //Initial mouse and cloud values needed for cloud movement algorythm
+        Debug.Log("Click Position: " + mouseWorldPos);
+        Vector3 mouseCellCenter = new Vector3(Mathf.FloorToInt(mouseWorldPos.x), Mathf.FloorToInt(mouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
+        int[] onClickMatrixCoor = GetMouseMatrixIndex(mouseWorldPos);
+        if(onClickMatrixCoor == null) return;
+        Debug.Log("In find path");
+
+        if(matrixManager.InsideLevelMatrix(onClickMatrixCoor) && matrixManager.GetPjMovementMatrix()[onClickMatrixCoor[0], onClickMatrixCoor[1]])
+        {
+            //if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
+
+            Pathfinding pathfinding = new Pathfinding();
+            int[] pjMovementsArray = new int[0];
+
+            if(playerBehavior.pjCell[0] == onClickMatrixCoor[0] && playerBehavior.pjCell[1] == onClickMatrixCoor[1]) return;
+            pjMovementsArray = pathfinding.CalculatePathMovement(playerBehavior.pjCell[0], playerBehavior.pjCell[1], onClickMatrixCoor[0], onClickMatrixCoor[1]);
+            
+            if(pjMovementsArray != null)
+            {
+                pjMovementsPress = (int[])pjMovementsArray.Clone();
+                if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
+            } 
+
+            pjAnimationManager.PjClickAnimation(mouseCellCenter);
+
+            if(FindObjectOfType<WASD_TutorialScript>() != null) FindObjectOfType<WASD_TutorialScript>().FadeOutMouse();
+        }
+    }
 
 
+    private Vector3 GetMouseWorldPos()
+    {
+        Vector3 mousePos = Mouse.current.position.ReadValue();
+
+        //mousePos.z = Camera.main.farClipPlane * .5f;  I leave this here just in case I want to come back some day for 3D algorythm
+
+        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(mousePos);
+        worldPoint.z = 0;
+
+        return worldPoint;
+    }
+
+    int[] GetMouseMatrixIndex(Vector3 mousePosition)
+    {
+        int[] mouseMatrixIndex = new int[2];
+
+        //Truncate position and add (0.5, 0.5, 0) to match cell center
+        Vector3 mouseWorldPosTruncated = new Vector3(Mathf.FloorToInt(mousePosition.x), Mathf.FloorToInt(mousePosition.y), 0f);
+
+        mouseMatrixIndex = matrixManager.FromWorldToMatrixIndex(mouseWorldPosTruncated + new Vector3(0.5f, 0.5f, 0f));
+        if(mouseMatrixIndex == null) Debug.LogWarning("PjInputManager: Out of matrix");
+
+        return mouseMatrixIndex;
+    }
+
+    public void OnPause()
+    {
+        FindObjectOfType<LevelUIController>().exitButton();
+    }
+
+    public void OnReleaseLeftClick()
+    {
+        if(Vector3.Magnitude(GetMouseWorldPos() - onClickMouseWorldPos) > releaseMouseTolerance && !wallLevel) return;
+
+        if(!playerBehavior.clickIsForCloud)
+        FindPath(GetMouseWorldPos());
+    }
+
+    public void OnLeftClick()
+    {
+        playerBehavior.clickIsForCloud = false;
+
+        onClickMouseWorldPos = GetMouseWorldPos();
+        Debug.Log("Left Click Pos: " + GetMouseWorldPos());
+        CloudInputManager.instance.SelectCloud(GetMouseWorldPos());
+    }
+    
     //WHOLE CODE TO ACCEPT WASD CONTROL
     /*void OnUp()
     {
@@ -381,87 +464,4 @@ public class PjInputManager : MonoBehaviour
         }
         holdRight = false;
     }*/
-
-    void OnNoIdle()
-    {
-        pjIdle = false;  
-    }
-
-    void OnFindPath()
-    {
-        //Initial mouse and cloud values needed for cloud movement algorythm
-        Vector3 mouseWorldPos = GetMouseWorldPos();
-        Vector3 mouseCellCenter = new Vector3(Mathf.FloorToInt(mouseWorldPos.x), Mathf.FloorToInt(mouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
-        int[] onClickMatrixCoor = GetMouseMatrixIndex();
-        if(onClickMatrixCoor == null) return;
-
-        if(matrixManager.InsideLevelMatrix(onClickMatrixCoor) && matrixManager.GetPjMovementMatrix()[onClickMatrixCoor[0], onClickMatrixCoor[1]])
-        {
-            //if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
-
-            Pathfinding pathfinding = new Pathfinding();
-            int[] pjMovementsArray = new int[0];
-
-            if(playerBehavior.pjCell[0] == onClickMatrixCoor[0] && playerBehavior.pjCell[1] == onClickMatrixCoor[1]) return;
-            pjMovementsArray = pathfinding.CalculatePathMovement(playerBehavior.pjCell[0], playerBehavior.pjCell[1], onClickMatrixCoor[0], onClickMatrixCoor[1]);
-            
-            if(pjMovementsArray != null)
-            {
-                pjMovementsPress = (int[])pjMovementsArray.Clone();
-                if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
-            } 
-
-            pjAnimationManager.PjClickAnimation(mouseCellCenter);
-
-            if(FindObjectOfType<WASD_TutorialScript>() != null) FindObjectOfType<WASD_TutorialScript>().FadeOutMouse();
-        }
-    }
-
-
-    private Vector3 GetMouseWorldPos()
-    {
-        Vector3 mousePos = Mouse.current.position.ReadValue();
-
-        //mousePos.z = Camera.main.farClipPlane * .5f;  I leave this here just in case I want to come back some day for 3D algorythm
-
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(mousePos);
-        worldPoint.z = 0;
-
-        return worldPoint;
-    }
-
-    int[] GetMouseMatrixIndex()
-    {
-        int[] mouseMatrixIndex = new int[2];
-
-        //Truncate position and add (0.5, 0.5, 0) to match cell center
-        Vector3 mouseWorldPosTruncated = new Vector3(Mathf.FloorToInt(GetMouseWorldPos().x), Mathf.FloorToInt(GetMouseWorldPos().y), 0f);
-
-        mouseMatrixIndex = matrixManager.FromWorldToMatrixIndex(mouseWorldPosTruncated + new Vector3(0.5f, 0.5f, 0f));
-        if(mouseMatrixIndex == null) Debug.LogWarning("PjInputManager: Out of matrix");
-
-        return mouseMatrixIndex;
-    }
-
-    public void OnPause()
-    {
-        FindObjectOfType<LevelUIController>().exitButton();
-    }
-
-    public void OnReleaseLeftClick()
-    {
-        if(Vector3.Magnitude(GetMouseWorldPos() - onClickMouseWorldPos) > releaseMouseTolerance && !wallLevel) return;
-
-        if(!playerBehavior.clickIsForCloud)
-        OnFindPath();
-    }
-
-    public void OnLeftClick()
-    {
-        playerBehavior.clickIsForCloud = false;
-
-        onClickMouseWorldPos = GetMouseWorldPos();
-    }
-
-    
 }

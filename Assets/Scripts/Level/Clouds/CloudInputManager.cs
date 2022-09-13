@@ -122,20 +122,24 @@ public class CloudInputManager : MonoBehaviour
     }
 
 
-    void OnSelectCloud()
+    public void SelectCloud(Vector3 onClickMouseWorldPos)
     {
         playerBehavior.clickIsForCloud = false;
 
         //Initial mouse and cloud values needed for cloud movement algorythm
-        Vector3 onClickMouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
         Vector3 onClickCellCenter = new Vector3(Mathf.FloorToInt(onClickMouseWorldPos.x), Mathf.FloorToInt(onClickMouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
         mouseOffset = onClickMouseWorldPos - onClickCellCenter;
-        int[] onClickMatrixCoor = MouseMatrixScript.GetMouseMatrixIndex();
+        //int[] onClickMatrixCoor = MouseMatrixScript.GetMouseMatrixIndex();
+        int[] onClickMatrixCoor = MouseMatrixScript.GetMatrixIndex(onClickMouseWorldPos);
+
+        if(onClickMatrixCoor == null) return;
+
+        Debug.Log("Matrix cell: " + onClickMatrixCoor[0].ToString() + " ," + onClickMatrixCoor[1].ToString());
 
         //Update cloud parents in case it was changed due to crystals or grey clouds
         cloudsParents = fromMatrixToGame.GetCloudsParents();
         
-        if(onClickMatrixCoor == null) return;
+        
 
         if(matrixManager.InsideLevelMatrix(onClickMatrixCoor) && !cloudIsMoving)
         {
@@ -200,7 +204,8 @@ public class CloudInputManager : MonoBehaviour
 
     void FillMousePath()
     {
-        Vector3 mouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
+        //Vector3 mouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
+        Vector3 mouseWorldPos = TouchControlScript.instance.GetTouchPosition();
 
         int movementToAdd = 0;
 
@@ -445,10 +450,7 @@ public class CloudInputManager : MonoBehaviour
         stopMovement = true;
     }
 
-    public bool GetIsSelecting()
-    {
-        return isSelecting;
-    }
+    public bool GetIsSelecting() => isSelecting;
 
     bool CloudCanMove(int nextMovement)
     {
@@ -534,10 +536,7 @@ public class CloudInputManager : MonoBehaviour
         }
     }
 
-    public void SetEasingValue(float value)
-    {
-        easingValue = value;
-    }
+    public void SetEasingValue(float value) => easingValue = value;
 
     public void SetCloudMove(bool value) => cloudMoved = value;
 
