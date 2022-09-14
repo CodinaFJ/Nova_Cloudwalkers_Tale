@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menus/StartMenu.unity
     guid: 06a55675a1d4ef74ba0b59483def7e90
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Cinematics/Cinematic1.unity
     guid: 01bc9bb302f917640bf3d412c655ff07
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/World2/World2Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menus/ControlsMenu.unity
     guid: c6a0f974b2c6cc04aac736f3b3496bd6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menus/LevelSelectorMenu.unity
     guid: a4c6e9584e2670944b4872ebbffb8dae
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/World1/Tutoriales Codi Peques/1-1-World1Tutorial1
       Peque.unity
     guid: 2594462755c2e704580ef279264ff2ea

@@ -130,11 +130,16 @@ public class CloudInputManager : MonoBehaviour
         Vector3 onClickCellCenter = new Vector3(Mathf.FloorToInt(onClickMouseWorldPos.x), Mathf.FloorToInt(onClickMouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
         mouseOffset = onClickMouseWorldPos - onClickCellCenter;
         //int[] onClickMatrixCoor = MouseMatrixScript.GetMouseMatrixIndex();
+        Debug.Log("onClickMouseWorldPos: " + onClickMouseWorldPos);
         int[] onClickMatrixCoor = MouseMatrixScript.GetMatrixIndex(onClickMouseWorldPos);
 
-        if(onClickMatrixCoor == null) return;
+        if(onClickMatrixCoor == null)
+        {
+            Debug.Log("Error onClickMatrixCoor in SelectCloud()");
+            return;
+        }
 
-        Debug.Log("Matrix cell: " + onClickMatrixCoor[0].ToString() + " ," + onClickMatrixCoor[1].ToString());
+        //Debug.Log("Matrix cell: " + onClickMatrixCoor[0].ToString() + " ," + onClickMatrixCoor[1].ToString());
 
         //Update cloud parents in case it was changed due to crystals or grey clouds
         cloudsParents = fromMatrixToGame.GetCloudsParents();
