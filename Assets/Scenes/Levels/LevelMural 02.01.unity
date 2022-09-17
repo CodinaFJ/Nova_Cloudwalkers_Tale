@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.05
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa06306757bf3813a318fe2f110
+  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa0f3813a318fe2f110
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.05
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa06306757bf3813a318fe2f110
+  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa0f3813a318fe2f110
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.08
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa06306757bf3813a318fe2f110
+  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa0f3813a318fe2f110
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -2386,7 +2386,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.05
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa06306757bf3813a318fe2f110
+  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa0f3813a318fe2f110
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -3140,7 +3140,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.08
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa06306757bf3813a318fe2f110
+  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa0f3813a318fe2f110
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -3675,17 +3675,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 672929022}
     m_Modifications:
+    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
+      propertyPath: ShapeModule.m_Position.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
+      propertyPath: ShapeModule.m_Position.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
+      propertyPath: ShapeModule.m_Position.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
+      propertyPath: ShapeModule.m_Rotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
+      propertyPath: EmissionModule.rateOverTime.minScalar
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4644661815427408585, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4644661815427408585, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.460258
+      value: 29.960258
       objectReference: {fileID: 0}
     - target: {fileID: 4644661815427408585, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9852121
+      value: 2.235212
       objectReference: {fileID: 0}
     - target: {fileID: 4644661815427408585, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4025,7 +4065,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.05
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa06306757bf3813a318fe2f110
+  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa0f3813a318fe2f110
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -4097,7 +4137,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.08
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa06306757bf3813a318fe2f110
+  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa0f3813a318fe2f110
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -4809,7 +4849,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.05
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa06306757bf3813a318fe2f110
+  m_ApplyToSortingLayers: fd6ff374eb1a21c2555ae954f303d317e1f6fb1137bfaae72d0b31bac759268577461aa0f3813a318fe2f110
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0

@@ -1714,19 +1714,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 19.747772
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4644661815427408584, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
-      propertyPath: EmissionModule.rateOverTime.minScalar
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4644661815427408585, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
       propertyPath: m_RootOrder
@@ -1734,7 +1726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4644661815427408585, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.32
+      value: -21.07
       objectReference: {fileID: 0}
     - target: {fileID: 4644661815427408585, guid: ea7aa3e5f5fbf3749aae3ae5bf2efd2a, type: 3}
       propertyPath: m_LocalPosition.y
