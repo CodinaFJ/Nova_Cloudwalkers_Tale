@@ -206,6 +206,7 @@ MonoBehaviour:
   textAnimator: {fileID: 137207445}
   textButton: {fileID: 1823136749}
   waitForFadeOut: 2
+  video: {fileID: 32900000, guid: 217a17348dbe9f84a908841563ba42f8, type: 3}
   vid: {fileID: 115481422}
 --- !u!114 &115481425
 MonoBehaviour:
@@ -788,7 +789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 861, y: -503.5}
+  m_AnchoredPosition: {x: 818.7071, y: -356.7978}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823136749
