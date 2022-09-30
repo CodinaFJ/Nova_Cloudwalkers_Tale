@@ -9,7 +9,7 @@ public class VideoScript : MonoBehaviour
     [SerializeField] Animator textAnimator;
     [SerializeField] Button textButton;
     [SerializeField] float waitForFadeOut = 1f;
-    public VideoPlayer vid;
+    [SerializeField] public VideoPlayer vid;
     double videoLength;
     double timeElapsed = 0.0;
  
@@ -27,7 +27,7 @@ public class VideoScript : MonoBehaviour
  
     void Start()
     {
-        vid.url = System.IO.Path.Combine (Application.streamingAssetsPath,"cinematic1.mp4");
+        //vid.url = System.IO.Path.Combine (Application.streamingAssetsPath,"cinematic1.mp4");
 
         vid.Play();     
         //GetComponent<AudioSource>().Play();
