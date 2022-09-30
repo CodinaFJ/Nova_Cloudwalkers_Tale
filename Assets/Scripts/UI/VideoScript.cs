@@ -1,14 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class VideoScript : MonoBehaviour
 {
     [SerializeField] Animator textAnimator;
     [SerializeField] Button textButton;
     [SerializeField] float waitForFadeOut = 1f;
+    [SerializeField] VideoClip video;
     public VideoPlayer vid;
     double videoLength;
     double timeElapsed = 0.0;
@@ -24,10 +25,23 @@ public class VideoScript : MonoBehaviour
     string currentState;
 
     float currentTime;
+
+    private void OnEnable() {
+        TouchSimulation.Enable();
+        EnhancedTouchSupport.Enable();
+        UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown += FingerDown;
+    }
+
+    private void OnDisable() {
+        TouchSimulation.Disable();
+        UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown -= FingerDown;
+        EnhancedTouchSupport.Disable();
+    }
  
     void Start()
     {
-        vid.url = System.IO.Path.Combine (Application.streamingAssetsPath,"cinematic1.mp4");
+        //vid.url = System.IO.Path.Combine (Application.streamingAssetsPath,"cinematic1.mp4");
+        vid.clip = video;
 
         vid.Play();     
         //GetComponent<AudioSource>().Play();
@@ -64,6 +78,11 @@ public class VideoScript : MonoBehaviour
     }
 
     public void OnMouseDrag() 
+    {
+        FadeInText();
+    }
+
+    private void FingerDown(Finger finger)
     {
         FadeInText();
     }
