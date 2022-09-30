@@ -23,30 +23,34 @@ public class LevelFinish : MonoBehaviour
         if(other.tag == "Player")
         {
             if(levelInfo == null) return;
-            int levelNumber = levelInfo.GetLevelNumber();
-            int worldNumber = levelInfo.GetLevelWorldNumber();
-            Debug.Log("Finished Level: " + levelNumber + " In world: "+ worldNumber);
-            if(worldNumber == 1)
-            {
-                GameState.instance.completedLevelsWorld1[levelNumber - 1] = true;
-
-                if(GameState.instance.collectedStarsInLevelsWorld1[levelNumber - 1] < FindObjectOfType<LevelInfo>().collectedStars)
+            else{
+                int levelNumber = levelInfo.GetLevelNumber();
+                int worldNumber = levelInfo.GetLevelWorldNumber();
+            
+                Debug.Log("Finished Level: " + levelNumber + " In world: "+ worldNumber);
+                if(worldNumber == 1)
                 {
-                    GameState.instance.collectedStarsInLevelsWorld1[levelNumber - 1] = FindObjectOfType<LevelInfo>().collectedStars;
-                }
-            }
-            else if(worldNumber == 2)
-            {
-                GameState.instance.completedLevelsWorld2[levelNumber - 1] = true;
+                    GameState.instance.completedLevelsWorld1[levelNumber - 1] = true;
 
-                if(GameState.instance.collectedStarsInLevelsWorld2[levelNumber - 1] < FindObjectOfType<LevelInfo>().collectedStars)
+                    if(GameState.instance.collectedStarsInLevelsWorld1[levelNumber - 1] < FindObjectOfType<LevelInfo>().collectedStars)
+                    {
+                        GameState.instance.collectedStarsInLevelsWorld1[levelNumber - 1] = FindObjectOfType<LevelInfo>().collectedStars;
+                    }
+                }
+                else if(worldNumber == 2)
                 {
-                    GameState.instance.collectedStarsInLevelsWorld2[levelNumber - 1] = FindObjectOfType<LevelInfo>().collectedStars;
-                }
-            }
+                    GameState.instance.completedLevelsWorld2[levelNumber - 1] = true;
 
-            GameState.instance.lastLevel[0] = worldNumber;
-            GameState.instance.lastLevel[1] = levelNumber;
+                    if(GameState.instance.collectedStarsInLevelsWorld2[levelNumber - 1] < FindObjectOfType<LevelInfo>().collectedStars)
+                    {
+                        GameState.instance.collectedStarsInLevelsWorld2[levelNumber - 1] = FindObjectOfType<LevelInfo>().collectedStars;
+                    }
+                }
+
+                GameState.instance.lastLevel[0] = worldNumber;
+                GameState.instance.lastLevel[1] = levelNumber;
+
+            }
 
             GameState.instance.SaveGameState();
             StartCoroutine(LoadNextLevel());
