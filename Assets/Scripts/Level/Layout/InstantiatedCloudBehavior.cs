@@ -73,8 +73,6 @@ public class InstantiatedCloudBehavior : MonoBehaviour
         matrixCoordinates = MatrixManager.instance.FromWorldToMatrixIndex(transform.position);
         objectNumber = MatrixManager.instance.GetItemsLayoutMatrix()[matrixCoordinates[0], matrixCoordinates[1]];
         mechanicNumber = MatrixManager.instance.GetMechanicsLayoutMatrix()[matrixCoordinates[0], matrixCoordinates[1]];
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
-        myAnimator = GetComponent<Animator>();
 
         for (int index = 0; index < adyacentTiles.Length; index ++)
         {
@@ -107,6 +105,7 @@ public class InstantiatedCloudBehavior : MonoBehaviour
                     }*/
                     if(tileType == 999)
                     {
+                        //If this tile is floor and check if adyacent are floor or spiked floor (USELES FOR CLOUDS)
                         if (Mathf.Abs(MatrixManager.instance.GetItemsLayoutMatrix()[matrixCoordinates[0] + i, matrixCoordinates[1] + j]) == Mathf.Abs(objectNumber))
                         {
                             if ( i == -1 && j ==  0) adyacentTiles[0] =  true;
@@ -118,6 +117,7 @@ public class InstantiatedCloudBehavior : MonoBehaviour
 
                     else if(tileType == -999)
                     {
+                        //If this tile is spikes and check if adyacent spikes (USELES FOR CLOUDS)
                         if (MatrixManager.instance.GetMechanicsLayoutMatrix()[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == mechanicNumber)
                         {
                             if ( i == -1 && j ==  0) adyacentTiles[0] =  true;
@@ -129,6 +129,7 @@ public class InstantiatedCloudBehavior : MonoBehaviour
                     }
                     else
                     {
+                        //If this tile is cloud and check if adyacent are clouds
                         if (MatrixManager.instance.GetItemsLayoutMatrix()[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == objectNumber /*|| itemsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == objectNumber + 4000*/)
                         {
                             if ( i == -1 && j ==  0) adyacentTiles[0] =  true;
@@ -147,6 +148,7 @@ public class InstantiatedCloudBehavior : MonoBehaviour
             if(adyacentTiles[index])adyacentTilesNumber++;
         }
 
+        //Initialize to default values
         mySpriteRenderer.flipX = false;
         mySpriteRenderer.flipY = false;
         transform.Rotate(0,0,0,Space.Self);
@@ -295,7 +297,7 @@ public class InstantiatedCloudBehavior : MonoBehaviour
         else if(adyacentTilesForShadow[1] && !adyacentTilesForShadow[4]) Instantiate(tileShadow, transform.position + new Vector3(0, -shadowToWorldCorrection, 0), Quaternion.identity, gameObject.transform);
     }
 
-    public int GetobjectNumber()
+    public int GetObjectNumber()
     {
         return objectNumber;
     }
