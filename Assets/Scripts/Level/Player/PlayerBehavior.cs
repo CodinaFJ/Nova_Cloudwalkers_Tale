@@ -94,8 +94,8 @@ public class PlayerBehavior : MonoBehaviour
     public int GetMechanicUnderPj() => MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]];
 
     //On level finished we need the PJ to keep walking towards the exit
-    public void ExitThroughDoor() => PjInputManager.instance.KeepMoving(lastMovement);
-
+    public void ExitThroughDoor() => PjInputManager.instance.KeepMoving();
+    
     //States saved while solving a puzzle. Ued for the UNDO button
     public void LoadLevelStatePlayer(int[] _pjCell, int _starsCollected)
     {     

@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     public void PjToExit()
     {
         PauseGame();
-        FindObjectOfType<PlayerBehavior>().ExitThroughDoor();
+        PlayerBehavior.instance.ExitThroughDoor();
     }
 
     public void ToEndDemo()

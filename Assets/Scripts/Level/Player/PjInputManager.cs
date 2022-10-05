@@ -280,19 +280,27 @@ public class PjInputManager : MonoBehaviour
         return pjMovements;
     }
 
-    public void KeepMoving(int lastMovement)
+    public void KeepMoving()
     {
         int movementToAdd;
-        if(itemsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1] + 1] == 999)
-        {
+        int[] lastCell = new int[2];
+        if(itemsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1] + 1] == 999){
+            lastCell[0] = playerBehavior.pjCell[0];
+            lastCell[1] = itemsLayoutMatrix.GetLength(1) - 1;
             movementToAdd = 1;
-        }
-        else
-        {
+        }else{
+            lastCell[0] = 0;
+            lastCell[1] = playerBehavior.pjCell[1];
             movementToAdd = 2;
         }
 
+        Vector3 pos = MatrixManager.instance.FromMatrixIndexToWorld(lastCell[0], lastCell[1]);
+
+        //VirtualClick(pos);
+
+
         pjMovementsPress = new int[10];
+
         for (int i = 0; i < 10; i++)
         {
             pjMovementsPress[i] = movementToAdd;
@@ -387,10 +395,9 @@ public class PjInputManager : MonoBehaviour
         pjIdle = false;  
     }
 
-    void OnFindPath()
+    void OnFindPath(Vector3 mouseWorldPos)
     {
         //Initial mouse and cloud values needed for cloud movement algorythm
-        Vector3 mouseWorldPos = GetMouseWorldPos();
         Vector3 mouseCellCenter = new Vector3(Mathf.FloorToInt(mouseWorldPos.x), Mathf.FloorToInt(mouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
         int[] onClickMatrixCoor = GetMouseMatrixIndex();
         if(onClickMatrixCoor == null) return;
@@ -453,7 +460,7 @@ public class PjInputManager : MonoBehaviour
         if(Vector3.Magnitude(GetMouseWorldPos() - onClickMouseWorldPos) > releaseMouseTolerance && !wallLevel) return;
 
         if(!playerBehavior.clickIsForCloud)
-        OnFindPath();
+        OnFindPath(GetMouseWorldPos());
     }
 
     public void OnLeftClick()
@@ -461,6 +468,14 @@ public class PjInputManager : MonoBehaviour
         playerBehavior.clickIsForCloud = false;
 
         onClickMouseWorldPos = GetMouseWorldPos();
+    }
+
+    private void VirtualClick(Vector3 pos){
+        playerBehavior.clickIsForCloud = false;
+        onClickMouseWorldPos = pos;
+
+        Debug.Log("In VirtualClick");
+        OnFindPath(pos);
     }
 
     

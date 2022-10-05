@@ -49,14 +49,13 @@ public class LevelFinish : MonoBehaviour
             GameState.instance.lastLevel[1] = levelNumber;
 
             GameState.instance.SaveGameState();
-            StartCoroutine(LoadNextLevel());
+            gameManager.PjToExit();
+            //StartCoroutine(LoadNextLevel());
         }
     }
 
     IEnumerator LoadNextLevel()
     {
-        gameManager.PjToExit();
-        //yield return new WaitForSecondsRealtime(0.5f);
         AudioManager.instance.PlaySound("LevelExit");
         yield return new WaitForSecondsRealtime(levelLoadDelay);
 
@@ -71,6 +70,8 @@ public class LevelFinish : MonoBehaviour
             else gameManager.ToMap();
         }
         else gameManager.ToMap();
+
+        yield break;
         
     }
 }
