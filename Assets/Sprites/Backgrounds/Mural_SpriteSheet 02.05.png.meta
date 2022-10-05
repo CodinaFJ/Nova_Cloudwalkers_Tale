@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 7eeb67c19a780ab429e54109570d2b67
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5780794011632725939
+    second: Mural_SpriteSheet 02.05_0
+  - first:
+      213: 1027846352886991189
+    second: Mural_SpriteSheet 02.05_4
+  - first:
+      213: -7294441827406828946
+    second: Mural_SpriteSheet 02.05_5
+  - first:
+      213: -190779686730089270
+    second: Mural_SpriteSheet 02.05_14
+  - first:
+      213: -811697732775595411
+    second: Mural_SpriteSheet 02.05_15
+  - first:
+      213: -6056496616683187884
+    second: Mural_SpriteSheet 02.05_19
+  - first:
+      213: 6931198119335723351
+    second: Mural_SpriteSheet 02.05_24
+  - first:
+      213: 9062513278092208946
+    second: Mural_SpriteSheet 02.05_1
+  - first:
+      213: 9216554117285786333
+    second: Mural_SpriteSheet 02.05_2
+  - first:
+      213: 7925702270699934462
+    second: Mural_SpriteSheet 02.05_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +119,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2193
+        width: 522
+        height: 1898
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfe21f8681893050800000000000000
+      internalID: 5780794011632725939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2451
+        width: 1808
+        height: 1642
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559828befc4a34e00800000000000000
+      internalID: 1027846352886991189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_5
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 2247
+        width: 1745
+        height: 1846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a2aaa3ecfe4ca90800000000000000
+      internalID: -7294441827406828946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_14
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 578
+        width: 2317
+        height: 1654
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accb71eb2e63a5df0800000000000000
+      internalID: -190779686730089270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2004
+        width: 161
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62bbec66354cb4f0800000000000000
+      internalID: -811697732775595411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_19
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1832
+        width: 164
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4515e337a6003fba0800000000000000
+      internalID: -6056496616683187884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 1487
+        height: 1811
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7518cda67ff803060800000000000000
+      internalID: 6931198119335723351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_1
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 313
+        width: 674
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b62f8afc384cd70800000000000000
+      internalID: 9062513278092208946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_2
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 185
+        width: 676
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2bbf56327c7ef70800000000000000
+      internalID: 9216554117285786333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mural_SpriteSheet 02.05_3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 2193
+        width: 136
+        height: 1898
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef293981930cdfd60800000000000000
+      internalID: 7925702270699934462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -99,7 +339,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: dc9094b8daa965f43b7073e530e0d8d0, type: 3}
+      name: _NormalMap
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

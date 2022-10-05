@@ -95,6 +95,96 @@ TextureImporter:
   - first:
       213: -3764747685045493581
     second: Nova_Suelo_Sprite Sheet_30
+  - first:
+      213: 7972031272373410525
+    second: Nova_Suelo_Sprite Sheet_31
+  - first:
+      213: -3543231769836391890
+    second: Nova_Suelo_Sprite Sheet_32
+  - first:
+      213: 1977564369513386398
+    second: Nova_Suelo_Sprite Sheet_33
+  - first:
+      213: 276929034405022203
+    second: Nova_Suelo_Sprite Sheet_34
+  - first:
+      213: -5075782966212811542
+    second: Nova_Suelo_Sprite Sheet_35
+  - first:
+      213: -1453196496225411145
+    second: Nova_Suelo_Sprite Sheet_36
+  - first:
+      213: 4943748147934485438
+    second: Nova_Suelo_Sprite Sheet_37
+  - first:
+      213: 6935810424214603891
+    second: Nova_Suelo_Sprite Sheet_38
+  - first:
+      213: -1786761767016543956
+    second: Nova_Suelo_Sprite Sheet_39
+  - first:
+      213: -7631992493049277458
+    second: Nova_Suelo_Sprite Sheet_40
+  - first:
+      213: -113513159059264790
+    second: Nova_Suelo_Sprite Sheet_41
+  - first:
+      213: 3708054072942612823
+    second: Nova_Suelo_Sprite Sheet_42
+  - first:
+      213: -4736303520910899744
+    second: Nova_Suelo_Sprite Sheet_43
+  - first:
+      213: 8735881379201539130
+    second: Nova_Suelo_Sprite Sheet_44
+  - first:
+      213: -220259518267005362
+    second: Nova_Suelo_Sprite Sheet_47
+  - first:
+      213: 7088021834446062682
+    second: Nova_Suelo_Sprite Sheet_92
+  - first:
+      213: -7695770856707335948
+    second: Nova_Suelo_Sprite Sheet_93
+  - first:
+      213: 3302314139988152459
+    second: Nova_Suelo_Sprite Sheet_94
+  - first:
+      213: 8355967944939522488
+    second: Nova_Suelo_Sprite Sheet_95
+  - first:
+      213: -5508031588783438457
+    second: Nova_Suelo_Sprite Sheet_96
+  - first:
+      213: -7957507683338456151
+    second: Nova_Suelo_Sprite Sheet_97
+  - first:
+      213: -575958449470866631
+    second: Nova_Suelo_Sprite Sheet_98
+  - first:
+      213: -2122735440934534063
+    second: Nova_Suelo_Sprite Sheet_99
+  - first:
+      213: -2736181691196632474
+    second: Nova_Suelo_Sprite Sheet_100
+  - first:
+      213: -2702364598041883507
+    second: Nova_Suelo_Sprite Sheet_101
+  - first:
+      213: 6392975522578350237
+    second: Nova_Suelo_Sprite Sheet_102
+  - first:
+      213: -5674613515046310886
+    second: Nova_Suelo_Sprite Sheet_103
+  - first:
+      213: 1037551520177944815
+    second: Nova_Suelo_Sprite Sheet_104
+  - first:
+      213: -3994844422559495146
+    second: Nova_Suelo_Sprite Sheet_113
+  - first:
+      213: 3678154181453922710
+    second: Nova_Suelo_Sprite Sheet_114
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -855,7 +945,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -876,7 +966,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -897,7 +987,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -918,7 +1008,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -939,7 +1029,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -960,7 +1050,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -981,7 +1071,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1002,7 +1092,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1023,7 +1113,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1044,7 +1134,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1065,7 +1155,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1086,7 +1176,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1107,7 +1197,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1128,7 +1218,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1149,7 +1239,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1170,7 +1260,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1191,7 +1281,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1212,7 +1302,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1233,7 +1323,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1254,7 +1344,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1275,7 +1365,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1296,7 +1386,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1317,7 +1407,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1338,7 +1428,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1359,7 +1449,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1380,7 +1470,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1401,7 +1491,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1422,7 +1512,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1443,7 +1533,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1464,7 +1554,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1485,7 +1575,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1506,7 +1596,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1527,7 +1617,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1548,7 +1638,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1569,7 +1659,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1590,7 +1680,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1611,7 +1701,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1632,7 +1722,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1653,7 +1743,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1674,7 +1764,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1695,7 +1785,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1716,7 +1806,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1737,7 +1827,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1758,7 +1848,7 @@ TextureImporter:
         width: 204
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1766,6 +1856,636 @@ TextureImporter:
       bones: []
       spriteID: 1b015ae9b18056a90800000000000000
       internalID: -7321436704502116175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda5f10643852ae60800000000000000
+      internalID: 7972031272373410525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22f50a6a79e3dec0800000000000000
+      internalID: -3543231769836391890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9190550158b17b10800000000000000
+      internalID: 1977564369513386398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf904b35d79d7d300800000000000000
+      internalID: 276929034405022203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae428ede8423f89b0800000000000000
+      internalID: -5075782966212811542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf54ad6c7535dbe0800000000000000
+      internalID: -1453196496225411145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb51a85fb8bb9440800000000000000
+      internalID: 4943748147934485438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37843c455d2f04060800000000000000
+      internalID: 6935810424214603891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29cabab3a52437e0800000000000000
+      internalID: -1786761767016543956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3995b7347b51690800000000000000
+      internalID: -7631992493049277458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeaa0fc1268bc6ef0800000000000000
+      internalID: -113513159059264790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7515fa18887a57330800000000000000
+      internalID: 3708054072942612823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e58cafaa05454eb0800000000000000
+      internalID: -4736303520910899744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 3315
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3cd14764d51c3970800000000000000
+      internalID: 8735881379201539130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46eb47922b71fcf0800000000000000
+      internalID: -220259518267005362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54ce52fd46bd5260800000000000000
+      internalID: 7088021834446062682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8d7250e21233590800000000000000
+      internalID: -7695770856707335948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b805eb2c63d24dd20800000000000000
+      internalID: 3302314139988152459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9cba8f29c56f370800000000000000
+      internalID: 8355967944939522488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785ceeae37a8f83b0800000000000000
+      internalID: -5508031588783438457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a37b253ce0419190800000000000000
+      internalID: -7957507683338456151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b77ed77d8c108f0800000000000000
+      internalID: -575958449470866631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15407fafc578a82e0800000000000000
+      internalID: -2122735440934534063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6621c4faf31270ad0800000000000000
+      internalID: -2736181691196632474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c4f1047b54f7ad0800000000000000
+      internalID: -2702364598041883507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90cc09cd5968b850800000000000000
+      internalID: 6392975522578350237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ca80ec219bf31b0800000000000000
+      internalID: -5674613515046310886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 3315
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe87f544c9f166e00800000000000000
+      internalID: 1037551520177944815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_113
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 59
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c046cc9267f88c0800000000000000
+      internalID: -3994844422559495146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_Suelo_Sprite Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 59
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691cda68dbd6b0330800000000000000
+      internalID: 3678154181453922710
       vertices: []
       indices: 
       edges: []

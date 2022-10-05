@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 454c815156e85ce4c9fdbfeb1922575d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6343778871767483589
+    second: "Men\xFAInicio anim_SpriteSheet 01_0"
+  - first:
+      213: -3305475142446368539
+    second: "Men\xFAInicio anim_SpriteSheet 01_1"
+  - first:
+      213: 3306035302977333023
+    second: "Men\xFAInicio anim_SpriteSheet 01_2"
+  - first:
+      213: 4375287080174789345
+    second: "Men\xFAInicio anim_SpriteSheet 01_3"
+  - first:
+      213: -525727082263584712
+    second: "Men\xFAInicio anim_SpriteSheet 01_4"
+  - first:
+      213: 476435367019411249
+    second: "Men\xFAInicio anim_SpriteSheet 01_5"
+  - first:
+      213: 8991422647590294068
+    second: "Men\xFAInicio anim_SpriteSheet 01_6"
+  - first:
+      213: 4655644492285208542
+    second: "Men\xFAInicio anim_SpriteSheet 01_7"
+  - first:
+      213: -5582806061260503147
+    second: "Men\xFAInicio anim_SpriteSheet 01_8"
+  - first:
+      213: -708019968867563412
+    second: "Men\xFAInicio anim_SpriteSheet 01_9"
+  - first:
+      213: 8136758546597434093
+    second: "Men\xFAInicio anim_SpriteSheet 01_10"
+  - first:
+      213: 7193404965939914873
+    second: "Men\xFAInicio anim_SpriteSheet 01_11"
+  - first:
+      213: -5252932383750806554
+    second: "Men\xFAInicio anim_SpriteSheet 01_12"
+  - first:
+      213: -8977857374917741352
+    second: "Men\xFAInicio anim_SpriteSheet 01_13"
+  - first:
+      213: 6591715339877557376
+    second: "Men\xFAInicio anim_SpriteSheet 01_14"
+  - first:
+      213: -4456840217267714079
+    second: "Men\xFAInicio anim_SpriteSheet 01_15"
+  - first:
+      213: -192686304096076248
+    second: "Men\xFAInicio anim_SpriteSheet 01_16"
+  - first:
+      213: -4093659988063814432
+    second: "Men\xFAInicio anim_SpriteSheet 01_17"
+  - first:
+      213: 5959734802049590285
+    second: "Men\xFAInicio anim_SpriteSheet 01_18"
+  - first:
+      213: 8182826348548807439
+    second: "Men\xFAInicio anim_SpriteSheet 01_19"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 204
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1602
+        width: 371
+        height: 446
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c44459e541a90850800000000000000
+      internalID: 6343778871767483589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_1"
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1602
+        width: 371
+        height: 446
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8b9900fd79022d0800000000000000
+      internalID: -3305475142446368539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_2"
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 1602
+        width: 371
+        height: 446
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f176dd8879561ed20800000000000000
+      internalID: 3306035302977333023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_3"
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1602
+        width: 371
+        height: 446
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2ac2c0b6428bc30800000000000000
+      internalID: 4375287080174789345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_4"
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1602
+        width: 371
+        height: 446
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83060ec010e34b8f0800000000000000
+      internalID: -525727082263584712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_5"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1137
+        width: 329
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137ff992173ac9600800000000000000
+      internalID: 476435367019411249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_6"
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1137
+        width: 329
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43295076243f7cc70800000000000000
+      internalID: 8991422647590294068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_7"
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1137
+        width: 329
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7e923cffb2c9040800000000000000
+      internalID: 4655644492285208542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_8"
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 1137
+        width: 329
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5978bac5773e582b0800000000000000
+      internalID: -5582806061260503147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_9"
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 1137
+        width: 329
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6804cde69b9c26f0800000000000000
+      internalID: -708019968867563412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_10"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 726
+        width: 281
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de25019a9c29be070800000000000000
+      internalID: 8136758546597434093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_11"
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 726
+        width: 281
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978216844bb14d360800000000000000
+      internalID: 7193404965939914873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_12"
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 726
+        width: 281
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3236504d5d917b0800000000000000
+      internalID: -5252932383750806554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_13"
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 726
+        width: 281
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d438e3c84e386380800000000000000
+      internalID: -8977857374917741352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_14"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 337
+        width: 252
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08425ed5d2a7a7b50800000000000000
+      internalID: 6591715339877557376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_15"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 337
+        width: 252
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7451d8f6f1622c0800000000000000
+      internalID: -4456840217267714079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_16"
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 337
+        width: 252
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e354bc3d0735df0800000000000000
+      internalID: -192686304096076248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_17"
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 337
+        width: 252
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecf9341ee56037c0800000000000000
+      internalID: -4093659988063814432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_18"
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 337
+        width: 252
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04e2b7f93b35b250800000000000000
+      internalID: 5959734802049590285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Men\xFAInicio anim_SpriteSheet 01_19"
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 337
+        width: 252
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b55f3a53d3f8170800000000000000
+      internalID: 8182826348548807439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

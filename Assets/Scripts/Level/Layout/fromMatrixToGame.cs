@@ -78,8 +78,12 @@ public class fromMatrixToGame : MonoBehaviour
             whiteCloudsTilemapRederers[i].enabled = false;
         }
 
-        floorTilemap.enabled = false;
-        floorTilemapRenderer.enabled = false;
+        if(!LevelInfo.instance.wallLevel)
+        {
+            floorTilemap.enabled = false;
+            floorTilemapRenderer.enabled = false;
+        }
+        
 
         spikedFloorTilemap.enabled = false;
         spikedFloorTilemapRenderer.enabled = false;

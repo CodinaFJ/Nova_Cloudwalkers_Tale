@@ -18,6 +18,8 @@ public class TilemapsLevelLayout : MonoBehaviour
     [HideInInspector]
     public Tilemap[] cloudsTilemaps;
 
+    public Tilemap blockTilemap;
+
     void Awake()
     {
 
