@@ -19,7 +19,7 @@ public class InstantiatedCloudBehavior : MonoBehaviour
     [HideInInspector]
     public GameObject myMovementParticles;
 
-    Animator myAnimator;
+    //Animator myAnimator;
     private string currentState;
 
     //Animations names
@@ -58,7 +58,7 @@ public class InstantiatedCloudBehavior : MonoBehaviour
         objectNumber = MatrixManager.instance.GetItemsLayoutMatrix()[matrixCoordinates[0], matrixCoordinates[1]];
         mechanicNumber = MatrixManager.instance.GetMechanicsLayoutMatrix()[matrixCoordinates[0], matrixCoordinates[1]];*/
 
-        myAnimator = GetComponent<Animator>();
+        //myAnimator = GetComponent<Animator>();
 
         SelectCorrectSprite();
 
@@ -235,7 +235,7 @@ public class InstantiatedCloudBehavior : MonoBehaviour
     
         else if(adyacentTilesNumber==4)
         {
-            myAnimator.enabled = false;
+            //myAnimator.enabled = false;
             mySpriteRenderer.sprite = tile4;
 
         } 
@@ -310,12 +310,12 @@ public class InstantiatedCloudBehavior : MonoBehaviour
     public void ChangeAnimationState(string newState)
     {
         //stop the same animation from interrupting itself
-        if(currentState == newState) return;
+        /*if(currentState == newState) return;
 
         //play the animation
         myAnimator.Play(newState);
 
         //reassign the current state
-        currentState = newState;
+        currentState = newState;*/
     }
 }
