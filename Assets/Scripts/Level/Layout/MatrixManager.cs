@@ -143,6 +143,7 @@ public class MatrixManager : MonoBehaviour
 
                 int[] matrixPosition = {(int)(coordinatesOriginMatrix.y - cellPosition.y), (int)(cellPosition.x - coordinatesOriginMatrix.x)};
                 if(tile.name == "CrystalRuleTile" && valueForItem == valueForFloor) itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem - 1;
+                if(tile.name == "CrystalFloorRuleTile" && valueForItem == valueForFloor) itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem - 1;
                 else if(itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] == valueForBorder) continue;
                 else itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem;
             }
