@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 
 public class TilemapsLevelLayout : MonoBehaviour
 {
+    public static TilemapsLevelLayout instance;
     int[,] levelLayoutMatrix;
     Vector3 coordinatesOriginMatrix = new Vector3 (0f,0f,0f);
 
@@ -22,7 +23,7 @@ public class TilemapsLevelLayout : MonoBehaviour
 
     void Awake()
     {
-
+        if(instance == null) instance = this;
     }
 
     void Update()
