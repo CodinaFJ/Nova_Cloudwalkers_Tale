@@ -6,10 +6,12 @@ public class TileBehavior : MonoBehaviour
 {
     [SerializeField]
     protected TileType tileType;
-    protected enum TileType{
-        Floor, CrystalFloor, SpikedFloor,
-        WhiteCloud, GreyCloud, CrystalCloudBot, CrystalCloudTop, ThunderCloud
-    }
+
+    [Header("Tile Shadow")]
+    [SerializeField] 
+    GameObject tileShadow;
+    [SerializeField] 
+    float shadowToWorldCorrection = 0.85f;
 
     SpriteRenderer mySpriteRenderer;
 
@@ -23,11 +25,15 @@ public class TileBehavior : MonoBehaviour
 
     // 0-up, 1-left, 2-down, 3-right
     bool[] adyacentTiles = new bool[4];
+    bool[] adyacentTilesForShadow = new bool[5];
     int adyacentTilesNumber = 0;
+
+    protected TileSpritesBundle tileSpritesBundle;
 
     private void Start() {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
 
+        SetTileSpritesBundle();
         InitilizeTileInfo();
         SelectCorrectSprite();
     }
@@ -36,7 +42,9 @@ public class TileBehavior : MonoBehaviour
     {
         itemsLayoutMatrix = MatrixManager.instance.GetItemsLayoutMatrix();
         mechanicsLayoutMatrix = MatrixManager.instance.GetMechanicsLayoutMatrix();
+
         matrixCoordinates = MatrixManager.instance.FromWorldToMatrixIndex(transform.position);
+
         itemNumber = itemsLayoutMatrix[matrixCoordinates[0], matrixCoordinates[1]];
         mechanicNumber = mechanicsLayoutMatrix[matrixCoordinates[0], matrixCoordinates[1]];
     }
@@ -47,71 +55,49 @@ public class TileBehavior : MonoBehaviour
 
         SetAndOrientateSprites();
 
-        //Once the tile is correctly instatiated, the proper shadow is instantiated
         InstantiateShadow();
     }
 
 
-    protected virtual void CalculateAdyacentTiles()
-    {
+    protected virtual void CalculateAdyacentTiles(){
         // 0-up, 1-left, 2-down, 3-right
         adyacentTiles = new bool[4];
 
         for (int index = 0; index < adyacentTiles.Length; index ++)
-        {
             adyacentTiles[index] = false;
-        }
 
         adyacentTilesNumber = 0;
+
+        int numberToCompare = AssignNumberToCompare();
         
-        for (int i = -1; i < 2; i++)
-        {
-            for (int j = -1; j < 2; j++)
-            {
+        for (int i = -1; i < 2; i++){
+            for (int j = -1; j < 2; j++){
                 //Mathf.Abs(i + j) == 1 used to limit the checked tiles to the one at the right/left/up/down
-                if (Mathf.Abs(i + j) == 1 && CheckCoordinatesInMatrix(i,j))
-                {
-                    if(tileType == TileType.Floor)
-                    {
-                        if (Mathf.Abs(itemsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j]) == Mathf.Abs(itemNumber))
-                        {
-                            if ( i == -1 && j ==  0) adyacentTiles[0] =  true;
-                            if ( i ==  0 && j == -1) adyacentTiles[1] =  true;
-                            if ( i ==  1 && j ==  0) adyacentTiles[2] =  true;
-                            if ( i ==  0 && j ==  1) adyacentTiles[3] =  true;
-                        }
-                    }
-
-                    else if(tileType == TileType.SpikedFloor)
-                    {
-                        if (mechanicsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == mechanicNumber)
-                        {
-                            if ( i == -1 && j ==  0) adyacentTiles[0] =  true;
-                            if ( i ==  0 && j == -1) adyacentTiles[1] =  true;
-                            if ( i ==  1 && j ==  0) adyacentTiles[2] =  true;
-                            if ( i ==  0 && j ==  1) adyacentTiles[3] =  true;
-                            
-                        }
-                    }
-                    else
-                    {
-                        if (itemsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == itemNumber)
-                        {
-                            if ( i == -1 && j ==  0) adyacentTiles[0] =  true;
-                            if ( i ==  0 && j == -1) adyacentTiles[1] =  true;
-                            if ( i ==  1 && j ==  0) adyacentTiles[2] =  true;
-                            if ( i ==  0 && j ==  1) adyacentTiles[3] =  true;
-                        }
-                    }
-                }
-
+                if (Mathf.Abs(i + j) == 1 && CheckCoordinatesInMatrix(i,j) && Mathf.Abs(itemsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j]) == numberToCompare)
+                    FillAdyacentTiles(i,j);
             }
         }
 
         for (int index = 0; index < adyacentTiles.Length; index ++)
-        {
             if(adyacentTiles[index])adyacentTilesNumber++;
-        }
+    }
+
+    protected int AssignNumberToCompare(){
+        if(tileType == TileType.Floor)
+            return Mathf.Abs(itemNumber);
+
+        else if(tileType == TileType.SpikedFloor)
+            return mechanicNumber;
+        
+        else
+            return itemNumber;
+    }
+
+    protected void FillAdyacentTiles(int i, int j){
+        if ( i == -1 && j ==  0) adyacentTiles[0] =  true;
+        if ( i ==  0 && j == -1) adyacentTiles[1] =  true;
+        if ( i ==  1 && j ==  0) adyacentTiles[2] =  true;
+        if ( i ==  0 && j ==  1) adyacentTiles[3] =  true;
     }
 
     protected void SetAndOrientateSprites()
@@ -120,12 +106,12 @@ public class TileBehavior : MonoBehaviour
         //Then sprite is rotated or fliped to match the postion
         if(adyacentTilesNumber==0)
         {
-            mySpriteRenderer.sprite = tile0;
+            mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.None).sprite;
         } 
 
         else if(adyacentTilesNumber==1) 
         {
-            mySpriteRenderer.sprite = tile1;
+            mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.One).sprite;
 
             if(adyacentTiles[0])
             {
@@ -140,35 +126,33 @@ public class TileBehavior : MonoBehaviour
             {
                 mySpriteRenderer.flipX = true;
             }
-
         }
 
         else if(adyacentTilesNumber==2)
         {
             if(adyacentTiles[0] && adyacentTiles[2])
             {
-                mySpriteRenderer.sprite = tile2Parallel;
+                mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.TwoMiddle).sprite;
                 transform.Rotate(0,0,90,Space.Self);
             }
             else if(adyacentTiles[1] && adyacentTiles[3])
             {
-                mySpriteRenderer.sprite = tile2Parallel;
+                mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.TwoMiddle).sprite;
             }
             else
             {
-                mySpriteRenderer.sprite = tile2Corner;
+                mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.TwoCorner).sprite;
 
                 if     (adyacentTiles[0] && adyacentTiles[1]) transform.Rotate(0,0,180,Space.Self);
                 else if(adyacentTiles[1] && adyacentTiles[2]) mySpriteRenderer.flipX = true;
                 //   if(adyacentTiles[2] && adyacentTiles[3]) transform.Rotate(0,0,  0,Space.Self); Initial position
                 else if(adyacentTiles[3] && adyacentTiles[0]) mySpriteRenderer.flipY = true;
-
             }
         }
 
         else if(adyacentTilesNumber==3)
         {
-            mySpriteRenderer.sprite = tile3;
+            mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.Three).sprite;
 
                 //   if(!adyacentTiles[0]) transform.Rotate(0,0,  0,Space.Self); Initial Position
                 if     (!adyacentTiles[1]) transform.Rotate(0,0, 90,Space.Self);
@@ -176,7 +160,7 @@ public class TileBehavior : MonoBehaviour
                 else if(!adyacentTiles[3]) transform.Rotate(0,0,-90,Space.Self);
         }
     
-        else if(adyacentTilesNumber==4) mySpriteRenderer.sprite = tile4;
+        else if(adyacentTilesNumber==4) mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.Four).sprite;
 
         else Debug.Log("Error in adyacent tiles");
     }
@@ -196,9 +180,9 @@ public class TileBehavior : MonoBehaviour
             {
                 if (CheckCoordinatesInMatrix(i,j))
                 {
-                    if(objectNumber == -999 || objectNumber == 999)
+                    if(itemNumber == -999 || itemNumber == 999)
                     {
-                        if (Mathf.Abs(itemsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j]) == Mathf.Abs(objectNumber))
+                        if (Mathf.Abs(itemsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j]) == Mathf.Abs(itemNumber))
                         {
                                 if ( i ==  0 && j == -1) adyacentTilesForShadow[0] =  true;
                             else if ( i ==  0 && j ==  1) adyacentTilesForShadow[1] =  true;
@@ -207,7 +191,7 @@ public class TileBehavior : MonoBehaviour
                             else if ( i ==  1 && j ==  1) adyacentTilesForShadow[4] =  true;
                         }
                     }
-                    else if (itemsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == objectNumber)
+                    else if (itemsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == itemNumber)
                     {
                              if ( i ==  0 && j == -1) adyacentTilesForShadow[0] =  true;
                         else if ( i ==  0 && j ==  1) adyacentTilesForShadow[1] =  true;
@@ -235,6 +219,10 @@ public class TileBehavior : MonoBehaviour
                                         matrixCoordinates[0] + i < itemsLayoutMatrix.GetLength(0) && matrixCoordinates[1] + j < itemsLayoutMatrix.GetLength(1);
 
         return indexInMatrixBoundaries;
+    }
+
+    protected void SetTileSpritesBundle(){
+        tileSpritesBundle = AssetsRepository.instance.GetSpritesBundle(tileType, LevelInfo.instance.GetLevelWorldNumber());
     }
 
 }

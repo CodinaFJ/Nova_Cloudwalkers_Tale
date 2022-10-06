@@ -23,5 +23,9 @@ public class AssetsRepository : MonoBehaviour
     List<WorldAssets> worldAssetsList = new List<WorldAssets>(4);
 
     [SerializeField]
-    List<CloudTileSpritesBundle> cloudTileSpritesBundles;
+    List<TileSpritesBundle> cloudTileSpritesBundles;
+
+    public TileSpritesBundle GetSpritesBundle(TileType tileType, int worldNumber){
+        return worldAssetsList.Find(x => x.worldNumber == worldNumber).floorTileSpritesBundles.Find(x => x.tileType == tileType && x.shadowTiles == false);
+    }
 }

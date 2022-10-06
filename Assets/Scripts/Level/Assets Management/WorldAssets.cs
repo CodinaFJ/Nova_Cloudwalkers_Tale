@@ -15,7 +15,7 @@ public class WorldAssets
     [Header("Visuals")]
     public Sprite backgroundImage;
 
-    public List<FloorTileSpritesBundle> floorTileSpritesBundles = new List<FloorTileSpritesBundle>(5);
+    public List<TileSpritesBundle> floorTileSpritesBundles = new List<TileSpritesBundle>(5);
 }
 
 public enum SpriteBoundaries{
@@ -23,29 +23,19 @@ public enum SpriteBoundaries{
 }
 
 [System.Serializable]
-public struct OrientedSprite{
+public struct TileableSprite{
     public SpriteBoundaries boundaries;
     public Sprite sprite;
 }
 
-public enum FloorTileType{
-    Floor, CrystalFloor, SpikedFloor
-}
-
-public enum CloudTileType{
+public enum TileType{
+    Floor, CrystalFloor, SpikedFloor,
     WhiteCloud, GreyCloud, CrystalCloudBot, CrystalCloudTop, ThunderCloud
 }
 
 [System.Serializable]
-public struct FloorTileSpritesBundle{
-    public FloorTileType floorTileType;
+public struct TileSpritesBundle{
+    public TileType tileType;
     public bool shadowTiles;
-    public List<OrientedSprite> spritesList;
-}
-
-[System.Serializable]
-public struct CloudTileSpritesBundle{
-    public CloudTileType cloudTileType;
-    public bool shadowTiles;
-    public List<OrientedSprite> spritesList;
+    public List<TileableSprite> spritesList;
 }
