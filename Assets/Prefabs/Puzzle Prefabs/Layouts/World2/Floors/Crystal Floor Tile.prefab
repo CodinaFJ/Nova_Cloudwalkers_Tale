@@ -70,10 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 399705075
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7f0221d599bc9de449a6472ed7bdb061, type: 3}
-  m_Color: {r: 1, g: 0.5019608, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -95,12 +95,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19f6153ebac3204184d53ae6c221d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileShadow: {fileID: 2404473863140462609, guid: 32e36414a61a80e4094655379cc0ce24, type: 3}
-  tile0: {fileID: 21300000, guid: 1704a02eecd5afb438095b989ba5aabb, type: 3}
-  tile1: {fileID: 21300000, guid: 1704a02eecd5afb438095b989ba5aabb, type: 3}
-  tile2Corner: {fileID: 21300000, guid: 1704a02eecd5afb438095b989ba5aabb, type: 3}
-  tile2Parallel: {fileID: 21300000, guid: 1704a02eecd5afb438095b989ba5aabb, type: 3}
-  tile3: {fileID: 21300000, guid: 1704a02eecd5afb438095b989ba5aabb, type: 3}
-  tile4: {fileID: 21300000, guid: 1704a02eecd5afb438095b989ba5aabb, type: 3}
+  tileShadow: {fileID: 2404473863140462609, guid: 64a2343ae1ec7504b804d1143cb7c05b, type: 3}
+  tile0: {fileID: -3994844422559495146, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
+  tile1: {fileID: -3994844422559495146, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
+  tile2Corner: {fileID: -3994844422559495146, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
+  tile2Parallel: {fileID: -3994844422559495146, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
+  tile3: {fileID: -3994844422559495146, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
+  tile4: {fileID: -3994844422559495146, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
   tileType: 5
   shadowToWorldCorrection: 0.85

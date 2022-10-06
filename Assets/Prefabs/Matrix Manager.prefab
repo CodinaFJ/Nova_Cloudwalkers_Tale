@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 8754337548083080888}
   - component: {fileID: 8754337548083080891}
   - component: {fileID: 8754337548083080890}
-  - component: {fileID: 497658075462273915}
   m_Layer: 0
   m_Name: Matrix Manager
   m_TagString: Untagged
@@ -84,7 +83,7 @@ MonoBehaviour:
   valueWhiteCloudMechanic: 1
   valueGreyCloudMechanic: 2
   valueCrystalCloudMechanic: 3
-  valueCrystalFloorCloudMechanic: 5
+  valueCrystalFloorMechanic: 5
   valueThunderCloudMechanic: -1
   valueSpikedFloorMechanic: -999
 --- !u!114 &8754337548083080890
@@ -110,17 +109,3 @@ MonoBehaviour:
   cloudParent: {fileID: 7275058362957305135, guid: 9026cd34f4270c8458f6834dcae25756, type: 3}
   floorTilemap: {fileID: 0}
   spikedFloorTilemap: {fileID: 0}
---- !u!114 &497658075462273915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8754337548083080889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da3b731f783d0b34bad2d38773c92e8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  music: World1
-  ambient: AmbientWind

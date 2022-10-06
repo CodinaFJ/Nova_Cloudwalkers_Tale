@@ -91,7 +91,8 @@ PrefabInstance:
       propertyPath: ambient
       value: AmbientOcean
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7726620585761772685, guid: 504ff5cedd7d23c48b97edc835c2447b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 504ff5cedd7d23c48b97edc835c2447b, type: 3}
 --- !u!4 &4604511388831931051 stripped
 Transform:

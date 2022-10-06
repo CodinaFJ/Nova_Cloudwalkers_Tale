@@ -142,7 +142,7 @@ public class MatrixManager : MonoBehaviour
                 if(tile == null) continue;
 
                 int[] matrixPosition = {(int)(coordinatesOriginMatrix.y - cellPosition.y), (int)(cellPosition.x - coordinatesOriginMatrix.x)};
-                if(tile.name == "CrystalRuleTile" && valueForItem == valueForFloor) itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem - 1;
+                if(tile.name == "FloorCrystalRuleTile") itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem - 1;
                 else if(itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] == valueForBorder) continue;
                 else itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem;
             }
@@ -304,10 +304,6 @@ public class MatrixManager : MonoBehaviour
         tilemapItem.CompressBounds();
         BoundsInt bounds = tilemapItem.cellBounds;
 
-        bool floorTilemap = false;
-
-        if (tilemapItem == tilemapsLevelLayout.floorTilemap) floorTilemap = true;
-
         //Loop through all the tiles in the bounds of the tilemap
         for (int x = bounds.min.x; x < bounds.max.x; x++)
         {
@@ -323,13 +319,13 @@ public class MatrixManager : MonoBehaviour
 
                 if(mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] == valueForBorder) continue;
 
-                     if(tile.name == "WhiteCloudsRuleTile")              mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueWhiteCloudMechanic;
-                else if(tile.name == "GreyCloudsRuleTile")               mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueGreyCloudMechanic;
-                else if(tile.name == "CrystalRuleTile" && !floorTilemap) mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueCrystalCloudMechanic;
-                else if(tile.name == "CrystalRuleTile" && floorTilemap)  mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueCrystalFloorMechanic;
-                else if(tile.name == "ThunderCloudsRuleTile")            mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueThunderCloudMechanic;
-                else if(tile.name == "FloorRuleTile")                    mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForFloor;
-                else if(tile.name == "SpikedFloorRuleTile")              mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueSpikedFloorMechanic;
+                     if(tile.name == "WhiteCloudsRuleTile")   mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueWhiteCloudMechanic;
+                else if(tile.name == "GreyCloudsRuleTile")    mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueGreyCloudMechanic;
+                else if(tile.name == "CrystalRuleTile")       mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueCrystalCloudMechanic;
+                else if(tile.name == "FloorCrystalRuleTile")  mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueCrystalFloorMechanic;
+                else if(tile.name == "ThunderCloudsRuleTile") mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueThunderCloudMechanic;
+                else if(tile.name == "FloorRuleTile")         mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForFloor;
+                else if(tile.name == "SpikedFloorRuleTile")   mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueSpikedFloorMechanic;
                 
             }
         }
