@@ -8,9 +8,9 @@ public class WorldAssets
     [SerializeField][Range(1,4)]
     public int worldNumber = 1;
     
-    [Header("Music")]
+    /*[Header("Music")]
     public AudioClip music;
-    public AudioClip ambientMusic;
+    public AudioClip ambientMusic;*/
 
     [Header("Visuals")]
     public Sprite backgroundImage;

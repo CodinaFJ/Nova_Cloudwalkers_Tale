@@ -101,6 +101,7 @@ MonoBehaviour:
   sleepingTime: 23
   movementsMemory: 3
   releaseMouseTolerance: 0.3
+  wallLevel: 0
   pjMoving: 0
 --- !u!114 &6719978607187103728
 MonoBehaviour:

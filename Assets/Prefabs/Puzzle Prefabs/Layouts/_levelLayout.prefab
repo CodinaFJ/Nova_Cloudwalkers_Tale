@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1745610187077640776}
+  - component: {fileID: 5319295279769304665}
   m_Layer: 0
   m_Name: Layout
   m_TagString: Untagged
@@ -31,8 +32,26 @@ Transform:
   - {fileID: 1665807946207315674}
   - {fileID: 1665807945168872511}
   m_Father: {fileID: 1665807946566289824}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5319295279769304665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128868431908932344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3edcd6a1fe512824b9500d9cdbb52c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  borderTilemap: {fileID: 1665807945927485060}
+  cloudsGrid: {fileID: 1665807945168872448}
+  floorTilemap: {fileID: 1665807945200371708}
+  spikedFloorTilemap: {fileID: 1665807945308277001}
+  cloudsTilemaps: []
+  blockTilemap: {fileID: 486424021004881825}
 --- !u!1 &1665807944860759030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4383,6 +4402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1665807946233478354}
   - component: {fileID: 1665807946233478355}
+  - component: {fileID: 5537060938448477709}
   m_Layer: 0
   m_Name: Background Image
   m_TagString: Untagged
@@ -4455,6 +4475,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5537060938448477709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665807946233478356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac54dceec2070164791a2d55f3547024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1665807946566289825
 GameObject:
   m_ObjectHideFlags: 0
@@ -4464,7 +4496,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1665807946566289824}
-  - component: {fileID: 1665807946566289759}
   - component: {fileID: 3204290127542389602}
   m_Layer: 0
   m_Name: _levelLayout
@@ -4485,30 +4516,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1665807946233478354}
+  - {fileID: 6260332368752913756}
   - {fileID: 8581812076314881579}
   - {fileID: 947746028117630929}
   - {fileID: 1745610187077640776}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1665807946566289759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665807946566289825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3edcd6a1fe512824b9500d9cdbb52c88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  borderTilemap: {fileID: 1665807945927485060}
-  cloudsGrid: {fileID: 1665807945168872448}
-  floorTilemap: {fileID: 1665807945200371708}
-  spikedFloorTilemap: {fileID: 1665807945308277001}
-  cloudsTilemaps: []
-  blockTilemap: {fileID: 486424021004881825}
 --- !u!114 &3204290127542389602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4571,6 +4585,51 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!1 &2737655632077151987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6260332368752913756}
+  - component: {fileID: 240193826538158004}
+  m_Layer: 0
+  m_Name: MusicSelector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6260332368752913756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2737655632077151987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1665807946566289824}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240193826538158004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2737655632077151987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3b731f783d0b34bad2d38773c92e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: 
+  ambient: 
 --- !u!1 &3845080995793990881
 GameObject:
   m_ObjectHideFlags: 0
@@ -5477,7 +5536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1665807946566289824}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1733892322036714237
 MonoBehaviour:
@@ -5514,13 +5573,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f07bdcc6148ae94bb4f750711911c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteCloud: {fileID: 7075206057840484584, guid: 662f0c0f09afe1249971c8ca3bf1e0aa, type: 3}
-  greyCloud: {fileID: 7075206057840484584, guid: abda56dd5c4a8464f9591c26ac32135e, type: 3}
-  crystalCloud: {fileID: 7075206057840484584, guid: bedd611b642e23842aaef9dd5420988d, type: 3}
-  thunderCloud: {fileID: 7075206057840484584, guid: decb0cdd8e077dc4db298631cfa9a27a, type: 3}
-  floor: {fileID: 7075206057840484584, guid: 7713db2c31f54a6498d8f27ec3af0db4, type: 3}
-  spikedFloor: {fileID: 7075206057840484584, guid: 08d7031043ecc08429b92d67182b6165, type: 3}
-  crystalFloor: {fileID: 7075206057840484584, guid: d7168bad0eca5e547a5691400fc98900, type: 3}
+  whiteCloud: {fileID: 5159312073458946680, guid: eb738845df402bf4f98c6b4af1cd6ac4, type: 3}
+  greyCloud: {fileID: 5159312073458946680, guid: 4dbb4dce1eb7d71478a9f80af3abbb59, type: 3}
+  crystalCloud: {fileID: 5159312073458946680, guid: 0ac77d007d8180240966ad35b9e55e81, type: 3}
+  thunderCloud: {fileID: 5159312073458946680, guid: eb25a411157af11469250cfdeb94e39f, type: 3}
+  floor: {fileID: 3220349696219990677, guid: f35e3de86f1821d4e844bbb76c752db0, type: 3}
+  spikedFloor: {fileID: 3220349696219990677, guid: 9d09af3a94a20814f8f09d65e7d35a7d, type: 3}
+  crystalFloor: {fileID: 3220349696219990677, guid: 5cbc27a2d0584ec448a2fb531bd00e73, type: 3}
   whiteCloudsGrid: {fileID: 1665807945168872448}
   cloudParent: {fileID: 7275058362957305135, guid: 9026cd34f4270c8458f6834dcae25756, type: 3}
   floorTilemap: {fileID: 1665807945200371708}
@@ -5992,7 +6051,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 781115540735110207, guid: 6e774815e96fc7d46b204dd18e1d2142, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 781115540735110207, guid: 6e774815e96fc7d46b204dd18e1d2142, type: 3}
       propertyPath: m_LocalPosition.x

@@ -54,7 +54,7 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
         // Do something.
         if(!cloudPointerClick)TweenCloudScaleIn();
         pointerInCloud = true;
-        Debug.Log("OnPointerEnter");
+        //Debug.Log("OnPointerEnter");
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -62,7 +62,7 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
         // Do something.
         if(!cloudPointerClick)TweenCloudScaleOut();
         pointerInCloud = false;
-        Debug.Log("OnPointerExit");
+        //Debug.Log("OnPointerExit");
     }
 
     public void OnPointerDown(PointerEventData eventData)

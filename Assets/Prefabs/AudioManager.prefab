@@ -238,13 +238,13 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   ambients:
-  - name: AmbientWind
+  - name: Ambient1
     clip: {fileID: 8300000, guid: 455d504cefce8bc48b4c95a4b4c83132, type: 3}
     volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: AmbientOcean
+  - name: Ambient2
     clip: {fileID: 8300000, guid: 08d38bb9433a5d54c9d25b7f4a6bc2d5, type: 3}
     volume: 0.2
     pitch: 1
@@ -253,4 +253,5 @@ MonoBehaviour:
   musicMixerGroup: {fileID: 3328788449262456128, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
   sfxMixerGroup: {fileID: 8705665391241937590, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
   ambientMixerGroup: {fileID: 5171551400734837472, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
-  fadeDuration: 1
+  fadeInDuration: 2
+  fadeOutDuration: 1

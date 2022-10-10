@@ -30,4 +30,8 @@ public class AssetsRepository : MonoBehaviour
         else
             return cloudTileSpritesBundles.Find(x => x.tileType == tileType && x.shadowTiles == shadowTiles);
     }
+
+    public Sprite GetBackgroundImage(int worldNumber){
+        return worldAssetsList.Find(x => x.worldNumber == worldNumber).backgroundImage;
+    }
 }
