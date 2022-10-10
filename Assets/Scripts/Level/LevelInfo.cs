@@ -14,6 +14,7 @@ public class LevelInfo : MonoBehaviour
     [HideInInspector]
     public int collectedStars = 0;
     int level;
+    [SerializeField]
     int world;
     public bool levelCompleted = false;
 

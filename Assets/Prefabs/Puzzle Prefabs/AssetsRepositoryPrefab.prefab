@@ -49,7 +49,7 @@ MonoBehaviour:
     ambientMusic: {fileID: 8300000, guid: 455d504cefce8bc48b4c95a4b4c83132, type: 3}
     backgroundImage: {fileID: -6266120648457523528, guid: c6b49aaf3e00a9844a320bcc142dde87, type: 3}
     floorTileSpritesBundles:
-    - floorTileType: 0
+    - tileType: 0
       shadowTiles: 0
       spritesList:
       - boundaries: 2
@@ -64,7 +64,7 @@ MonoBehaviour:
         sprite: {fileID: -5608144073080937767, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: -7935161825971849609, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 0
+    - tileType: 0
       shadowTiles: 1
       spritesList:
       - boundaries: 1
@@ -73,7 +73,7 @@ MonoBehaviour:
         sprite: {fileID: 2141041021244214625, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: 3195573933480212235, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 2
+    - tileType: 2
       shadowTiles: 0
       spritesList:
       - boundaries: 2
@@ -86,12 +86,12 @@ MonoBehaviour:
         sprite: {fileID: -4127522503892928284, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: -5115620047451143154, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 1
+    - tileType: 1
       shadowTiles: 0
       spritesList:
       - boundaries: 0
         sprite: {fileID: -3994844422559495146, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 1
+    - tileType: 1
       shadowTiles: 1
       spritesList:
       - boundaries: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
     ambientMusic: {fileID: 8300000, guid: 08d38bb9433a5d54c9d25b7f4a6bc2d5, type: 3}
     backgroundImage: {fileID: 3730225833042338496, guid: c6b49aaf3e00a9844a320bcc142dde87, type: 3}
     floorTileSpritesBundles:
-    - floorTileType: 0
+    - tileType: 0
       shadowTiles: 0
       spritesList:
       - boundaries: 2
@@ -116,7 +116,7 @@ MonoBehaviour:
         sprite: {fileID: -181463820540194807, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: 9116475397919688727, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 0
+    - tileType: 0
       shadowTiles: 1
       spritesList:
       - boundaries: 1
@@ -125,7 +125,7 @@ MonoBehaviour:
         sprite: {fileID: 7498883586916705499, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: -4847940962496620616, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 2
+    - tileType: 0
       shadowTiles: 0
       spritesList:
       - boundaries: 2
@@ -138,12 +138,12 @@ MonoBehaviour:
         sprite: {fileID: -7022728122172440438, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: 3823047672386439262, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 1
+    - tileType: 0
       shadowTiles: 0
       spritesList:
       - boundaries: 0
         sprite: {fileID: -3994844422559495146, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 1
+    - tileType: 0
       shadowTiles: 1
       spritesList:
       - boundaries: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
     ambientMusic: {fileID: 8300000, guid: 455d504cefce8bc48b4c95a4b4c83132, type: 3}
     backgroundImage: {fileID: 6793273102218567343, guid: 88f2ad7e849292843a08e6cd2cd46d2d, type: 3}
     floorTileSpritesBundles:
-    - floorTileType: 0
+    - tileType: 0
       shadowTiles: 0
       spritesList:
       - boundaries: 2
@@ -168,7 +168,7 @@ MonoBehaviour:
         sprite: {fileID: -5075782966212811542, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: -1453196496225411145, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 0
+    - tileType: 0
       shadowTiles: 1
       spritesList:
       - boundaries: 1
@@ -177,7 +177,7 @@ MonoBehaviour:
         sprite: {fileID: 6935810424214603891, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: -1786761767016543956, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 2
+    - tileType: 0
       shadowTiles: 0
       spritesList:
       - boundaries: 2
@@ -190,12 +190,12 @@ MonoBehaviour:
         sprite: {fileID: -4736303520910899744, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: 8735881379201539130, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 1
+    - tileType: 0
       shadowTiles: 0
       spritesList:
       - boundaries: 0
         sprite: {fileID: -3994844422559495146, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 1
+    - tileType: 0
       shadowTiles: 1
       spritesList:
       - boundaries: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
     ambientMusic: {fileID: 8300000, guid: 455d504cefce8bc48b4c95a4b4c83132, type: 3}
     backgroundImage: {fileID: 7210400190327778597, guid: 88f2ad7e849292843a08e6cd2cd46d2d, type: 3}
     floorTileSpritesBundles:
-    - floorTileType: 0
+    - tileType: 0
       shadowTiles: 0
       spritesList:
       - boundaries: 2
@@ -220,7 +220,7 @@ MonoBehaviour:
         sprite: {fileID: 8355967944939522488, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: -5508031588783438457, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 0
+    - tileType: 0
       shadowTiles: 1
       spritesList:
       - boundaries: 1
@@ -229,7 +229,7 @@ MonoBehaviour:
         sprite: {fileID: -575958449470866631, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: -2122735440934534063, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 2
+    - tileType: 0
       shadowTiles: 0
       spritesList:
       - boundaries: 2
@@ -242,33 +242,33 @@ MonoBehaviour:
         sprite: {fileID: -5674613515046310886, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
       - boundaries: 0
         sprite: {fileID: 1037551520177944815, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 1
+    - tileType: 0
       shadowTiles: 0
       spritesList:
       - boundaries: 0
         sprite: {fileID: -3994844422559495146, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
-    - floorTileType: 1
+    - tileType: 0
       shadowTiles: 1
       spritesList:
       - boundaries: 0
         sprite: {fileID: 3678154181453922710, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
   cloudTileSpritesBundles:
-  - cloudTileType: 0
+  - tileType: 3
     shadowTiles: 0
     spritesList:
     - boundaries: 2
-      sprite: {fileID: 21300000, guid: 4347bce1b409251428c70ffc7be56ba0, type: 3}
+      sprite: {fileID: 6887368097464344716, guid: ee48ff2c123bafd4a8e674e2d8d673e8, type: 3}
     - boundaries: 4
-      sprite: {fileID: 21300000, guid: ba6ce752f6a524d4b9e62ff1405e9255, type: 3}
+      sprite: {fileID: 1357393203843571917, guid: ee48ff2c123bafd4a8e674e2d8d673e8, type: 3}
     - boundaries: 5
       sprite: {fileID: 21300000, guid: 945ef5bbe02a28f44be610afc79b9de7, type: 3}
     - boundaries: 1
       sprite: {fileID: 21300000, guid: 414dda35894d3644c827eafb4c482d39, type: 3}
     - boundaries: 3
-      sprite: {fileID: 21300000, guid: 793c4b7a391dbba4c88ee5c6ebcedb79, type: 3}
+      sprite: {fileID: 710639471521415084, guid: ee48ff2c123bafd4a8e674e2d8d673e8, type: 3}
     - boundaries: 0
-      sprite: {fileID: 21300000, guid: 8c109d493337a0d4f8458126503cb574, type: 3}
-  - cloudTileType: 0
+      sprite: {fileID: -7444982457086184201, guid: 169b47f69556e1548901e169d3f3191f, type: 3}
+  - tileType: 3
     shadowTiles: 1
     spritesList:
     - boundaries: 1
@@ -277,7 +277,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 74536ac3a0339ba4aaba5dede0fa1761, type: 3}
     - boundaries: 0
       sprite: {fileID: 21300000, guid: 332c61ade95bd7b4b94c813c58bb6513, type: 3}
-  - cloudTileType: 1
+  - tileType: 4
     shadowTiles: 0
     spritesList:
     - boundaries: 2
@@ -292,7 +292,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: f71e3eabe07190b4b84492a17943aac5, type: 3}
     - boundaries: 0
       sprite: {fileID: 21300000, guid: 09887d2b25e8e4c4aa83b2bfce60a8a7, type: 3}
-  - cloudTileType: 1
+  - tileType: 4
     shadowTiles: 1
     spritesList:
     - boundaries: 1
@@ -301,7 +301,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 61ff589683ef5514c94597bb3cb52ab5, type: 3}
     - boundaries: 0
       sprite: {fileID: 21300000, guid: b664b95d887b1a94c974ad37f90524c6, type: 3}
-  - cloudTileType: 3
+  - tileType: 6
     shadowTiles: 0
     spritesList:
     - boundaries: 2
@@ -316,7 +316,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 47b186aac33f59741903f1ddc256ccb7, type: 3}
     - boundaries: 0
       sprite: {fileID: 21300000, guid: 91641425049cb8f4f9ce298b7da9071c, type: 3}
-  - cloudTileType: 2
+  - tileType: 5
     shadowTiles: 0
     spritesList:
     - boundaries: 2
@@ -331,7 +331,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 6c73bf466c331e44999cdaaff1344074, type: 3}
     - boundaries: 0
       sprite: {fileID: 21300000, guid: 487b996197f2ca54fbf26b98bcf5a6b1, type: 3}
-  - cloudTileType: 2
+  - tileType: 5
     shadowTiles: 1
     spritesList:
     - boundaries: 1
@@ -340,7 +340,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 742ca258be831034694b828bd8eee7fa, type: 3}
     - boundaries: 0
       sprite: {fileID: 21300000, guid: 50d0ae7b9bea13a47a1a0c66acefbd48, type: 3}
-  - cloudTileType: 4
+  - tileType: 7
     shadowTiles: 0
     spritesList:
     - boundaries: 1
@@ -349,7 +349,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 742ca258be831034694b828bd8eee7fa, type: 3}
     - boundaries: 0
       sprite: {fileID: 21300000, guid: 50d0ae7b9bea13a47a1a0c66acefbd48, type: 3}
-  - cloudTileType: 4
+  - tileType: 7
     shadowTiles: 1
     spritesList:
     - boundaries: 1

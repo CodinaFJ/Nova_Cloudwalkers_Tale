@@ -18,8 +18,11 @@ public class WorldAssets
     public List<TileSpritesBundle> floorTileSpritesBundles = new List<TileSpritesBundle>(5);
 }
 
-public enum SpriteBoundaries{
-    None, One, TwoCorner, TwoMiddle, Three, Four, Null
+[System.Serializable]
+public struct TileSpritesBundle{
+    public TileType tileType;
+    public bool shadowTiles;
+    public List<TileableSprite> spritesList;
 }
 
 [System.Serializable]
@@ -33,9 +36,6 @@ public enum TileType{
     WhiteCloud, GreyCloud, CrystalCloudBot, CrystalCloudTop, ThunderCloud
 }
 
-[System.Serializable]
-public struct TileSpritesBundle{
-    public TileType tileType;
-    public bool shadowTiles;
-    public List<TileableSprite> spritesList;
+public enum SpriteBoundaries{
+    None, One, TwoCorner, TwoMiddle, Three, Four, Null
 }

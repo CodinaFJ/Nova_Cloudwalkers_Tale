@@ -177,13 +177,11 @@ public class fromMatrixToGame : MonoBehaviour
     {
         GameObject[] result = new GameObject[cloudsParents.Length + 1];
 
-        for (int index = 0; index < cloudsParents.Length; index++)
-        {
+        for (int index = 0; index < cloudsParents.Length; index++){
             result[index] = cloudsParents[index];
         }
 
         result[cloudsParents.Length] = Instantiate(cloudParent);
-
         cloudsParents = result;
     }
 
@@ -200,8 +198,8 @@ public class fromMatrixToGame : MonoBehaviour
 
         if (itemsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForFloor)
         {
-            if (mechanicsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForFloor) InstantiateFloor(i,j);
-            else if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueSpikedFloorMechanic) InstantiateFloor(i,j);
+            if (mechanicsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForFloor || mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueSpikedFloorMechanic) 
+                InstantiateFloor(i,j);
         }
         if (mechanicsLayoutMatrix[i,j] ==  MatrixManager.instance.valueCrystalFloorMechanic ||
             mechanicsLayoutMatrix[i,j] ==  (MatrixManager.instance.valueCrystalFloorMechanic + 1)) InstantiateCrystalFloor(i,j);

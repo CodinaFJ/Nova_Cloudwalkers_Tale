@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 399705075
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: eb73055255d3bda4397917ac4912196d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -104,6 +104,7 @@ MonoBehaviour:
   tile3: {fileID: 3375366997283034962, guid: cc349ddb7e5a9b644b6cb76330e20508, type: 3}
   tile4: {fileID: 1585442954850175358, guid: 01e43852af03f15478fe762106ba3eb9, type: 3}
   movementParticlesPrefab: {fileID: 8478759500691322797, guid: 5ab4e9883271e7c41bcc1e856674c519, type: 3}
+  myMovementParticles: {fileID: 0}
   tileType: -1
   shadowToWorldCorrection: 0.45
 --- !u!95 &-942483958070760568
