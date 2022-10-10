@@ -5573,7 +5573,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteCloud: {fileID: 5159312073458946680, guid: eb738845df402bf4f98c6b4af1cd6ac4, type: 3}
   greyCloud: {fileID: 5159312073458946680, guid: 4dbb4dce1eb7d71478a9f80af3abbb59, type: 3}
-  crystalCloud: {fileID: 5159312073458946680, guid: 0ac77d007d8180240966ad35b9e55e81, type: 3}
+  crystalTopCloud: {fileID: 5159312073458946680, guid: aaf2fc7579f58864cbefdd2950e09b54, type: 3}
+  crystalBotCloud: {fileID: 5159312073458946680, guid: 0ac77d007d8180240966ad35b9e55e81, type: 3}
   thunderCloud: {fileID: 5159312073458946680, guid: eb25a411157af11469250cfdeb94e39f, type: 3}
   floor: {fileID: 3220349696219990677, guid: f35e3de86f1821d4e844bbb76c752db0, type: 3}
   spikedFloor: {fileID: 3220349696219990677, guid: 9d09af3a94a20814f8f09d65e7d35a7d, type: 3}

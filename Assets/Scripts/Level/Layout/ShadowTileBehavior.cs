@@ -31,5 +31,12 @@ public class ShadowTileBehavior : MonoBehaviour
             mySpriteRenderer.flipX = true;
         } 
         if ( adyacentTilesForShadow[1] &&  adyacentTilesForShadow[0]) mySpriteRenderer.sprite = tileShadowsSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.TwoMiddle).sprite;
+
+        if(mySpriteRenderer.sprite == null){
+            mySpriteRenderer.sprite = tileShadowsSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.None).sprite;
+            transform.Rotate(0,0,0,Space.Self);
+            mySpriteRenderer.flipX = false;
+            mySpriteRenderer.flipY = false;
+        } 
     }
 }

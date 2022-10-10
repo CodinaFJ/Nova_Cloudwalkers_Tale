@@ -7,7 +7,8 @@ public class fromMatrixToGame : MonoBehaviour
 {
     [SerializeField] GameObject whiteCloud;
     [SerializeField] GameObject greyCloud;
-    [SerializeField] GameObject crystalCloud;
+    [SerializeField] GameObject crystalTopCloud;
+    [SerializeField] GameObject crystalBotCloud;
     [SerializeField] GameObject thunderCloud;
     [SerializeField] GameObject floor;
     [SerializeField] GameObject spikedFloor;
@@ -108,7 +109,8 @@ public class fromMatrixToGame : MonoBehaviour
     {
         Vector3 itemPosition = MatrixManager.instance.FromMatrixIndexToWorld(i, j);
 
-        Instantiate(crystalCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
+        GameObject crystalTile =  Instantiate(crystalTopCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
+        Instantiate(crystalBotCloud, itemPosition, Quaternion.identity, crystalTile.transform);
     }
 
     void InstantiateThunderCloud(int i, int j, int whiteCloudNumber)

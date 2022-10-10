@@ -54,8 +54,11 @@ public class TileBehavior : MonoBehaviour
 
     protected void SetCorrectSprites()
     {
-        SetAdyacentTiles();
-        SetAndOrientateSprites();
+        if(tileType != TileType.CrystalFloor){
+            SetAdyacentTiles();
+            SetAndOrientateSprites();
+        }
+        else SetCrystalFloorTile();
 
         SetAdyacentTilesForShadow();
         InstantiateShadow();
@@ -145,6 +148,14 @@ public class TileBehavior : MonoBehaviour
         else if ( i ==  1 && j ==  1) adyacentTilesForShadow[4] =  true;
     }
 
+
+    void SetCrystalFloorTile(){
+        mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.None).sprite;
+        transform.Rotate(0,0,0,Space.Self);
+        mySpriteRenderer.flipX = false;
+        mySpriteRenderer.flipY = false;
+    }
+
     protected void SetAndOrientateSprites()
     {
         //Use adyacentTilesNumber to do a first filter to select the sprite based on how many other cloud tiles are connected to this one.
@@ -193,11 +204,20 @@ public class TileBehavior : MonoBehaviour
         else if(adyacentTilesNumber==4) mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.Four).sprite;
 
         else Debug.Log("Error in adyacent tiles");
+
+
+        if(mySpriteRenderer.sprite == null){
+            mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.None).sprite;
+            transform.Rotate(0,0, 0,Space.Self);
+            mySpriteRenderer.flipX = false;
+            mySpriteRenderer.flipY = false;
+        } 
     }
 
     
     private void InstantiateShadow(){
         if(tileType == TileType.SpikedFloor) return;
+        if(tileType == TileType.CrystalCloudTop) return;
 
         //Instantiate needed shadows
         //Always instantiate if tile just below is empty
