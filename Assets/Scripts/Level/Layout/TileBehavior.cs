@@ -25,6 +25,8 @@ public class TileBehavior : MonoBehaviour
     // 0-up, 1-left, 2-down, 3-right
     bool[] adyacentTiles = new bool[4];
     bool[] adyacentTilesForShadow = new bool[5];
+
+    [SerializeField]
     int adyacentTilesNumber = 0;
 
     protected TileSpritesBundle tileSpritesBundle;
@@ -75,7 +77,7 @@ public class TileBehavior : MonoBehaviour
         for (int i = -1; i < 2; i++){
             for (int j = -1; j < 2; j++){
                 //Mathf.Abs(i + j) == 1 used to limit the checked tiles to the one at the right/left/up/down
-                if (Mathf.Abs(i + j) == 1 && CheckCoordinatesInMatrix(i,j) && Mathf.Abs(itemsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j]) == numberToCompare)
+                if (Mathf.Abs(i + j) == 1 && CheckCoordinatesInMatrix(i,j) && AssignMatrixToCompare()[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == numberToCompare)
                     FillAdyacentTiles(i,j);
             }
         }
@@ -111,6 +113,14 @@ public class TileBehavior : MonoBehaviour
         
         else
             return itemNumber;
+    }
+
+    protected int[,] AssignMatrixToCompare(){
+        if(tileType == TileType.SpikedFloor)
+            return mechanicsLayoutMatrix;
+        
+        else
+            return itemsLayoutMatrix;
     }
 
     protected int AssignNumberToCompareForShadow(){
