@@ -22,7 +22,6 @@ public class AssetsRepository : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
     }
 
     public TileSpritesBundle GetSpritesBundle(TileType tileType, int worldNumber) => GetSpritesBundle(tileType, worldNumber, false);
