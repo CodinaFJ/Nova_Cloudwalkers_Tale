@@ -19,6 +19,7 @@ public class LevelFinish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Trigger enter");
         if(other.tag == "Player")
         {
             if(levelInfo == null) return;

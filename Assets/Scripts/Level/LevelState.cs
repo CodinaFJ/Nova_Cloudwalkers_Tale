@@ -23,8 +23,6 @@ public class LevelState
 
     void ImportStarsInfo(StarBehavior[] stars)
     {
-        /*starsCells.Clear();
-        starsCollected.Clear();*/
         starsCells = new List<int[]>();
         starsCollected = new List<bool>();
         totalStarsCollected = 0;
@@ -33,6 +31,7 @@ public class LevelState
         {
             starsCells.Add(star.starCell);
             starsCollected.Add(star.starCollected);
+            
             if(star.starCollected) totalStarsCollected++;
         }
     }

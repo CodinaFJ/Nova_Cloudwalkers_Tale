@@ -31,6 +31,7 @@ public class PjInputManager : MonoBehaviour
     [SerializeField] float sleepingTime;
     [SerializeField] int movementsMemory = 2;
     [SerializeField] float releaseMouseTolerance = 1f;
+    [SerializeField] bool wallLevel = false;
     
     public static PjInputManager instance;
 
@@ -307,7 +308,10 @@ public class PjInputManager : MonoBehaviour
         pjIdle = true;
     }
 
-    void OnUp()
+
+
+    //WHOLE CODE TO ACCEPT WASD CONTROL
+    /*void OnUp()
     {
         pjMovementsPress = AddMovement(pjMovementsPress ,2);
     }
@@ -376,7 +380,7 @@ public class PjInputManager : MonoBehaviour
             pjMovementsHold = matrixManager.RemoveNumberFromArray(pjMovementsHold, 1);
         }
         holdRight = false;
-    }
+    }*/
 
     void OnNoIdle()
     {
@@ -393,14 +397,19 @@ public class PjInputManager : MonoBehaviour
 
         if(matrixManager.InsideLevelMatrix(onClickMatrixCoor) && matrixManager.GetPjMovementMatrix()[onClickMatrixCoor[0], onClickMatrixCoor[1]])
         {
-            if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
+            //if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
 
             Pathfinding pathfinding = new Pathfinding();
             int[] pjMovementsArray = new int[0];
 
             if(playerBehavior.pjCell[0] == onClickMatrixCoor[0] && playerBehavior.pjCell[1] == onClickMatrixCoor[1]) return;
             pjMovementsArray = pathfinding.CalculatePathMovement(playerBehavior.pjCell[0], playerBehavior.pjCell[1], onClickMatrixCoor[0], onClickMatrixCoor[1]);
-            if(pjMovementsArray != null) pjMovementsPress = (int[])pjMovementsArray.Clone();
+            
+            if(pjMovementsArray != null)
+            {
+                pjMovementsPress = (int[])pjMovementsArray.Clone();
+                if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
+            } 
 
             pjAnimationManager.PjClickAnimation(mouseCellCenter);
 
@@ -445,7 +454,6 @@ public class PjInputManager : MonoBehaviour
 
         if(!playerBehavior.clickIsForCloud)
         OnFindPath();
-        Debug.Log("Click UP");
     }
 
     public void OnLeftClick()
@@ -453,8 +461,6 @@ public class PjInputManager : MonoBehaviour
         playerBehavior.clickIsForCloud = false;
 
         onClickMouseWorldPos = GetMouseWorldPos();
-
-        Debug.Log("Click DOWN");
     }
 
     

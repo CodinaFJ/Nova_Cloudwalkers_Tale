@@ -131,6 +131,10 @@ public class CloudInputManager : MonoBehaviour
         Vector3 onClickCellCenter = new Vector3(Mathf.FloorToInt(onClickMouseWorldPos.x), Mathf.FloorToInt(onClickMouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
         mouseOffset = onClickMouseWorldPos - onClickCellCenter;
         int[] onClickMatrixCoor = MouseMatrixScript.GetMouseMatrixIndex();
+
+        //Update cloud parents in case it was changed due to crystals or grey clouds
+        cloudsParents = fromMatrixToGame.GetCloudsParents();
+        
         if(onClickMatrixCoor == null) return;
 
         if(matrixManager.InsideLevelMatrix(onClickMatrixCoor) && !cloudIsMoving)
@@ -149,8 +153,11 @@ public class CloudInputManager : MonoBehaviour
             pjMovement = pjMovementMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];
             cloudMovement = cloudMovementMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];
 
+            Debug.Log("Item: " + item + ". Mechanic: " + mechanic + "\nCharacter movement: " + pjMovement + ". Cloud movement: " + cloudMovement);
+
             if((mechanic == -1 || mechanic == 1 || mechanic ==3) && !isSelecting)
             {
+                
                 if(cloudsParents[item - 1] != null)
                 cloudsParents[item - 1].GetComponent<ParentCloudScript>().PlayClickParticles(onClickMouseWorldPos);
 
@@ -187,7 +194,6 @@ public class CloudInputManager : MonoBehaviour
 
             isSelecting = true;
 
-            Debug.Log("Item: " + item + ". Mechanic: " + mechanic + "\nCharacter movement: " + pjMovement + ". Cloud movement: " + cloudMovement);
             //Debug.Log("Initial Cell Coor: ( " + onClickMatrixCoor[0] + ", " + onClickMatrixCoor[1] + ")");
         }
     }
@@ -343,7 +349,7 @@ public class CloudInputManager : MonoBehaviour
 
         matrixManager.FinishCloudMovementInMatrix(unitaryMovement, item);
 
-        matrixManager.SearchGreyCloudContact(item);     
+        matrixManager.SearchGreyCloudContact(item);   
 
         if(!isSelecting) mouseMovements = new int[0];
 

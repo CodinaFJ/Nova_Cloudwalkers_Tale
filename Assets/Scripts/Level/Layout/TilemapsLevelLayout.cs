@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 
 public class TilemapsLevelLayout : MonoBehaviour
 {
+    public static TilemapsLevelLayout instance;
     int[,] levelLayoutMatrix;
     Vector3 coordinatesOriginMatrix = new Vector3 (0f,0f,0f);
 
@@ -22,27 +23,11 @@ public class TilemapsLevelLayout : MonoBehaviour
 
     void Awake()
     {
-
+        if(instance == null) instance = this;
     }
 
-    void Update()
-    {
-        
-    }
-
-    public void FillCloudTilemaps()
-    {
-        cloudsTilemaps = cloudsGrid.GetComponentsInChildren<Tilemap>();
-    }
-
-    public int GetNumberOfClouds()
-    {
-        return cloudsTilemaps.Length;
-    }
-
-    public float GetGridCellSize()
-    {
-        return cloudsGrid.cellSize.x;
-    }
+    public void FillCloudTilemaps() => cloudsTilemaps = cloudsGrid.GetComponentsInChildren<Tilemap>();
+    public int GetNumberOfClouds() => cloudsTilemaps.Length;
+    public float GetGridCellSize() => cloudsGrid.cellSize.x;
 
 }

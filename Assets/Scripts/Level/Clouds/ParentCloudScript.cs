@@ -8,7 +8,7 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     [SerializeField] ParticleSystem particlesCloudOnClick;
     [SerializeField] float scaleTweenTime = 0.1f;
 
-    InstantiatedCloudBehavior[] cloudTiles;
+    //InstantiatedCloudBehavior[] cloudTiles;
 
     Vector3 posPrevious;
     Vector3 posDifference;
@@ -18,20 +18,20 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void Start() 
     {
-        cloudTiles = GetComponentsInChildren<InstantiatedCloudBehavior>();
-        posPrevious = transform.position;
+        /*cloudTiles = GetComponentsInChildren<InstantiatedCloudBehavior>();
+        posPrevious = transform.position;*/
     }
 
     private void Update() 
     {
-        cloudTiles = GetComponentsInChildren<InstantiatedCloudBehavior>();
+        /*cloudTiles = GetComponentsInChildren<InstantiatedCloudBehavior>();
         posDifference = transform.position - posPrevious;
 
         foreach(InstantiatedCloudBehavior cloudTile in cloudTiles)
         {
             if(cloudTile.myMovementParticles != null) cloudTile.myMovementParticles.transform.position += posDifference;
         }
-        posPrevious = transform.position;
+        posPrevious = transform.position;*/
 
     }
 
@@ -68,7 +68,7 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public void OnPointerDown(PointerEventData eventData)
     {
         cloudPointerClick = true;
-        TweenCloudScaleOut();
+        //TweenCloudScaleOut();
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -84,7 +84,7 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void TweenCloudScaleIn()
     {
-        foreach(InstantiatedCloudBehavior cloudTile in gameObject.GetComponentsInChildren<InstantiatedCloudBehavior>())
+        foreach(TileBehavior cloudTile in gameObject.GetComponentsInChildren<TileBehavior>())
         {
             LeanTween.cancel(cloudTile.gameObject);
             LeanTween.scale(cloudTile.gameObject, new Vector3 (Mathf.Sign(cloudTile.transform.localScale.x) * 1.05f,Mathf.Sign(cloudTile.transform.localScale.y) * 1.05f, 1), scaleTweenTime).setEaseOutElastic();
@@ -94,7 +94,7 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void TweenCloudScaleOut()
     {
-        foreach(InstantiatedCloudBehavior cloudTile in gameObject.GetComponentsInChildren<InstantiatedCloudBehavior>())
+        foreach(TileBehavior cloudTile in gameObject.GetComponentsInChildren<TileBehavior>())
         {
             LeanTween.cancel(cloudTile.gameObject);
             LeanTween.scale(cloudTile.gameObject, new Vector3 (Mathf.Sign(cloudTile.transform.localScale.x) * 1f,Mathf.Sign(cloudTile.transform.localScale.y) *1f, 1), scaleTweenTime).setEaseOutExpo(); 

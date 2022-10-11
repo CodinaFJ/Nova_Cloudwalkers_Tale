@@ -137,15 +137,26 @@ public class StarBehavior : MonoBehaviour
         transform.position = playerBehavior.transform.position + offset;
     }
 
+    void SetStarCollected(bool collected)
+    {
+        starCollected = collected;
+    }
+
     void PlaceInInitialPosition()
     {
         transform.position = matrixManager.FromMatrixIndexToWorld(starCell[0], starCell[1]);
         starCollected = false;
     }
 
-    public void LoadLevelStateStar(bool followPlayer)
+    public void LoadLevelStateStar(bool collected)
     {  
-        SetFollowPlayer(followPlayer);
-        if(!followPlayer) PlaceInInitialPosition();
+        SetFollowPlayer(collected);
+        SetStarCollected(collected);
+        if(!collected) PlaceInInitialPosition();
+    }
+
+    public bool GetStarCollected()
+    {
+        return starCollected;
     }
 }

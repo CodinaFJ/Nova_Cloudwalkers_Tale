@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3034481318021325556}
-  - component: {fileID: 3034481318021325559}
+  - component: {fileID: 1729157385623009636}
   m_Layer: 0
   m_Name: LevelInfo
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3034481318021325559
+--- !u!114 &1729157385623009636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,10 +40,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3034481318021325558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9150836729bb8ee4587241dd11b5a2cf, type: 3}
+  m_Script: {fileID: 11500000, guid: da3b731f783d0b34bad2d38773c92e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfStars: 1
-  levelNumber: 1
-  world: 1
-  levelCompleted: 0
+  music: 
+  ambient: 
