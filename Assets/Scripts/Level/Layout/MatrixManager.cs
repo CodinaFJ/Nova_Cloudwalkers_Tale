@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -591,6 +591,12 @@ public class MatrixManager : MonoBehaviour
 
             RefreshPjMovementMatrix();
             RefreshCloudsMovementMatrix();
+
+            TileBehavior crystalTile = Array.Find(FromMatrixToGame.GetFloorParent().GetComponentsInChildren<TileBehavior>(),
+                                                  x => x.GetTileCoordinates()[0] == playerBehavior.pjCell[0] && x.GetTileCoordinates()[1] == playerBehavior.pjCell[1]);
+
+            crystalTile.gameObject.SetActive(false);
+            Destroy(crystalTile.gameObject);
             //FromMatrixToGame.ReInstantiateItem(998);
             //TODO: START CRYSTAL CRACK ANIMATION
         }
