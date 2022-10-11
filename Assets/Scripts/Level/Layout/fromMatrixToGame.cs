@@ -221,8 +221,12 @@ public class fromMatrixToGame : MonoBehaviour
 
         foreach (GameObject child in cloudsParents)
         {
-            child.SetActive(false);
-            Destroy(child);
+            try{
+                child.SetActive(false);
+                Destroy(child);
+            }catch(MissingReferenceException ex){
+                Debug.LogWarning(ex.Message);
+            }
         }
         spikedFloorParent.SetActive(false);
         Destroy(spikedFloorParent);
