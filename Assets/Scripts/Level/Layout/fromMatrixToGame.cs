@@ -267,4 +267,8 @@ public class fromMatrixToGame : MonoBehaviour
 
         return highestItemInMatrix;
     }
+
+
+    public GameObject GetFloorParent() => walkableFloorParent;
+    public GameObject GetSpikedFloorParent() => spikedFloorParent;
 }

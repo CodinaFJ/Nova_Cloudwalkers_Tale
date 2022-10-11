@@ -241,6 +241,7 @@ public class TileBehavior : MonoBehaviour
     }
 
 
+    public int[] GetTileCoordinates() => matrixCoordinates;
     public bool[] GetAdyacentTilesForShadow() => adyacentTilesForShadow;
     public TileSpritesBundle GetTileShadowsSpritesBundle() => tileShadowsSpritesBundle;
 

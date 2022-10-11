@@ -7,10 +7,6 @@ public class WorldAssets
     [Header("World Info")]
     [SerializeField][Range(1,4)]
     public int worldNumber = 1;
-    
-    /*[Header("Music")]
-    public AudioClip music;
-    public AudioClip ambientMusic;*/
 
     [Header("Visuals")]
     public Sprite backgroundImage;
