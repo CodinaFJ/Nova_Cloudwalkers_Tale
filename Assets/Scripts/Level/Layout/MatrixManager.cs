@@ -597,7 +597,7 @@ public class MatrixManager : MonoBehaviour
 
             crystalTile.gameObject.SetActive(false);
             Destroy(crystalTile.gameObject);
-            //FromMatrixToGame.ReInstantiateItem(998);
+
             //TODO: START CRYSTAL CRACK ANIMATION
         }
     }
