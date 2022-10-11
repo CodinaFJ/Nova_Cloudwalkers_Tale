@@ -335,21 +335,27 @@ MonoBehaviour:
   - tileType: 7
     shadowTiles: 0
     spritesList:
+    - boundaries: 2
+      sprite: {fileID: 21300000, guid: f8612a13a8023b443a339b138a985e98, type: 3}
+    - boundaries: 4
+      sprite: {fileID: 21300000, guid: 273e2068cfaf4a34ea2b8cbc357d877c, type: 3}
+    - boundaries: 5
+      sprite: {fileID: 21300000, guid: 4ac5c72b0442dc541a6aeb31b4849449, type: 3}
     - boundaries: 1
-      sprite: {fileID: 21300000, guid: 43b4c919bc894f947868a969ff96d68d, type: 3}
+      sprite: {fileID: 21300000, guid: 238a17deb08ab864283ec74a2712908e, type: 3}
     - boundaries: 3
-      sprite: {fileID: 21300000, guid: 742ca258be831034694b828bd8eee7fa, type: 3}
+      sprite: {fileID: 21300000, guid: d0c7cbce71b411e48ae2d0419340227f, type: 3}
     - boundaries: 0
-      sprite: {fileID: 21300000, guid: 50d0ae7b9bea13a47a1a0c66acefbd48, type: 3}
+      sprite: {fileID: 21300000, guid: 067d0420244802747841a0c7e5012403, type: 3}
   - tileType: 7
     shadowTiles: 1
     spritesList:
     - boundaries: 1
-      sprite: {fileID: 21300000, guid: 43b4c919bc894f947868a969ff96d68d, type: 3}
+      sprite: {fileID: 21300000, guid: b5365b3cdff759344b25e3080bba7ebe, type: 3}
     - boundaries: 3
-      sprite: {fileID: 21300000, guid: 742ca258be831034694b828bd8eee7fa, type: 3}
+      sprite: {fileID: 21300000, guid: 9f963474faef65946b2b3d1a934adb14, type: 3}
     - boundaries: 0
-      sprite: {fileID: 21300000, guid: 50d0ae7b9bea13a47a1a0c66acefbd48, type: 3}
+      sprite: {fileID: 21300000, guid: ce0a38a8cf502c344817f658ab5e2b8c, type: 3}
   particleSystemList:
   - type: 0
     particlesPrefab: {fileID: 8478759500691322797, guid: 88f359077867c744b83438d9733e769a, type: 3}

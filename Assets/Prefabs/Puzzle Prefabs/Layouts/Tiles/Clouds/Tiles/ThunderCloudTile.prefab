@@ -1,5 +1,70 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6022337140238525523
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6883003323548749974}
+    m_Modifications:
+    - target: {fileID: 6794402071129025545, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_Name
+      value: Par_RayosNe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025548, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025550, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_SortingLayer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025550, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 825917939
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b792e3459348d4428685d209cfaf9cb, type: 3}
 --- !u!1001 &6110634336478676999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThunderCloudTile
       objectReference: {fileID: 0}
+    - target: {fileID: 1629984981303202443, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 067d0420244802747841a0c7e5012403, type: 3}
     - target: {fileID: 8915423902217730175, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
       propertyPath: tileType
       value: 7
@@ -64,6 +133,11 @@ PrefabInstance:
 --- !u!1 &5159312073458946680 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1392979473577171583, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
+  m_PrefabInstance: {fileID: 6110634336478676999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6883003323548749974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 812902497187862673, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
   m_PrefabInstance: {fileID: 6110634336478676999}
   m_PrefabAsset: {fileID: 0}
 --- !u!61 &-6114273637227413703
