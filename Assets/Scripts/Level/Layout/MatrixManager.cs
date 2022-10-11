@@ -589,6 +589,10 @@ public class MatrixManager : MonoBehaviour
             mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] = 0;
             itemsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] = 0;
 
+            foreach(TileBehavior tile in FromMatrixToGame.GetFloorParent().GetComponentsInChildren<TileBehavior>()){
+                tile.SetCorrectSpritesAfterCrack();
+            }
+
             RefreshPjMovementMatrix();
             RefreshCloudsMovementMatrix();
 
@@ -597,8 +601,8 @@ public class MatrixManager : MonoBehaviour
 
             crystalTile.gameObject.SetActive(false);
             Destroy(crystalTile.gameObject);
-
-            //TODO: START CRYSTAL CRACK ANIMATION
+            
+            VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalFloorBreak);
         }
     }
 
@@ -614,7 +618,7 @@ public class MatrixManager : MonoBehaviour
 
             RefreshPjMovementMatrix();
             RefreshCloudsMovementMatrix();
-            //TODO: START CRYSTAL CRACK ANIMATION
+            VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalCloudBreak);
             //FromMatrixToGame.DeactivateItem(item);
 
 

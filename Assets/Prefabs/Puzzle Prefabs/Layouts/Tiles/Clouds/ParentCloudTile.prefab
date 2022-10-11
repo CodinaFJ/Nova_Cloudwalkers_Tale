@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7075206057840484584, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_Name
-      value: ParentTile
+      value: ParentCloudTile
       objectReference: {fileID: 0}
     - target: {fileID: 8803683623780049414, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_RootOrder

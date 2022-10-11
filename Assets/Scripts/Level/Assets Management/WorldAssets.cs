@@ -27,6 +27,12 @@ public struct TileableSprite{
     public Sprite sprite;
 }
 
+[System.Serializable]
+public struct ParticlesVFX{
+    public ParticlesVFXType type;
+    public GameObject particlesPrefab;
+}
+
 public enum TileType{
     Floor, CrystalFloor, SpikedFloor,
     WhiteCloud, GreyCloud, CrystalCloudBot, CrystalCloudTop, ThunderCloud
@@ -34,4 +40,8 @@ public enum TileType{
 
 public enum SpriteBoundaries{
     None, One, TwoCorner, TwoMiddle, Three, Four, Null
+}
+
+public enum ParticlesVFXType{
+    CrystalFloorBreak, CrystalCloudBreak, ThundersInCloud
 }

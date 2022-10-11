@@ -11,6 +11,9 @@ public class AssetsRepository : MonoBehaviour
     [SerializeField]
     List<TileSpritesBundle> cloudTileSpritesBundles;
 
+    [SerializeField]
+    List<ParticlesVFX> particleSystemList;
+
     private void Awake() {
         if(instance == null)
            instance = this;
@@ -34,4 +37,6 @@ public class AssetsRepository : MonoBehaviour
     public Sprite GetBackgroundImage(int worldNumber){
         return worldAssetsList.Find(x => x.worldNumber == worldNumber).backgroundImage;
     }
+
+    public ParticlesVFX GetParticlesVFX(ParticlesVFXType type) => particleSystemList.Find(x => x.type == type);
 }

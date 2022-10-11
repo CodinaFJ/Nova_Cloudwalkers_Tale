@@ -52,7 +52,7 @@ public class TileBehavior : MonoBehaviour
         SetTileSpritesBundles();
     }
 
-    protected void SetCorrectSprites()
+    private void SetCorrectSprites()
     {
         if(tileType != TileType.CrystalFloor){
             SetAdyacentTiles();
@@ -62,6 +62,16 @@ public class TileBehavior : MonoBehaviour
 
         SetAdyacentTilesForShadow();
         InstantiateShadow();
+    }
+
+    public void SetCorrectSpritesAfterCrack(){
+        foreach(Transform childShadow in this.transform){
+            if(childShadow.GetComponent<ParticleSystem>() != null) continue;
+            childShadow.gameObject.SetActive(false);
+            Destroy(childShadow.gameObject);
+        }
+
+        SetCorrectSprites();
     }
 
 
