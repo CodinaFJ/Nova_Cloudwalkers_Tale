@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1731023091914446820, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a4c6d75c26b41340b2d293c80524804, type: 2}
     - target: {fileID: 7075206057840484584, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_Name
       value: ParentCloudTile
