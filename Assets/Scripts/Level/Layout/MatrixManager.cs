@@ -698,8 +698,8 @@ public void LoadLevelStateMatrixManager(int[,] _itemsLayoutMatrix, int[,] _mecha
 
 //MATRIX UTILITIES
 
-    public Vector3 FromMatrixIndexToWorld(Vector3 x) => FromMatrixIndexToWorld((int)x[0], (int)x[1]);
-    public Vector3 FromMatrixIndexToWorld(Vector2 x) => FromMatrixIndexToWorld((int)x[0], (int)x[1]);
+    public Vector3 FromMatrixIndexToWorld(Vector3 v) => FromMatrixIndexToWorld((int)v.x, (int)v.y);
+    public Vector3 FromMatrixIndexToWorld(Vector2 v) => FromMatrixIndexToWorld((int)v.x, (int)v.y);
     public Vector3 FromMatrixIndexToWorld(float i, float j) => FromMatrixIndexToWorld((int)i, (int)j);
     public Vector3 FromMatrixIndexToWorld(int i, int j)
     {

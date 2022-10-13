@@ -349,7 +349,7 @@ public class CloudInputManager : MonoBehaviour
 
         matrixManager.FinishCloudMovementInMatrix(unitaryMovement, item);
 
-        matrixManager.SearchGreyCloudContact(item);   
+        matrixManager.SearchGreyCloudContact(item);
 
         if(!isSelecting) mouseMovements = new int[0];
 

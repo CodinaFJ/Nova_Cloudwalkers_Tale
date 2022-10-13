@@ -24,7 +24,7 @@ public class VFXManager : MonoBehaviour
     }
 
     public void InstantiateGreyParticles(Vector2 coor, Vector2 coorAdjacent){
-        if(tilesWithCloudToJoin.Find(x => x == coor) != null){
+        if(tilesWithCloudToJoin.Exists(x => x == coor)){
             Vector2 pos = (MatrixManager.instance.FromMatrixIndexToWorld(coor) + MatrixManager.instance.FromMatrixIndexToWorld(coor + coorAdjacent))/2;
             GameObject particlesGO = Instantiate(AssetsRepository.instance.GetParticlesVFX(ParticlesVFXType.GreyCloudJoin).particlesPrefab, pos, Quaternion.identity);
             particlesGO.GetComponent<ParticleSystem>().Play();
