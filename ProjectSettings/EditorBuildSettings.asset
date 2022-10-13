@@ -6,76 +6,28 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menus/StartMenu.unity
-    guid: 06a55675a1d4ef74ba0b59483def7e90
-  - enabled: 1
-    path: Assets/Scenes/Cinematics/Cinematic1.unity
-    guid: 01bc9bb302f917640bf3d412c655ff07
-  - enabled: 1
-    path: Assets/Scenes/Levels/World2/World2Level1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Menus/LevelSelectorMenu.unity
+    guid: a4c6e9584e2670944b4872ebbffb8dae
   - enabled: 1
     path: Assets/Scenes/Menus/ControlsMenu.unity
     guid: c6a0f974b2c6cc04aac736f3b3496bd6
   - enabled: 1
-    path: Assets/Scenes/Menus/LevelSelectorMenu.unity
-    guid: a4c6e9584e2670944b4872ebbffb8dae
-  - enabled: 1
-    path: Assets/Scenes/Levels/World1/Tutoriales Codi Peques/1-1-World1Tutorial1
-      Peque.unity
-    guid: 2594462755c2e704580ef279264ff2ea
-  - enabled: 1
-    path: Assets/Scenes/Levels/World1/Tutoriales Codi Peques/Legacy/World1Tutorial2
-      Peque.unity
-    guid: f472b15db3de7be4c80eaca719ac5abe
-  - enabled: 1
-    path: Assets/Scenes/Levels/World1/Tutoriales Codi Peques/Legacy/World1Tutorial3
-      Peque.unity
-    guid: 8f99a41462a3ac04f803b0c9bb5f40e8
-  - enabled: 1
-    path: Assets/Scenes/Levels/World1/4-1-Level click U jam.unity
-    guid: d08495e7c99b4a840973fba5a681ae5c
-  - enabled: 1
-    path: Assets/Scenes/Levels/World1/5-1-gg2 - Girado.unity
-    guid: 216056db7abf3bb4099fb5f82b139448
-  - enabled: 1
-    path: Assets/Scenes/Levels/World1/6-1-gg3 girado.unity
-    guid: f9cd20def9f30ee45a37e5bcb9ad8a47
-  - enabled: 1
-    path: Assets/Scenes/Levels/World1/7-1-gg4 v4.unity
-    guid: 8ffa648194547c747b7b4c8abb984ed1
-  - enabled: 1
-    path: Assets/Scenes/Levels/World1/8-1- soloblancas IntroSurf v2.unity
-    guid: 4cc31c136620d424fbc75f9d270ab2d5
-  - enabled: 1
-    path: Assets/Scenes/Levels/World1/9-1- Soloblancas Libreta NICER.unity
-    guid: b3d4181ba40ebb74b9abf14bb31b298b
-  - enabled: 1
-    path: Assets/Scenes/Levels/World1/10-1-GDC0 Mejorado Hard.unity
-    guid: 878e1f8e9ce36534a97eb87c5832f476
-  - enabled: 1
-    path: Assets/Scenes/Levels/World2/1-2-Level IntroDark NEW.unity
-    guid: fd129ffbf9de4314abeca7491ca3cc10
-  - enabled: 1
-    path: Assets/Scenes/Levels/World2/2-2-gg6 - IntroDark part2.unity
-    guid: 1011197f01462334387571d67fceda09
-  - enabled: 1
-    path: Assets/Scenes/Levels/World2/3-2-gg7 - ezpz.unity
-    guid: 0e3d40278ae259844a5e00b5d7481c97
-  - enabled: 1
-    path: Assets/Scenes/Levels/World2/4-2-Level NubesGrises Gordas OK.unity
-    guid: 2d330dca8f54fbb4abc020ad849b2dfc
-  - enabled: 1
-    path: Assets/Scenes/Levels/World2/5-2-gg8 deLaJam v2.unity
-    guid: 5e7c1a8f2835a894db8f95311b9827e3
-  - enabled: 1
-    path: Assets/Scenes/Levels/World2/6-2-Level colchonpuertas NICE 1.unity
-    guid: 1f685a95b2a828442ae99318c1679111
-  - enabled: 1
-    path: Assets/Scenes/Levels/World2/7-2-Level small7 2nubes (+).unity
-    guid: cec847f343115bc488fbed0497d4fd43
-  - enabled: 1
     path: Assets/Scenes/Menus/Finaldemo.unity
     guid: 34531e8dec4bcb84ea3b95e82dcf70c5
+  - enabled: 1
+    path: Assets/Scenes/JuanAssetsDelivery/1-1-SampleLevelWorld1.unity
+    guid: edb28ec402083484f9010aebf32639b7
+  - enabled: 1
+    path: Assets/Scenes/JuanAssetsDelivery/2-1-SampleLevelWorld2.unity
+    guid: 305f43fbfd159db4db528c96fe54c1dc
+  - enabled: 1
+    path: Assets/Scenes/JuanAssetsDelivery/3-1-SampleLevelWorld3.unity
+    guid: 1c0c7a8a3b93300439f4578cdb37b347
+  - enabled: 1
+    path: Assets/Scenes/JuanAssetsDelivery/4-1-SampleLevelWorld3.unity
+    guid: 864c7a791c3c5cd47b172e99d8564b55
+  - enabled: 1
+    path: Assets/Scenes/JuanAssetsDelivery/5-1-SampleLevelWorld4.unity
+    guid: 7ef1482b29e959d4e804c6190f698283
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 67b6f2b3104188242a8ff244006eb075, type: 2}

@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     public void ToMap()
     {
-        levelLoader.LoadLevel("LevelSelectorMenu");
+        levelLoader.LoadLevel("LevelSelectorMenu_JuanDemo");
     }
 
     public void PjToExit()
@@ -65,8 +65,8 @@ public class GameManager : MonoBehaviour
 
     public void ToEndDemo()
     {
-        levelLoader.LoadLevel("Finaldemo");
-        FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
+        levelLoader.LoadLevel("LevelSelectorMenu_JuanDemo");
+        //FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
 
 }

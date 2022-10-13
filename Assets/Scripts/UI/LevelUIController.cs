@@ -27,10 +27,10 @@ public class LevelUIController : MonoBehaviour
         Debug.Log("ExitButton");
         OptionCanvas.SetActive(true);
 
-        OptionsMenuController optionsMenuController = FindObjectOfType<OptionsMenuController>();
+        /*OptionsMenuController optionsMenuController = FindObjectOfType<OptionsMenuController>();
 
         optionsMenuController.pauseMenuInput.enabled = true;
-        optionsMenuController.pauseMenuInput.ActivateInput();
+        optionsMenuController.pauseMenuInput.ActivateInput();*/
 
         if(gameManager != null) gameManager.PauseGame();
     }
