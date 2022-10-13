@@ -465,6 +465,7 @@ public class MatrixManager : MonoBehaviour
 
     public void SearchGreyCloudContact(int item)
     {
+        VFXManager.instance.PreInstantiateGreyParticles(item);
         if(AttachGreyCloudInMatrix(item))
         {
             FromMatrixToGame.ReInstantiateItem(item);
@@ -537,6 +538,7 @@ public class MatrixManager : MonoBehaviour
                                 if (mechanicsLayoutMatrix[i + k, j + u] == valueGreyCloudMechanic)
                                 {
                                     attachingCloud = true;
+                                    VFXManager.instance.InstantiateGreyParticles(new Vector2(i,j), new Vector2(k, u));
 
                                     mechanicsLayoutMatrix[i + k, j + u] = mechanicsLayoutMatrix[i,j];                             
 
@@ -696,6 +698,9 @@ public void LoadLevelStateMatrixManager(int[,] _itemsLayoutMatrix, int[,] _mecha
 
 //MATRIX UTILITIES
 
+    public Vector3 FromMatrixIndexToWorld(Vector3 x) => FromMatrixIndexToWorld((int)x[0], (int)x[1]);
+    public Vector3 FromMatrixIndexToWorld(Vector2 x) => FromMatrixIndexToWorld((int)x[0], (int)x[1]);
+    public Vector3 FromMatrixIndexToWorld(float i, float j) => FromMatrixIndexToWorld((int)i, (int)j);
     public Vector3 FromMatrixIndexToWorld(int i, int j)
     {
         Vector3 worldPosition = new Vector3 (coordinatesOriginMatrix.x + j + (0.5f * tilemapsLevelLayout.GetGridCellSize()), coordinatesOriginMatrix.y - i + (0.5f * tilemapsLevelLayout.GetGridCellSize()), 0f);

@@ -43,5 +43,7 @@ public enum SpriteBoundaries{
 }
 
 public enum ParticlesVFXType{
-    CrystalFloorBreak, CrystalCloudBreak, ThundersInCloud
+    CrystalFloorBreak, CrystalCloudBreak,
+    ThundersInCloud,
+    GreyCloudJoin
 }
