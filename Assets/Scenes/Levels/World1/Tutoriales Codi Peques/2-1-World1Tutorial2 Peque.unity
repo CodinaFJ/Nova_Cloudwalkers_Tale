@@ -3792,11 +3792,11 @@ PrefabInstance:
     - target: {fileID: 1041690251505586119, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[1].m_Data
       value: 
-      objectReference: {fileID: 5961732372782351441, guid: 01e43852af03f15478fe762106ba3eb9, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1041690251505586119, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[2].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5961732372782351441, guid: 01e43852af03f15478fe762106ba3eb9, type: 3}
     - target: {fileID: 1041690251505586119, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_TileColorArray.Array.data[0].m_Data.a
       value: 1
@@ -3947,11 +3947,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251505586119, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[1].m_RefCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251505586119, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[2].m_RefCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251505586119, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_AllTileFlags
@@ -3971,7 +3971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251505586119, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_Tiles.Array.data[1].second.m_TileSpriteIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251505586119, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_Tiles.Array.data[2].second.m_TileMatrixIndex
@@ -17564,6 +17564,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1953080084227253640, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3913294653125811544, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821994776898489235, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864135669658118453, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8333424986176356318, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -17651,6 +17667,10 @@ PrefabInstance:
     - target: {fileID: 8333424986176356322, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
       propertyPath: m_Name
       value: OptionsCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333424986176356322, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
