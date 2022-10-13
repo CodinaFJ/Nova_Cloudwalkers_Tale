@@ -11,6 +11,13 @@ public class TileBehavior : MonoBehaviour
     GameObject tileShadow;
     [SerializeField] 
     float shadowToWorldCorrection = 0.85f;
+    [SerializeField]
+    GameObject movementParticlesPrefab;
+    [SerializeField]
+    GameObject joinParticlesPrefab;
+    
+    GameObject myMovementParticles;
+    GameObject myJoinParticles;
 
     SpriteRenderer mySpriteRenderer;
 
@@ -34,6 +41,9 @@ public class TileBehavior : MonoBehaviour
 
     private void Start() {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+
+        myMovementParticles = Instantiate(movementParticlesPrefab, transform.position, Quaternion.identity, this.transform);
+        myMovementParticles.GetComponent<ParticleSystem>().Play();
 
         InitilizeTileInfo();
         SetCorrectSprites();

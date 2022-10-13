@@ -516,7 +516,7 @@ public class CloudInputManager : MonoBehaviour
 
     void TweenCloudScaleOnSelect()
     {
-        foreach(InstantiatedCloudBehavior cloudTile in cloudsParents[item-1].GetComponentsInChildren<InstantiatedCloudBehavior>())
+        foreach(TileBehavior cloudTile in cloudsParents[item-1].GetComponentsInChildren<TileBehavior>())
         {
             LeanTween.cancel(cloudTile.gameObject);
             LeanTween.scale(cloudTile.gameObject, new Vector3 (Mathf.Sign(cloudTile.transform.localScale.x) * 1f,Mathf.Sign(cloudTile.transform.localScale.y) *1f, 1), scaleTweenTime).setEaseOutExpo();
@@ -527,7 +527,7 @@ public class CloudInputManager : MonoBehaviour
 
     void TweenCloudScaleOnRelease()
     {
-        foreach(InstantiatedCloudBehavior cloudTile in cloudsParents[item-1].GetComponentsInChildren<InstantiatedCloudBehavior>())
+        foreach(TileBehavior cloudTile in cloudsParents[item-1].GetComponentsInChildren<TileBehavior>())
         {
            //LeanTween.scale(cloudTile.gameObject, new Vector3 (Mathf.Sign(cloudTile.transform.localScale.x) * 1f,Mathf.Sign(cloudTile.transform.localScale.y) *1f, 1), scaleTweenTime).setEaseOutExpo();
            LeanTween.scale(cloudTile.gameObject, new Vector3 (Mathf.Sign(cloudTile.transform.localScale.x) * 1.05f,Mathf.Sign(cloudTile.transform.localScale.y) * 1.05f, 1), scaleTweenTime).setEasePunch(); 

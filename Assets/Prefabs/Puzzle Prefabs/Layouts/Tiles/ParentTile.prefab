@@ -98,3 +98,6 @@ MonoBehaviour:
   tileType: 0
   tileShadow: {fileID: 7075206057840484584, guid: 6f3e3afd0f8a8894487bec6c3f6c7db3, type: 3}
   shadowToWorldCorrection: 0.85
+  movementParticlesPrefab: {fileID: 8478759500691322797, guid: 5ab4e9883271e7c41bcc1e856674c519, type: 3}
+  myMovementParticles: {fileID: 0}
+  adyacentTilesNumber: 0

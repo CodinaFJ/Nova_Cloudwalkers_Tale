@@ -491,7 +491,7 @@ public class MatrixManager : MonoBehaviour
 
             
             if(mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] == valueCrystalCloudMechanic ||
-                mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] == valueCrystalFloorMechanic)
+               mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] == valueCrystalFloorMechanic)
             {
                 mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] ++; 
                 Debug.Log("Mechanic in tile under PJ: " + mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]]);
