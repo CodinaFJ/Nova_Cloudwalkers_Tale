@@ -55,19 +55,28 @@ TextureImporter:
     second: Nova_UI Menu icono Hoover
   - first:
       213: 3253030660798202881
-    second: Nova_UI Deshacer icono Hoover
+    second: Nova_UI Reset icono Hoover
   - first:
       213: 4047773083792360383
     second: Nova_UI Menu icono Click
   - first:
       213: 7056478922987834077
-    second: Nova_UI Deshacer icono Click
+    second: Nova_UI Reset icono Click
   - first:
       213: 182779330967423271
     second: Nova_UI Candado cerrado
   - first:
       213: 5608850119652856679
     second: Nova_UI Candado abierto
+  - first:
+      213: 1654698091864666627
+    second: Nova_UI Deshacer icon
+  - first:
+      213: 7315607463994060330
+    second: Nova_UI Deshacer icono Hoove
+  - first:
+      213: -7487365070015476424
+    second: Nova_UI Reset icono Click
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -241,7 +250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nova_UI Deshacer icono
+      name: Nova_UI Reset icono
       rect:
         serializedVersion: 2
         x: 939
@@ -497,7 +506,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 2
         width: 1557
         height: 1557
       alignment: 0
@@ -997,7 +1006,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nova_UI Deshacer icono Hoover
+      name: Nova_UI Reset icono Hoover
       rect:
         serializedVersion: 2
         x: 2606
@@ -1039,7 +1048,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nova_UI Deshacer icono Click
+      name: Nova_UI Reset icono Click
       rect:
         serializedVersion: 2
         x: 2950
@@ -1097,6 +1106,69 @@ TextureImporter:
       bones: []
       spriteID: 763d0548773a6dd40800000000000000
       internalID: 5608850119652856679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Deshacer icon
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 1694
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3023c18c52ba6f610800000000000000
+      internalID: 1654698091864666627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Deshacer icono Hoove
+      rect:
+        serializedVersion: 2
+        x: 2606
+        y: 1694
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2eef8f8a32468560800000000000000
+      internalID: 7315607463994060330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Deshacer icono Click
+      rect:
+        serializedVersion: 2
+        x: 2778
+        y: 1694
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d4f0a7329871890800000000000000
+      internalID: -7487365070015476424
       vertices: []
       indices: 
       edges: []
