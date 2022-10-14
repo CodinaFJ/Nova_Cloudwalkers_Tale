@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_Nube
-  m_Shader: {fileID: -6465566751694194690, guid: 2aae289511f999846bc4c8a26a5c34a4, type: 3}
+  m_Shader: {fileID: 4800000, guid: 1600d87f817370c40911385d681f42e9, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -36,6 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - BOOLEAN_9D9E37D4AFB44812A8FE0060262413A8: 0
     - Vector1_0f864ba63a0b417dac1cfab7253422ee: 1
     - Vector1_58b45d19e59e4bb295e1382670053b0b: 1.1
     - Vector1_a3541c7914294b02bdf85966fd88923e: 0.2
