@@ -170,7 +170,8 @@ public class fromMatrixToGame : MonoBehaviour
         {
             foreach (Transform child in cloudsParents[item - 1].transform)
             {
-                child.gameObject.SetActive(false);
+                if(child.GetComponent<TileBehavior>() != null)
+                    child.gameObject.SetActive(false);
             }
         }
     }
