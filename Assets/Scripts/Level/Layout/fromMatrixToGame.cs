@@ -168,10 +168,9 @@ public class fromMatrixToGame : MonoBehaviour
     {
         if(item != MatrixManager.instance.valueForFloor && item != MatrixManager.instance.valueForCrystalFloor)
         {
-            foreach (Transform child in cloudsParents[item - 1].transform)
+            foreach (TileBehavior child in cloudsParents[item - 1].GetComponentsInChildren<TileBehavior>())
             {
-                if(child.GetComponent<TileBehavior>() != null)
-                    child.gameObject.SetActive(false);
+                child.gameObject.SetActive(false);
             }
         }
     }
