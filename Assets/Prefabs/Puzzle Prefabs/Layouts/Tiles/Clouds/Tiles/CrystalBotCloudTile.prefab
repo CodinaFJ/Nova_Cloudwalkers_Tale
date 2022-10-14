@@ -53,8 +53,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1392979473577171583, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
       propertyPath: m_Name
-      value: CrystalCloudTile
+      value: CrystalBotCloudTile
       objectReference: {fileID: 0}
+    - target: {fileID: 1629984981303202443, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a4c6d75c26b41340b2d293c80524804, type: 2}
     - target: {fileID: 8915423902217730175, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
       propertyPath: tileType
       value: 5
@@ -83,7 +87,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0049261, y: 1.0049261}
+    oldSize: {x: 1.2610837, y: 1.2610837}
     newSize: {x: 1.0049261, y: 1.0049261}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
