@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9a4c6d75c26b41340b2d293c80524804, type: 2}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: tileShadow
+      value: 
+      objectReference: {fileID: 3342565517161224840, guid: 737b9bf5628a3da439c9082706f5d826, type: 3}
     - target: {fileID: 7075206057840484584, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_Name
       value: ParentCloudTile
