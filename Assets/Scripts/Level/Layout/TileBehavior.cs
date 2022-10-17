@@ -188,11 +188,11 @@ public class TileBehavior : MonoBehaviour
             mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.One).sprite;
 
             if(adyacentTiles[0]){
-               transform.Rotate(0,0,90,Space.Self);
+               transform.Rotate(0,0,-90,Space.Self);
                mySpriteRenderer.flipY = true;
             }
-            else if(adyacentTiles[2]) transform.Rotate(0,0,-90,Space.Self);
-            else if(adyacentTiles[1]) mySpriteRenderer.flipX = true;
+            else if(adyacentTiles[2]) transform.Rotate(0,0,90,Space.Self);
+            else if(adyacentTiles[3]) mySpriteRenderer.flipX = true;
         }
 
         else if(adyacentTilesNumber==2){
