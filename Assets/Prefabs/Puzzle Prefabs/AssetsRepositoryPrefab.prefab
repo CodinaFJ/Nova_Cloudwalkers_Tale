@@ -249,17 +249,17 @@ MonoBehaviour:
     shadowTiles: 0
     spritesList:
     - boundaries: 2
-      sprite: {fileID: 6887368097464344716, guid: ee48ff2c123bafd4a8e674e2d8d673e8, type: 3}
+      sprite: {fileID: 21300000, guid: 4347bce1b409251428c70ffc7be56ba0, type: 3}
     - boundaries: 4
-      sprite: {fileID: 1357393203843571917, guid: ee48ff2c123bafd4a8e674e2d8d673e8, type: 3}
+      sprite: {fileID: 21300000, guid: ba6ce752f6a524d4b9e62ff1405e9255, type: 3}
     - boundaries: 5
       sprite: {fileID: 21300000, guid: 945ef5bbe02a28f44be610afc79b9de7, type: 3}
     - boundaries: 1
       sprite: {fileID: 21300000, guid: 414dda35894d3644c827eafb4c482d39, type: 3}
     - boundaries: 3
-      sprite: {fileID: 710639471521415084, guid: ee48ff2c123bafd4a8e674e2d8d673e8, type: 3}
+      sprite: {fileID: 21300000, guid: 793c4b7a391dbba4c88ee5c6ebcedb79, type: 3}
     - boundaries: 0
-      sprite: {fileID: -7444982457086184201, guid: 169b47f69556e1548901e169d3f3191f, type: 3}
+      sprite: {fileID: 21300000, guid: 8c109d493337a0d4f8458126503cb574, type: 3}
   - tileType: 3
     shadowTiles: 1
     spritesList:
