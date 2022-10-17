@@ -39,7 +39,7 @@ public class CloudInputManager : MonoBehaviour
     fromMatrixToGame fromMatrixToGame;
     GameObject[] cloudsParents;
 
-    CloudSfxManager cloudSfxManager;
+    //CloudSfxManager cloudSfxManager;
     float timeForWrongAction = 2f;
 
     float cellSize = 1f;
@@ -92,7 +92,7 @@ public class CloudInputManager : MonoBehaviour
 
         playerBehavior = FindObjectOfType<PlayerBehavior>();
 
-        cloudSfxManager = FindObjectOfType<CloudSfxManager>();
+        //cloudSfxManager = FindObjectOfType<CloudSfxManager>();
 
         cloudAnimationManager = FindObjectOfType<CloudAnimationManager>();
     }

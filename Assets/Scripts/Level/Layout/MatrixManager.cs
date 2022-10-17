@@ -42,8 +42,6 @@ public class MatrixManager : MonoBehaviour
 
     PlayerBehavior playerBehavior;
 
-    CloudSfxManager cloudSfxManager;
-
     void Awake()
     {
         if(instance == null)
@@ -60,8 +58,6 @@ public class MatrixManager : MonoBehaviour
         CreatePjMovementMatrix();
         CreateCloudsMovementMatrix();
         CreatePathNodesMatrix();
-
-        cloudSfxManager = FindObjectOfType<CloudSfxManager>();
     }
 
     void Start()
@@ -468,6 +464,8 @@ public class MatrixManager : MonoBehaviour
         VFXManager.instance.PreInstantiateGreyParticles(item);
         if(AttachGreyCloudInMatrix(item))
         {
+            try  {SFXManager.instance.PlayCloudConnect();
+            }catch (Exception ex) {Debug.Log("Error opening SFXManager: " + ex.Message);}
             FromMatrixToGame.ReInstantiateItem(item);
         }
     }
@@ -488,16 +486,12 @@ public class MatrixManager : MonoBehaviour
             playerBehavior.UpdateItemUnderPj();
             RefreshCloudsMovementMatrix();
             RefreshPjMovementMatrix();
-            cloudSfxManager.PlayCloudConnect();
+            
 
             
             if(mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] == valueCrystalCloudMechanic ||
                mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] == valueCrystalFloorMechanic)
-            {
-                mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] ++; 
-                Debug.Log("Mechanic in tile under PJ: " + mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]]);
-            }
-            
+                mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] ++;             
         }
         else stateSaved = false;
     }

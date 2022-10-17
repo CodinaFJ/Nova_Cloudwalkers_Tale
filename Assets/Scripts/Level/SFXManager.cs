@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CloudSfxManager : MonoBehaviour
+public class SFXManager : MonoBehaviour
 {
     //SFX names
     const string CLOUD_COLLISION = "CloudCollision";
@@ -11,6 +11,12 @@ public class CloudSfxManager : MonoBehaviour
     const string CLOUD_SWIPE_LOOP = "CloudSwipe_Loop";
     const string CLOUD_SWIPE_RELEASE = "CloudSwipe_Release";
     const string CLOUD_SWIPE_TAP = "CloudSwipe_Tap";//+ SFX variation (1-3)
+
+    public static SFXManager instance;
+
+    private void Awake() {
+        instance = this;
+    }
 
     public void PlayCloudConnect()
     {
