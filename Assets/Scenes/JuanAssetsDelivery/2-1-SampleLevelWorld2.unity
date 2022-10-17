@@ -21622,6 +21622,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[15].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 3204290127542389602, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
+      propertyPath: world
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4133686695883577544, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
       propertyPath: m_ChunkCullingBounds.x
       value: 0.0024630427

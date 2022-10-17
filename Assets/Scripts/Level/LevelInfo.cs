@@ -44,7 +44,7 @@ public class LevelInfo : MonoBehaviour
 
         string[] levelNameParts = LevelName.Split(new char[] {'-'});
 
-        try
+        /*try TODO: Use this to set world and level
         {
             level = int.Parse(levelNameParts[0]);
             world = int.Parse(levelNameParts[1]);
@@ -57,7 +57,7 @@ public class LevelInfo : MonoBehaviour
         catch(Exception e)
         {
             Debug.Log("Error reading level name: " + e.Message);
-        }
+        }*/
 
         
     }
