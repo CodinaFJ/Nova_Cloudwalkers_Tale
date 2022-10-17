@@ -124,6 +124,10 @@ PrefabInstance:
       propertyPath: tileType
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8915423902217730175, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
+      propertyPath: shadowToWorldCorrection
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
 --- !u!1 &5159312073458946680 stripped
@@ -153,7 +157,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2610837, y: 1.2610837}
+    oldSize: {x: 1.0049261, y: 1.0049261}
     newSize: {x: 1.0049261, y: 1.0049261}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
