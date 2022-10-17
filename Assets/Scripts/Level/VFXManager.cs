@@ -17,9 +17,10 @@ public class VFXManager : MonoBehaviour
         }
     }
 
+    //By default instantiates particles on PJ cell
     public void InstantiateParticles(ParticlesVFXType particlesType) => InstantiateParticles(particlesType, MatrixManager.instance.FromMatrixIndexToWorld(PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]));
     public void InstantiateParticles(ParticlesVFXType particlesType, Vector3 pos){
-        GameObject particlesGO = Instantiate(AssetsRepository.instance.GetParticlesVFX(ParticlesVFXType.CrystalFloorBreak).particlesPrefab, pos, Quaternion.identity);
+        GameObject particlesGO = Instantiate(AssetsRepository.instance.GetParticlesVFX(particlesType).particlesPrefab, pos, Quaternion.identity);
         particlesGO.GetComponent<ParticleSystem>().Play();
     }
 
@@ -31,6 +32,7 @@ public class VFXManager : MonoBehaviour
         }
     }
 
+    //Saves tiles with white cloud to instatiente grey particles on these ones
     public void PreInstantiateGreyParticles(int item){
         tilesWithCloudToJoin.Clear();
 

@@ -110,7 +110,7 @@ public class fromMatrixToGame : MonoBehaviour
         Vector3 itemPosition = MatrixManager.instance.FromMatrixIndexToWorld(i, j);
 
         GameObject crystalTile =  Instantiate(crystalTopCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
-        Instantiate(crystalBotCloud, itemPosition, Quaternion.identity, crystalTile.transform);
+        Instantiate(crystalBotCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
     }
 
     void InstantiateThunderCloud(int i, int j, int whiteCloudNumber)
