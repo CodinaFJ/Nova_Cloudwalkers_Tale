@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Permanent : MonoBehaviour
 {
-    void Start()
-    {
+    private void Start(){
         DontDestroyOnLoad(gameObject);
     }
-
 }

@@ -6,12 +6,18 @@ public class FPSDisplay : MonoBehaviour
 {
     public int avgFrameRate;
     public TextMeshProUGUI display_Text;
+
+    float elapsedTime = 0f;
  
     public void Update ()
     {
         float current = 0;
         current = (int)(1f / Time.unscaledDeltaTime);
         avgFrameRate = (int)current;
-        display_Text.text = avgFrameRate.ToString() + " FPS";
+        string text = avgFrameRate.ToString() + " FPS";
+        if(elapsedTime > 0.2f){
+                display_Text.text = text;
+                elapsedTime = 0f;
+            } 
     }
 }

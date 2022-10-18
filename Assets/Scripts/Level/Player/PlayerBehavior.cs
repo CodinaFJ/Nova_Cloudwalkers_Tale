@@ -56,6 +56,9 @@ public class PlayerBehavior : MonoBehaviour
         UpdateItemUnderPj();
     }
 
+    private void OnDisable() {
+        instance = null;
+    }
 
     //Places PJ in the correct centered position within the cell it is
     void SnapPjToGrid()

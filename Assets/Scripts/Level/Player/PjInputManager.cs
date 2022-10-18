@@ -71,7 +71,7 @@ public class PjInputManager : MonoBehaviour
     void Start()
     {
         //Initialize all matrixes
-        matrixManager = FindObjectOfType<MatrixManager>();
+        matrixManager = MatrixManager.instance;
         itemsLayoutMatrix = matrixManager.GetItemsLayoutMatrix();
         mechanicsLayoutMatrix = matrixManager.GetMechanicsLayoutMatrix();
         pjMovementMatrix = matrixManager.GetPjMovementMatrix();
@@ -145,7 +145,6 @@ public class PjInputManager : MonoBehaviour
         UpdateMovementState(movementDone);
         
         //Variables for the position calculations
-        float finishTime = PjMovementTime;
         Vector3 pjInitialPosition = playerBehavior.gameObject.transform.position;
         Vector3 pjMovementDirection = new Vector3 (0, 0, 0);
 
