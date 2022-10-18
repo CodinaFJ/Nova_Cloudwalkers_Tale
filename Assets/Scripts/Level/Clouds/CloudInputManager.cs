@@ -534,10 +534,7 @@ public class CloudInputManager : MonoBehaviour
         }
     }
 
-    public void SetEasingValue(float value)
-    {
-        easingValue = value;
-    }
+    public void SetEasingValue(float value) => easingValue = value;
 
     public void SetCloudMove(bool value) => cloudMoved = value;
 

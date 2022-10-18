@@ -32,6 +32,10 @@ public class PjInputManager : MonoBehaviour
     [SerializeField] int movementsMemory = 2;
     [SerializeField] float releaseMouseTolerance = 1f;
     [SerializeField] bool wallLevel = false;
+    [SerializeField][Range(0,0.5f)]
+    float timeStepOvershootCorrection = 0.1f;
+    [SerializeField][Range(0,0.2f)]
+    float arriveToFinalPositionBuffer = 0.01f;
     
     public static PjInputManager instance;
 
@@ -173,12 +177,15 @@ public class PjInputManager : MonoBehaviour
         Vector3 stepFinalPosition = pjInitialPosition + pjMovementDirection;
         float currentTime = 0;
 
-        while (!Vector3.Equals(playerBehavior.gameObject.transform.position, stepFinalPosition) && pjMoving)
-        {
+        while (Vector3.Magnitude(playerBehavior.gameObject.transform.position - stepFinalPosition) > arriveToFinalPositionBuffer && pjMoving){
             currentTime += Time.deltaTime;
-            playerBehavior.gameObject.transform.position = Vector3.Lerp(pjInitialPosition, stepFinalPosition, Mathf.Clamp(currentTime / PjMovementTime, 0f, 1f));
+            playerBehavior.gameObject.transform.position = Vector3.Lerp(pjInitialPosition, 
+                                                                        stepFinalPosition, 
+                                                                        Mathf.Clamp(currentTime / PjMovementTime + PjMovementTime* timeStepOvershootCorrection, 0f, 1f));
             yield return null;
         }
+
+        if(pjMovementsPress.Length == 0) playerBehavior.gameObject.transform.position = stepFinalPosition;
 
         //If stepped on crystal, prepare it to break when leaving the tile
         matrixManager.CheckForCrystal();
@@ -188,9 +195,7 @@ public class PjInputManager : MonoBehaviour
         pjMoving = false;// Bool to control if coroutine is active
 
         if(pjMovementsPress.Length > 0 || pjMovementsHold.Length > 0)
-        {
             MovePlayer();
-        }
     }
 
     IEnumerator WaitForSittingPJ()
