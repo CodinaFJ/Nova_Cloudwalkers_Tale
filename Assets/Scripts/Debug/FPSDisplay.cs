@@ -12,6 +12,7 @@ public class FPSDisplay : MonoBehaviour
     public void Update ()
     {
         float current = 0;
+        elapsedTime += Time.deltaTime;
         current = (int)(1f / Time.unscaledDeltaTime);
         avgFrameRate = (int)current;
         string text = avgFrameRate.ToString() + " FPS";
