@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -79,10 +79,15 @@ public class fromMatrixToGame : MonoBehaviour
             whiteCloudsTilemapRederers[i].enabled = false;
         }
 
-        if(!GameProgressManager.instance.GetActiveLevel().GetWallLevel()){
+        try{
+            if(!GameProgressManager.instance.GetActiveLevel().GetWallLevel()){
             floorTilemap.enabled = false;
             floorTilemapRenderer.enabled = false;
+            }   
+        }catch(Exception ex){
+            Debug.LogWarning("Error loading active level");
         }
+        
         
 
         spikedFloorTilemap.enabled = false;

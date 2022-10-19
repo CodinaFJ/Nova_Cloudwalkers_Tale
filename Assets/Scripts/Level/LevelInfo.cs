@@ -59,6 +59,8 @@ public class Level
     private int numberOfStars = 0;
     [SerializeField]
     private bool wallLevel = false;
+    [SerializeField]
+    private bool unlockedLevel = false;
 
     private int collectedStars = 0;
     private bool levelCompleted = false;
@@ -81,11 +83,13 @@ public class Level
     public int GetCollectedStars() => collectedStars;
     public bool GetWallLevel() => wallLevel;
     public bool GetLevelCompleted() => levelCompleted;
+    public bool GetLevelUnlocked() => unlockedLevel;
 
     //Setters
     public void SetCollectedStars(int collectedStars) => this.collectedStars = collectedStars;
     public void SetLevelCompleted() => SetLevelCompleted(true);
     public void SetLevelCompleted(bool value) => levelCompleted = value;
+    public void SetLevelUnlocked(bool value) => unlockedLevel = value;
 }
 
 [Serializable]

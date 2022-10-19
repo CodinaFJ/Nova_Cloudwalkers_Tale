@@ -4496,7 +4496,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1665807946566289824}
-  - component: {fileID: 3204290127542389602}
   m_Layer: 0
   m_Name: _levelLayout
   m_TagString: Untagged
@@ -4524,23 +4523,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3204290127542389602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665807946566289825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9150836729bb8ee4587241dd11b5a2cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wallLevel: 0
-  numberOfStars: 0
-  collectedStars: 0
-  world: 1
-  levelCompleted: 0
 --- !u!1 &1665807946897678080
 GameObject:
   m_ObjectHideFlags: 0

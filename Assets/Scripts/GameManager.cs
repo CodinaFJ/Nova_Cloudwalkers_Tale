@@ -15,6 +15,14 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public PlayerBehavior playerBehavior;
 
+    private void Awake() {
+        int numInstances = FindObjectsOfType<GameManager>().Length;
+        if(numInstances > 1)
+            Destroy(gameObject);
+        else{
+            instance = this;
+        }      
+    }
 
     private void Start() 
     {

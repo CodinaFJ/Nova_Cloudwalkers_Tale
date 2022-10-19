@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7303096619275083183}
-  - component: {fileID: 7303096619275083182}
   - component: {fileID: 9057001675364576587}
   m_Layer: 0
   m_Name: GameState
@@ -32,31 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7303096619275083182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7303096619275083177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3973d9f58e3ccf94ab9cbe685bf62463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelsList: []
-  completedLevelsWorld1: 00000000000000000000
-  completedLevelsWorld2: 00000000000000
-  preCompletedLevelsWorld1: 00000000000000000000
-  preCompletedLevelsWorld2: 00000000000000
-  collectedStarsInLevelsWorld1: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  totalStarsInLevelsWorld1: 01000000010000000200000002000000020000000200000003000000020000000200000001000000
-  collectedStarsInLevelsWorld2: 00000000000000000000000000000000000000000000000000000000
-  totalStarsInLevelsWorld2: 01000000010000000100000002000000020000000200000001000000
-  totalCollectedStars: 0
-  totalStars: 0
-  endReached: 0
-  lastLevel: 0000000000000000
 --- !u!114 &9057001675364576587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,9 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b42caaaff7df92478999169aaa030aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldsList:
+  worldsWithLevels:
   - worldNumber: 1
     levelsList:
-    - numberOfStars: 1
-      levelNumber: 1
+    - levelNumber: 1
+      numberOfStars: 1
       wallLevel: 0
+    - levelNumber: 2
+      numberOfStars: 1
+      wallLevel: 0
+  - worldNumber: 0
+    levelsList: []

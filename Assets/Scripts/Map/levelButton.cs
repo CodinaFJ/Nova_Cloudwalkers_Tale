@@ -28,20 +28,15 @@ public class levelButton : MonoBehaviour
     {
         myButton = GetComponent<Button>();
         myImage = GetComponent<Image>();
-        level = GameProgressManager.instance.GetLevel(worldNumber, levelNumber);
         if(GetComponentInChildren<ParticleSystem>() != null)GetComponentInChildren<ParticleSystem>().Stop();
 
-        if(!UnlockLevelQueryPre() && UnlockLevelQuery()){
-            StartCoroutine(DelayUnlockAnimationStart("UI_LevelUnlock"));
+        try{
+            level = GameProgressManager.instance.GetLevel(worldNumber, levelNumber);
+            SelectButtonStatus();
+        }catch{
+            Debug.LogWarning("Error importing level on button for level: " + worldNumber + ", " +levelNumber);
         }
-        if(level.GetLevelCompleted()){
-            myImage.sprite = completedLevel;
-            myButton.image.sprite = semiCompletedLevel;
-
-            if(level.GetCollectedStars() == level.GetNumberOfStars()){
-                myButton.image.sprite = completedLevel;
-            }
-        }
+        
         
         if(GameProgressManager.instance.GetActiveLevel() == level){
             GameObject activeLevelAnim = GameObject.FindGameObjectWithTag("ActiveLevel");
@@ -67,7 +62,22 @@ public class levelButton : MonoBehaviour
         FindObjectOfType<LevelSelectorController>().LoadLevel(sceneToLoad);
     }
 
+    private void SelectButtonStatus(){
+        if(!UnlockLevelQueryPre() && UnlockLevelQuery()){
+            StartCoroutine(DelayUnlockAnimationStart("UI_LevelUnlock"));
+        }
+        if(level.GetLevelCompleted()){
+            myImage.sprite = completedLevel;
+            myButton.image.sprite = semiCompletedLevel;
+
+            if(level.GetCollectedStars() == level.GetNumberOfStars()){
+                myButton.image.sprite = completedLevel;
+            }
+        }
+    }
+
     private bool UnlockLevelQuery(){
+        if(unlockerLevels.Length == 0) return true;
         foreach(int i in unlockerLevels){
             if(GameProgressManager.instance.GetLevel(worldNumber, i).GetLevelCompleted()) return true;
         }

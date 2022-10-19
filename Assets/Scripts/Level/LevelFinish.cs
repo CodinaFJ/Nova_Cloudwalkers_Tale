@@ -27,7 +27,7 @@ public class LevelFinish : MonoBehaviour
 
                 GameProgressManager.instance.SaveGameState();
             }catch(Exception ex){
-                Debug.Log("Problem saving: " + ex.Message);
+                Debug.LogWarning("Problem saving: " + ex.Message);
             }
             StartCoroutine(LoadNextLevel());
         }
@@ -35,8 +35,8 @@ public class LevelFinish : MonoBehaviour
 
     IEnumerator LoadNextLevel()
     {
-        gameManager.PjToExit();
-        //yield return new WaitForSecondsRealtime(0.5f);
+        gameManager = GameManager.instance;
+        GameManager.instance.PjToExit();
         AudioManager.instance.PlaySound("LevelExit");
         yield return new WaitForSecondsRealtime(levelLoadDelay);
 
@@ -45,12 +45,12 @@ public class LevelFinish : MonoBehaviour
             GameProgressManager.instance.CalculateCollectedStarsInGame();
             if(!GameProgressManager.instance.GetEndReached() || GameProgressManager.instance.GetCollectedStarsInGame() == GameProgressManager.instance.GetTotalStarsInGame())
             {
-                gameManager.ToEndDemo();
+                GameManager.instance.ToEndDemo();
                 GameProgressManager.instance.SetEndReached(true);
             }
-            else gameManager.ToMap();
+            else GameManager.instance.ToMap();
         }
-        else gameManager.ToMap();
+        else GameManager.instance.ToMap();
         
     }
 }
