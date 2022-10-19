@@ -11,7 +11,7 @@ public static class SaveSystem
         string path = Path.Combine(Application.persistentDataPath, "game.bin");
         FileStream stream = new FileStream(path, FileMode.Create);  
 
-        GameSaveData data = new GameSaveData(GameState.instance);
+        GameSaveData data = new GameSaveData();
 
         formatter.Serialize(stream, data);
         stream.Close();

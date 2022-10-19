@@ -9,48 +9,23 @@ public class LevelFinish : MonoBehaviour
     [SerializeField] float levelLoadDelay = 1f;
 
     GameManager gameManager;
-    LevelInfo levelInfo;
-    GameState gameState;
-
-    void Start()
-    {
-        gameManager = FindObjectOfType<GameManager>();
-        levelInfo = FindObjectOfType<LevelInfo>();
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Trigger enter");
         if(other.tag == "Player")
         {
-            if(levelInfo == null) return;
             try{
-                int levelNumber = levelInfo.GetLevelNumber();
-                int worldNumber = levelInfo.GetLevelWorldNumber();
-                Debug.Log("Finished Level: " + levelNumber + " In world: "+ worldNumber);
-                if(worldNumber == 1)
-                {
-                    GameState.instance.completedLevelsWorld1[levelNumber - 1] = true;
+                Level level = GameProgressManager.instance.GetActiveLevel();
+                Debug.Log("Finished Level: " + level.GetLevelNumber() + " In world: "+ GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber());
 
-                    if(GameState.instance.collectedStarsInLevelsWorld1[levelNumber - 1] < FindObjectOfType<LevelInfo>().collectedStars)
-                    {
-                        GameState.instance.collectedStarsInLevelsWorld1[levelNumber - 1] = FindObjectOfType<LevelInfo>().collectedStars;
-                    }
-                }
-                else if(worldNumber == 2)
-                {
-                    GameState.instance.completedLevelsWorld2[levelNumber - 1] = true;
-
-                    if(GameState.instance.collectedStarsInLevelsWorld2[levelNumber - 1] < FindObjectOfType<LevelInfo>().collectedStars)
-                    {
-                        GameState.instance.collectedStarsInLevelsWorld2[levelNumber - 1] = FindObjectOfType<LevelInfo>().collectedStars;
-                    }
+                level.SetLevelCompleted();
+                if(level.GetCollectedStars() < GameProgressManager.instance.GetCollectedStarsInLevel()){
+                    level.SetCollectedStars(GameProgressManager.instance.GetCollectedStarsInLevel());
+                    GameProgressManager.instance.GetActiveWorld().CalculateCollectedStars();
                 }
 
-                GameState.instance.lastLevel[0] = worldNumber;
-                GameState.instance.lastLevel[1] = levelNumber;
-
-                GameState.instance.SaveGameState();
+                GameProgressManager.instance.SaveGameState();
             }catch(Exception ex){
                 Debug.Log("Problem saving: " + ex.Message);
             }
@@ -65,13 +40,13 @@ public class LevelFinish : MonoBehaviour
         AudioManager.instance.PlaySound("LevelExit");
         yield return new WaitForSecondsRealtime(levelLoadDelay);
 
-        if(GameState.instance.AllLevelsCompleted())
+        if(GameProgressManager.instance.AllLevelsCompleted())
         {
-            GameState.instance.UpdateCollectedStars();
-            if(!GameState.instance.endReached || GameState.instance.totalCollectedStars == GameState.instance.totalStars)
+            GameProgressManager.instance.CalculateCollectedStarsInGame();
+            if(!GameProgressManager.instance.GetEndReached() || GameProgressManager.instance.GetCollectedStarsInGame() == GameProgressManager.instance.GetTotalStarsInGame())
             {
                 gameManager.ToEndDemo();
-                GameState.instance.endReached = true;
+                GameProgressManager.instance.SetEndReached(true);
             }
             else gameManager.ToMap();
         }

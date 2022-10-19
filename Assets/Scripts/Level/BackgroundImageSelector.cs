@@ -9,6 +9,6 @@ public class BackgroundImageSelector : MonoBehaviour
     void Start(){
         mySpriteRenderer = GetComponent<SpriteRenderer>();
 
-        mySpriteRenderer.sprite = AssetsRepository.instance.GetBackgroundImage(LevelInfo.instance.GetLevelWorldNumber());
+        mySpriteRenderer.sprite = AssetsRepository.instance.GetBackgroundImage(GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber());
     }
 }

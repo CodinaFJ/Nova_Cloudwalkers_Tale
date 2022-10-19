@@ -107,12 +107,12 @@ public class PlayerBehavior : MonoBehaviour
         transform.position = MatrixManager.instance.FromMatrixIndexToWorld(pjCell[0], pjCell[1]) + new Vector3(0, 0.65f, 0);
         UpdateItemUnderPj();
 
-        //Recover the total stars count in the game
-        GameState.instance.totalCollectedStars -= (starsCollected - _starsCollected);
+        //Recover the total stars count in the game - This might not be needed anymore since it is calculateTotalStarsInGame is called in levelFinished.cs
+        //GameProgressManager.instance. -= (starsCollected - _starsCollected);
 
         //Recover stars collected on saved state
         starsCollected = _starsCollected;
-        LevelInfo.instance.collectedStars = _starsCollected;
+        GameProgressManager.instance.SetCollectedStarsInLevel(_starsCollected);// SetCollectedStars(_starsCollected);
 
         //Set idle state
         running = false;

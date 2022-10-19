@@ -17,11 +17,11 @@ public class World2StarCount : MonoBehaviour
 
         string starCollectedNumberText;
 
-        starCollectedNumberText = GameState.instance.totalCollectedStars.ToString();/*(Mathf.Clamp(14 - GameState.instance.totalCollectedStars, 0, 14)).ToString();*/
+        starCollectedNumberText = GameProgressManager.instance.GetCollectedStarsInGame().ToString();/*(Mathf.Clamp(14 - GameState.instance.totalCollectedStars, 0, 14)).ToString();*/
 
         countText.text = starCollectedNumberText + "/14";
 
-        if(GameState.instance.totalCollectedStars >= 14)
+        if(GameProgressManager.instance.GetCollectedStarsInGame() >= 14)
         {
             world2Lock.sprite = openedLock;
             counter.SetActive(false);

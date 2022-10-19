@@ -16,28 +16,9 @@ public class MapLineScript : MonoBehaviour
     {
         myImage = GetComponent<Image>();
 
-        if(initialLevel2)
-        {
-            if(GameState.instance.totalCollectedStars >= 14)
-            {
-                myImage.sprite = filledLine;
-            }
-        }
-        else if(worldNumber == 1)
-        {
-            if(GameState.instance.completedLevelsWorld1[levelNumber - 1])
-            {
-                myImage.sprite = filledLine;
-            }
-        }
-        else if(worldNumber == 2)
-        {
-            if(GameState.instance.completedLevelsWorld2[levelNumber - 1])
-            {
-                myImage.sprite = filledLine;
-            }
-        }
-        
+        if(initialLevel2 && GameProgressManager.instance.GetCollectedStarsInGame() >= 14) myImage.sprite = filledLine;
+
+        else if(GameProgressManager.instance.GetLevel(worldNumber, levelNumber).GetLevelCompleted()) myImage.sprite = filledLine;        
     }
 
 }

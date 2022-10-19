@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7303096619275083183}
   - component: {fileID: 7303096619275083182}
+  - component: {fileID: 9057001675364576587}
   m_Layer: 0
   m_Name: GameState
   m_TagString: Untagged
@@ -43,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3973d9f58e3ccf94ab9cbe685bf62463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelsList: []
   completedLevelsWorld1: 00000000000000000000
   completedLevelsWorld2: 00000000000000
   preCompletedLevelsWorld1: 00000000000000000000
@@ -53,4 +55,23 @@ MonoBehaviour:
   totalStarsInLevelsWorld2: 01000000010000000100000002000000020000000200000001000000
   totalCollectedStars: 0
   totalStars: 0
+  endReached: 0
   lastLevel: 0000000000000000
+--- !u!114 &9057001675364576587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7303096619275083177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b42caaaff7df92478999169aaa030aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldsList:
+  - worldNumber: 1
+    levelsList:
+    - numberOfStars: 1
+      levelNumber: 1
+      wallLevel: 0

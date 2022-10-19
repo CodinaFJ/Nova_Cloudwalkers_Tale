@@ -454,7 +454,7 @@ public class PjInputManager : MonoBehaviour
 
     public void OnReleaseLeftClick()
     {
-        if(Vector3.Magnitude(GetMouseWorldPos() - onClickMouseWorldPos) > releaseMouseTolerance && !LevelInfo.instance.wallLevel) return;
+        if(Vector3.Magnitude(GetMouseWorldPos() - onClickMouseWorldPos) > releaseMouseTolerance && !GameProgressManager.instance.GetActiveLevel().GetWallLevel()) return;
 
         if(!playerBehavior.clickIsForCloud)
         OnFindPath();

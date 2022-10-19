@@ -75,7 +75,7 @@ public class StarBehavior : MonoBehaviour
 
     void StarPickedUp()
     {
-        FindObjectOfType<LevelInfo>().collectedStars++;
+        GameProgressManager.instance.IncreaseCollectedStarsInLevel();
 
         if (playerBehavior.starsCollected == 1)
         { 

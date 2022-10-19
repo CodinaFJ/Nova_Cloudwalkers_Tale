@@ -50,14 +50,13 @@ public class TitleMenuController : MonoBehaviour
 
     public void StartButton()
     {
-        if(GameState.instance != null)Destroy(GameState.instance);
         //StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));
         levelLoader.LoadLevel("Cinematic1");
     }
 
     public void ContinueButton()
     {
-        GameState.instance.LoadGameState();
+        GameProgressManager.instance.LoadGameState();
         ToMap();
     }
 

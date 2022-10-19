@@ -127,8 +127,6 @@ public class OptionsMenuController : MonoBehaviour
 
     public void ToMap()
     {
-        GameState.instance.lastLevel[0] = LevelInfo.instance.GetLevelWorldNumber();
-        GameState.instance.lastLevel[1] = LevelInfo.instance.GetLevelNumber();
         if(gameManager != null) gameManager.ToMap();
     }
 

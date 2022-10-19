@@ -79,8 +79,7 @@ public class fromMatrixToGame : MonoBehaviour
             whiteCloudsTilemapRederers[i].enabled = false;
         }
 
-        if(!LevelInfo.instance.wallLevel)
-        {
+        if(!GameProgressManager.instance.GetActiveLevel().GetWallLevel()){
             floorTilemap.enabled = false;
             floorTilemapRenderer.enabled = false;
         }
