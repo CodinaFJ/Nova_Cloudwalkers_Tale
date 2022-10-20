@@ -257,7 +257,7 @@ public class TileBehavior : MonoBehaviour
 
     protected void SetTileSpritesBundles(){
         tileSpritesBundle = AssetsRepository.instance.GetSpritesBundle(tileType, GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber());
-        tileShadowsSpritesBundle = AssetsRepository.instance.GetSpritesBundle(tileType, GameProgressManager.instance.GetActiveLevel().GetLevelNumber(), true);
+        tileShadowsSpritesBundle = AssetsRepository.instance.GetSpritesBundle(tileType, GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber(), true);
     }
 
 

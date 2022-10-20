@@ -88,8 +88,6 @@ public class fromMatrixToGame : MonoBehaviour
             Debug.LogWarning("Error loading active level: " + ex.Message);
         }
         
-        
-
         spikedFloorTilemap.enabled = false;
         spikedFloorTilemapRenderer.enabled = false;
     

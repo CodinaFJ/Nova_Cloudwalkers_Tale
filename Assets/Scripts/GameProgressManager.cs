@@ -9,7 +9,9 @@ public class GameProgressManager : MonoBehaviour
     [SerializeField]
     private List<World> worldsWithLevels = new List<World>();
 
+    //[SerializeField] FOR DEBUG
     private Level activeLevel;
+    //[SerializeField] FOR DEBUG
     private World activeWorld;
 
     private int collectedStarsInLevel = 0;
