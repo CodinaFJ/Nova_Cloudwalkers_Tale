@@ -85,7 +85,7 @@ public class fromMatrixToGame : MonoBehaviour
             floorTilemapRenderer.enabled = false;
             }   
         }catch(Exception ex){
-            Debug.LogWarning("Error loading active level");
+            Debug.LogWarning("Error loading active level: " + ex.Message);
         }
         
         
