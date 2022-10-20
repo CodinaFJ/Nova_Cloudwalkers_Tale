@@ -38,7 +38,7 @@ public class levelButton : MonoBehaviour
         }
         
         
-        if(GameProgressManager.instance.GetActiveLevel() == level){
+        if(GameProgressManager.instance.GetActiveLevel().GetLevelNumber() == levelNumber && GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber() == worldNumber){
             GameObject activeLevelAnim = GameObject.FindGameObjectWithTag("ActiveLevel");
             activeLevelAnim.transform.SetParent(transform, false);
         }
@@ -63,17 +63,24 @@ public class levelButton : MonoBehaviour
     }
 
     private void SelectButtonStatus(){
-        if(!UnlockLevelQueryPre() && UnlockLevelQuery()){
-            StartCoroutine(DelayUnlockAnimationStart("UI_LevelUnlock"));
-        }
         if(level.GetLevelCompleted()){
             myImage.sprite = completedLevel;
             myButton.image.sprite = semiCompletedLevel;
+            myButton.interactable = true;
 
-            if(level.GetCollectedStars() == level.GetNumberOfStars()){
+            if(level.GetCollectedStars() >= level.GetNumberOfStars()){
                 myButton.image.sprite = completedLevel;
             }
         }
+        else if(level.GetLevelUnlocked()){
+            myImage.sprite = unlockedLevel;
+            myButton.image.sprite = unlockedLevel;
+            myButton.interactable = true;
+        }
+        else if(!level.GetLevelUnlocked() && UnlockLevelQuery()){
+            StartCoroutine(DelayUnlockAnimationStart("UI_LevelUnlock"));
+        }
+        
     }
 
     private bool UnlockLevelQuery(){
@@ -84,18 +91,12 @@ public class levelButton : MonoBehaviour
         return false;
     }
 
-    private bool UnlockLevelQueryPre(){
-        foreach(int i in unlockerLevels){
-            if(GameProgressManager.instance.GetLevelPrevious(worldNumber, i).GetLevelCompleted()) return true;
-        }
-        return false;
-    }
-
     IEnumerator DelayUnlockAnimationStart(string newState)
     {
         yield return new WaitForSeconds(1.5f);
         ChangeAnimationState(newState);
         myButton.interactable = true;
+        level.SetLevelUnlocked(true);
         myButton.GetComponentInChildren<ParticleSystem>().Play();
     }
 

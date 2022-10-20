@@ -8,7 +8,6 @@ public class GameProgressManager : MonoBehaviour
 
     [SerializeField]
     private List<World> worldsWithLevels = new List<World>();
-    private List<World> worldsWithLevelsPrevious = new List<World>();
 
     private Level activeLevel;
     private World activeWorld;
@@ -32,7 +31,6 @@ public class GameProgressManager : MonoBehaviour
 
     private void Start() {
         SetActiveLevel(1, 1);
-        worldsWithLevelsPrevious = worldsWithLevels;
 
         CalculateCollectedStarsInGame();
         CalculateTotalStarsInGame();
@@ -41,10 +39,8 @@ public class GameProgressManager : MonoBehaviour
     public Level GetActiveLevel() => activeLevel;
     public World GetActiveWorld() => activeWorld;
     public List<World> GetWorldsWithLevels() => worldsWithLevels;
-    public List<World> GetWorldsWithLevelsPre() => worldsWithLevelsPrevious;
 
     public Level GetLevel(int worldNumber ,int levelNumber) => worldsWithLevels.Find(x => x.GetLevelWorldNumber() == worldNumber).GetLevelsList().Find(x => x.GetLevelNumber() == levelNumber);
-    public Level GetLevelPrevious(int worldNumber ,int levelNumber) => worldsWithLevelsPrevious.Find(x => x.GetLevelWorldNumber() == worldNumber).GetLevelsList().Find(x => x.GetLevelNumber() == levelNumber);
     public int GetCollectedStarsInLevel() => this.collectedStarsInLevel;
     public int GetCollectedStarsInGame() => this.collectedStarsInGame;
     public int GetTotalStarsInGame() => this.totalStarsIngame;
@@ -63,8 +59,6 @@ public class GameProgressManager : MonoBehaviour
         }
     }
     public void SetCollectedStarsInLevel(int collectedStarsInLevel) => this.collectedStarsInLevel = collectedStarsInLevel;
-
-    public void CopyStateToPreviousState() => worldsWithLevelsPrevious = worldsWithLevels;
 
     public void IncreaseCollectedStarsInLevel() => collectedStarsInLevel++;
 
@@ -99,8 +93,7 @@ public class GameProgressManager : MonoBehaviour
     {
         GameSaveData data = SaveSystem.LoadGame();
         if (data != null){
-            this.worldsWithLevels = data.worldsWithLevels;
-            this.worldsWithLevelsPrevious = data.worldsWithLevelsPrevious;
+            this.worldsWithLevels = new List<World>(data.worldsWithLevels);
             this.activeLevel = data.activeLevel;
             this.activeWorld = data.activeWorld;
         }

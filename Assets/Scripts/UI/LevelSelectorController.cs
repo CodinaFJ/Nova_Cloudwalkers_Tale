@@ -51,8 +51,6 @@ public class LevelSelectorController : MonoBehaviour
 
     public void LoadLevel(string name)
     {
-        GameProgressManager.instance.CopyStateToPreviousState();
-
         if(AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));
 
         levelLoader.LoadLevel(name);

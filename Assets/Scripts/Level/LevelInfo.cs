@@ -58,11 +58,11 @@ public class Level
     [SerializeField] 
     private int numberOfStars = 0;
     [SerializeField]
+    private int collectedStars = 0;
+    [SerializeField]
     private bool wallLevel = false;
     [SerializeField]
     private bool unlockedLevel = false;
-
-    private int collectedStars = 0;
     private bool levelCompleted = false;
 
     //Constructors
@@ -75,6 +75,11 @@ public class Level
     public Level(int levelNumber, int numberOfStars){
         this.levelNumber = levelNumber;
         this.numberOfStars = numberOfStars;
+    }
+    public Level(Level level){
+        this.levelNumber = level.GetLevelNumber();
+        this.numberOfStars = level.GetNumberOfStars();
+        this.wallLevel = level.GetWallLevel();
     }
 
     //Getters
