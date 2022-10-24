@@ -598,6 +598,7 @@ public class MatrixManager : MonoBehaviour
             crystalTile.gameObject.SetActive(false);
             Destroy(crystalTile.gameObject);
             
+            SFXManager.PlayCrystalFloorBreak();
             VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalFloorBreak);
         }
     }
@@ -614,6 +615,7 @@ public class MatrixManager : MonoBehaviour
 
             RefreshPjMovementMatrix();
             RefreshCloudsMovementMatrix();
+            SFXManager.PlayCrystalCloudBreak();
             VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalCloudBreak);
             //FromMatrixToGame.DeactivateItem(item);
 

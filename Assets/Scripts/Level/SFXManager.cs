@@ -13,6 +13,8 @@ public class SFXManager : MonoBehaviour
     const string CLOUD_SWIPE_RELEASE = "CloudSwipe_Release";
     const string CLOUD_SWIPE_TAP = "CloudSwipe_Tap";//+ SFX variation (1-3)
     const string UNDO = "Undo";
+    const string CRYSTAL_FLOOR_BREAK = "CrystalPlatformBreak";
+    const string CRYSTAL_CLOUD_BREAK = "CrystalCloudBreak";
 
     private List<Vector2> tilesWithCloudToJoin = new List<Vector2>();
 
@@ -21,22 +23,16 @@ public class SFXManager : MonoBehaviour
     }
 
     public static void PlayUndo() => AudioManager.instance.PlaySound(UNDO);
+    public static void PlayCloudCollision() => AudioManager.instance.PlaySound(CLOUD_COLLISION);
 
-    
-
-    public void PlayCloudCollision()
-    {
-        AudioManager.instance.PlaySound(CLOUD_COLLISION);
-    }
-
-
-    
-
-    public void PlayCloudSwipeTap()
+    public static void PlayCloudSwipeTap()
     {
         int soundNumber = Random.Range(1,4);
-        AudioManager.instance.PlaySound(CLOUD_SWIPE_TAP);
+        AudioManager.instance.PlaySound(CLOUD_SWIPE_TAP + soundNumber.ToString());
     }
+
+    public static void PlayCrystalFloorBreak() => AudioManager.instance.PlaySound(CRYSTAL_FLOOR_BREAK);
+    public static void PlayCrystalCloudBreak() => AudioManager.instance.PlaySound(CRYSTAL_CLOUD_BREAK);
 
     public void StopCloudSwipeLoop(){
         AudioManager.instance.Stop(CLOUD_SWIPE_LOOP + TileType.WhiteCloud);
