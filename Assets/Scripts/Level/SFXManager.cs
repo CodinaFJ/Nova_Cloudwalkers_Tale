@@ -11,6 +11,7 @@ public class SFXManager : MonoBehaviour
     const string CLOUD_SWIPE_LOOP = "CloudSwipe_Loop";
     const string CLOUD_SWIPE_RELEASE = "CloudSwipe_Release";
     const string CLOUD_SWIPE_TAP = "CloudSwipe_Tap";//+ SFX variation (1-3)
+    const string UNDO = "Undo";
 
     public static SFXManager instance;
 
@@ -18,10 +19,8 @@ public class SFXManager : MonoBehaviour
         instance = this;
     }
 
-    public void PlayCloudConnect()
-    {
-        AudioManager.instance.PlaySound(CLOUD_CONNECT);
-    }
+    public static void PlayUndo() => AudioManager.instance.PlaySound(UNDO);
+    public void PlayCloudConnect() => AudioManager.instance.PlaySound(CLOUD_CONNECT);
 
     public void PlayCloudCollision()
     {
