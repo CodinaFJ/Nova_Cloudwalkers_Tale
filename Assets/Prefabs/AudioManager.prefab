@@ -160,25 +160,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CloudSwipe_Release
     clip: {fileID: 8300000, guid: 6d3f4efe14977ef4197391aaec53cb92, type: 3}
-    volume: 1
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipe_Tap1
     clip: {fileID: 8300000, guid: a392884b42ed41349a1569ce63cb993d, type: 3}
-    volume: 1
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipe_Tap2
     clip: {fileID: 8300000, guid: e0e44e980cb2e6f42923f29f756defaa, type: 3}
-    volume: 1
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipe_Tap3
     clip: {fileID: 8300000, guid: 85f6398cad191d7439f70271d9a43935, type: 3}
-    volume: 1
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -237,6 +237,24 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: World3
+    clip: {fileID: 8300000, guid: 86b8e89f2242f1a48bfaa5a207412d08, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: World4
+    clip: {fileID: 8300000, guid: 830833d921d313f4eaf77fc0a367b326, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: WallLevel
+    clip: {fileID: 8300000, guid: 00dafe5d50edb3e4f9047d24cff7d83e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   ambients:
   - name: Ambient1
     clip: {fileID: 8300000, guid: 455d504cefce8bc48b4c95a4b4c83132, type: 3}
@@ -246,6 +264,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ambient2
     clip: {fileID: 8300000, guid: 08d38bb9433a5d54c9d25b7f4a6bc2d5, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Ambient3
+    clip: {fileID: 8300000, guid: e2472506ff92c00419a18a45abe81f3e, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Ambient4
+    clip: {fileID: 8300000, guid: 0a45aeb54d67fe140b7c728f998fe108, type: 3}
     volume: 0.2
     pitch: 1
     loop: 1
