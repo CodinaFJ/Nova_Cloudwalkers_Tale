@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -56,9 +57,12 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
+        InputSystemUIInputModule inputModule = FindObjectOfType<InputSystemUIInputModule>();
+        inputModule.enabled = false;
         gamePaused = false;
         playerInput.enabled = true;
         playerInput.ActivateInput();
+        inputModule.enabled = true;
     }
 
     public void ToMap()

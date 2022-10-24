@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 863376868}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: Event_system
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14017,10 +14017,6 @@ PrefabInstance:
     - target: {fileID: 8333424986176356322, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
       propertyPath: m_Name
       value: OptionsCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 9213784716243108351, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}

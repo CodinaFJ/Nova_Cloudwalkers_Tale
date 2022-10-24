@@ -163,6 +163,7 @@ public class OptionsMenuController : MonoBehaviour
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        SFXManager.PlayHoverUI();
     }
 
     public void SetResolution(int resolutionIndex)
@@ -175,6 +176,7 @@ public class OptionsMenuController : MonoBehaviour
     {
         currentResolutionIndex++;
         resolutionOption.text = resolutionOptions[currentResolutionIndex];
+        SFXManager.PlaySelectUI_F();
 
         if(currentResolutionIndex == 0) resolutionLeftButton.interactable = false;
         else if(!resolutionLeftButton.interactable) resolutionLeftButton.interactable = true;
@@ -189,6 +191,7 @@ public class OptionsMenuController : MonoBehaviour
     {
         currentResolutionIndex--;
         resolutionOption.text = resolutionOptions[currentResolutionIndex];
+        SFXManager.PlaySelectUI_B();
 
         if(currentResolutionIndex <= 0) resolutionLeftButton.interactable = false;
         else if(!resolutionLeftButton.interactable) resolutionLeftButton.interactable = true;
