@@ -45,6 +45,7 @@ public class TouchControlScript : MonoBehaviour
 
     private void FingerDown(Finger finger)
     {
+        Debug.Log("FinderDown");
         fingerScreenPosition = finger.screenPosition;
         Vector3 touchPosition = Camera.main.ScreenToWorldPoint(finger.screenPosition);
         touchPosition.z = 0f;
@@ -56,6 +57,7 @@ public class TouchControlScript : MonoBehaviour
 
     private void FingerUp(Finger finger)
     {
+        Debug.Log("FinderUp");
         Vector3 touchPosition = Camera.main.ScreenToWorldPoint(finger.screenPosition);
         touchPosition.z = 0f;
 
