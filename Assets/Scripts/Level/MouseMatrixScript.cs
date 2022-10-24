@@ -31,4 +31,8 @@ public class MouseMatrixScript
 
         return mouseMatrixIndex;
     }
+
+    public static int[] GetMatrixIndex(Vector3 value){
+        return new int[0];
+    }
 }

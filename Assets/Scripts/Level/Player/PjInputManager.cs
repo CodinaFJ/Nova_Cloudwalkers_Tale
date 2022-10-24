@@ -60,6 +60,10 @@ public class PjInputManager : MonoBehaviour
     PjAnimationManager pjAnimationManager;
 
     Vector3 onClickMouseWorldPos;
+    public Vector3 OnClickMouseWorldPos{
+        get => onClickMouseWorldPos;
+        set => onClickMouseWorldPos = value;
+    }
 
     private void Awake() 
     {
@@ -391,10 +395,10 @@ public class PjInputManager : MonoBehaviour
         pjIdle = false;  
     }
 
-    void OnFindPath()
-    {
+    void OnFindPath() => FindPath(GetMouseWorldPos());
+   
+    public void FindPath(Vector3 mouseWorldPos){
         //Initial mouse and cloud values needed for cloud movement algorythm
-        Vector3 mouseWorldPos = GetMouseWorldPos();
         Vector3 mouseCellCenter = new Vector3(Mathf.FloorToInt(mouseWorldPos.x), Mathf.FloorToInt(mouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
         int[] onClickMatrixCoor = GetMouseMatrixIndex();
         if(onClickMatrixCoor == null) return;

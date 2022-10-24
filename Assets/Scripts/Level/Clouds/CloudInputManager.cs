@@ -122,15 +122,22 @@ public class CloudInputManager : MonoBehaviour
     }
 
 
-    void OnSelectCloud()
-    {
+    void OnSelectCloud() => SelectCloud(MouseMatrixScript.GetMouseWorldPos());
+
+
+    public void SelectCloud(Vector3 onClickMouseWorldPos){
         playerBehavior.clickIsForCloud = false;
 
         //Initial mouse and cloud values needed for cloud movement algorythm
-        Vector3 onClickMouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
         Vector3 onClickCellCenter = new Vector3(Mathf.FloorToInt(onClickMouseWorldPos.x), Mathf.FloorToInt(onClickMouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
         mouseOffset = onClickMouseWorldPos - onClickCellCenter;
-        int[] onClickMatrixCoor = MouseMatrixScript.GetMouseMatrixIndex();
+        int[] onClickMatrixCoor = MouseMatrixScript.GetMatrixIndex(onClickMouseWorldPos);
+
+        if(onClickMatrixCoor == null)
+        {
+            Debug.Log("Error onClickMatrixCoor in SelectCloud()");
+            return;
+        }
 
         //Update cloud parents in case it was changed due to crystals or grey clouds
         cloudsParents = fromMatrixToGame.GetCloudsParents();
