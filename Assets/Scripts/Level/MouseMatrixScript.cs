@@ -32,7 +32,18 @@ public class MouseMatrixScript
         return mouseMatrixIndex;
     }
 
-    public static int[] GetMatrixIndex(Vector3 value){
-        return new int[0];
+    public static int[] GetMatrixIndex(Vector3 position)
+    {
+        int[] matrixIndex = new int[2];
+
+        MatrixManager matrixManager = MatrixManager.instance; 
+
+        //Truncate position and add (0.5, 0.5, 0) to match cell center
+        Vector3 worldPosTruncated = new Vector3(Mathf.FloorToInt(position.x), Mathf.FloorToInt(position.y), 0f);
+
+        matrixIndex = matrixManager.FromWorldToMatrixIndex(worldPosTruncated + new Vector3(0.5f, 0.5f, 0f));
+        if(matrixIndex == null) Debug.LogWarning("MouseMatrixScript: Out of matrix");
+
+        return matrixIndex;
     }
 }
