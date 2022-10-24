@@ -34,7 +34,11 @@ public class AssetsRepository : MonoBehaviour
     }
 
     public Sprite GetBackgroundImage(int worldNumber){
-        return worldAssetsList.Find(x => x.worldNumber == worldNumber).backgroundImage;
+        try{return worldAssetsList.Find(x => x.worldNumber == worldNumber).backgroundImage;}
+        catch{
+            Debug.LogWarning("Error retrieving background image");
+            return worldAssetsList.Find(x => x.worldNumber == 1).backgroundImage;
+        }
     }
 
     public ParticlesVFX GetParticlesVFX(ParticlesVFXType type) => particleSystemList.Find(x => x.type == type);
