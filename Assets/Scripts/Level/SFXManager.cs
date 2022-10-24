@@ -16,6 +16,12 @@ public class SFXManager : MonoBehaviour
     const string CRYSTAL_FLOOR_BREAK = "CrystalPlatformBreak";
     const string CRYSTAL_CLOUD_BREAK = "CrystalCloudBreak";
 
+    const string UI_OPEN_MENU = "EnterMenu";
+    const string UI_CLOSE_MENU = "CloseMenu";
+    const string UI_HOVER = "HoverUI";
+    const string UI_SELECT_F = "UISelect_Forward";
+    const string UI_SELECT_B = "UISelect_Backward";
+
     private List<Vector2> tilesWithCloudToJoin = new List<Vector2>();
 
     private void Awake() {
@@ -64,4 +70,11 @@ public class SFXManager : MonoBehaviour
             }
         }
     }
+
+
+    public static void PlayOpenMenu() => AudioManager.instance.PlaySound(UI_OPEN_MENU);
+    public static void PlayCloseMenu() => AudioManager.instance.PlaySound(UI_CLOSE_MENU);
+    public static void PlayHoverUI() => AudioManager.instance.PlaySound(UI_HOVER);
+    public static void PlaySelectUI_F() => AudioManager.instance.PlaySound(UI_SELECT_F);
+    public static void PlaySelectUI_B() => AudioManager.instance.PlaySound(UI_SELECT_B);
 }

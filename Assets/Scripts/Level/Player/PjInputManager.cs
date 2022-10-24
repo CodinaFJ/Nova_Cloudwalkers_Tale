@@ -447,10 +447,7 @@ public class PjInputManager : MonoBehaviour
         return mouseMatrixIndex;
     }
 
-    public void OnPause()
-    {
-        FindObjectOfType<LevelUIController>().exitButton();
-    }
+    
 
     public void OnReleaseLeftClick()
     {

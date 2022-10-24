@@ -218,12 +218,6 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: EnterMenu
-    clip: {fileID: 8300000, guid: 35670fbe44d47e7488edb9dfad701660, type: 3}
-    volume: 0.8
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: CrystalCloudBreak
     clip: {fileID: 8300000, guid: 5aafab08f4932b840ad809e0bea49955, type: 3}
     volume: 0.8
@@ -253,6 +247,36 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: EnterMenu
+    clip: {fileID: 8300000, guid: 35670fbe44d47e7488edb9dfad701660, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloseMenu
+    clip: {fileID: 8300000, guid: 35670fbe44d47e7488edb9dfad701660, type: 3}
+    volume: 0.8
+    pitch: 1.4
+    loop: 0
+    source: {fileID: 0}
+  - name: HoverUI
+    clip: {fileID: 8300000, guid: 5178bac27af787c488ef6490f58a0e48, type: 3}
+    volume: 0.8
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: UISelect_Forward
+    clip: {fileID: 8300000, guid: 4daed4df451d2b04e81406665d5a8181, type: 3}
+    volume: 0.8
+    pitch: 1.2
+    loop: 0
+    source: {fileID: 0}
+  - name: UISelect_Backward
+    clip: {fileID: 8300000, guid: 4daed4df451d2b04e81406665d5a8181, type: 3}
+    volume: 0.8
+    pitch: 0.7
+    loop: 0
     source: {fileID: 0}
   musics:
   - name: Main Theme

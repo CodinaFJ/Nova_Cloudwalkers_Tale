@@ -1,38 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class LevelUIController : MonoBehaviour
 {
     [SerializeField] GameObject OptionCanvas;
-    GameManager gameManager;
     
     LevelLoader levelLoader;
 
     void Start()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
-        gameManager = FindObjectOfType<GameManager>();
         OptionCanvas.SetActive(false);
     }
 
     public void restartButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.instance.OnRestart();
     }
     
     public void exitButton()
     {
-        Debug.Log("ExitButton");
         OptionCanvas.SetActive(true);
+        
+        SFXManager.PlayOpenMenu();
 
-        /*OptionsMenuController optionsMenuController = FindObjectOfType<OptionsMenuController>();
+        if(GameManager.instance != null) GameManager.instance.PauseGame();
 
-        optionsMenuController.pauseMenuInput.enabled = true;
-        optionsMenuController.pauseMenuInput.ActivateInput();*/
-
-        if(gameManager != null) gameManager.PauseGame();
+        OptionCanvas.GetComponent<PlayerInput>().enabled = true;
+        OptionCanvas.GetComponent<PlayerInput>().ActivateInput();
     }
 
     public void undoButton()

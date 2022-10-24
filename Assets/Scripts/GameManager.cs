@@ -15,6 +15,15 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public PlayerBehavior playerBehavior;
 
+    private void Awake() {
+        if(instance == null)
+           instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
 
     private void Start() 
     {
@@ -67,6 +76,10 @@ public class GameManager : MonoBehaviour
     {
         levelLoader.LoadLevel("LevelSelectorMenu_JuanDemo");
         //FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
+    }
+    public void OnPause()
+    {
+        FindObjectOfType<LevelUIController>().exitButton();
     }
 
 }
