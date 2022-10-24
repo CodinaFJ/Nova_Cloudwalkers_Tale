@@ -246,13 +246,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2a38322e62a0a55408264efa3ae272a0, type: 3}
     volume: 0.8
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: CloudSwipeThunderCloud
     clip: {fileID: 8300000, guid: 6746a2c48618aad4c932817df5522e8e, type: 3}
     volume: 0.8
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   musics:
   - name: Main Theme
