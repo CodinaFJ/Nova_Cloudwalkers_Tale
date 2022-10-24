@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_Marco
-  m_Shader: {fileID: -6465566751694194690, guid: 3d7471b2e31bee44aa8f88613b365a0f, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 41f6b44d5aef25147a807cd6cfaaeca0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,11 +20,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_b61294243a2e4633bc60eb2b46f26c21:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 53cd15fb66125fb49add0c8dd7b78eea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 464ba60c0f55dec46836364c7c4c72c5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_d74049d24c8c43249a71c8ff9d1b9e64_Out_0:
+        m_Texture: {fileID: 2800000, guid: 0ac8d80f7a961f5429e8e920a3042ee5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -43,11 +47,19 @@ Material:
     - Vector1_0f864ba63a0b417dac1cfab7253422ee: 1
     - Vector1_58b45d19e59e4bb295e1382670053b0b: 1.1
     - Vector1_5c30e52eccbc4abc9197f0a9bb4f64fd: 0.025
+    - Vector1_89b75aa089df4f25a0a8a1bce2bbee4e: 15
     - Vector1_a3541c7914294b02bdf85966fd88923e: 0.2
+    - Vector1_aa4a9b03bb8b409d96c39ba90dc99dd5: 0.01
     - Vector1_bf2ce2bffb9640bc8d7ad2748b642204: 0
+    - Vector1_c2b279e3374b438499923b10fa9df8c4: 1
     - Vector1_cef0448ae82448e5a4cede6367de2126: 2
+    - Vector1_d8daadd4ffbe4c5eb1e58d6470df1937: 0.2
     - Vector1_f52276ee0c144c88841da46cba7861f5: 0.05
+    - Vector1_f75df47ea4904c2cb75ec2d4a882ed31: 5
+    - Vector1_fbf378f0877d4af0b87e782d26f58f79: 1.5
     m_Colors:
     - Vector2_36058a0d6b9840ebb800d3b8952bda6d: {r: 0.5, g: 0.5, b: 0, a: 0}
     - Vector2_396de5782b34402bb9ae518aadc37dd3: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_a951b3dfc27b4652a698ea7f44caf819: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - Vector2_c3608474f2f44edb8206f29b64fcb22b: {r: 0.3, g: 0.3, b: 0, a: 0}
   m_BuildTextureStacks: []
