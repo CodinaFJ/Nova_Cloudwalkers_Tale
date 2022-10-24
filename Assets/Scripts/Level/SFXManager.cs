@@ -29,15 +29,8 @@ public class SFXManager : MonoBehaviour
         AudioManager.instance.PlaySound(CLOUD_COLLISION);
     }
 
-    public void PlayCloudSwipeLoop()
-    {
-        AudioManager.instance.PlaySound(CLOUD_SWIPE_LOOP);
-    }
 
-    public void StopCloudSwipeLoop()
-    {
-        AudioManager.instance.Stop(CLOUD_SWIPE_LOOP);
-    }
+    
 
     public void PlayCloudSwipeTap()
     {
@@ -45,40 +38,24 @@ public class SFXManager : MonoBehaviour
         AudioManager.instance.PlaySound(CLOUD_SWIPE_TAP);
     }
 
+    public void StopCloudSwipeLoop(){
+        AudioManager.instance.Stop(CLOUD_SWIPE_LOOP + TileType.WhiteCloud);
+        AudioManager.instance.Stop(CLOUD_SWIPE_LOOP + TileType.CrystalCloudTop);
+        AudioManager.instance.Stop(CLOUD_SWIPE_LOOP + TileType.ThunderCloud);
+    }
+
+    public void PlayCloudSwipeLoop() => PlayCloudSwipeLoop(TileType.WhiteCloud);
+    public void PlayCloudSwipeLoop(int mechanicNumber) => PlayCloudSwipeLoop(TileBehavior.MechanicNumberToTyleTipe(mechanicNumber));
+    public void PlayCloudSwipeLoop(TileType tileType) => AudioManager.instance.PlaySound(CLOUD_SWIPE_LOOP + tileType.ToString());
     
     private void PlayCloudConnect() => PlayCloudConnect(TileType.WhiteCloud);
-    private void PlayCloudConnect(int mechanicNumber){
-        switch(mechanicNumber){
-            case 1:
-                PlayCloudConnect(TileType.WhiteCloud);
-                break;
-            
-            case 2:
-                break;
-
-            case 3:
-                PlayCloudConnect(TileType.CrystalCloudTop);
-                break;
-
-            case 4:
-                PlayCloudConnect(TileType.CrystalCloudBot);
-                break;
-
-            case -1:
-                PlayCloudConnect(TileType.ThunderCloud);
-                break;
-
-            default:
-                PlayCloudConnect(TileType.WhiteCloud);
-                break;
-        }
-    }
-    private void PlayCloudConnect(TileType tileType) => AudioManager.instance.PlaySound(CLOUD_CONNECT + tileType.ToString());
     public void PlayCloudConnect(Vector2 coor){
         if(tilesWithCloudToJoin.Exists(x => x == coor)){
             PlayCloudConnect(MatrixManager.instance.GetMechanicsLayoutMatrix()[(int)coor.x, (int)coor.y]);
         }
     }
+    private void PlayCloudConnect(int mechanicNumber) => PlayCloudConnect(TileBehavior.MechanicNumberToTyleTipe(mechanicNumber));
+    private void PlayCloudConnect(TileType tileType) => AudioManager.instance.PlaySound(CLOUD_CONNECT + tileType.ToString());
 
     public void SetCloudToJoin(int item){
         tilesWithCloudToJoin.Clear();

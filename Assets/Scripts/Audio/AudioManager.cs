@@ -121,7 +121,7 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    public void Stop (string name)
+    public bool Stop (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null) s = Array.Find(musics, sound => sound.name == name);
@@ -129,9 +129,15 @@ public class AudioManager : MonoBehaviour
         if (s == null)
         {
             Debug.LogWarning("Clip " + name + " not found!");
-            return;
+            return false;
         }
-        s.source.Stop();
+        try{
+            s.source.Stop();
+            return true;
+        }
+        catch{
+            return  false;
+        }
     }
 
     public bool IsPlaying(string name)

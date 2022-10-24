@@ -180,7 +180,7 @@ public class CloudInputManager : MonoBehaviour
                     AudioManager.instance.PlaySound("CloudSwipe_Tap1");
                     break;
                 }
-                SFXManager.instance.PlayCloudSwipeLoop();
+                SFXManager.instance.PlayCloudSwipeLoop(mechanic);
 
                 if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = true;
 
