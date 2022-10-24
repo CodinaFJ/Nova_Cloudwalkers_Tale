@@ -180,7 +180,7 @@ public class CloudInputManager : MonoBehaviour
                     AudioManager.instance.PlaySound("CloudSwipe_Tap1");
                     break;
                 }
-                AudioManager.instance.PlaySound("CloudSwipe_Loop");
+                SFXManager.instance.PlayCloudSwipeLoop();
 
                 if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = true;
 
@@ -429,7 +429,7 @@ public class CloudInputManager : MonoBehaviour
         if((mechanic == -1 || mechanic == 1 || mechanic ==3) && isSelecting)
         {
             AudioManager.instance.PlaySound("CloudSwipe_Release");
-            AudioManager.instance.Stop("CloudSwipe_Loop");
+            SFXManager.instance.StopCloudSwipeLoop();
             if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = false;
         }
         wrongActionPlayed = false;

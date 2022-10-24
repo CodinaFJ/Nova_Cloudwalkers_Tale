@@ -8,7 +8,7 @@ public class SFXManager : MonoBehaviour
     const string CLOUD_COLLISION = "CloudCollision";
     const string CLOUD_CONNECT = "CloudConnect";
     const string CLOUD_STORMY = "CloudStormy";
-    const string CLOUD_SWIPE_LOOP = "CloudSwipe_Loop";
+    const string CLOUD_SWIPE_LOOP = "CloudSwipe";
     const string CLOUD_SWIPE_RELEASE = "CloudSwipe_Release";
     const string CLOUD_SWIPE_TAP = "CloudSwipe_Tap";//+ SFX variation (1-3)
     const string UNDO = "Undo";
@@ -20,7 +20,9 @@ public class SFXManager : MonoBehaviour
     }
 
     public static void PlayUndo() => AudioManager.instance.PlaySound(UNDO);
-    public void PlayCloudConnect() => AudioManager.instance.PlaySound(CLOUD_CONNECT);
+    
+    public void PlayCloudConnect() => PlayCloudConnect(TileType.WhiteCloud);
+    public void PlayCloudConnect(TileType tileType) => AudioManager.instance.PlaySound(CLOUD_CONNECT + tileType.ToString());
 
     public void PlayCloudCollision()
     {

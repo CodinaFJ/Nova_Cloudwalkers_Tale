@@ -31,4 +31,8 @@ public class MouseMatrixScript
 
         return mouseMatrixIndex;
     }
+
+    public static bool PointerOnSteppedCloud() => MatrixManager.instance.GetItemsLayoutMatrix()[GetMouseMatrixIndex()[0], GetMouseMatrixIndex()[1]] == 
+                                                  PlayerBehavior.instance.GetItemUnderPj();
+    
 }
