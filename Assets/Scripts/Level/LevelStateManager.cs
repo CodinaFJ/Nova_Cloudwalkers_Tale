@@ -85,6 +85,7 @@ public class LevelStateManager : MonoBehaviour
     public void OnUndo()
     {
         LoadToState(levelStateList.Count - 1);
+        SFXManager.PlayUndo();
         
         if(levelStateList.Count > 0) levelStateList.Remove(levelStateList[levelStateList.Count - 1]);
     }

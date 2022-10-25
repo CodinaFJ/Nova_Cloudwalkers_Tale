@@ -67,26 +67,34 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound " + name + " not found!");
             return;
         }
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
-            s.source.outputAudioMixerGroup = sfxMixerGroup;
+        //Prevents spamming same SFX, would create performance problems
+        AudioSource[] identicalSources = Array.FindAll<AudioSource>(GetComponents<AudioSource>(), x => x.clip == s.clip);
+        if(identicalSources.Length > 3) Destroy(identicalSources[0]);
+
+        s.source = gameObject.AddComponent<AudioSource>();
+        s.source.clip = s.clip;
+        s.source.volume = s.volume;
+        s.source.pitch = s.pitch;
+        s.source.loop = s.loop;
+        s.source.outputAudioMixerGroup = sfxMixerGroup;
 
         s.source.Play();
-
+        
         StartCoroutine(DestroyOnFinishedClip(s.source));
     }
 
     IEnumerator DestroyOnFinishedClip(AudioSource source)
     {
-        while(source.isPlaying)
+        bool isPlaying = true;
+        while(isPlaying)
         {
+            if(source == null) yield break;
+            else isPlaying = source.isPlaying;
             yield return null;
         }
 
-        Destroy(source);
+        try{Destroy(source);}
+        catch{}
         
         yield break;
     }
@@ -113,7 +121,7 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    public void Stop (string name)
+    public bool Stop (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null) s = Array.Find(musics, sound => sound.name == name);
@@ -121,9 +129,15 @@ public class AudioManager : MonoBehaviour
         if (s == null)
         {
             Debug.LogWarning("Clip " + name + " not found!");
-            return;
+            return false;
         }
-        s.source.Stop();
+        try{
+            s.source.Stop();
+            return true;
+        }
+        catch{
+            return  false;
+        }
     }
 
     public bool IsPlaying(string name)

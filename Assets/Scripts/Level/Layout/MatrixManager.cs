@@ -461,11 +461,10 @@ public class MatrixManager : MonoBehaviour
 
     public void SearchGreyCloudContact(int item)
     {
-        VFXManager.instance.PreInstantiateGreyParticles(item);
+        VFXManager.instance.SetCloudToJoin(item);
+        SFXManager.instance.SetCloudToJoin(item);
         if(AttachGreyCloudInMatrix(item))
         {
-            try  {SFXManager.instance.PlayCloudConnect();
-            }catch (Exception ex) {Debug.Log("Error opening SFXManager: " + ex.Message);}
             FromMatrixToGame.ReInstantiateItem(item);
         }
     }
@@ -533,6 +532,7 @@ public class MatrixManager : MonoBehaviour
                                 {
                                     attachingCloud = true;
                                     VFXManager.instance.InstantiateGreyParticles(new Vector2(i,j), new Vector2(k, u));
+                                    SFXManager.instance.PlayCloudConnect(new Vector2(i,j));
 
                                     mechanicsLayoutMatrix[i + k, j + u] = mechanicsLayoutMatrix[i,j];                             
 
@@ -598,6 +598,7 @@ public class MatrixManager : MonoBehaviour
             crystalTile.gameObject.SetActive(false);
             Destroy(crystalTile.gameObject);
             
+            SFXManager.PlayCrystalFloorBreak();
             VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalFloorBreak);
         }
     }
@@ -614,6 +615,7 @@ public class MatrixManager : MonoBehaviour
 
             RefreshPjMovementMatrix();
             RefreshCloudsMovementMatrix();
+            SFXManager.PlayCrystalCloudBreak();
             VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalCloudBreak);
             //FromMatrixToGame.DeactivateItem(item);
 

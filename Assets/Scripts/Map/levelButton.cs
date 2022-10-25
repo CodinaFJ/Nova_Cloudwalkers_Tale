@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class levelButton : MonoBehaviour
+public class levelButton : MonoBehaviour, IPointerEnterHandler
 {
     [Header ("Sprites")]
     [SerializeField] Sprite lockedLevel;
@@ -107,5 +108,8 @@ public class levelButton : MonoBehaviour
         myButton.GetComponent<Animator>().Play(newState);
     }
     
+    public void OnPointerEnter(PointerEventData eventData){
+        SFXManager.PlayHoverLevel();
+    }
 
 }

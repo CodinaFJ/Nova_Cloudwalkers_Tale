@@ -33,7 +33,7 @@ public class VFXManager : MonoBehaviour
     }
 
     //Saves tiles with white cloud to instatiente grey particles on these ones
-    public void PreInstantiateGreyParticles(int item){
+    public void SetCloudToJoin(int item){
         tilesWithCloudToJoin.Clear();
 
         int[,] itemLayoutMatrix = MatrixManager.instance.GetItemsLayoutMatrix();

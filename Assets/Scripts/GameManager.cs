@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,12 +17,13 @@ public class GameManager : MonoBehaviour
     public PlayerBehavior playerBehavior;
 
     private void Awake() {
-        int numInstances = FindObjectsOfType<GameManager>().Length;
-        if(numInstances > 1)
+        if(instance == null)
+           instance = this;
+        else
+        {
             Destroy(gameObject);
-        else{
-            instance = this;
-        }      
+            return;
+        }
     }
 
     private void Start() 
@@ -55,9 +57,12 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
+        InputSystemUIInputModule inputModule = FindObjectOfType<InputSystemUIInputModule>();
+        inputModule.enabled = false;
         gamePaused = false;
         playerInput.enabled = true;
         playerInput.ActivateInput();
+        inputModule.enabled = true;
     }
 
     public void ToMap()
@@ -75,6 +80,10 @@ public class GameManager : MonoBehaviour
     {
         levelLoader.LoadLevel("LevelSelectorMenu_tests");
         //FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
+    }
+    public void OnPause()
+    {
+        FindObjectOfType<LevelUIController>().exitButton();
     }
 
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class OptionsMenuController : MonoBehaviour
 {
@@ -77,6 +76,7 @@ public class OptionsMenuController : MonoBehaviour
         OptionsMenu.SetActive(true);
         QuitMenu.SetActive(false);
         OptionsBackground.SetActive(true);
+        SFXManager.PlaySelectUI_F();
     }
 
     public void ToAudioOptions()
@@ -87,6 +87,7 @@ public class OptionsMenuController : MonoBehaviour
         OptionsMenu.SetActive(false);
         QuitMenu.SetActive(false);
         OptionsBackground.SetActive(true);
+        SFXManager.PlaySelectUI_F();
     }
 
     public void ToVideoOptions()
@@ -97,6 +98,7 @@ public class OptionsMenuController : MonoBehaviour
         OptionsMenu.SetActive(false);
         QuitMenu.SetActive(false);
         OptionsBackground.SetActive(true);
+        SFXManager.PlaySelectUI_F();
     }
 
     public void ToPauseMenu()
@@ -107,6 +109,7 @@ public class OptionsMenuController : MonoBehaviour
         OptionsMenu.SetActive(false);
         QuitMenu.SetActive(false);
         OptionsBackground.SetActive(true);
+        SFXManager.PlaySelectUI_B();
     }
 
     public void ToGame()
@@ -123,16 +126,19 @@ public class OptionsMenuController : MonoBehaviour
         pauseMenuInput.DeactivateInput();
         
         if(gameManager != null) gameManager.ResumeGame();
+        SFXManager.PlayCloseMenu();
     }
 
     public void ToMap()
     {
+        SFXManager.PlaySelectUI_B();
         if(gameManager != null) gameManager.ToMap();
     }
 
     public void ToMainMenu()
     {
         levelLoader.LoadLevel("StartMenu");
+        SFXManager.PlaySelectUI_B();
     }
 
     public void ToQuitMenu()
@@ -143,10 +149,12 @@ public class OptionsMenuController : MonoBehaviour
         OptionsMenu.SetActive(false);
         QuitMenu.SetActive(true);
         OptionsBackground.SetActive(false);
+        SFXManager.PlaySelectUI_F();
     }
 
     public void Quit()
     {
+        SFXManager.PlaySelectUI_B();
         Application.Quit();
     }
 
@@ -165,6 +173,7 @@ public class OptionsMenuController : MonoBehaviour
     {
         currentResolutionIndex++;
         resolutionOption.text = resolutionOptions[currentResolutionIndex];
+        SFXManager.PlaySelectUI_F();
 
         if(currentResolutionIndex == 0) resolutionLeftButton.interactable = false;
         else if(!resolutionLeftButton.interactable) resolutionLeftButton.interactable = true;
@@ -179,6 +188,7 @@ public class OptionsMenuController : MonoBehaviour
     {
         currentResolutionIndex--;
         resolutionOption.text = resolutionOptions[currentResolutionIndex];
+        SFXManager.PlaySelectUI_B();
 
         if(currentResolutionIndex <= 0) resolutionLeftButton.interactable = false;
         else if(!resolutionLeftButton.interactable) resolutionLeftButton.interactable = true;
@@ -196,13 +206,14 @@ public class OptionsMenuController : MonoBehaviour
     }
 
     public void OnResumeGame()
-    {        
+    {
         ToGame();
     }
 
     public void OnRestart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ToGame();
+        GameManager.instance.OnRestart();
     }
 
     

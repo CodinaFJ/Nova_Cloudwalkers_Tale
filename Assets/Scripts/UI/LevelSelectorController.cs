@@ -51,6 +51,7 @@ public class LevelSelectorController : MonoBehaviour
 
     public void LoadLevel(string name)
     {
+        SFXManager.PlayEnterLevel();
         if(AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));
 
         levelLoader.LoadLevel(name);
@@ -66,13 +67,8 @@ public class LevelSelectorController : MonoBehaviour
         if(!optioncanvas.activeSelf)
         {
             optioncanvas.SetActive(true);
+            SFXManager.PlayOpenMenu();
             if(FindObjectOfType<GameManager>() != null) FindObjectOfType<GameManager>().PauseGame();
-
-            /*GetComponent<PlayerInput>().enabled = false;
-            GetComponent<PlayerInput>().DeactivateInput();
-
-            optioncanvas.GetComponent<PlayerInput>().enabled = true;
-            optioncanvas.GetComponent<PlayerInput>().ActivateInput();*/
         }
         
     }

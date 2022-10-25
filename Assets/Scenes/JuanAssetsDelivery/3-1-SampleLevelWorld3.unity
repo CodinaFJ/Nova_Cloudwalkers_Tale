@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 863376868}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: Event_system
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11946,7 +11946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.data[14].second.m_TileMatrixIndex
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.data[14].second.m_TileSpriteIndex
@@ -12010,7 +12010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.data[22].second.m_TileMatrixIndex
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.data[22].second.m_TileSpriteIndex
@@ -12018,7 +12018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.data[23].second.m_TileMatrixIndex
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.data[23].second.m_TileSpriteIndex
@@ -12026,7 +12026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.data[24].second.m_TileMatrixIndex
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.data[24].second.m_TileSpriteIndex
@@ -13522,17 +13522,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
---- !u!114 &2017885031 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8333424985266608089, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
-  m_PrefabInstance: {fileID: 8333424985941486782}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4007958892111917684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13654,14 +13643,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2121821233, guid: e0613ddc4dbb8ad4998b3704badc1479, type: 3}
-      propertyPath: sfxSliderText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2121821233, guid: e0613ddc4dbb8ad4998b3704badc1479, type: 3}
-      propertyPath: musicSliderText
-      value: 
-      objectReference: {fileID: 2017885031}
     - target: {fileID: 4760499739259852692, guid: e0613ddc4dbb8ad4998b3704badc1479, type: 3}
       propertyPath: m_Name
       value: AudioManager

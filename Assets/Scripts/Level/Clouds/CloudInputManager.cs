@@ -161,26 +161,8 @@ public class CloudInputManager : MonoBehaviour
                 if(cloudsParents[item - 1] != null)
                 cloudsParents[item - 1].GetComponent<ParentCloudScript>().PlayClickParticles(onClickMouseWorldPos);
 
-                int tapNumber = (int)UnityEngine.Random.Range(1,4);
-                switch(tapNumber)
-                {
-                    case 1:
-                    AudioManager.instance.PlaySound("CloudSwipe_Tap1");
-                    break;
-
-                    case 2:
-                    AudioManager.instance.PlaySound("CloudSwipe_Tap2");
-                    break;
-
-                    case 3:
-                    AudioManager.instance.PlaySound("CloudSwipe_Tap3");
-                    break;
-
-                    default:
-                    AudioManager.instance.PlaySound("CloudSwipe_Tap1");
-                    break;
-                }
-                AudioManager.instance.PlaySound("CloudSwipe_Loop");
+                SFXManager.PlayCloudSwipeTap();
+                SFXManager.instance.PlayCloudSwipeLoop(mechanic);
 
                 if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = true;
 
@@ -429,7 +411,7 @@ public class CloudInputManager : MonoBehaviour
         if((mechanic == -1 || mechanic == 1 || mechanic ==3) && isSelecting)
         {
             AudioManager.instance.PlaySound("CloudSwipe_Release");
-            AudioManager.instance.Stop("CloudSwipe_Loop");
+            SFXManager.instance.StopCloudSwipeLoop();
             if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = false;
         }
         wrongActionPlayed = false;
