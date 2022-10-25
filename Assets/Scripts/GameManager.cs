@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     public void ToMap()
     {
-        levelLoader.LoadLevel("LevelSelectorMenu_tests");
+        levelLoader.LoadLevel("LevelSelectorMenu_IDD");
     }
 
     public void PjToExit()
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
 
     public void ToEndDemo()
     {
-        levelLoader.LoadLevel("LevelSelectorMenu_tests");
+        levelLoader.LoadLevel("LevelSelectorMenu_IDD");
         //FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
     public void OnPause()
