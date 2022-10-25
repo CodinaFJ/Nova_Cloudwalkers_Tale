@@ -29,10 +29,12 @@ public class GameProgressManager : MonoBehaviour
         else{
             instance = this;
             DontDestroyOnLoad(gameObject);
-        }      
+        }
+        ParseActiveLevel();      
     }
 
     private void Start() {
+        //ParseActiveLevel();
         CalculateCollectedStarsInGame();
         CalculateTotalStarsInGame();
     }
@@ -60,8 +62,7 @@ public class GameProgressManager : MonoBehaviour
             Debug.Log("Error reading level name: " + e.Message);
         }
 
-        activeWorld =  worldsWithLevels.Find(x => x.GetLevelWorldNumber() == world);
-        activeLevel = activeWorld.GetLevelsList().Find(x => x.GetLevelNumber() == level);
+        SetActiveLevel(1,1);
     }
 
     public Level GetActiveLevel() => activeLevel;
