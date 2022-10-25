@@ -89,8 +89,10 @@ public class OptionsMenuController : MonoBehaviour
 
     public void BackToPause(){
         if(pauseMenuToGo == OptionsSectionTag.PauseMenu){
-            OptionsSectionsList.Find(x => x.tag == OptionsSectionTag.PauseMenu).sectionGameObject.SetActive(true);
-            ToGame();
+            try{
+                OptionsSectionsList.Find(x => x.tag == OptionsSectionTag.PauseMenu).sectionGameObject.SetActive(true);
+                ToGame();
+            }catch{}
         }
         LoadOptionsSection(pauseMenuToGo);
     }
