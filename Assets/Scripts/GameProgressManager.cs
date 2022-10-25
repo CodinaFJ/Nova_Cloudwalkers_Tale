@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameProgressManager : MonoBehaviour
 {
@@ -32,10 +33,35 @@ public class GameProgressManager : MonoBehaviour
     }
 
     private void Start() {
-        SetActiveLevel(1, 1);
-
         CalculateCollectedStarsInGame();
         CalculateTotalStarsInGame();
+    }
+
+    private void ParseActiveLevel(){
+        string LevelName = SceneManager.GetActiveScene().name;
+
+        string[] levelNameParts = LevelName.Split(new char[] {'-'});
+
+        int level = 1;
+        int world = 1;
+
+        try
+        {
+            level = int.Parse(levelNameParts[0]);
+            world = int.Parse(levelNameParts[1]);
+            Debug.Log("Loaded level: " + level.ToString() + " In world: " + world.ToString());
+        }
+        catch(FormatException e)
+        {
+            Debug.Log("Level Name is not correct. Exception message: " + e.Message);
+        }
+        catch(Exception e)
+        {
+            Debug.Log("Error reading level name: " + e.Message);
+        }
+
+        activeWorld =  worldsWithLevels.Find(x => x.GetLevelWorldNumber() == world);
+        activeLevel = activeWorld.GetLevelsList().Find(x => x.GetLevelNumber() == level);
     }
 
     public Level GetActiveLevel() => activeLevel;
