@@ -77,7 +77,7 @@ public class OptionsMenuController : MonoBehaviour
         pauseMenuToGo = OptionsSectionTag.PauseMap;
     } 
     public void ToPauseMenu(){
-        LoadOptionsSection(OptionsSectionTag.PauseMenu);
+        LoadOptionsSection(OptionsSectionTag.Options);
         Hotkeys.SetActive(false);
         pauseMenuToGo = OptionsSectionTag.PauseMenu;
     } 
@@ -88,6 +88,10 @@ public class OptionsMenuController : MonoBehaviour
     }
 
     public void BackToPause(){
+        if(pauseMenuToGo == OptionsSectionTag.PauseMenu){
+            OptionsSectionsList.Find(x => x.tag == OptionsSectionTag.PauseMenu).sectionGameObject.SetActive(true);
+            ToGame();
+        }
         LoadOptionsSection(pauseMenuToGo);
     }
 

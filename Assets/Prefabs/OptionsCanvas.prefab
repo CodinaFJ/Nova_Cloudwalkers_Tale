@@ -416,9 +416,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8333424986176356319}
         m_TargetAssemblyTypeName: OptionsMenuController, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2938,6 +2938,7 @@ GameObject:
   - component: {fileID: 72865525545954853}
   - component: {fileID: 4666926120655216794}
   - component: {fileID: 341318534834915800}
+  - component: {fileID: 2089927192651385139}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -3071,6 +3072,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04612436045aab341a5b4c49866b3557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2089927192651385139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973132989550231831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1803c749e9b45d943ae5af50ab89b392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleTweenTime: 0.05
+  scaleValue: 1.1
 --- !u!1 &2078107319656534351
 GameObject:
   m_ObjectHideFlags: 0
@@ -7765,6 +7780,7 @@ GameObject:
   - component: {fileID: 3626033694786747101}
   - component: {fileID: 2298737402384094050}
   - component: {fileID: 4804421231473451824}
+  - component: {fileID: 6163200671083845175}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -7898,6 +7914,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04612436045aab341a5b4c49866b3557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6163200671083845175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8282414584998984371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1803c749e9b45d943ae5af50ab89b392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleTweenTime: 0.05
+  scaleValue: 1.1
 --- !u!1 &8287928944752769670
 GameObject:
   m_ObjectHideFlags: 0
@@ -9461,6 +9491,8 @@ MonoBehaviour:
   resolutionRightButton: {fileID: 1272950396990150110}
   resolutionLeftButton: {fileID: 21853382736058634}
   OptionsSectionsList:
+  - tag: 0
+    sectionGameObject: {fileID: 0}
   - tag: 1
     sectionGameObject: {fileID: 1202561523}
   - tag: 2
@@ -9736,6 +9768,7 @@ GameObject:
   - component: {fileID: 8333424986295873342}
   - component: {fileID: 8333424986295873473}
   - component: {fileID: 2186936210748175235}
+  - component: {fileID: 294047853628395019}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -9869,6 +9902,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04612436045aab341a5b4c49866b3557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &294047853628395019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333424986295873475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1803c749e9b45d943ae5af50ab89b392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleTweenTime: 0.05
+  scaleValue: 1.1
 --- !u!1 &8333424986305136686
 GameObject:
   m_ObjectHideFlags: 0
