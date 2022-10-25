@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class LevelSelectorController : MonoBehaviour
 {
     LevelLoader levelLoader;
-    [SerializeField] GameObject optioncanvas;
+    [SerializeField] GameObject OptionCanvas;
 
     void Start()
     {
@@ -31,21 +31,21 @@ public class LevelSelectorController : MonoBehaviour
 
     private void Update() 
     {
-        if(optioncanvas.activeSelf)
+        if(OptionCanvas.activeSelf)
         {
             GetComponent<PlayerInput>().enabled = false;
             GetComponent<PlayerInput>().DeactivateInput();
 
-            optioncanvas.GetComponent<PlayerInput>().enabled = true;
-            optioncanvas.GetComponent<PlayerInput>().ActivateInput();
+            OptionCanvas.GetComponent<PlayerInput>().enabled = true;
+            OptionCanvas.GetComponent<PlayerInput>().ActivateInput();
         }
         else
         {
             GetComponent<PlayerInput>().enabled = true;
             GetComponent<PlayerInput>().ActivateInput();
 
-            optioncanvas.GetComponent<PlayerInput>().enabled = false;
-            optioncanvas.GetComponent<PlayerInput>().DeactivateInput();
+            OptionCanvas.GetComponent<PlayerInput>().enabled = false;
+            OptionCanvas.GetComponent<PlayerInput>().DeactivateInput();
         }
     }
 
@@ -64,11 +64,12 @@ public class LevelSelectorController : MonoBehaviour
 
     public void OnPause()
     {
-        if(!optioncanvas.activeSelf)
+        if(!OptionCanvas.activeSelf)
         {
-            optioncanvas.SetActive(true);
+            OptionCanvas.SetActive(true);
+            OptionCanvas.GetComponent<OptionsMenuController>().ToPauseMap();
             SFXManager.PlayOpenMenu();
-            if(FindObjectOfType<GameManager>() != null) FindObjectOfType<GameManager>().PauseGame();
+            //if(FindObjectOfType<GameManager>() != null) FindObjectOfType<GameManager>().PauseGame();
         }
         
     }

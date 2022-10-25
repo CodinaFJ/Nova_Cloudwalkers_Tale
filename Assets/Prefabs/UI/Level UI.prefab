@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 8571868823950653911}
   - component: {fileID: 1024325766878669392}
   - component: {fileID: 4618366549324263036}
-  - component: {fileID: 420198332049195617}
+  - component: {fileID: 6200679293608359218}
   m_Layer: 5
   m_Name: Undo Button
   m_TagString: Untagged
@@ -249,7 +249,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &420198332049195617
+--- !u!114 &6200679293608359218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3346032906812388117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fffb171e9bad84b4f911251fe3755360, type: 3}
+  m_Script: {fileID: 11500000, guid: 34880c330a7f48742b70a0e30fdbe486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3622608278028965324
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 1546800609237238178}
   - component: {fileID: 1819620605648519379}
   - component: {fileID: 9135099865414829574}
-  - component: {fileID: 5810129376874124310}
+  - component: {fileID: 7867614249431473462}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -394,7 +394,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5810129376874124310
+--- !u!114 &7867614249431473462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3622608278028965324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fffb171e9bad84b4f911251fe3755360, type: 3}
+  m_Script: {fileID: 11500000, guid: 34880c330a7f48742b70a0e30fdbe486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6889603274682465009
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 4472662309254489325}
   - component: {fileID: 5575029432248349720}
   - component: {fileID: 4002405887101911010}
-  - component: {fileID: 780841410450167041}
+  - component: {fileID: 819432218724540952}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -539,7 +539,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &780841410450167041
+--- !u!114 &819432218724540952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -548,6 +548,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6889603274682465009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fffb171e9bad84b4f911251fe3755360, type: 3}
+  m_Script: {fileID: 11500000, guid: 34880c330a7f48742b70a0e30fdbe486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

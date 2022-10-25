@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
     }
     public void OnPause()
     {
-        FindObjectOfType<LevelUIController>().exitButton();
+        FindObjectOfType<LevelUIController>().ToOptionsLevel();
     }
 
 }

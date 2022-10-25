@@ -79,7 +79,9 @@ public class TitleMenuController : MonoBehaviour
     public void ToOptions()
     {
         optionCanvas.SetActive(true);
-        optionsMenu.SetActive(true);
+        optionCanvas.GetComponent<OptionsMenuController>().ToOptions();
+        /*optionCanvas.SetActive(true);
+        optionsMenu.SetActive(true);*/
         gameObject.SetActive(false);
     }
 

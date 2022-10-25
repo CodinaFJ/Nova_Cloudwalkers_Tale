@@ -109,7 +109,7 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
     }
     
     public void OnPointerEnter(PointerEventData eventData){
-        SFXManager.PlayHoverLevel();
+        if(myButton.interactable) SFXManager.PlayHoverLevel();
     }
 
 }

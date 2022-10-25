@@ -10,6 +10,7 @@ public class WorldAssets
 
     [Header("Visuals")]
     public Sprite backgroundImage;
+    public Sprite mainMenuImage;
 
     public List<TileSpritesBundle> floorTileSpritesBundles = new List<TileSpritesBundle>(5);
 }

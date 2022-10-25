@@ -7,16 +7,15 @@ using UnityEngine.InputSystem;
 
 public class OptionsMenuController : MonoBehaviour
 {
-    [SerializeField] GameObject PauseMenu;
-    [SerializeField] GameObject OptionsMenu;
-    [SerializeField] GameObject AudioOptions;
-    [SerializeField] GameObject VideoOptions;
-    [SerializeField] GameObject QuitMenu;
+    [SerializeField] GameObject Hotkeys;
     [SerializeField] GameObject OptionsBackground;
     [SerializeField] Toggle FullscreenToggle;
     [SerializeField] TextMeshProUGUI resolutionOption;
     [SerializeField] Button resolutionRightButton;
     [SerializeField] Button resolutionLeftButton;
+
+    [SerializeField]
+    List<OptionsSection> OptionsSectionsList = new List<OptionsSection>();
 
     GameManager gameManager;
     LevelLoader levelLoader;
@@ -29,13 +28,10 @@ public class OptionsMenuController : MonoBehaviour
     List<string> resolutionOptions = new List<string>();
     int currentResolutionIndex;
 
+    OptionsSectionTag pauseMenuToGo = OptionsSectionTag.PauseMenu;
+
     void Start()
     {
-        PauseMenu.SetActive(true);
-        AudioOptions.SetActive(false);
-        VideoOptions.SetActive(false);
-        OptionsMenu.SetActive(false);
-        QuitMenu.SetActive(false);
         OptionsBackground.SetActive(true);
 
         gameManager = FindObjectOfType<GameManager>();
@@ -68,57 +64,39 @@ public class OptionsMenuController : MonoBehaviour
         else resolutionRightButton.interactable = true;
     }
 
-    public void ToOptions()
-    {
-        PauseMenu.SetActive(false);
-        AudioOptions.SetActive(false);
-        VideoOptions.SetActive(false);
-        OptionsMenu.SetActive(true);
-        QuitMenu.SetActive(false);
-        OptionsBackground.SetActive(true);
-        SFXManager.PlaySelectUI_F();
+    public void ToOptions() => LoadOptionsSection(OptionsSectionTag.Options);
+    public void ToAudioOptions() => LoadOptionsSection(OptionsSectionTag.OptionsAudio);
+    public void ToVideoOptions() => LoadOptionsSection(OptionsSectionTag.OptionsVideo);
+    public void ToPauseLevel(){
+        LoadOptionsSection(OptionsSectionTag.PauseLevel);
+        Hotkeys.SetActive(true);
+    } 
+    public void ToPauseMap(){
+        LoadOptionsSection(OptionsSectionTag.PauseMap);
+        Hotkeys.SetActive(false);
+        pauseMenuToGo = OptionsSectionTag.PauseMap;
+    } 
+    public void ToPauseMenu(){
+        LoadOptionsSection(OptionsSectionTag.PauseMenu);
+        Hotkeys.SetActive(false);
+        pauseMenuToGo = OptionsSectionTag.PauseMenu;
+    } 
+    public void ToQuitMenu(){
+        LoadOptionsSection(OptionsSectionTag.PauseLevel);
+        OptionsBackground.SetActive(false);
+        pauseMenuToGo = OptionsSectionTag.PauseLevel;
     }
 
-    public void ToAudioOptions()
-    {
-        PauseMenu.SetActive(false);
-        AudioOptions.SetActive(true);
-        VideoOptions.SetActive(false);
-        OptionsMenu.SetActive(false);
-        QuitMenu.SetActive(false);
-        OptionsBackground.SetActive(true);
-        SFXManager.PlaySelectUI_F();
+    public void BackToPause(){
+        LoadOptionsSection(pauseMenuToGo);
     }
 
-    public void ToVideoOptions()
-    {
-        PauseMenu.SetActive(false);
-        AudioOptions.SetActive(false);
-        VideoOptions.SetActive(true);
-        OptionsMenu.SetActive(false);
-        QuitMenu.SetActive(false);
-        OptionsBackground.SetActive(true);
-        SFXManager.PlaySelectUI_F();
-    }
-
-    public void ToPauseMenu()
-    {
-        PauseMenu.SetActive(true);
-        AudioOptions.SetActive(false);
-        VideoOptions.SetActive(false);
-        OptionsMenu.SetActive(false);
-        QuitMenu.SetActive(false);
-        OptionsBackground.SetActive(true);
-        SFXManager.PlaySelectUI_B();
-    }
 
     public void ToGame()
     {
-        PauseMenu.SetActive(true);
-        AudioOptions.SetActive(false);
-        VideoOptions.SetActive(false);
-        OptionsMenu.SetActive(false);
-        QuitMenu.SetActive(false);
+        foreach(OptionsSection section in OptionsSectionsList){
+            section.sectionGameObject.SetActive(false);
+        }
         OptionsBackground.SetActive(true);
         gameObject.SetActive(false);
 
@@ -139,17 +117,6 @@ public class OptionsMenuController : MonoBehaviour
     {
         levelLoader.LoadLevel("StartMenu");
         SFXManager.PlaySelectUI_B();
-    }
-
-    public void ToQuitMenu()
-    {
-        PauseMenu.SetActive(false);
-        AudioOptions.SetActive(false);
-        VideoOptions.SetActive(false);
-        OptionsMenu.SetActive(false);
-        QuitMenu.SetActive(true);
-        OptionsBackground.SetActive(false);
-        SFXManager.PlaySelectUI_F();
     }
 
     public void Quit()
@@ -216,5 +183,24 @@ public class OptionsMenuController : MonoBehaviour
         GameManager.instance.OnRestart();
     }
 
-    
+
+    public void LoadOptionsSection(OptionsSectionTag optionsSectionTag){
+        foreach(OptionsSection section in OptionsSectionsList.FindAll(x => x.tag != optionsSectionTag)){
+            section.sectionGameObject.SetActive(false);
+        }
+        OptionsSectionsList.Find(x => x.tag == optionsSectionTag).sectionGameObject.SetActive(true);
+    }
+}
+
+[System.Serializable]
+public struct OptionsSection {
+    public OptionsSectionTag tag;
+    public GameObject sectionGameObject;
+}
+
+public enum OptionsSectionTag{
+    PauseMenu, PauseMap, PauseLevel,
+    Options, OptionsAudio, OptionsVideo,
+    Credits,
+    Quit
 }
