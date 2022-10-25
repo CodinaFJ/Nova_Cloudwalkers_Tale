@@ -74,13 +74,8 @@ public class LevelSelectorController : MonoBehaviour
         if(!optioncanvas.activeSelf)
         {
             optioncanvas.SetActive(true);
+            SFXManager.PlayOpenMenu();
             if(FindObjectOfType<GameManager>() != null) FindObjectOfType<GameManager>().PauseGame();
-
-            /*GetComponent<PlayerInput>().enabled = false;
-            GetComponent<PlayerInput>().DeactivateInput();
-
-            optioncanvas.GetComponent<PlayerInput>().enabled = true;
-            optioncanvas.GetComponent<PlayerInput>().ActivateInput();*/
         }
         
     }
