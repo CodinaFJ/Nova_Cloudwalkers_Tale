@@ -163,7 +163,6 @@ public class OptionsMenuController : MonoBehaviour
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-        SFXManager.PlayHoverUI();
     }
 
     public void SetResolution(int resolutionIndex)

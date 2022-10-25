@@ -1857,6 +1857,7 @@ GameObject:
   - component: {fileID: 1348619639}
   - component: {fileID: 1348619638}
   - component: {fileID: 1348619637}
+  - component: {fileID: 1348619640}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -1977,6 +1978,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348619635}
   m_CullTransparentMesh: 1
+--- !u!114 &1348619640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348619635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fffb171e9bad84b4f911251fe3755360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1502278493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,10 +2221,6 @@ PrefabInstance:
     - target: {fileID: 7015785404560429492, guid: e7f64409f2676854d879224842f4eaa3, type: 3}
       propertyPath: m_Name
       value: Transition Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7015785404560429502, guid: e7f64409f2676854d879224842f4eaa3, type: 3}
-      propertyPath: transitionTime
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7f64409f2676854d879224842f4eaa3, type: 3}

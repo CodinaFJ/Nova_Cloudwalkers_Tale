@@ -56,9 +56,7 @@ public class LevelSelectorController : MonoBehaviour
 
     public void LoadLevel(string name)
     {
-        GameState.instance.preCompletedLevelsWorld1 = new List<bool>(GameState.instance.completedLevelsWorld1);
-        GameState.instance.preCompletedLevelsWorld2 = new List<bool>(GameState.instance.completedLevelsWorld2);
-
+        SFXManager.PlayEnterLevel();
         if(AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));
 
         levelLoader.LoadLevel(name);

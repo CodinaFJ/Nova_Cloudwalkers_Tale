@@ -21,6 +21,8 @@ public class SFXManager : MonoBehaviour
     const string UI_HOVER = "HoverUI";
     const string UI_SELECT_F = "UISelect_Forward";
     const string UI_SELECT_B = "UISelect_Backward";
+    const string UI_SELECT_LEVEL = "UISelect_Level";
+    const string UI_HOVER_LEVEL = "UIHover_Level";
 
     private List<Vector2> tilesWithCloudToJoin = new List<Vector2>();
 
@@ -77,4 +79,6 @@ public class SFXManager : MonoBehaviour
     public static void PlayHoverUI() => AudioManager.instance.PlaySound(UI_HOVER);
     public static void PlaySelectUI_F() => AudioManager.instance.PlaySound(UI_SELECT_F);
     public static void PlaySelectUI_B() => AudioManager.instance.PlaySound(UI_SELECT_B);
+    public static void PlayEnterLevel() => AudioManager.instance.PlaySound(UI_SELECT_LEVEL);
+    public static void PlayHoverLevel() => AudioManager.instance.PlaySound(UI_HOVER_LEVEL);
 }
