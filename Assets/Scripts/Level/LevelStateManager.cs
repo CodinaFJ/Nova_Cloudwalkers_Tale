@@ -84,6 +84,7 @@ public class LevelStateManager : MonoBehaviour
 
     public void OnUndo()
     {
+        StopAllCoroutines();
         LoadToState(levelStateList.Count - 1);
         SFXManager.PlayUndo();
         

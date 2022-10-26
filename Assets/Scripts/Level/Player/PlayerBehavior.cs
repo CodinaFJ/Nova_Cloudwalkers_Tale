@@ -92,6 +92,7 @@ public class PlayerBehavior : MonoBehaviour
     public void LoadLevelStatePlayer(int[] _pjCell, int _starsCollected)
     {     
         //Update pj position - cell & transform
+        PjInputManager.instance.pjMoving = false;
         pjCell = (int[])_pjCell.Clone();
         transform.position = MatrixManager.instance.FromMatrixIndexToWorld(pjCell[0], pjCell[1]) + new Vector3(0, 0.65f, 0);
         UpdateItemUnderPj();
@@ -107,6 +108,5 @@ public class PlayerBehavior : MonoBehaviour
         running = false;
         sitting = false;
         sleeping = false;
-        PjInputManager.instance.pjMoving = false;
     }
 }

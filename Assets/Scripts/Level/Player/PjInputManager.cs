@@ -185,7 +185,7 @@ public class PjInputManager : MonoBehaviour
             yield return null;
         }
 
-        if(pjMovementsPress.Length == 0) playerBehavior.gameObject.transform.position = stepFinalPosition;
+        if(pjMovementsPress.Length == 0 && pjMoving) playerBehavior.gameObject.transform.position = stepFinalPosition;
 
         //If stepped on crystal, prepare it to break when leaving the tile
         matrixManager.CheckForCrystal();
