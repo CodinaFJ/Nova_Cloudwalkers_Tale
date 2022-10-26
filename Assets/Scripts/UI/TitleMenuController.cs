@@ -72,7 +72,7 @@ public class TitleMenuController : MonoBehaviour
 
     public void ToMap()
     {
-        levelLoader.LoadLevel("LevelSelectorMenu");
+        levelLoader.LoadLevel("LevelSelectorMenu_IDD");
         if(FindObjectOfType<MusicSelectionManager>() != null) FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
 

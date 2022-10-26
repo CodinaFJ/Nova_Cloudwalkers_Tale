@@ -9,6 +9,7 @@ public class VideoScript : MonoBehaviour
     [SerializeField] Animator textAnimator;
     [SerializeField] Button textButton;
     [SerializeField] float waitForFadeOut = 1f;
+    [SerializeField] VideoClip videoClip;
     public VideoPlayer vid;
     double videoLength;
     double timeElapsed = 0.0;
@@ -27,8 +28,8 @@ public class VideoScript : MonoBehaviour
  
     void Start()
     {
-        vid.url = System.IO.Path.Combine (Application.streamingAssetsPath,"cinematic1.mp4");
-
+        //vid.url = System.IO.Path.Combine (Application.streamingAssetsPath,"cinematic1.mp4");
+        //vid.clip = videoClip;
         vid.Play();     
         //GetComponent<AudioSource>().Play();
         vid.loopPointReached += CheckOver;
@@ -49,7 +50,7 @@ public class VideoScript : MonoBehaviour
     public void CheckOver(VideoPlayer vp)
     {
         print("Video Is Over");
-        FindObjectOfType<LevelLoader>().LoadLevel("LevelSelectorMenu");
+        FindObjectOfType<LevelLoader>().LoadLevel("LevelSelectorMenu_IDD");
     }
     
 

@@ -56,5 +56,49 @@ MonoBehaviour:
       collectedStars: 0
       wallLevel: 0
       unlockedLevel: 0
+    - levelNumber: 3
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 4
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 5
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 6
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 7
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 8
+      numberOfStars: 0
+      collectedStars: 0
+      wallLevel: 1
+      unlockedLevel: 0
+    - levelNumber: 9
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
   - worldNumber: 0
+    levelsList: []
+  activeLevel:
+    levelNumber: 0
+    numberOfStars: 0
+    collectedStars: 0
+    wallLevel: 0
+    unlockedLevel: 0
+  activeWorld:
+    worldNumber: 0
     levelsList: []

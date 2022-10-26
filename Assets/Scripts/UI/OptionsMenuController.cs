@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -70,10 +70,12 @@ public class OptionsMenuController : MonoBehaviour
     public void ToPauseLevel(){
         LoadOptionsSection(OptionsSectionTag.PauseLevel);
         Hotkeys.SetActive(true);
+        pauseMenuToGo = OptionsSectionTag.PauseLevel;
     } 
     public void ToPauseMap(){
         LoadOptionsSection(OptionsSectionTag.PauseMap);
         Hotkeys.SetActive(false);
+        OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseMap;
     } 
     public void ToPauseMenu(){
@@ -82,9 +84,8 @@ public class OptionsMenuController : MonoBehaviour
         pauseMenuToGo = OptionsSectionTag.PauseMenu;
     } 
     public void ToQuitMenu(){
-        LoadOptionsSection(OptionsSectionTag.PauseLevel);
+        LoadOptionsSection(OptionsSectionTag.Quit);
         OptionsBackground.SetActive(false);
-        pauseMenuToGo = OptionsSectionTag.PauseLevel;
     }
 
     public void BackToPause(){
@@ -92,7 +93,7 @@ public class OptionsMenuController : MonoBehaviour
             try{
                 OptionsSectionsList.Find(x => x.tag == OptionsSectionTag.PauseMenu).sectionGameObject.SetActive(true);
                 ToGame();
-            }catch{}
+            }catch{throw new NullReferenceException();}
         }
         LoadOptionsSection(pauseMenuToGo);
     }
@@ -194,7 +195,8 @@ public class OptionsMenuController : MonoBehaviour
         foreach(OptionsSection section in OptionsSectionsList.FindAll(x => x.tag != optionsSectionTag)){
             section.sectionGameObject.SetActive(false);
         }
-        OptionsSectionsList.Find(x => x.tag == optionsSectionTag).sectionGameObject.SetActive(true);
+        try{OptionsSectionsList.Find(x => x.tag == optionsSectionTag).sectionGameObject.SetActive(true);}
+        catch{throw new NullReferenceException("Exception loading: " + optionsSectionTag.ToString());}
     }
 }
 
