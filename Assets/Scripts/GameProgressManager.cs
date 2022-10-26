@@ -15,10 +15,14 @@ public class GameProgressManager : MonoBehaviour
     [SerializeField] //FOR DEBUG
     private World activeWorld;
 
+    [Header("Global Info")]
     [SerializeField]//FOR DEBUG
     private int collectedStarsInLevel = 0;
     [SerializeField]//FOR DEBUG
     private int collectedStarsInGame = 0;
+
+    [SerializeField]
+    private List<bool> playedCinematics;
 
     private int totalStarsInGame = 0;
 
@@ -82,6 +86,7 @@ public class GameProgressManager : MonoBehaviour
     public int GetCollectedStarsInGame() => this.collectedStarsInGame;
     public int GetTotalStarsInGame() => this.totalStarsInGame;
     public bool GetEndReached() => endReached;
+    public bool GetPlayedCinematic(int cinematic) => playedCinematics[cinematic - 1];
 
     public void SetEndReached(bool value) => endReached = value;
 
@@ -96,6 +101,7 @@ public class GameProgressManager : MonoBehaviour
         }
     }
     public void SetCollectedStarsInLevel(int collectedStarsInLevel) => this.collectedStarsInLevel = collectedStarsInLevel;
+    public bool SetPlayedCinematic(int cinematic) => playedCinematics[cinematic - 1] = true;
 
     public void IncreaseCollectedStarsInLevel() => collectedStarsInLevel++;
 

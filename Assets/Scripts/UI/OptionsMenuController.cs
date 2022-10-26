@@ -121,7 +121,7 @@ public class OptionsMenuController : MonoBehaviour
 
     public void ToMainMenu()
     {
-        levelLoader.LoadLevel("StartMenu");
+        levelLoader.LoadLevel("StartMenu_IDD");
         SFXManager.PlaySelectUI_B();
     }
 

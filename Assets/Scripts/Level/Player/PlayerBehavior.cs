@@ -4,20 +4,6 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
-    /*********************************************************************
-    PlayerBehavior.cs
-
-    Description:
-        Basic infos of the PJ 
-
-    Check also:
-
-        PjAnimationManager.cs
-        PjInputManager.cs
-        MatrixManager.cs
-
-    **********************************************************************/
-
     public static PlayerBehavior instance;
 
     //Cell the player occupies

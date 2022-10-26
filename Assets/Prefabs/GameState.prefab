@@ -174,3 +174,6 @@ MonoBehaviour:
   activeWorld:
     worldNumber: 0
     levelsList: []
+  collectedStarsInLevel: 0
+  collectedStarsInGame: 0
+  playedCinematics: 0000000000
