@@ -529,7 +529,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7332492557668564830}
         m_TargetAssemblyTypeName: LevelUIController, Assembly-CSharp
-        m_MethodName: exitButton
+        m_MethodName: ToOptionsLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
