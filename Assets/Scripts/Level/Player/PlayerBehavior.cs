@@ -86,6 +86,9 @@ public class PlayerBehavior : MonoBehaviour
         {
             itemUnderPj = MatrixManager.instance.GetItemsLayoutMatrix()[pjCell[0], pjCell[1]];
         }
+        if(MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]] == 5 ||
+           MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]] == 5)
+            MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]]++;
     }
 
     public bool GetRunningState() => running;
