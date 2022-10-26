@@ -28,6 +28,11 @@ public class VideoScript : MonoBehaviour
  
     void Start()
     {
+        foreach ( Sound sound in AudioManager.instance.musics)
+        {
+            if(AudioManager.instance.IsPlaying(sound.name)) StartCoroutine(AudioManager.instance.FadeOutMusic(sound.name));
+        }
+
         //vid.url = System.IO.Path.Combine (Application.streamingAssetsPath,"cinematic1.mp4");
         //vid.clip = videoClip;
         vid.Play();     

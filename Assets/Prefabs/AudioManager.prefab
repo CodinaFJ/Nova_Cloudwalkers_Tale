@@ -58,31 +58,31 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: StepCloud1
     clip: {fileID: 8300000, guid: d5934c8abcacbaf4387e9c106f53a464, type: 3}
-    volume: 0.3
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud2
     clip: {fileID: 8300000, guid: e8cb0f47face9744193396b9cd007e9d, type: 3}
-    volume: 0.3
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud3
     clip: {fileID: 8300000, guid: 07eb2c09e375ebb40ac16569f1b3fcf2, type: 3}
-    volume: 0.3
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud4
     clip: {fileID: 8300000, guid: fb5ddf21eec5e68428016d26fd394c2b, type: 3}
-    volume: 0.3
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud5
     clip: {fileID: 8300000, guid: 1e3e304841d23a741980f16c46b0ad45, type: 3}
-    volume: 0.3
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -203,7 +203,7 @@ MonoBehaviour:
   - name: WrongAction
     clip: {fileID: 8300000, guid: 439c8759749363d4882cdaeef4875913, type: 3}
     volume: 0.8
-    pitch: 1
+    pitch: 0.1
     loop: 0
     source: {fileID: 0}
   - name: Undo

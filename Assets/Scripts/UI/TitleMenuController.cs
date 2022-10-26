@@ -51,6 +51,7 @@ public class TitleMenuController : MonoBehaviour
     public void StartButton()
     {
         //StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));
+        if(GameProgressManager.instance != null) Destroy(GameProgressManager.instance.gameObject);
         levelLoader.LoadLevel("Cinematic1");
     }
 
@@ -72,6 +73,7 @@ public class TitleMenuController : MonoBehaviour
 
     public void ToMap()
     {
+        
         levelLoader.LoadLevel("LevelSelectorMenu_IDD");
         if(FindObjectOfType<MusicSelectionManager>() != null) FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
