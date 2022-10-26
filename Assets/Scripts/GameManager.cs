@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public bool gamePaused = false;
 
+    [SerializeField]
     PlayerInput playerInput;
     [HideInInspector]
     public PlayerBehavior playerBehavior;
@@ -24,11 +25,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-    }
-
-    private void Start() 
-    {
-        playerInput = GetComponent<PlayerInput>();
     }
 
     public void OnRestart()

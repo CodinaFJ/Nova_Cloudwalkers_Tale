@@ -37,8 +37,7 @@ public class OptionsMenuController : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         levelLoader = FindObjectOfType<LevelLoader>();
         pauseMenuInput = GetComponent<PlayerInput>();
-        pauseMenuInput.enabled = false;
-        pauseMenuInput.DeactivateInput();
+       
 
         FullscreenToggle.isOn = Screen.fullScreen;
         fullscreenBool = Screen.fullScreen;

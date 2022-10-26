@@ -84,6 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 7015785404226185746}
   gamePaused: 0
+  playerInput: {fileID: 8159789064767154785}
   playerBehavior: {fileID: 0}
 --- !u!114 &8159789064767154787
 MonoBehaviour:
@@ -103,6 +104,8 @@ MonoBehaviour:
   movementsMemory: 3
   releaseMouseTolerance: 0.3
   wallLevel: 0
+  timeStepOvershootCorrection: 0.1
+  arriveToFinalPositionBuffer: 0.01
   pjMoving: 0
 --- !u!114 &6719978607187103728
 MonoBehaviour:

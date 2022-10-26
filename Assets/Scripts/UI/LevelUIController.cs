@@ -23,18 +23,19 @@ public class LevelUIController : MonoBehaviour
     
     public void Pause()
     {
-        SFXManager.PlayOpenMenu();
+        
 
-        if(GameManager.instance != null) GameManager.instance.PauseGame();
-
-        OptionCanvas.GetComponent<PlayerInput>().enabled = true;
-        OptionCanvas.GetComponent<PlayerInput>().ActivateInput();
+        
     }
 
     public void ToOptionsLevel(){
-        OptionCanvas.SetActive(true);
-        OptionCanvas.GetComponent<OptionsMenuController>().ToPauseLevel();
         SFXManager.PlayOpenMenu();
+        if(GameManager.instance != null) GameManager.instance.PauseGame();
+        OptionCanvas.SetActive(true);
+        OptionCanvas.GetComponent<PlayerInput>().enabled = true;
+        OptionCanvas.GetComponent<PlayerInput>().ActivateInput();
+        OptionCanvas.GetComponent<OptionsMenuController>().ToPauseLevel();
+        
     }
     public void ToOptionsMap(){
         OptionCanvas.SetActive(true);
