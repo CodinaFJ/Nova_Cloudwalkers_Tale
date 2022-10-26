@@ -7,25 +7,6 @@ using UnityEngine.EventSystems;
 
 public class PjInputManager : MonoBehaviour
 {
-    /*********************************************************************
-    PjInputManager.cs
-
-    Description:
-        Read keyboard for PJ movement (WASD and arrows).
-        Values from keyboard are translated into commands and stored in
-        command movements arrays (pjMovementsPress and pjMovementsHold)
-        Those commands execute movement coroutines which update the position
-        of the Player object.
-        Player states are defined and controlled for animations.
-
-    Check also:
-
-        PjAnimationManager.cs
-        PlayerBehavior.cs
-
-        MatrixManager.cs
-
-    **********************************************************************/
     [SerializeField] float PjMovementTime;
     [SerializeField] float sittingTime;
     [SerializeField] float sleepingTime;

@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class PjAnimationManager : MonoBehaviour
 {
-    /*********************************************************************
-    PjAnimationManager.cs
-
-    Description:
-        Change animation state of the object "Player" based on the states
-        defined on PjInputManager.cs
-
-    Check also:
-        PlayerBehavior.cs
-
-    **********************************************************************/
-
     PlayerBehavior playerBehavior;
 
     Animator myAnimator;

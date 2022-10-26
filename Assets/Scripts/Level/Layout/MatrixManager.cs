@@ -33,7 +33,8 @@ public class MatrixManager : MonoBehaviour
                valueCrystalCloudMechanic = 3, 
                valueCrystalFloorMechanic = 5, 
                valueThunderCloudMechanic = -1, 
-               valueSpikedFloorMechanic = -999;
+               valueSpikedFloorMechanic = -999,
+               valueBlockMechanic = -2;
     
     bool stateSaved = false;
     
@@ -101,7 +102,7 @@ public class MatrixManager : MonoBehaviour
         }
 
         itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.borderTilemap, valueForBorder, itemsLayoutMatrix);
-        if(tilemapsLevelLayout.blockTilemap != null) itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.blockTilemap, valueForBorder, itemsLayoutMatrix);
+        if(tilemapsLevelLayout.blockTilemap != null) itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.blockTilemap, valueForFloor, itemsLayoutMatrix);
 
         for (int index = 0; index < tilemapsLevelLayout.cloudsTilemaps.Length; index++)
         {
@@ -288,6 +289,7 @@ public class MatrixManager : MonoBehaviour
 
         mechanicsLayoutMatrix = AddTilemapToMechanicsLayoutMatrix(tilemapsLevelLayout.floorTilemap, mechanicsLayoutMatrix);
         mechanicsLayoutMatrix = AddTilemapToMechanicsLayoutMatrix(tilemapsLevelLayout.spikedFloorTilemap, mechanicsLayoutMatrix);
+        if(tilemapsLevelLayout.blockTilemap != null) mechanicsLayoutMatrix = AddTilemapToMechanicsLayoutMatrix(tilemapsLevelLayout.blockTilemap, mechanicsLayoutMatrix);
     }
 
     public int[,] GetMechanicsLayoutMatrix()
@@ -297,7 +299,7 @@ public class MatrixManager : MonoBehaviour
 
     int[,] AddTilemapToMechanicsLayoutMatrix (Tilemap tilemapItem, int[,] mechanicsLayoutMatrix)
     {
-        tilemapItem.CompressBounds();
+        //tilemapItem.CompressBounds();
         BoundsInt bounds = tilemapItem.cellBounds;
 
         //Loop through all the tiles in the bounds of the tilemap
@@ -322,6 +324,7 @@ public class MatrixManager : MonoBehaviour
                 else if(tile.name == "ThunderCloudsRuleTile") mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueThunderCloudMechanic;
                 else if(tile.name == "FloorRuleTile")         mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForFloor;
                 else if(tile.name == "SpikedFloorRuleTile")   mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueSpikedFloorMechanic;
+                else                                          mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueBlockMechanic;
                 
             }
         }

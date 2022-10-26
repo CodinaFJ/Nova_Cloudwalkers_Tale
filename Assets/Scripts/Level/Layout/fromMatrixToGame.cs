@@ -79,15 +79,8 @@ public class fromMatrixToGame : MonoBehaviour
             whiteCloudsTilemapRederers[i].enabled = false;
         }
 
-        try{
-            if(!GameProgressManager.instance.GetActiveLevel().GetWallLevel()){
-            floorTilemap.enabled = false;
-            floorTilemapRenderer.enabled = false;
-            }   
-        }catch(Exception ex){
-            Debug.LogWarning("Error loading active level: " + ex.Message);
-        }
-        
+        floorTilemap.enabled = false;
+        floorTilemapRenderer.enabled = false;
         spikedFloorTilemap.enabled = false;
         spikedFloorTilemapRenderer.enabled = false;
     
@@ -202,7 +195,9 @@ public class fromMatrixToGame : MonoBehaviour
 
         if (itemsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForFloor)
         {
-            if (mechanicsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForFloor || mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueSpikedFloorMechanic) 
+            if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueForFloor ||
+                mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueSpikedFloorMechanic ||
+                mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueBlockMechanic) 
                 InstantiateFloor(i,j);
         }
         if (mechanicsLayoutMatrix[i,j] ==  MatrixManager.instance.valueCrystalFloorMechanic ||
