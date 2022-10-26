@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void ToMap()
     {
+        GameProgressManager.instance.UpdateStarsInGame();
         levelLoader.LoadLevel("LevelSelectorMenu_IDD");
     }
 

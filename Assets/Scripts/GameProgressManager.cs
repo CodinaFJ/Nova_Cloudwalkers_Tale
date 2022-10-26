@@ -15,10 +15,12 @@ public class GameProgressManager : MonoBehaviour
     [SerializeField] //FOR DEBUG
     private World activeWorld;
 
+    [SerializeField]//FOR DEBUG
     private int collectedStarsInLevel = 0;
+    [SerializeField]//FOR DEBUG
     private int collectedStarsInGame = 0;
 
-    private int totalStarsIngame = 0;
+    private int totalStarsInGame = 0;
 
     private bool endReached = false;
     
@@ -35,6 +37,12 @@ public class GameProgressManager : MonoBehaviour
 
     private void Start() {
         //ParseActiveLevel();
+        CalculateCollectedStarsInGame();
+        CalculateTotalStarsInGame();
+        try{FindObjectOfType<TotalStarsCounter>().UpdateCounter();}catch{}
+    }
+
+    public void UpdateStarsInGame(){
         CalculateCollectedStarsInGame();
         CalculateTotalStarsInGame();
     }
@@ -72,7 +80,7 @@ public class GameProgressManager : MonoBehaviour
     public Level GetLevel(int worldNumber ,int levelNumber) => worldsWithLevels.Find(x => x.GetLevelWorldNumber() == worldNumber).GetLevelsList().Find(x => x.GetLevelNumber() == levelNumber);
     public int GetCollectedStarsInLevel() => this.collectedStarsInLevel;
     public int GetCollectedStarsInGame() => this.collectedStarsInGame;
-    public int GetTotalStarsInGame() => this.totalStarsIngame;
+    public int GetTotalStarsInGame() => this.totalStarsInGame;
     public bool GetEndReached() => endReached;
 
     public void SetEndReached(bool value) => endReached = value;
@@ -99,14 +107,15 @@ public class GameProgressManager : MonoBehaviour
                 collectedStarsInGame += level.GetCollectedStars();
             }
         }
+        Debug.Log("CollectedStars: " + collectedStarsInGame);
     }
 
     public void CalculateTotalStarsInGame(){
-        collectedStarsInGame = 0;
+        totalStarsInGame = 0;
         foreach(World world in worldsWithLevels){
             foreach(Level level in world.GetLevelsList())
             {
-                collectedStarsInGame += level.GetNumberOfStars();
+                totalStarsInGame += level.GetNumberOfStars();
             }
         }
     }

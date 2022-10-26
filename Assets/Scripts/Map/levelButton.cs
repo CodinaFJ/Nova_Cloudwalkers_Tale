@@ -85,7 +85,7 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
     }
 
     private bool UnlockLevelQuery(){
-        if(unlockerLevels.Length == 0) return true;
+        if(unlockerLevels.Length == 0) return false;
         foreach(int i in unlockerLevels){
             if(GameProgressManager.instance.GetLevel(worldNumber, i).GetLevelCompleted()) return true;
         }
@@ -110,6 +110,11 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
     
     public void OnPointerEnter(PointerEventData eventData){
         if(myButton.interactable) SFXManager.PlayHoverLevel();
+    }
+
+    public void UnlockLevel(){
+        if(!GameProgressManager.instance.GetLevel(worldNumber, levelNumber).GetLevelUnlocked())
+            StartCoroutine(DelayUnlockAnimationStart("UI_LevelUnlock"));
     }
 
 }
