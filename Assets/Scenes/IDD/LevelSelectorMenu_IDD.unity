@@ -1653,6 +1653,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6138862942858712849, guid: dd7a8dc0f0378eb479702ac436a956a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6138862943481719140, guid: dd7a8dc0f0378eb479702ac436a956a7, type: 3}
       propertyPath: levelNumber
       value: 4
@@ -2266,6 +2270,10 @@ PrefabInstance:
     - target: {fileID: 3595229459625137958, guid: dd7a8dc0f0378eb479702ac436a956a7, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138862942858712849, guid: dd7a8dc0f0378eb479702ac436a956a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6138862943481719140, guid: dd7a8dc0f0378eb479702ac436a956a7, type: 3}
       propertyPath: levelNumber
@@ -5086,6 +5094,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6138862942858712849, guid: dd7a8dc0f0378eb479702ac436a956a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6138862943481719140, guid: dd7a8dc0f0378eb479702ac436a956a7, type: 3}
       propertyPath: levelNumber
       value: 5
@@ -7334,94 +7346,6 @@ PrefabInstance:
     - target: {fileID: 7303096619275083183, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[1].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[2].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[3].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[4].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[5].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[6].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[7].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[8].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[1].levelsList.Array.data[0].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[1].levelsList.Array.data[1].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[1].levelsList.Array.data[2].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[1].levelsList.Array.data[3].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[1].levelsList.Array.data[4].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[1].levelsList.Array.data[5].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[1].levelsList.Array.data[6].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[2].levelsList.Array.data[0].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[2].levelsList.Array.data[1].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[2].levelsList.Array.data[2].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[2].levelsList.Array.data[3].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[2].levelsList.Array.data[4].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[2].levelsList.Array.data[5].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[2].levelsList.Array.data[6].unlockedLevel
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}

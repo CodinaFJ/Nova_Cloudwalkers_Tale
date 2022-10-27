@@ -77,14 +77,14 @@ MonoBehaviour:
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 7
-      numberOfStars: 2
-      collectedStars: 0
-      wallLevel: 0
-      unlockedLevel: 0
-    - levelNumber: 8
       numberOfStars: 0
       collectedStars: 0
       wallLevel: 1
+      unlockedLevel: 0
+    - levelNumber: 8
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 9
       numberOfStars: 2
@@ -176,4 +176,4 @@ MonoBehaviour:
     levelsList: []
   collectedStarsInLevel: 0
   collectedStarsInGame: 0
-  playedCinematics: 0000000000
+  playedCinematics: 0000010101

@@ -32,13 +32,6 @@ public class WorldUnlockStarCount : MonoBehaviour
             levelToUnlock.UnlockLevel();
             world2Lock.sprite = openedLock;
             counter.SetActive(false);
-            try{
-                if(!GameProgressManager.instance.GetPlayedCinematic(worldToUnlock)){
-                    GameProgressManager.instance.SetPlayedCinematic(worldToUnlock);
-                    FindObjectOfType<LevelLoader>().LoadLevel("Cinematic" + worldToUnlock );
-                }
-            }catch(Exception ex){Debug.Log("Error loading cinematic: " + ex.Message);}
-
         }
     }
 }

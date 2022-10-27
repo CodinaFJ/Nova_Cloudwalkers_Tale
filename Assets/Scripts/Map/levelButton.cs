@@ -53,6 +53,10 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
         string levelNameID = levelNumber.ToString() + "-" + worldNumber.ToString();
         string sceneToLoad = null;
 
+        if(levelNumber == 1 && !GameProgressManager.instance.GetPlayedCinematic(worldNumber)){
+            levelNameID = "Cinematic" + worldNumber;
+        }
+
         int sceneCount = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;     
         string[] scenes = new string[sceneCount];
         for( int i = 0; i < sceneCount; i++ ){
