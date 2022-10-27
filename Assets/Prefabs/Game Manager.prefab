@@ -104,7 +104,7 @@ MonoBehaviour:
   movementsMemory: 3
   releaseMouseTolerance: 0.3
   wallLevel: 0
-  timeStepOvershootCorrection: 0.1
+  timeStepOvershootCorrection: 0.2
   arriveToFinalPositionBuffer: 0.01
   pjMoving: 0
 --- !u!114 &6719978607187103728
