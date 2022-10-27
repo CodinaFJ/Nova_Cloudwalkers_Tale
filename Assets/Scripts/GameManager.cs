@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
     public void PjToExit()
     {
         PauseGame();
+        SFXManager.instance.StopCloudSwipeLoop();
         FindObjectOfType<PlayerBehavior>().ExitThroughDoor();
     }
 

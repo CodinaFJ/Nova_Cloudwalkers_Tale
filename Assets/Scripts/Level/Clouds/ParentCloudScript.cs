@@ -41,12 +41,14 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     }
 
     public void OnPointerDown(PointerEventData eventData){
+        if(MouseMatrixScript.PointerOnSteppedCloud()) return;
         cloudPointerClick = true;
         //TweenCloudScaleOut();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if(MouseMatrixScript.PointerOnSteppedCloud()) return;
         cloudPointerClick = false;
         TweenCloudScaleIn();
         if(!pointerInCloud)

@@ -7,9 +7,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: shadowToWorldCorrection
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7075206057840484584, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_Name
-      value: ParentTile
+      value: FloorTile
       objectReference: {fileID: 0}
     - target: {fileID: 8803683623780049414, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_RootOrder

@@ -12,7 +12,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixerGroup sfxMixerGroup;
     [SerializeField] private AudioMixerGroup ambientMixerGroup;
     [SerializeField] float fadeInDuration = 2f;
+    [SerializeField] float fadeInDurationSFX = 0.1f;
     [SerializeField] float fadeOutDuration = 1f;
+    [SerializeField] float fadeOutDurationSFX = 0.3f;
 
     public static AudioManager instance;
 
@@ -195,5 +197,49 @@ public class AudioManager : MonoBehaviour
 			yield return null;
 		}
 		s.source.Stop();
+    }
+
+    public IEnumerator FadeInSFX(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound " + name + " not found!");
+            yield break;
+        }
+        s.source.Play();
+			s.source.volume = 0f;
+			while (s.source.volume < s.volume) 
+            {
+				s.source.volume += Time.deltaTime / fadeInDurationSFX;
+				yield return null;
+            }
+    }
+
+    public IEnumerator FadeOutSFX(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if(Array.FindAll<AudioSource>(GetComponents<AudioSource>(), x => x.clip == s.clip).Length > 1){
+            AudioSource[] sourcesPlaying = Array.FindAll<AudioSource>(GetComponents<AudioSource>(), x => x.clip == s.clip);
+            for(int i = 0; i < sourcesPlaying.Length - 1; i++){
+                sourcesPlaying[i].Stop();
+            }
+        } 
+        if (s == null)
+        {
+            Debug.LogWarning("Sound " + name + " not found!");
+            yield break;
+        }
+        else if(s.source == null) yield break;
+        float startVolume = s.source.volume;
+        float elapsedTime = 0;
+        while (s.source.volume > 0) {
+            elapsedTime += Time.deltaTime;
+            s.source.volume -= startVolume * Time.deltaTime / fadeOutDurationSFX; //Mathf.Lerp(startVolume, 0, elapsedTime/fadeOutDurationSFX);
+            yield return null;
+        }
+        Debug.Log("Stop sfx after fade out");
+        s.source.Stop();
+        
     }
 }

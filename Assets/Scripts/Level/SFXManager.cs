@@ -43,9 +43,9 @@ public class SFXManager : MonoBehaviour
     public static void PlayCrystalCloudBreak() => AudioManager.instance.PlaySound(CRYSTAL_CLOUD_BREAK);
 
     public void StopCloudSwipeLoop(){
-        AudioManager.instance.Stop(CLOUD_SWIPE_LOOP + TileType.WhiteCloud);
-        AudioManager.instance.Stop(CLOUD_SWIPE_LOOP + TileType.CrystalCloudTop);
-        AudioManager.instance.Stop(CLOUD_SWIPE_LOOP + TileType.ThunderCloud);
+        StartCoroutine(AudioManager.instance.FadeOutSFX(CLOUD_SWIPE_LOOP + TileType.WhiteCloud));
+        StartCoroutine(AudioManager.instance.FadeOutSFX(CLOUD_SWIPE_LOOP + TileType.CrystalCloudTop));
+        StartCoroutine(AudioManager.instance.FadeOutSFX(CLOUD_SWIPE_LOOP + TileType.ThunderCloud));
     }
 
     public void PlayCloudSwipeLoop() => PlayCloudSwipeLoop(TileType.WhiteCloud);

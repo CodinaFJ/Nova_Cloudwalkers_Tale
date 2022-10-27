@@ -388,6 +388,9 @@ GameObject:
   - component: {fileID: 415777193}
   - component: {fileID: 415777192}
   - component: {fileID: 415777191}
+  - component: {fileID: 415777196}
+  - component: {fileID: 415777195}
+  - component: {fileID: 415777194}
   m_Layer: 5
   m_Name: Quit button
   m_TagString: Untagged
@@ -509,6 +512,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415777189}
   m_CullTransparentMesh: 1
+--- !u!114 &415777194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415777189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34880c330a7f48742b70a0e30fdbe486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &415777195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415777189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04612436045aab341a5b4c49866b3557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &415777196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415777189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1803c749e9b45d943ae5af50ab89b392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleTweenTime: 0.03
+  scaleValue: 1.2
 --- !u!1001 &427498629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1120,6 +1161,9 @@ GameObject:
   - component: {fileID: 1376585521}
   - component: {fileID: 1376585520}
   - component: {fileID: 1376585519}
+  - component: {fileID: 1376585524}
+  - component: {fileID: 1376585523}
+  - component: {fileID: 1376585522}
   m_Layer: 5
   m_Name: Continue button
   m_TagString: Untagged
@@ -1241,6 +1285,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376585517}
   m_CullTransparentMesh: 1
+--- !u!114 &1376585522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376585517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34880c330a7f48742b70a0e30fdbe486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1376585523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376585517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fffb171e9bad84b4f911251fe3755360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1376585524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376585517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1803c749e9b45d943ae5af50ab89b392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleTweenTime: 0.03
+  scaleValue: 1.2
 --- !u!1 &1446769952
 GameObject:
   m_ObjectHideFlags: 0

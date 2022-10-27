@@ -151,7 +151,7 @@ public class CloudInputManager : MonoBehaviour
             item = itemsLayoutMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];
             mechanic = mechanicsLayoutMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];
             pjMovement = pjMovementMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];
-            cloudMovement = cloudMovementMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];
+            cloudMovement = cloudMovementMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];      
 
             Debug.Log("Item: " + item + ". Mechanic: " + mechanic + "\nCharacter movement: " + pjMovement + ". Cloud movement: " + cloudMovement);
 
@@ -160,6 +160,8 @@ public class CloudInputManager : MonoBehaviour
                 
                 if(cloudsParents[item - 1] != null)
                 cloudsParents[item - 1].GetComponent<ParentCloudScript>().PlayClickParticles(onClickMouseWorldPos);
+
+                if(PlayerBehavior.instance.GetItemUnderPj() == item) return;
 
                 SFXManager.PlayCloudSwipeTap();
                 SFXManager.instance.PlayCloudSwipeLoop(mechanic);

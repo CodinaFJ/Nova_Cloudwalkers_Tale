@@ -582,7 +582,7 @@ public class MatrixManager : MonoBehaviour
 
     public void CrackCrystalFloor()
     {
-        if(mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] == 6)
+        if(mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] == 6 || mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] == 5)
         {
 
             mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] = 0;
@@ -609,7 +609,7 @@ public class MatrixManager : MonoBehaviour
     public void CrackCrystalCloud()
     {
         int[] crystalCell = playerBehavior.pjCell;
-        if(mechanicsLayoutMatrix[crystalCell[0], crystalCell[1]] == 4)
+        if(mechanicsLayoutMatrix[crystalCell[0], crystalCell[1]] == 4 || mechanicsLayoutMatrix[crystalCell[0], crystalCell[1]] == 3)
         {
             int item = itemsLayoutMatrix[crystalCell[0], crystalCell[1]];
 
