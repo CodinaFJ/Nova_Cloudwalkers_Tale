@@ -69,17 +69,20 @@ public class OptionsMenuController : MonoBehaviour
     public void ToPauseLevel(){
         LoadOptionsSection(OptionsSectionTag.PauseLevel);
         Hotkeys.SetActive(true);
+        OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseLevel;
     } 
     public void ToPauseMap(){
         LoadOptionsSection(OptionsSectionTag.PauseMap);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
+        OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseMap;
     } 
     public void ToPauseMenu(){
         LoadOptionsSection(OptionsSectionTag.Options);
         Hotkeys.SetActive(false);
+        OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseMenu;
     } 
     public void ToQuitMenu(){
@@ -94,6 +97,7 @@ public class OptionsMenuController : MonoBehaviour
                 ToGame();
             }catch{throw new NullReferenceException();}
         }
+        OptionsBackground.SetActive(true);
         LoadOptionsSection(pauseMenuToGo);
     }
 

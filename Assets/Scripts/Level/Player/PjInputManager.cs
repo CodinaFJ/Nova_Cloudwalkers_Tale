@@ -134,8 +134,7 @@ public class PjInputManager : MonoBehaviour
         Vector3 pjMovementDirection = new Vector3 (0, 0, 0);
 
         //If we are starting movement from a crystal it must break
-        matrixManager.CrackCrystalFloor();
-        matrixManager.CrackCrystalCloud();
+        StartCoroutine(WaitForCrystalBreak(playerBehavior.pjCell[0], playerBehavior.pjCell[1]));
 
         //Translate movement value to a direction vector 
         if(Mathf.Abs(movementDone)==1)
@@ -177,6 +176,19 @@ public class PjInputManager : MonoBehaviour
 
         if(pjMovementsPress.Length > 0 || pjMovementsHold.Length > 0)
             MovePlayer();
+    }
+
+    IEnumerator WaitForCrystalBreak(int cell0,int cell1)
+    {
+        float currentTime = 0f;
+        while(currentTime < PjMovementTime/2)
+        {
+            currentTime += Time.deltaTime;
+            yield return null;
+        }
+        playerBehavior.sitting = true;
+        matrixManager.CrackCrystalFloor(cell0, cell1);
+        matrixManager.CrackCrystalCloud(cell0, cell1);
     }
 
     IEnumerator WaitForSittingPJ()

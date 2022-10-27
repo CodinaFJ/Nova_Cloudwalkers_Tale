@@ -580,13 +580,13 @@ public class MatrixManager : MonoBehaviour
         }
     }
 
-    public void CrackCrystalFloor()
+    public void CrackCrystalFloor(int cell0, int cell1)
     {
-        if(mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] == 6 || mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] == 5)
+        if(mechanicsLayoutMatrix[cell0, cell1] == 6 || mechanicsLayoutMatrix[cell0, cell1] == 5)
         {
 
-            mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] = 0;
-            itemsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] = 0;
+            mechanicsLayoutMatrix[cell0, cell1] = 0;
+            itemsLayoutMatrix[cell0, cell1] = 0;
 
             foreach(TileBehavior tile in FromMatrixToGame.GetFloorParent().GetComponentsInChildren<TileBehavior>()){
                 tile.SetCorrectSpritesAfterCrack();
@@ -596,25 +596,25 @@ public class MatrixManager : MonoBehaviour
             RefreshCloudsMovementMatrix();
 
             TileBehavior crystalTile = Array.Find(FromMatrixToGame.GetFloorParent().GetComponentsInChildren<TileBehavior>(),
-                                                  x => x.GetTileCoordinates()[0] == playerBehavior.pjCell[0] && x.GetTileCoordinates()[1] == playerBehavior.pjCell[1]);
+                                                  x => x.GetTileCoordinates()[0] == cell0 && x.GetTileCoordinates()[1] == cell1);
 
             crystalTile.gameObject.SetActive(false);
             Destroy(crystalTile.gameObject);
             
             SFXManager.PlayCrystalFloorBreak();
-            VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalFloorBreak);
+            VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalFloorBreak, FromMatrixIndexToWorld(cell0, cell1));
         }
     }
 
-    public void CrackCrystalCloud()
+    public void CrackCrystalCloud(int cell0, int cell1)
     {
         int[] crystalCell = playerBehavior.pjCell;
-        if(mechanicsLayoutMatrix[crystalCell[0], crystalCell[1]] == 4 || mechanicsLayoutMatrix[crystalCell[0], crystalCell[1]] == 3)
+        if(mechanicsLayoutMatrix[cell0, cell1] == 4 || mechanicsLayoutMatrix[cell0, cell1] == 3)
         {
-            int item = itemsLayoutMatrix[crystalCell[0], crystalCell[1]];
+            int item = itemsLayoutMatrix[cell0, cell1];
 
-            mechanicsLayoutMatrix[crystalCell[0], crystalCell[1]] = 0;
-            itemsLayoutMatrix[crystalCell[0], crystalCell[1]] = 0;
+            mechanicsLayoutMatrix[cell0, cell1] = 0;
+            itemsLayoutMatrix[cell0, cell1] = 0;
 
             RefreshPjMovementMatrix();
             RefreshCloudsMovementMatrix();
