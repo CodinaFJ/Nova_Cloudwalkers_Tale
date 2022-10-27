@@ -68,19 +68,8 @@ public class VideoScript : MonoBehaviour
         print("Video Is Over");
 
         GameProgressManager.instance.SetPlayedCinematic(worldUnlocked);
-        if(worldUnlocked == 1) FindObjectOfType<LevelLoader>().LoadLevel("LevelSelectorMenu_IDD");
-        else{
-            string sceneToLoad = null;
-
-            int sceneCount = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;     
-            string[] scenes = new string[sceneCount];
-
-            for( int i = 0; i < sceneCount; i++ ){
-                scenes[i] = System.IO.Path.GetFileNameWithoutExtension(UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex( i ));
-                if(scenes[i].Contains("1-" + worldUnlocked)) sceneToLoad = scenes[i];
-            }
-            FindObjectOfType<LevelLoader>().LoadLevel(sceneToLoad);
-        }
+        if(worldUnlocked == 1) FindObjectOfType<LevelLoader>().LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
+        else FindObjectOfType<LevelLoader>().LoadLevel(LevelLoader.GetLevelContains("1-" + worldUnlocked));
     }
 
     public void OnAnyKey()

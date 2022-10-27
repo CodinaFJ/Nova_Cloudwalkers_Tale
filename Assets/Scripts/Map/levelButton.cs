@@ -51,20 +51,12 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
     public void LoadLevel(){
         GameProgressManager.instance.SetActiveLevel(worldNumber, levelNumber);
         string levelNameID = levelNumber.ToString() + "-" + worldNumber.ToString();
-        string sceneToLoad = null;
 
         if(levelNumber == 1 && !GameProgressManager.instance.GetPlayedCinematic(worldNumber) && worldNumber != 1){
             levelNameID = "Cinematic" + worldNumber;
         }
 
-        int sceneCount = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;     
-        string[] scenes = new string[sceneCount];
-        for( int i = 0; i < sceneCount; i++ ){
-            scenes[i] = System.IO.Path.GetFileNameWithoutExtension(UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex( i ));
-            if(scenes[i].Contains(levelNameID)) sceneToLoad = scenes[i];
-        }
-
-        FindObjectOfType<LevelSelectorController>().LoadLevel(sceneToLoad);
+        FindObjectOfType<LevelSelectorController>().LoadLevel(LevelLoader.GetLevelContains(levelNameID));
     }
 
     private void SelectButtonStatus(){
@@ -83,7 +75,7 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
             myButton.interactable = true;
         }
         else if(!level.GetLevelUnlocked() && UnlockLevelQuery()){
-            StartCoroutine(DelayUnlockAnimationStart("UI_LevelUnlock"));
+            UnlockLevel();
         }
         
     }

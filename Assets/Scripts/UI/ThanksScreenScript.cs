@@ -22,7 +22,7 @@ public class ThanksScreenScript : MonoBehaviour
     
     public void ToMap()
     {
-        levelLoader.LoadLevel("LevelSelectorMenu");
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
         if(FindObjectOfType<MusicSelectionManager>() != null) FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
 

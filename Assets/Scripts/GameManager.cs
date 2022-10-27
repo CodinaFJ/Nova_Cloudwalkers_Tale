@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     public void ToMap()
     {
         GameProgressManager.instance.UpdateStarsInGame();
-        levelLoader.LoadLevel("LevelSelectorMenu_IDD");
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
     }
 
     public void PjToExit()
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     public void ToEndDemo()
     {
-        levelLoader.LoadLevel("LevelSelectorMenu_IDD");
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
         //FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
     public void OnPause()
