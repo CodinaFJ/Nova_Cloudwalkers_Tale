@@ -15,6 +15,7 @@ public class SFXManager : MonoBehaviour
     const string UNDO = "Undo";
     const string CRYSTAL_FLOOR_BREAK = "CrystalPlatformBreak";
     const string CRYSTAL_CLOUD_BREAK = "CrystalCloudBreak";
+    const string WRONG = "WrongAction";
 
     const string UI_OPEN_MENU = "EnterMenu";
     const string UI_CLOSE_MENU = "CloseMenu";
@@ -23,6 +24,8 @@ public class SFXManager : MonoBehaviour
     const string UI_SELECT_B = "UISelect_Backward";
     const string UI_SELECT_LEVEL = "UISelect_Level";
     const string UI_HOVER_LEVEL = "UIHover_Level";
+    const string UI_UNLOCK_LEVEL = "UnlockLevel";
+    const string UI_UNLOCK_WORLD = "UnlockWorld";
 
     private List<Vector2> tilesWithCloudToJoin = new List<Vector2>();
 
@@ -31,6 +34,7 @@ public class SFXManager : MonoBehaviour
     }
 
     public static void PlayUndo() => AudioManager.instance.PlaySound(UNDO);
+    public static void PlayWrong() => AudioManager.instance.PlaySound(WRONG);
     public static void PlayCloudCollision() => AudioManager.instance.PlaySound(CLOUD_COLLISION);
 
     public static void PlayCloudSwipeTap()
@@ -81,4 +85,6 @@ public class SFXManager : MonoBehaviour
     public static void PlaySelectUI_B() => AudioManager.instance.PlaySound(UI_SELECT_B);
     public static void PlayEnterLevel() => AudioManager.instance.PlaySound(UI_SELECT_LEVEL);
     public static void PlayHoverLevel() => AudioManager.instance.PlaySound(UI_HOVER_LEVEL);
+    public static void PlayUnlockLevel() => AudioManager.instance.PlaySound(UI_UNLOCK_LEVEL);
+    public static void PlayUnlockWorld() => AudioManager.instance.PlaySound(UI_UNLOCK_WORLD);
 }

@@ -203,7 +203,7 @@ MonoBehaviour:
   - name: WrongAction
     clip: {fileID: 8300000, guid: 439c8759749363d4882cdaeef4875913, type: 3}
     volume: 0.8
-    pitch: 0.1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Undo
@@ -262,7 +262,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: HoverUI
     clip: {fileID: 8300000, guid: 5178bac27af787c488ef6490f58a0e48, type: 3}
-    volume: 0.8
+    volume: 0.3
     pitch: 0.6
     loop: 0
     source: {fileID: 0}
@@ -288,6 +288,18 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b1de5b56cdbe70041b4be8773ea94ce7, type: 3}
     volume: 0.8
     pitch: 0.9
+    loop: 0
+    source: {fileID: 0}
+  - name: UnlockLevel
+    clip: {fileID: 8300000, guid: f6349b18706439e4f8b4bcda57c0718b, type: 3}
+    volume: 0.8
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: UnlockWorld
+    clip: {fileID: 8300000, guid: f6349b18706439e4f8b4bcda57c0718b, type: 3}
+    volume: 0.9
+    pitch: 1.2
     loop: 0
     source: {fileID: 0}
   musics:

@@ -90,7 +90,9 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
 
     IEnumerator DelayUnlockAnimationStart(string newState)
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
+        if(levelNumber == 1) SFXManager.PlayUnlockWorld();
+        else SFXManager.PlayUnlockLevel();
         ChangeAnimationState(newState);
         myButton.interactable = true;
         level.SetLevelUnlocked(true);

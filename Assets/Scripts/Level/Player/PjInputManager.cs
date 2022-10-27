@@ -394,7 +394,8 @@ public class PjInputManager : MonoBehaviour
             {
                 pjMovementsPress = (int[])pjMovementsArray.Clone();
                 if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
-            } 
+            }
+            else SFXManager.PlayWrong();
 
             pjAnimationManager.PjClickAnimation(mouseCellCenter);
 

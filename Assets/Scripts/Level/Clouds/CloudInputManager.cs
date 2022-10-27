@@ -66,6 +66,8 @@ public class CloudInputManager : MonoBehaviour
 
     bool stopMovement = false;
 
+    bool wrongSFXPlayed = false;
+
     void Awake()
     {
         if(instance == null)
@@ -101,14 +103,13 @@ public class CloudInputManager : MonoBehaviour
     void FixedUpdate()
     {
         //Start mouse movement recording algorithm only if selection is done and selected object is cloud
-        if( isSelecting && (mechanic == -1 || mechanic == 1 || mechanic ==3))
-        {
-            FillMousePath();
-        }
+        if( isSelecting && (mechanic == -1 || mechanic == 1 || mechanic ==3)) FillMousePath();
+        else if(isSelecting && mechanic == 2) CheckForWrongSFX();
 
         //Start moving cloud if there is are movements done
         if(mouseMovements.Length > 0)
         {
+            Debug.Log("Try move cloud");
             cloudsParents = fromMatrixToGame.GetCloudsParents();
             doingMagic = true;
             moveCloud();
@@ -159,9 +160,7 @@ public class CloudInputManager : MonoBehaviour
             {
                 
                 if(cloudsParents[item - 1] != null)
-                cloudsParents[item - 1].GetComponent<ParentCloudScript>().PlayClickParticles(onClickMouseWorldPos);
-
-                if(PlayerBehavior.instance.GetItemUnderPj() == item) return;
+                    cloudsParents[item - 1].GetComponent<ParentCloudScript>().PlayClickParticles(onClickMouseWorldPos);
 
                 SFXManager.PlayCloudSwipeTap();
                 SFXManager.instance.PlayCloudSwipeLoop(mechanic);
@@ -169,10 +168,6 @@ public class CloudInputManager : MonoBehaviour
                 if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = true;
 
                 //TweenCloudScaleOnSelect();
-            }
-            else if(mechanic == 2)
-            {
-                AudioManager.instance.PlaySound("WrongAction");
             }
             cloudMoved = false;
 
@@ -215,6 +210,19 @@ public class CloudInputManager : MonoBehaviour
         }
         //If there are movements that contradict themselves (i.e. right and left) both are removed
         CompesateMouseMovements();
+    }
+
+    void CheckForWrongSFX(){
+        Vector3 mouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
+        int diffX;
+        int diffY;
+    
+        diffX = (int)(((mouseWorldPos.x - mouseOffset.x) - previousCellCenter.x)/(cellSize - sensitivityToMove));
+        diffY = (int)(((mouseWorldPos.y - mouseOffset.y) - previousCellCenter.y)/(cellSize - sensitivityToMove));
+        if((Mathf.Abs(diffX) > 0 || Mathf.Abs(diffY) > 0) && !wrongSFXPlayed){
+            SFXManager.PlayWrong();
+            wrongSFXPlayed = true;
+        } 
     }
 
     void CompesateMouseMovements()
@@ -337,7 +345,7 @@ public class CloudInputManager : MonoBehaviour
 
         if(!isSelecting) mouseMovements = new int[0];
 
-        wrongActionPlayed = false;
+        //wrongActionPlayed = false;
     }
 
 
@@ -366,20 +374,12 @@ public class CloudInputManager : MonoBehaviour
                     movementDoneIndex = index;
                     break;
                 }
-
-                else if(!CloudCanMove(mouseMovements[index]) && !wrongActionPlayed && !cloudMoved)
-                {
-                    wrongActionPlayed = true;
-                    AudioManager.instance.PlaySound("WrongAction");
-                    StartCoroutine(RestartWrongActionSound());
-                }
             }
         }
         else if(playerBehavior.GetItemUnderPj() == item && !wrongActionPlayed)
         {
             wrongActionPlayed = true;
-            AudioManager.instance.PlaySound("WrongAction");
-            StartCoroutine(RestartWrongActionSound());
+            SFXManager.PlayWrong();
         }
         if(startCloudMovement)
         {
@@ -416,6 +416,7 @@ public class CloudInputManager : MonoBehaviour
             SFXManager.instance.StopCloudSwipeLoop();
             if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = false;
         }
+        wrongSFXPlayed = false;
         wrongActionPlayed = false;
         isSelecting = false;
         if(!cloudIsMoving) mouseMovements = new int[0];
