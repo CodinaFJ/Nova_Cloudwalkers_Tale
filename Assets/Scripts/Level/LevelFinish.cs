@@ -41,15 +41,15 @@ public class LevelFinish : MonoBehaviour
         AudioManager.instance.PlaySound("LevelExit");
         yield return new WaitForSecondsRealtime(levelLoadDelay);
 
-        if(GameProgressManager.instance.AllLevelsCompleted())
-        {
-            GameProgressManager.instance.CalculateCollectedStarsInGame();
-            if(!GameProgressManager.instance.GetEndReached() || GameProgressManager.instance.GetCollectedStarsInGame() == GameProgressManager.instance.GetTotalStarsInGame())
-            {
-                GameManager.instance.ToEndDemo();
-                GameProgressManager.instance.SetEndReached(true);
-            }
-            else GameManager.instance.ToMap();
+        GameProgressManager.instance.CalculateCollectedStarsInGame();
+
+        if(GameProgressManager.instance.AllLevelsCompleted() && !GameProgressManager.instance.GetEndReached()){
+            GameProgressManager.instance.SetEndReached(true);
+            GameManager.instance.ToEndDemo();
+        }
+        else if(GameProgressManager.instance.GetCollectedStarsInGame() == GameProgressManager.instance.GetTotalStarsInGame() && !GameProgressManager.instance.GetAllStarsCollected()){
+            GameProgressManager.instance.SetAllStarsCollected(true);
+            GameManager.instance.ToEndDemo();
         }
         else GameManager.instance.ToMap();
         

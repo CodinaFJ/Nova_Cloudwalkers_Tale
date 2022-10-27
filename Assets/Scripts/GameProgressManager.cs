@@ -27,6 +27,7 @@ public class GameProgressManager : MonoBehaviour
     private int totalStarsInGame = 0;
 
     private bool endReached = false;
+    private bool allStarsCollected = false;
     
     private void Awake() {
         int numInstances = FindObjectsOfType<GameProgressManager>().Length;
@@ -86,9 +87,11 @@ public class GameProgressManager : MonoBehaviour
     public int GetCollectedStarsInGame() => this.collectedStarsInGame;
     public int GetTotalStarsInGame() => this.totalStarsInGame;
     public bool GetEndReached() => endReached;
+    public bool GetAllStarsCollected() => allStarsCollected;
     public bool GetPlayedCinematic(int cinematic) => playedCinematics[cinematic - 1];
 
     public void SetEndReached(bool value) => endReached = value;
+    public void SetAllStarsCollected(bool value) => allStarsCollected = value;
 
     public void SetActiveLevel(int worldNumber, int levelNumber){
         try{

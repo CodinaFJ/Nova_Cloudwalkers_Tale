@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     public void ToEndDemo()
     {
-        levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains("FinalDemo"));
         //FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
     public void OnPause()
