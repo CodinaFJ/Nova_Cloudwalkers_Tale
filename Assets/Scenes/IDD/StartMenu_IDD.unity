@@ -4552,6 +4552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragmentoMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 5723262252607827927, guid: 7903b972a1582c5429a76c5bdbfc04f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5723262253537465037, guid: 7903b972a1582c5429a76c5bdbfc04f2, type: 3}
       propertyPath: m_SortingLayer
       value: 7
