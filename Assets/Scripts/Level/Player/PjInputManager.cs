@@ -186,7 +186,6 @@ public class PjInputManager : MonoBehaviour
             currentTime += Time.deltaTime;
             yield return null;
         }
-        playerBehavior.sitting = true;
         matrixManager.CrackCrystalFloor(cell0, cell1);
         matrixManager.CrackCrystalCloud(cell0, cell1);
     }
