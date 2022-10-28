@@ -469,6 +469,9 @@ public class MatrixManager : MonoBehaviour
         if(AttachGreyCloudInMatrix(item))
         {
             FromMatrixToGame.ReInstantiateItem(item);
+            playerBehavior.UpdateItemUnderPj();
+            RefreshCloudsMovementMatrix();
+            RefreshPjMovementMatrix();
         }
     }
 
@@ -485,9 +488,7 @@ public class MatrixManager : MonoBehaviour
             }
             
             //FromMatrixToGame.ReInstantiateItem(item);
-            playerBehavior.UpdateItemUnderPj();
-            RefreshCloudsMovementMatrix();
-            RefreshPjMovementMatrix();
+            
             
 
             

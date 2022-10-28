@@ -10,6 +10,7 @@ public class PlayerBehavior : MonoBehaviour
     public int[] pjCell = new int[2];
 
     //Layout under the player
+    [SerializeField]
     int itemUnderPj;
     int mechanicUnderPj;
 
