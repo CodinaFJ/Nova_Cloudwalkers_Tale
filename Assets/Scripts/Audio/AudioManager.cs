@@ -238,7 +238,6 @@ public class AudioManager : MonoBehaviour
             s.source.volume -= startVolume * Time.deltaTime / fadeOutDurationSFX; //Mathf.Lerp(startVolume, 0, elapsedTime/fadeOutDurationSFX);
             yield return null;
         }
-        Debug.Log("Stop sfx after fade out");
         s.source.Stop();
         
     }

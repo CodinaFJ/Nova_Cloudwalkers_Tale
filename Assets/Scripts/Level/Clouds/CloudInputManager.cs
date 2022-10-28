@@ -109,7 +109,6 @@ public class CloudInputManager : MonoBehaviour
         //Start moving cloud if there is are movements done
         if(mouseMovements.Length > 0)
         {
-            Debug.Log("Try move cloud");
             cloudsParents = fromMatrixToGame.GetCloudsParents();
             doingMagic = true;
             moveCloud();

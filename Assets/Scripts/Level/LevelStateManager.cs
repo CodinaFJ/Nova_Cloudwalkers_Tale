@@ -51,6 +51,7 @@ public class LevelStateManager : MonoBehaviour
     public void SaveLevelState()
     {
         levelStateList.Add(new LevelState(matrixManager, playerBehavior, stars));
+        specificLevelState = null;
         //Debug.Log("State saved number: " + levelStateList.Count);
     }
 
