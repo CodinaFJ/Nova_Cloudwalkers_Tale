@@ -392,7 +392,7 @@ public class PjInputManager : MonoBehaviour
     public void FindPath(Vector3 mouseWorldPos){
         //Initial mouse and cloud values needed for cloud movement algorythm
         Vector3 mouseCellCenter = new Vector3(Mathf.FloorToInt(mouseWorldPos.x), Mathf.FloorToInt(mouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
-        int[] onClickMatrixCoor = MatrixManager.instance.FromWorldToMatrixIndex(mouseWorldPos);//GetMouseMatrixIndex();
+        int[] onClickMatrixCoor = GetMouseMatrixIndex(mouseWorldPos);
         Debug.Log("On finger down walk cell:" + onClickMatrixCoor[0] + ", " + onClickMatrixCoor[1]);
         if(onClickMatrixCoor == null) return;
 
@@ -432,12 +432,12 @@ public class PjInputManager : MonoBehaviour
         return worldPoint;
     }
 
-    int[] GetMouseMatrixIndex()
+    int[] GetMouseMatrixIndex(Vector3 mousePosition)
     {
         int[] mouseMatrixIndex = new int[2];
 
         //Truncate position and add (0.5, 0.5, 0) to match cell center
-        Vector3 mouseWorldPosTruncated = new Vector3(Mathf.FloorToInt(GetMouseWorldPos().x), Mathf.FloorToInt(GetMouseWorldPos().y), 0f);
+        Vector3 mouseWorldPosTruncated = new Vector3(Mathf.FloorToInt(mousePosition.x), Mathf.FloorToInt(mousePosition.y), 0f);
 
         mouseMatrixIndex = matrixManager.FromWorldToMatrixIndex(mouseWorldPosTruncated + new Vector3(0.5f, 0.5f, 0f));
         if(mouseMatrixIndex == null) Debug.LogWarning("PjInputManager: Out of matrix");
@@ -452,7 +452,8 @@ public class PjInputManager : MonoBehaviour
         if(Vector3.Magnitude(GetMouseWorldPos() - onClickMouseWorldPos) > releaseMouseTolerance && !GameProgressManager.instance.GetActiveLevel().GetWallLevel()) return;
 
         if(!playerBehavior.clickIsForCloud)
-        OnFindPath();
+        //OnFindPath();
+        FindPath(GetMouseWorldPos());
     }
 
     public void OnLeftClick()
