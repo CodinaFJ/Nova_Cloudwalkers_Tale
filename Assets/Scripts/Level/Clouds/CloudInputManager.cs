@@ -185,7 +185,9 @@ public class CloudInputManager : MonoBehaviour
 
     void FillMousePath()
     {
-        Vector3 mouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
+        //Vector3 mouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
+        Vector3 mouseWorldPos = TouchControlScript.instance.GetTouchPosition();
+
 
         int movementToAdd = 0;
 
@@ -436,10 +438,7 @@ public class CloudInputManager : MonoBehaviour
         stopMovement = true;
     }
 
-    public bool GetIsSelecting()
-    {
-        return isSelecting;
-    }
+    public bool GetIsSelecting() => isSelecting;
 
     bool CloudCanMove(int nextMovement)
     {
