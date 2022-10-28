@@ -88,6 +88,10 @@ public class AudioManager : MonoBehaviour
         if(IsPlayingSFX(name) && avoidMoreThanOne) return;
         PlaySound(name);
     }
+    public void PlaySound(string name, string nameToStop){
+        if(IsPlayingSFX(nameToStop)) Stop(nameToStop);
+        PlaySound(name);
+    }
 
     IEnumerator DestroyOnFinishedClip(AudioSource source)
     {

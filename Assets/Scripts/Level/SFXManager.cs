@@ -86,5 +86,5 @@ public class SFXManager : MonoBehaviour
     public static void PlayEnterLevel() => AudioManager.instance.PlaySound(UI_SELECT_LEVEL);
     public static void PlayHoverLevel() => AudioManager.instance.PlaySound(UI_HOVER_LEVEL);
     public static void PlayUnlockLevel() => AudioManager.instance.PlaySound(UI_UNLOCK_LEVEL, true);
-    public static void PlayUnlockWorld() => AudioManager.instance.PlaySound(UI_UNLOCK_WORLD);
+    public static void PlayUnlockWorld() => AudioManager.instance.PlaySound(UI_UNLOCK_WORLD, UI_UNLOCK_LEVEL);
 }
