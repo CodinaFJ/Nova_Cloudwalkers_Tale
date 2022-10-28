@@ -147,6 +147,8 @@ GameObject:
   - component: {fileID: 1967907758552253470}
   - component: {fileID: 1967907758552253471}
   - component: {fileID: 1967907758552253468}
+  - component: {fileID: 745816500393477670}
+  - component: {fileID: 3997897823568375472}
   m_Layer: 5
   m_Name: Add to wishlist
   m_TagString: Untagged
@@ -278,5 +280,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2aef68edecd48c44b8859b2fde2f97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &745816500393477670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967907758552253538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1803c749e9b45d943ae5af50ab89b392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleTweenTime: 0.03
+  scaleValue: 0.7
+--- !u!114 &3997897823568375472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967907758552253538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34880c330a7f48742b70a0e30fdbe486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

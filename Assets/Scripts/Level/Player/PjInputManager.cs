@@ -7,25 +7,6 @@ using UnityEngine.EventSystems;
 
 public class PjInputManager : MonoBehaviour
 {
-    /*********************************************************************
-    PjInputManager.cs
-
-    Description:
-        Read keyboard for PJ movement (WASD and arrows).
-        Values from keyboard are translated into commands and stored in
-        command movements arrays (pjMovementsPress and pjMovementsHold)
-        Those commands execute movement coroutines which update the position
-        of the Player object.
-        Player states are defined and controlled for animations.
-
-    Check also:
-
-        PjAnimationManager.cs
-        PlayerBehavior.cs
-
-        MatrixManager.cs
-
-    **********************************************************************/
     [SerializeField] float PjMovementTime;
     [SerializeField] float sittingTime;
     [SerializeField] float sleepingTime;
@@ -157,8 +138,7 @@ public class PjInputManager : MonoBehaviour
         Vector3 pjMovementDirection = new Vector3 (0, 0, 0);
 
         //If we are starting movement from a crystal it must break
-        matrixManager.CrackCrystalFloor();
-        matrixManager.CrackCrystalCloud();
+        StartCoroutine(WaitForCrystalBreak(playerBehavior.pjCell[0], playerBehavior.pjCell[1]));
 
         //Translate movement value to a direction vector 
         if(Mathf.Abs(movementDone)==1)
@@ -189,7 +169,7 @@ public class PjInputManager : MonoBehaviour
             yield return null;
         }
 
-        if(pjMovementsPress.Length == 0) playerBehavior.gameObject.transform.position = stepFinalPosition;
+        if(pjMovementsPress.Length == 0 && pjMoving) playerBehavior.gameObject.transform.position = stepFinalPosition;
 
         //If stepped on crystal, prepare it to break when leaving the tile
         matrixManager.CheckForCrystal();
@@ -200,6 +180,18 @@ public class PjInputManager : MonoBehaviour
 
         if(pjMovementsPress.Length > 0 || pjMovementsHold.Length > 0)
             MovePlayer();
+    }
+
+    IEnumerator WaitForCrystalBreak(int cell0,int cell1)
+    {
+        float currentTime = 0f;
+        while(currentTime < PjMovementTime/2)
+        {
+            currentTime += Time.deltaTime;
+            yield return null;
+        }
+        matrixManager.CrackCrystalFloor(cell0, cell1);
+        matrixManager.CrackCrystalCloud(cell0, cell1);
     }
 
     IEnumerator WaitForSittingPJ()
@@ -417,7 +409,8 @@ public class PjInputManager : MonoBehaviour
             {
                 pjMovementsPress = (int[])pjMovementsArray.Clone();
                 if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
-            } 
+            }
+            else SFXManager.PlayWrong();
 
             pjAnimationManager.PjClickAnimation(mouseCellCenter);
 
@@ -451,10 +444,7 @@ public class PjInputManager : MonoBehaviour
         return mouseMatrixIndex;
     }
 
-    public void OnPause()
-    {
-        FindObjectOfType<LevelUIController>().exitButton();
-    }
+    
 
     public void OnReleaseLeftClick()
     {

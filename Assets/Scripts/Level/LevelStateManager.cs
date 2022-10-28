@@ -51,6 +51,7 @@ public class LevelStateManager : MonoBehaviour
     public void SaveLevelState()
     {
         levelStateList.Add(new LevelState(matrixManager, playerBehavior, stars));
+        specificLevelState = null;
         //Debug.Log("State saved number: " + levelStateList.Count);
     }
 
@@ -84,7 +85,9 @@ public class LevelStateManager : MonoBehaviour
 
     public void OnUndo()
     {
+        StopAllCoroutines();
         LoadToState(levelStateList.Count - 1);
+        SFXManager.PlayUndo();
         
         if(levelStateList.Count > 0) levelStateList.Remove(levelStateList[levelStateList.Count - 1]);
     }

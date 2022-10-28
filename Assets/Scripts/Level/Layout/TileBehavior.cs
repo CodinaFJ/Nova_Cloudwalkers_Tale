@@ -81,7 +81,8 @@ public class TileBehavior : MonoBehaviour
             Destroy(childShadow.gameObject);
         }
 
-        SetCorrectSprites();
+        SetAdyacentTilesForShadow();
+        InstantiateShadow();
     }
 
 
@@ -264,5 +265,28 @@ public class TileBehavior : MonoBehaviour
     public int[] GetTileCoordinates() => matrixCoordinates;
     public bool[] GetAdyacentTilesForShadow() => adyacentTilesForShadow;
     public TileSpritesBundle GetTileShadowsSpritesBundle() => tileShadowsSpritesBundle;
+
+    public static TileType MechanicNumberToTyleTipe(int mechanicNumber){
+        switch(mechanicNumber){
+            case 1:
+                return TileType.WhiteCloud;
+            
+            case 2:
+                break;
+
+            case 3:
+                return TileType.CrystalCloudTop;
+
+            case 4:
+                return TileType.CrystalCloudTop;
+
+            case -1:
+                return TileType.ThunderCloud;
+
+            default:
+                return TileType.WhiteCloud;
+        }
+        return TileType.WhiteCloud;
+    }
 
 }

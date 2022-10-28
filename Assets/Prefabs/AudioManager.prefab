@@ -58,31 +58,31 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: StepCloud1
     clip: {fileID: 8300000, guid: d5934c8abcacbaf4387e9c106f53a464, type: 3}
-    volume: 0.7
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud2
     clip: {fileID: 8300000, guid: e8cb0f47face9744193396b9cd007e9d, type: 3}
-    volume: 0.7
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud3
     clip: {fileID: 8300000, guid: 07eb2c09e375ebb40ac16569f1b3fcf2, type: 3}
-    volume: 0.7
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud4
     clip: {fileID: 8300000, guid: fb5ddf21eec5e68428016d26fd394c2b, type: 3}
-    volume: 0.7
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud5
     clip: {fileID: 8300000, guid: 1e3e304841d23a741980f16c46b0ad45, type: 3}
-    volume: 0.7
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: CloudConnect
+  - name: CloudConnectWhiteCloud
     clip: {fileID: 8300000, guid: 3e0b670be326bd548b68588f8b428c7e, type: 3}
     volume: 0.665
     pitch: 1
@@ -152,7 +152,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: CloudSwipe_Loop
+  - name: CloudSwipeWhiteCloud
     clip: {fileID: 8300000, guid: 320539b455ea89d4ba82c6239586c9f0, type: 3}
     volume: 1
     pitch: 1
@@ -160,30 +160,30 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CloudSwipe_Release
     clip: {fileID: 8300000, guid: 6d3f4efe14977ef4197391aaec53cb92, type: 3}
-    volume: 1
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipe_Tap1
     clip: {fileID: 8300000, guid: a392884b42ed41349a1569ce63cb993d, type: 3}
-    volume: 1
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipe_Tap2
     clip: {fileID: 8300000, guid: e0e44e980cb2e6f42923f29f756defaa, type: 3}
-    volume: 1
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipe_Tap3
     clip: {fileID: 8300000, guid: 85f6398cad191d7439f70271d9a43935, type: 3}
-    volume: 1
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: CrystalBreak
-    clip: {fileID: 8300000, guid: 7692628452703f94083544b11914b852, type: 3}
+  - name: CrystalPlatformBreak
+    clip: {fileID: 8300000, guid: 04a67fd97cd5f044c9f54fa00515a236, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -194,28 +194,112 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: ResetCancel
-    clip: {fileID: 8300000, guid: 6e44552a351e041469ee9d75e0e3072e, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: ResetComplete
     clip: {fileID: 8300000, guid: b4125a8b78248174c8f68a568d247c6d, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: ResetProgress
-    clip: {fileID: 8300000, guid: 67ca554b33782d74592826dc42f3af2b, type: 3}
-    volume: 1
+  - name: WrongAction
+    clip: {fileID: 8300000, guid: 439c8759749363d4882cdaeef4875913, type: 3}
+    volume: 0.8
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: WrongAction
-    clip: {fileID: 8300000, guid: ab785b53f1ff7934f990886e53d81c26, type: 3}
+  - name: Undo
+    clip: {fileID: 8300000, guid: e2325faa4d6e5e64394cff3552ea4e81, type: 3}
     volume: 0.8
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnterLevel
+    clip: {fileID: 8300000, guid: f6349b18706439e4f8b4bcda57c0718b, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CrystalCloudBreak
+    clip: {fileID: 8300000, guid: 5aafab08f4932b840ad809e0bea49955, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloudConnectCrystalCloudTop
+    clip: {fileID: 8300000, guid: d2f5f41490b84794c83e376e9e784d3b, type: 3}
+    volume: 0.35
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloudConnectThunderCloud
+    clip: {fileID: 8300000, guid: 3e0b670be326bd548b68588f8b428c7e, type: 3}
+    volume: 0.35
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloudSwipeCrystalCloudTop
+    clip: {fileID: 8300000, guid: 2a38322e62a0a55408264efa3ae272a0, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: CloudSwipeThunderCloud
+    clip: {fileID: 8300000, guid: 6746a2c48618aad4c932817df5522e8e, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: EnterMenu
+    clip: {fileID: 8300000, guid: 35670fbe44d47e7488edb9dfad701660, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CloseMenu
+    clip: {fileID: 8300000, guid: 35670fbe44d47e7488edb9dfad701660, type: 3}
+    volume: 0.8
+    pitch: 1.4
+    loop: 0
+    source: {fileID: 0}
+  - name: HoverUI
+    clip: {fileID: 8300000, guid: 5178bac27af787c488ef6490f58a0e48, type: 3}
+    volume: 0.3
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: UISelect_Forward
+    clip: {fileID: 8300000, guid: 4daed4df451d2b04e81406665d5a8181, type: 3}
+    volume: 0.8
+    pitch: 1.2
+    loop: 0
+    source: {fileID: 0}
+  - name: UISelect_Backward
+    clip: {fileID: 8300000, guid: 4daed4df451d2b04e81406665d5a8181, type: 3}
+    volume: 0.8
+    pitch: 0.7
+    loop: 0
+    source: {fileID: 0}
+  - name: UISelect_Level
+    clip: {fileID: 8300000, guid: f6349b18706439e4f8b4bcda57c0718b, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UIHover_Level
+    clip: {fileID: 8300000, guid: b1de5b56cdbe70041b4be8773ea94ce7, type: 3}
+    volume: 0.8
+    pitch: 0.9
+    loop: 0
+    source: {fileID: 0}
+  - name: UnlockLevel
+    clip: {fileID: 8300000, guid: f6349b18706439e4f8b4bcda57c0718b, type: 3}
+    volume: 0.8
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: UnlockWorld
+    clip: {fileID: 8300000, guid: f6349b18706439e4f8b4bcda57c0718b, type: 3}
+    volume: 0.9
+    pitch: 1.2
     loop: 0
     source: {fileID: 0}
   musics:
@@ -237,6 +321,24 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: World3
+    clip: {fileID: 8300000, guid: 86b8e89f2242f1a48bfaa5a207412d08, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: World4
+    clip: {fileID: 8300000, guid: 830833d921d313f4eaf77fc0a367b326, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: WallLevel
+    clip: {fileID: 8300000, guid: 00dafe5d50edb3e4f9047d24cff7d83e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   ambients:
   - name: Ambient1
     clip: {fileID: 8300000, guid: 455d504cefce8bc48b4c95a4b4c83132, type: 3}
@@ -250,8 +352,22 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Ambient3
+    clip: {fileID: 8300000, guid: e2472506ff92c00419a18a45abe81f3e, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Ambient4
+    clip: {fileID: 8300000, guid: 0a45aeb54d67fe140b7c728f998fe108, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   musicMixerGroup: {fileID: 3328788449262456128, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
   sfxMixerGroup: {fileID: 8705665391241937590, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
   ambientMixerGroup: {fileID: 5171551400734837472, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
   fadeInDuration: 2
+  fadeInDurationSFX: 0.1
   fadeOutDuration: 1
+  fadeOutDurationSFX: 0.7

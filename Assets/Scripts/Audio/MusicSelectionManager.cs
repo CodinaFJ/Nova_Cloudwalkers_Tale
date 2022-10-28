@@ -11,7 +11,9 @@ public class MusicSelectionManager : MonoBehaviour
     {
 
         music = "World" + GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber();
-        ambient = "Ambient" + GameProgressManager.instance.GetActiveLevel().GetLevelNumber();
+        ambient = "Ambient" + GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber();
+
+        if(GameProgressManager.instance.GetActiveLevel().GetWallLevel()) music = "WallLevel";
         
         foreach ( Sound sound in AudioManager.instance.musics)
         {

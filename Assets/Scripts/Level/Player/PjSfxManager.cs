@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class PjSfxManager : MonoBehaviour
 {
- /*********************************************************************
-    PjSfxManager.cs
-
-    Description:
-        Manage sfx of the object "Player" based on the states
-        defined on PjInputManager.cs
-
-    Check also:
-        PjInputManager.cs
-        PlayerBehavior.cs
-
-**********************************************************************/
     PjInputManager pjInputManager;
     PlayerBehavior playerBehavior;
 

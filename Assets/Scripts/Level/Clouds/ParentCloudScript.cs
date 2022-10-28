@@ -15,26 +15,6 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     bool pointerInCloud = false;
     bool cloudPointerClick = false;
-
-    void Start() 
-    {
-        /*cloudTiles = GetComponentsInChildren<InstantiatedCloudBehavior>();
-        posPrevious = transform.position;*/
-    }
-
-    private void Update() 
-    {
-        /*cloudTiles = GetComponentsInChildren<InstantiatedCloudBehavior>();
-        posDifference = transform.position - posPrevious;
-
-        foreach(InstantiatedCloudBehavior cloudTile in cloudTiles)
-        {
-            if(cloudTile.myMovementParticles != null) cloudTile.myMovementParticles.transform.position += posDifference;
-        }
-        posPrevious = transform.position;*/
-
-    }
-
     
 
     public void PlayClickParticles(Vector3 ClickPos)
@@ -49,30 +29,26 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
         particlesCloudOnClick.Stop();
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        // Do something.
+    public void OnPointerEnter(PointerEventData eventData){
+        if(MouseMatrixScript.PointerOnSteppedCloud()) return;
         if(!cloudPointerClick)TweenCloudScaleIn();
         pointerInCloud = true;
-        //Debug.Log("OnPointerEnter");
     }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        // Do something.
+    public void OnPointerExit(PointerEventData eventData){
         if(!cloudPointerClick)TweenCloudScaleOut();
         pointerInCloud = false;
-        //Debug.Log("OnPointerExit");
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
+    public void OnPointerDown(PointerEventData eventData){
+        if(MouseMatrixScript.PointerOnSteppedCloud()) return;
         cloudPointerClick = true;
         //TweenCloudScaleOut();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if(MouseMatrixScript.PointerOnSteppedCloud() || !cloudPointerClick) return;
         cloudPointerClick = false;
         TweenCloudScaleIn();
         if(!pointerInCloud)

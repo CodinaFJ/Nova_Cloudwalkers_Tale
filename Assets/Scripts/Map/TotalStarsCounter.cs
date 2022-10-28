@@ -7,16 +7,10 @@ public class TotalStarsCounter : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI counterText;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //counterText = GetComponentInChildren<TextMeshProUGUI>();
+    private void Start(){
         counterText.text = GameProgressManager.instance.GetCollectedStarsInGame() + "/" + GameProgressManager.instance.GetTotalStarsInGame();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void UpdateCounter(){
+        counterText.text = GameProgressManager.instance.GetCollectedStarsInGame() + "/" + GameProgressManager.instance.GetTotalStarsInGame();
     }
 }

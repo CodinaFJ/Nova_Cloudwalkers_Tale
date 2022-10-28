@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class levelButton : MonoBehaviour
+public class levelButton : MonoBehaviour, IPointerEnterHandler
 {
     [Header ("Sprites")]
     [SerializeField] Sprite lockedLevel;
@@ -50,16 +51,12 @@ public class levelButton : MonoBehaviour
     public void LoadLevel(){
         GameProgressManager.instance.SetActiveLevel(worldNumber, levelNumber);
         string levelNameID = levelNumber.ToString() + "-" + worldNumber.ToString();
-        string sceneToLoad = null;
 
-        int sceneCount = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;     
-        string[] scenes = new string[sceneCount];
-        for( int i = 0; i < sceneCount; i++ ){
-            scenes[i] = System.IO.Path.GetFileNameWithoutExtension(UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex( i ));
-            if(scenes[i].Contains(levelNameID)) sceneToLoad = scenes[i];
+        if(levelNumber == 1 && !GameProgressManager.instance.GetPlayedCinematic(worldNumber) && worldNumber != 1){
+            levelNameID = "Cinematic" + worldNumber;
         }
 
-        FindObjectOfType<LevelSelectorController>().LoadLevel(sceneToLoad);
+        FindObjectOfType<LevelSelectorController>().LoadLevel(LevelLoader.GetLevelContains(levelNameID));
     }
 
     private void SelectButtonStatus(){
@@ -78,13 +75,13 @@ public class levelButton : MonoBehaviour
             myButton.interactable = true;
         }
         else if(!level.GetLevelUnlocked() && UnlockLevelQuery()){
-            StartCoroutine(DelayUnlockAnimationStart("UI_LevelUnlock"));
+            UnlockLevel();
         }
         
     }
 
     private bool UnlockLevelQuery(){
-        if(unlockerLevels.Length == 0) return true;
+        if(unlockerLevels.Length == 0) return false;
         foreach(int i in unlockerLevels){
             if(GameProgressManager.instance.GetLevel(worldNumber, i).GetLevelCompleted()) return true;
         }
@@ -93,7 +90,9 @@ public class levelButton : MonoBehaviour
 
     IEnumerator DelayUnlockAnimationStart(string newState)
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
+        if(levelNumber == 1) SFXManager.PlayUnlockWorld();
+        else SFXManager.PlayUnlockLevel();
         ChangeAnimationState(newState);
         myButton.interactable = true;
         level.SetLevelUnlocked(true);
@@ -107,5 +106,13 @@ public class levelButton : MonoBehaviour
         myButton.GetComponent<Animator>().Play(newState);
     }
     
+    public void OnPointerEnter(PointerEventData eventData){
+        if(myButton.interactable) SFXManager.PlayHoverLevel();
+    }
+
+    public void UnlockLevel(){
+        if(!GameProgressManager.instance.GetLevel(worldNumber, levelNumber).GetLevelUnlocked())
+            StartCoroutine(DelayUnlockAnimationStart("UI_LevelUnlock"));
+    }
 
 }

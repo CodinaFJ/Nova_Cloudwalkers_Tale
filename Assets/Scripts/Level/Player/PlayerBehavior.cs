@@ -4,20 +4,6 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
-    /*********************************************************************
-    PlayerBehavior.cs
-
-    Description:
-        Basic infos of the PJ 
-
-    Check also:
-
-        PjAnimationManager.cs
-        PjInputManager.cs
-        MatrixManager.cs
-
-    **********************************************************************/
-
     public static PlayerBehavior instance;
 
     //Cell the player occupies
@@ -86,6 +72,9 @@ public class PlayerBehavior : MonoBehaviour
         {
             itemUnderPj = MatrixManager.instance.GetItemsLayoutMatrix()[pjCell[0], pjCell[1]];
         }
+        if(MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]] == 5 ||
+           MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]] == 5)
+            MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]]++;
     }
 
     public bool GetRunningState() => running;
@@ -103,6 +92,7 @@ public class PlayerBehavior : MonoBehaviour
     public void LoadLevelStatePlayer(int[] _pjCell, int _starsCollected)
     {     
         //Update pj position - cell & transform
+        PjInputManager.instance.pjMoving = false;
         pjCell = (int[])_pjCell.Clone();
         transform.position = MatrixManager.instance.FromMatrixIndexToWorld(pjCell[0], pjCell[1]) + new Vector3(0, 0.65f, 0);
         UpdateItemUnderPj();
@@ -118,6 +108,5 @@ public class PlayerBehavior : MonoBehaviour
         running = false;
         sitting = false;
         sleeping = false;
-        PjInputManager.instance.pjMoving = false;
     }
 }

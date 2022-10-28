@@ -66,6 +66,8 @@ public class CloudInputManager : MonoBehaviour
 
     bool stopMovement = false;
 
+    bool wrongSFXPlayed = false;
+
     void Awake()
     {
         if(instance == null)
@@ -101,10 +103,8 @@ public class CloudInputManager : MonoBehaviour
     void FixedUpdate()
     {
         //Start mouse movement recording algorithm only if selection is done and selected object is cloud
-        if( isSelecting && (mechanic == -1 || mechanic == 1 || mechanic ==3))
-        {
-            FillMousePath();
-        }
+        if( isSelecting && (mechanic == -1 || mechanic == 1 || mechanic ==3)) FillMousePath();
+        else if(isSelecting && mechanic == 2) CheckForWrongSFX();
 
         //Start moving cloud if there is are movements done
         if(mouseMovements.Length > 0)
@@ -158,7 +158,7 @@ public class CloudInputManager : MonoBehaviour
             item = itemsLayoutMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];
             mechanic = mechanicsLayoutMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];
             pjMovement = pjMovementMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];
-            cloudMovement = cloudMovementMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];
+            cloudMovement = cloudMovementMatrix[onClickMatrixCoor[0],onClickMatrixCoor[1]];      
 
             Debug.Log("Item: " + item + ". Mechanic: " + mechanic + "\nCharacter movement: " + pjMovement + ". Cloud movement: " + cloudMovement);
 
@@ -166,36 +166,14 @@ public class CloudInputManager : MonoBehaviour
             {
                 
                 if(cloudsParents[item - 1] != null)
-                cloudsParents[item - 1].GetComponent<ParentCloudScript>().PlayClickParticles(onClickMouseWorldPos);
+                    cloudsParents[item - 1].GetComponent<ParentCloudScript>().PlayClickParticles(onClickMouseWorldPos);
 
-                int tapNumber = (int)UnityEngine.Random.Range(1,4);
-                switch(tapNumber)
-                {
-                    case 1:
-                    AudioManager.instance.PlaySound("CloudSwipe_Tap1");
-                    break;
-
-                    case 2:
-                    AudioManager.instance.PlaySound("CloudSwipe_Tap2");
-                    break;
-
-                    case 3:
-                    AudioManager.instance.PlaySound("CloudSwipe_Tap3");
-                    break;
-
-                    default:
-                    AudioManager.instance.PlaySound("CloudSwipe_Tap1");
-                    break;
-                }
-                AudioManager.instance.PlaySound("CloudSwipe_Loop");
+                SFXManager.PlayCloudSwipeTap();
+                SFXManager.instance.PlayCloudSwipeLoop(mechanic);
 
                 if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = true;
 
                 //TweenCloudScaleOnSelect();
-            }
-            else if(mechanic == 2)
-            {
-                AudioManager.instance.PlaySound("WrongAction");
             }
             cloudMoved = false;
 
@@ -238,6 +216,19 @@ public class CloudInputManager : MonoBehaviour
         }
         //If there are movements that contradict themselves (i.e. right and left) both are removed
         CompesateMouseMovements();
+    }
+
+    void CheckForWrongSFX(){
+        Vector3 mouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
+        int diffX;
+        int diffY;
+    
+        diffX = (int)(((mouseWorldPos.x - mouseOffset.x) - previousCellCenter.x)/(cellSize - sensitivityToMove));
+        diffY = (int)(((mouseWorldPos.y - mouseOffset.y) - previousCellCenter.y)/(cellSize - sensitivityToMove));
+        if((Mathf.Abs(diffX) > 0 || Mathf.Abs(diffY) > 0) && !wrongSFXPlayed){
+            SFXManager.PlayWrong();
+            wrongSFXPlayed = true;
+        } 
     }
 
     void CompesateMouseMovements()
@@ -360,7 +351,7 @@ public class CloudInputManager : MonoBehaviour
 
         if(!isSelecting) mouseMovements = new int[0];
 
-        wrongActionPlayed = false;
+        //wrongActionPlayed = false;
     }
 
 
@@ -389,20 +380,12 @@ public class CloudInputManager : MonoBehaviour
                     movementDoneIndex = index;
                     break;
                 }
-
-                else if(!CloudCanMove(mouseMovements[index]) && !wrongActionPlayed && !cloudMoved)
-                {
-                    wrongActionPlayed = true;
-                    AudioManager.instance.PlaySound("WrongAction");
-                    StartCoroutine(RestartWrongActionSound());
-                }
             }
         }
         else if(playerBehavior.GetItemUnderPj() == item && !wrongActionPlayed)
         {
             wrongActionPlayed = true;
-            AudioManager.instance.PlaySound("WrongAction");
-            StartCoroutine(RestartWrongActionSound());
+            SFXManager.PlayWrong();
         }
         if(startCloudMovement)
         {
@@ -436,9 +419,10 @@ public class CloudInputManager : MonoBehaviour
         if((mechanic == -1 || mechanic == 1 || mechanic ==3) && isSelecting)
         {
             AudioManager.instance.PlaySound("CloudSwipe_Release");
-            AudioManager.instance.Stop("CloudSwipe_Loop");
+            SFXManager.instance.StopCloudSwipeLoop();
             if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = false;
         }
+        wrongSFXPlayed = false;
         wrongActionPlayed = false;
         isSelecting = false;
         if(!cloudIsMoving) mouseMovements = new int[0];

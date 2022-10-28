@@ -3,53 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 
-
-/*public class LevelInfo : MonoBehaviour
-{
-    public static LevelInfo instance;
-    private Level activeLevel = new Level();
-    private World activeWorld;
-    private int collectedStarsInLevel = 0;
-
-    private void Awake() {
-        int numGameState = FindObjectsOfType<LevelInfo>().Length;
-        if(numGameState > 1)
-            Destroy(gameObject);
-        else{
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
-
-    private void Start() {
-        activeLevel = GameProgressManager.instance.GetActivelevel();
-        activeWorld = GameProgressManager.instance.GetActiveWorld();
-    }
-
-    //Getters
-    public int GetLevelNumber() => activeLevel.GetLevelNumber();
-    public int GetNumberOfStars() => activeLevel.GetNumberOfStars();
-    public int GetCollectedStars() => activeLevel.GetCollectedStars();
-    public int GetCollectedStarsInLevel() => collectedStarsInLevel;
-    public int GetLevelWorldNumber() => activeWorld.GetLevelWorldNumber();
-    public bool GetWallLevel() => activeLevel.GetWallLevel();
-
-    //Setters
-    public void SetCollectedStars(int collectedStars){
-        activeLevel.SetCollectedStars(collectedStars);
-        activeWorld.CalculateCollectedStars();
-    }
-
-    public void IncreaseCollectedStarsInLevel() => collectedStarsInLevel++;
-
-    public void SetCollectedStarsWhenFinishedLevel(){
-        for(int i = 0; i < collectedStarsInLevel; i++){
-            SetCollectedStars(collectedStarsInLevel);
-        }
-    }
-    
-}*/
-
 [Serializable]
 public class Level
 {

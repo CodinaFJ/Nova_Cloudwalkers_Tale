@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,22 +12,19 @@ public class GameManager : MonoBehaviour
 
     public bool gamePaused = false;
 
+    [SerializeField]
     PlayerInput playerInput;
     [HideInInspector]
     public PlayerBehavior playerBehavior;
 
     private void Awake() {
-        int numInstances = FindObjectsOfType<GameManager>().Length;
-        if(numInstances > 1)
+        if(instance == null)
+           instance = this;
+        else
+        {
             Destroy(gameObject);
-        else{
-            instance = this;
-        }      
-    }
-
-    private void Start() 
-    {
-        playerInput = GetComponent<PlayerInput>();
+            return;
+        }
     }
 
     public void OnRestart()
@@ -55,26 +53,37 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
+        InputSystemUIInputModule inputModule = FindObjectOfType<InputSystemUIInputModule>();
+        inputModule.enabled = false;
         gamePaused = false;
         playerInput.enabled = true;
         playerInput.ActivateInput();
+        inputModule.enabled = true;
     }
 
     public void ToMap()
     {
-        levelLoader.LoadLevel("LevelSelectorMenu_tests");
+        GameProgressManager.instance.UpdateStarsInGame();
+        
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
     }
 
     public void PjToExit()
     {
+        MouseMatrixScript.BlockPointer();
         PauseGame();
+        SFXManager.instance.StopCloudSwipeLoop();
         FindObjectOfType<PlayerBehavior>().ExitThroughDoor();
     }
 
     public void ToEndDemo()
     {
-        levelLoader.LoadLevel("LevelSelectorMenu_tests");
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains("FinalDemo"));
         //FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
+    }
+    public void OnPause()
+    {
+        FindObjectOfType<LevelUIController>().ToOptionsLevel();
     }
 
 }

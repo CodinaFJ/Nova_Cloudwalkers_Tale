@@ -45,12 +45,16 @@ public class TitleMenuController : MonoBehaviour
         }
 
         if(!AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
+
+        MouseMatrixScript.ReleasePointer();
     }
 
 
     public void StartButton()
     {
         //StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));
+        if(GameProgressManager.instance != null) Destroy(GameProgressManager.instance.gameObject);
+        MouseMatrixScript.BlockPointer();
         levelLoader.LoadLevel("Cinematic1");
     }
 
@@ -72,14 +76,16 @@ public class TitleMenuController : MonoBehaviour
 
     public void ToMap()
     {
-        levelLoader.LoadLevel("LevelSelectorMenu");
+        MouseMatrixScript.BlockPointer();
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
         if(FindObjectOfType<MusicSelectionManager>() != null) FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
 
     public void ToOptions()
     {
         optionCanvas.SetActive(true);
-        optionsMenu.SetActive(true);
+        optionCanvas.GetComponent<OptionsMenuController>().ToPauseMenu();
+        SFXManager.PlayOpenMenu();
         gameObject.SetActive(false);
     }
 

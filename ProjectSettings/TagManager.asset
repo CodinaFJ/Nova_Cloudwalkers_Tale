@@ -9,6 +9,8 @@ TagManager:
   - Star
   - UI_anim
   - Part_mov
+  - Event_system
+  - spike_tile
   layers:
   - Default
   - TransparentFX
@@ -18,9 +20,9 @@ TagManager:
   - UI
   - Transition/Blur
   - Player
-  - 
-  - 
-  - 
+  - Spikes
+  - SpikeFlipper
+  - SpikeMover
   - 
   - 
   - 
@@ -72,6 +74,9 @@ TagManager:
     locked: 0
   - name: Shadows
     uniqueID: 2233883079
+    locked: 0
+  - name: Particles BelowPJ
+    uniqueID: 262149837
     locked: 0
   - name: Player
     uniqueID: 2686076535
