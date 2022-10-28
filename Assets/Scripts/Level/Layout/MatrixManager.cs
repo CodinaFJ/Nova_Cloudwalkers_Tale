@@ -619,7 +619,7 @@ public class MatrixManager : MonoBehaviour
             RefreshPjMovementMatrix();
             RefreshCloudsMovementMatrix();
             SFXManager.PlayCrystalCloudBreak();
-            VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalCloudBreak);
+            VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalCloudBreak, FromMatrixIndexToWorld(cell0, cell1));
             //FromMatrixToGame.DeactivateItem(item);
 
 
