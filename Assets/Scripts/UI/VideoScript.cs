@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class VideoScript : MonoBehaviour
 {
@@ -28,6 +29,18 @@ public class VideoScript : MonoBehaviour
     string currentState;
 
     float currentTime;
+
+    private void OnEnable() {
+        TouchSimulation.Enable();
+        EnhancedTouchSupport.Enable();
+        UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown += FingerDown;
+    }
+
+    private void OnDisable() {
+        TouchSimulation.Disable();
+        UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown -= FingerDown;
+        EnhancedTouchSupport.Disable();
+    }
  
     void Start()
     {
@@ -72,6 +85,11 @@ public class VideoScript : MonoBehaviour
         GameProgressManager.instance.SetPlayedCinematic(worldUnlocked);
         if(worldUnlocked == 1) FindObjectOfType<LevelLoader>().LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
         else FindObjectOfType<LevelLoader>().LoadLevel(LevelLoader.GetLevelContains("1-" + worldUnlocked));
+    }
+
+    private void FingerDown(Finger finger)
+    {
+        FadeInText();
     }
 
     public void OnAnyKey()
