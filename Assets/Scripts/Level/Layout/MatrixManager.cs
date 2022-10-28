@@ -608,7 +608,7 @@ public class MatrixManager : MonoBehaviour
 
     public void CrackCrystalCloud(int cell0, int cell1)
     {
-        int[] crystalCell = playerBehavior.pjCell;
+        int[] crystalCell = new int[]{cell0, cell1};
         if(mechanicsLayoutMatrix[cell0, cell1] == 4 || mechanicsLayoutMatrix[cell0, cell1] == 3)
         {
             int item = itemsLayoutMatrix[cell0, cell1];

@@ -281,10 +281,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4760499739259852693, guid: e0613ddc4dbb8ad4998b3704badc1479, type: 3}
-      propertyPath: sounds.Array.data[30].volume
-      value: 0.35
-      objectReference: {fileID: 0}
     - target: {fileID: 4760499739259852694, guid: e0613ddc4dbb8ad4998b3704badc1479, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7354,10 +7350,6 @@ PrefabInstance:
     - target: {fileID: 7303096619275083183, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[1].levelsList.Array.data[4].unlockedLevel
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
