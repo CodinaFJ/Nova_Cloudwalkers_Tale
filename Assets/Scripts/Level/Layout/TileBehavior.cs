@@ -81,7 +81,9 @@ public class TileBehavior : MonoBehaviour
             Destroy(childShadow.gameObject);
         }
 
-        SetCorrectSprites();
+        //SetCorrectSprites();
+        SetAdyacentTilesForShadow();
+        InstantiateShadow();
     }
 
 
