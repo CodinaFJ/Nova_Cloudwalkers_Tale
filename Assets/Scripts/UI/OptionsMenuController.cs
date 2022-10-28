@@ -120,11 +120,13 @@ public class OptionsMenuController : MonoBehaviour
     public void ToMap()
     {
         SFXManager.PlaySelectUI_B();
+        MouseMatrixScript.BlockPointer();
         if(gameManager != null) gameManager.ToMap();
     }
 
     public void ToMainMenu()
     {
+        MouseMatrixScript.BlockPointer();
         levelLoader.LoadLevel("StartMenu_IDD");
         SFXManager.PlaySelectUI_B();
     }

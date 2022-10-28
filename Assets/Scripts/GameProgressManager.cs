@@ -129,6 +129,14 @@ public class GameProgressManager : MonoBehaviour
         }
     }
 
+    public void UnlockAllLevels(){
+        foreach(World world in worldsWithLevels){
+            foreach(Level level in world.GetLevelsList()){
+                level.SetLevelUnlocked(true);
+            }
+        }
+    }
+
     public bool AllLevelsCompleted() => !worldsWithLevels.Exists(x => x.GetLevelsList().Exists(x => x.GetLevelCompleted() == false) == true);
 
     public void SaveGameState()

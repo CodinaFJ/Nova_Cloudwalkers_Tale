@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class LevelSelectorController : MonoBehaviour
 {
     LevelLoader levelLoader;
+    bool ctrlPressed = false;
     [SerializeField] GameObject OptionCanvas;
 
     void Start()
@@ -75,5 +77,19 @@ public class LevelSelectorController : MonoBehaviour
             //if(FindObjectOfType<GameManager>() != null) FindObjectOfType<GameManager>().PauseGame();
         }
         
+    }
+
+    public void OnCtrlPress(){
+        ctrlPressed = true;
+    }
+    public void OnCtrlRelease(){
+        ctrlPressed = true;
+    }
+
+    public void OnUnlockAllLevels(){
+        if(ctrlPressed){
+            GameProgressManager.instance.UnlockAllLevels();
+            SceneManager.LoadScene(LevelLoader.GetLevelContains("LevelSelector"));
+        }
     }
 }
