@@ -847,63 +847,6 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
---- !u!1001 &1243918585
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 274095618836736937, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_Name
-      value: TouchControl
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9221157736985574709, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 866d4cc8d0fa898448841d5be4d8ce22, type: 3}
 --- !u!1001 &1340060416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1777,6 +1720,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8127289026015802191, guid: 4b6e4ff42db024347b231a1f1717a8b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8127289026407672026, guid: 4b6e4ff42db024347b231a1f1717a8b4, type: 3}
       propertyPath: m_Name
       value: MouseTuto
@@ -1823,6 +1770,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8127289026407672027, guid: 4b6e4ff42db024347b231a1f1717a8b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127289026784494530, guid: 4b6e4ff42db024347b231a1f1717a8b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127289027707802125, guid: 4b6e4ff42db024347b231a1f1717a8b4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

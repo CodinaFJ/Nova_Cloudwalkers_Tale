@@ -450,7 +450,7 @@ public class CloudInputManager : MonoBehaviour
             {
                 for (int j = 0; j < itemsLayoutMatrix.GetLength(1); j++)
                 {
-                    if(itemsLayoutMatrix[i,j] == item)
+                    if(itemsLayoutMatrix[i,j] == item && (j + (int)(Mathf.Sign(nextMovement)) >= 0 && (j + (int)(Mathf.Sign(nextMovement)) < itemsLayoutMatrix.GetLength(1))))
                     {
                         if(itemsLayoutMatrix[i, j + (int)(Mathf.Sign(nextMovement))] == item) continue;
 

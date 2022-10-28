@@ -61,10 +61,12 @@ public class TouchControlScript : MonoBehaviour
         Vector3 touchPosition = Camera.main.ScreenToWorldPoint(finger.screenPosition);
         touchPosition.z = 0f;
 
+        CloudInputManager.instance.OnReleaseLeftClick();
+
         //if(Vector3.Magnitude((Vector3)playerControls.TouchControls.TouchPosition.ReadValue<Vector2>() - onClickMouseWorldPos) > releaseMouseTolerance && !wallLevel) return;
 
         if(!playerBehavior.clickIsForCloud)
-        pjInputManager.FindPath(touchPosition);
+            pjInputManager.FindPath(touchPosition);
     }
 
     private void FingerMove(Finger finger)
