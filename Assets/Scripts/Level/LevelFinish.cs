@@ -43,12 +43,14 @@ public class LevelFinish : MonoBehaviour
 
         GameProgressManager.instance.CalculateCollectedStarsInGame();
 
-        if(GameProgressManager.instance.AllLevelsCompleted() && !GameProgressManager.instance.GetEndReached()){
+        
+        if(GameProgressManager.instance.GetCollectedStarsInGame() >= GameProgressManager.instance.GetTotalStarsInGame() && !GameProgressManager.instance.GetAllStarsCollected()){
+            GameProgressManager.instance.SetAllStarsCollected(true);
             GameProgressManager.instance.SetEndReached(true);
             GameManager.instance.ToEndDemo();
         }
-        else if(GameProgressManager.instance.GetCollectedStarsInGame() >= GameProgressManager.instance.GetTotalStarsInGame() && !GameProgressManager.instance.GetAllStarsCollected()){
-            GameProgressManager.instance.SetAllStarsCollected(true);
+        else if(GameProgressManager.instance.AllLevelsCompleted() && !GameProgressManager.instance.GetEndReached()){
+            GameProgressManager.instance.SetEndReached(true);
             GameManager.instance.ToEndDemo();
         }
         else GameManager.instance.ToMap();

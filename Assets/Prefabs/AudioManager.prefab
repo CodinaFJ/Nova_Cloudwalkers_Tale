@@ -226,13 +226,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CloudConnectCrystalCloudTop
     clip: {fileID: 8300000, guid: d2f5f41490b84794c83e376e9e784d3b, type: 3}
-    volume: 0.665
+    volume: 0.35
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudConnectThunderCloud
     clip: {fileID: 8300000, guid: 3e0b670be326bd548b68588f8b428c7e, type: 3}
-    volume: 0.665
+    volume: 0.35
     pitch: 1
     loop: 0
     source: {fileID: 0}
