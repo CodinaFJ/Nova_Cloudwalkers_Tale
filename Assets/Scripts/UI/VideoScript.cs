@@ -49,6 +49,7 @@ public class VideoScript : MonoBehaviour
         videoLength = vid.clip.length;
 
         InitializeWorldUnlocked();
+        MouseMatrixScript.ReleasePointer();
     }
 
     private void Update() 
@@ -66,6 +67,7 @@ public class VideoScript : MonoBehaviour
     public void CheckOver(VideoPlayer vp)
     {
         print("Video Is Over");
+        MouseMatrixScript.BlockPointer();
 
         GameProgressManager.instance.SetPlayedCinematic(worldUnlocked);
         if(worldUnlocked == 1) FindObjectOfType<LevelLoader>().LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));

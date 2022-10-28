@@ -14,6 +14,7 @@ public class LevelUIController : MonoBehaviour
     {
         levelLoader = FindObjectOfType<LevelLoader>();
         OptionCanvas.SetActive(false);
+        MouseMatrixScript.ReleasePointer();
     }
 
     public void restartButton()

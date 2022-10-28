@@ -64,11 +64,13 @@ public class GameManager : MonoBehaviour
     public void ToMap()
     {
         GameProgressManager.instance.UpdateStarsInGame();
+        
         levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
     }
 
     public void PjToExit()
     {
+        MouseMatrixScript.BlockPointer();
         PauseGame();
         SFXManager.instance.StopCloudSwipeLoop();
         FindObjectOfType<PlayerBehavior>().ExitThroughDoor();

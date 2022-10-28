@@ -34,5 +34,14 @@ public class MouseMatrixScript
 
     public static bool PointerOnSteppedCloud() => MatrixManager.instance.GetItemsLayoutMatrix()[GetMouseMatrixIndex()[0], GetMouseMatrixIndex()[1]] == 
                                                   PlayerBehavior.instance.GetItemUnderPj();
+
+    public static void BlockPointer(){
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+    public static void ReleasePointer(){
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     
 }

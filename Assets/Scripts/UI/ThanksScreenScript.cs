@@ -18,10 +18,12 @@ public class ThanksScreenScript : MonoBehaviour
             Debug.LogWarning("Error in stars counters: " + ex.Message);
         }
         levelLoader = FindObjectOfType<LevelLoader>();
+        MouseMatrixScript.ReleasePointer();
     }
     
     public void ToMap()
     {
+        MouseMatrixScript.BlockPointer();
         levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
         if(FindObjectOfType<MusicSelectionManager>() != null) FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }

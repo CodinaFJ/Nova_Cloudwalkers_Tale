@@ -27,6 +27,8 @@ public class LevelSelectorController : MonoBehaviour
 
             StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
         }
+
+        MouseMatrixScript.ReleasePointer();
     }
 
     private void Update() 
@@ -52,6 +54,7 @@ public class LevelSelectorController : MonoBehaviour
     public void LoadLevel(string name)
     {
         SFXManager.PlayEnterLevel();
+        MouseMatrixScript.BlockPointer();
         if(AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));
 
         levelLoader.LoadLevel(name);
