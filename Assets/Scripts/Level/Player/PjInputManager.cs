@@ -392,7 +392,8 @@ public class PjInputManager : MonoBehaviour
     public void FindPath(Vector3 mouseWorldPos){
         //Initial mouse and cloud values needed for cloud movement algorythm
         Vector3 mouseCellCenter = new Vector3(Mathf.FloorToInt(mouseWorldPos.x), Mathf.FloorToInt(mouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
-        int[] onClickMatrixCoor = GetMouseMatrixIndex();
+        int[] onClickMatrixCoor = MatrixManager.instance.FromWorldToMatrixIndex(mouseWorldPos);//GetMouseMatrixIndex();
+        Debug.Log("On finger down walk cell:" + onClickMatrixCoor[0] + ", " + onClickMatrixCoor[1]);
         if(onClickMatrixCoor == null) return;
 
         if(matrixManager.InsideLevelMatrix(onClickMatrixCoor) && matrixManager.GetPjMovementMatrix()[onClickMatrixCoor[0], onClickMatrixCoor[1]])
