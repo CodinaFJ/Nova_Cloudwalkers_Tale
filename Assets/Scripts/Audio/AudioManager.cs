@@ -84,6 +84,10 @@ public class AudioManager : MonoBehaviour
         
         StartCoroutine(DestroyOnFinishedClip(s.source));
     }
+    public void PlaySound(string name, bool avoidMoreThanOne){
+        if(IsPlayingSFX(name) && avoidMoreThanOne) return;
+        PlaySound(name);
+    }
 
     IEnumerator DestroyOnFinishedClip(AudioSource source)
     {
@@ -154,6 +158,19 @@ public class AudioManager : MonoBehaviour
             return false;
         }
         isPlaying = s.source.isPlaying;
+        return isPlaying;
+    }
+
+    public bool IsPlayingSFX(string name)
+    {
+        bool isPlaying = false;
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound " + name + " not found!");
+            return false;
+        }
+        isPlaying = Array.Exists<AudioSource>(GetComponents<AudioSource>(), x => x.clip == s.clip);
         return isPlaying;
     }
 
