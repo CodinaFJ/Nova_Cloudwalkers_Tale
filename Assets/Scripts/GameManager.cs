@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     public void ToMap()
     {
         GameProgressManager.instance.UpdateStarsInGame();
-        
+        GameProgressManager.instance.SetCollectedStarsInLevel(0);
         levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
     }
 

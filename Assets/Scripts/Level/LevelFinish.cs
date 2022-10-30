@@ -28,8 +28,8 @@ public class LevelFinish : MonoBehaviour
             }catch(Exception ex){
                 Debug.LogWarning("Problem saving: " + ex.Message);
             }
-            StartCoroutine(LoadNextLevel());
             GameProgressManager.instance.SetCollectedStarsInLevel(0);
+            StartCoroutine(LoadNextLevel());
         }
     }
 
