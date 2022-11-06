@@ -165,6 +165,11 @@ MonoBehaviour:
       collectedStars: 0
       wallLevel: 0
       unlockedLevel: 0
+    - levelNumber: 8
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
   activeLevel:
     levelNumber: 0
     numberOfStars: 0
