@@ -623,8 +623,8 @@ public class MatrixManager : MonoBehaviour
             VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalCloudBreak, FromMatrixIndexToWorld(cell0, cell1));
             //FromMatrixToGame.DeactivateItem(item);
 
-
             DivideSeparatedCloudsInMatrix(crystalCell, item);
+            PlayerBehavior.instance.UpdateItemUnderPj();
         }
     }
 
