@@ -625,6 +625,7 @@ public class MatrixManager : MonoBehaviour
 
 
             DivideSeparatedCloudsInMatrix(crystalCell, item);
+            PlayerBehavior.instance.UpdateItemUnderPj();
         }
     }
 
