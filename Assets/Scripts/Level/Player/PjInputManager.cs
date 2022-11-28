@@ -184,6 +184,7 @@ public class PjInputManager : MonoBehaviour
         while(currentTime < PjMovementTime/2)
         {
             currentTime += Time.deltaTime;
+            if (!pjMoving) yield break;
             yield return null;
         }
         matrixManager.CrackCrystalFloor(cell0, cell1);
