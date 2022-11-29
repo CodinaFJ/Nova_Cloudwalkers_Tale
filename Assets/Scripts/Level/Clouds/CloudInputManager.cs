@@ -122,15 +122,22 @@ public class CloudInputManager : MonoBehaviour
     }
 
 
-    void OnSelectCloud()
-    {
+    void OnSelectCloud() => SelectCloud(MouseMatrixScript.GetMouseWorldPos());
+
+
+    public void SelectCloud(Vector3 onClickMouseWorldPos){
         playerBehavior.clickIsForCloud = false;
 
         //Initial mouse and cloud values needed for cloud movement algorythm
-        Vector3 onClickMouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
         Vector3 onClickCellCenter = new Vector3(Mathf.FloorToInt(onClickMouseWorldPos.x), Mathf.FloorToInt(onClickMouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
         mouseOffset = onClickMouseWorldPos - onClickCellCenter;
-        int[] onClickMatrixCoor = MouseMatrixScript.GetMouseMatrixIndex();
+        int[] onClickMatrixCoor = MouseMatrixScript.GetMatrixIndex(onClickMouseWorldPos);
+
+        if(onClickMatrixCoor == null)
+        {
+            Debug.Log("Error onClickMatrixCoor in SelectCloud()");
+            return;
+        }
 
         //Update cloud parents in case it was changed due to crystals or grey clouds
         cloudsParents = fromMatrixToGame.GetCloudsParents();
@@ -178,7 +185,9 @@ public class CloudInputManager : MonoBehaviour
 
     void FillMousePath()
     {
-        Vector3 mouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
+        //Vector3 mouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
+        Vector3 mouseWorldPos = TouchControlScript.instance.GetTouchPosition();
+
 
         int movementToAdd = 0;
 
@@ -429,10 +438,7 @@ public class CloudInputManager : MonoBehaviour
         stopMovement = true;
     }
 
-    public bool GetIsSelecting()
-    {
-        return isSelecting;
-    }
+    public bool GetIsSelecting() => isSelecting;
 
     bool CloudCanMove(int nextMovement)
     {
@@ -444,7 +450,7 @@ public class CloudInputManager : MonoBehaviour
             {
                 for (int j = 0; j < itemsLayoutMatrix.GetLength(1); j++)
                 {
-                    if(itemsLayoutMatrix[i,j] == item)
+                    if(itemsLayoutMatrix[i,j] == item && (j + (int)(Mathf.Sign(nextMovement)) >= 0 && (j + (int)(Mathf.Sign(nextMovement)) < itemsLayoutMatrix.GetLength(1))))
                     {
                         if(itemsLayoutMatrix[i, j + (int)(Mathf.Sign(nextMovement))] == item) continue;
 

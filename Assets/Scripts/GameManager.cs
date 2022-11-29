@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class GameManager : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
     {
         gamePaused = true;
         playerInput.enabled = false;
+        EnhancedTouchSupport.Disable();
         playerInput.DeactivateInput();
     }
 
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
         inputModule.enabled = false;
         gamePaused = false;
         playerInput.enabled = true;
+        EnhancedTouchSupport.Enable();
         playerInput.ActivateInput();
         inputModule.enabled = true;
     }

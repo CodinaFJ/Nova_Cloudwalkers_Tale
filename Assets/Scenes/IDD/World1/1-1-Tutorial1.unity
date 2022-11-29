@@ -1720,6 +1720,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8127289026015802191, guid: 4b6e4ff42db024347b231a1f1717a8b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8127289026407672026, guid: 4b6e4ff42db024347b231a1f1717a8b4, type: 3}
       propertyPath: m_Name
       value: MouseTuto
@@ -1766,6 +1770,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8127289026407672027, guid: 4b6e4ff42db024347b231a1f1717a8b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127289026784494530, guid: 4b6e4ff42db024347b231a1f1717a8b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127289027707802125, guid: 4b6e4ff42db024347b231a1f1717a8b4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3720,11 +3732,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251157421001, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251157421001, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251505586112, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_ChunkCullingBounds.x

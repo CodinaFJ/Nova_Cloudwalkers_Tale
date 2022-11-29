@@ -68,7 +68,7 @@ public class OptionsMenuController : MonoBehaviour
     public void ToVideoOptions() => LoadOptionsSection(OptionsSectionTag.OptionsVideo);
     public void ToPauseLevel(){
         LoadOptionsSection(OptionsSectionTag.PauseLevel);
-        Hotkeys.SetActive(true);
+        Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseLevel;
     } 
