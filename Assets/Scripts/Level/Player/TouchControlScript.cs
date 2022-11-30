@@ -29,10 +29,10 @@ public class TouchControlScript : MonoBehaviour
     }
 
     private void OnDisable() {
-        TouchSimulation.Disable();
         UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerUp -= FingerUp;
         UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown -= FingerDown;
         UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerMove -= FingerMove;
+        TouchSimulation.Disable();
         EnhancedTouchSupport.Disable();
     }
 

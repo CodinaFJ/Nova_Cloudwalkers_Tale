@@ -45,11 +45,13 @@ public class GameManager : MonoBehaviour
         levelLoader.FadeIn();
     }
 
-    public void PauseGame()
+    public void PauseGame() => PauseGame(false);
+    public void PauseGame(bool endLevel)
     {
         gamePaused = true;
         playerInput.enabled = false;
-        EnhancedTouchSupport.Disable();
+        if(!endLevel)
+            EnhancedTouchSupport.Disable();
         playerInput.DeactivateInput();
     }
 
@@ -74,7 +76,7 @@ public class GameManager : MonoBehaviour
     public void PjToExit()
     {
         MouseMatrixScript.BlockPointer();
-        PauseGame();
+        PauseGame(true);
         SFXManager.instance.StopCloudSwipeLoop();
         FindObjectOfType<PlayerBehavior>().ExitThroughDoor();
     }

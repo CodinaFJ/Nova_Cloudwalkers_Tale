@@ -185,9 +185,11 @@ public class CloudInputManager : MonoBehaviour
 
     void FillMousePath()
     {
-        //Vector3 mouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
-        Vector3 mouseWorldPos = TouchControlScript.instance.GetTouchPosition();
-
+        Vector3 mouseWorldPos;
+        if(TouchControlScript.instance)
+            mouseWorldPos = TouchControlScript.instance.GetTouchPosition();
+        else
+            mouseWorldPos = MouseMatrixScript.GetMouseWorldPos();
 
         int movementToAdd = 0;
 
