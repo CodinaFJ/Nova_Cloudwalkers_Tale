@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldAssetsList:
   - worldNumber: 1
-    backgroundImage: {fileID: 21300000, guid: a7a5b830a65ce8f4499c397f97fbe3ef, type: 3}
+    backgroundImage: {fileID: 21300000, guid: a9c98a9e3ff855b45a5d21ea70e4abcc, type: 3}
     mainMenuImage: {fileID: 0}
     floorTileSpritesBundles:
     - tileType: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
       - boundaries: 0
         sprite: {fileID: 3678154181453922710, guid: 7f7314dc98376754dad4206c3af172e9, type: 3}
   - worldNumber: 3
-    backgroundImage: {fileID: 6793273102218567343, guid: 88f2ad7e849292843a08e6cd2cd46d2d, type: 3}
+    backgroundImage: {fileID: 21300000, guid: 6222064f7dfb7964ca7dd7209326d5b0, type: 3}
     mainMenuImage: {fileID: 0}
     floorTileSpritesBundles:
     - tileType: 0

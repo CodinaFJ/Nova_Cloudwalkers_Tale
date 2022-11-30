@@ -22131,6 +22131,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[1].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 8891530336969197546, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
+      propertyPath: worldAssetsList.Array.data[2].backgroundImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6222064f7dfb7964ca7dd7209326d5b0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
 --- !u!1001 &2416167251820168346
