@@ -4,64 +4,97 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -2576279227399986788
-    second: "Nova_UIM\xF3vil Mapa icono"
+    second: "Nova_UIM\xF3vil_Continuar"
   - first:
       213: 2962474283376880390
-    second: "Nova_UIM\xF3vil Mapa icono Click"
+    second: "Nova_UIM\xF3vil_ContinuarClick"
   - first:
       213: 3660193962198235214
-    second: "Nova_UIM\xF3vil Deshacer icono"
+    second: "Nova_UIM\xF3vil_Deshacer"
   - first:
       213: 7149319989127301116
-    second: "Nova_UIM\xF3vil Deshacer icono Click"
+    second: "Nova_UIM\xF3vil_DeshacerClick"
   - first:
       213: -7926340105854034220
-    second: "Nova_UIM\xF3vil SelectorOpciones"
+    second: "Nova_UIM\xF3vil_Jugar"
   - first:
       213: 2159414629789932428
-    second: "Nova_UIM\xF3vil BarraOpciones Vac\xEDa"
+    second: "Nova_UIM\xF3vil_BarraOpcionesMarcador"
   - first:
       213: -5627000286879162317
-    second: "Nova_UIM\xF3vil BarraOpciones Llena"
+    second: "Nova_UIM\xF3vil_BarraOpcionesVac\xEDa"
   - first:
       213: 5923573660787795000
-    second: "Nova_UIM\xF3vil Audio icono"
+    second: "Nova_UIM\xF3vil_BarraOpcionesLlena"
   - first:
       213: -4349220391768090761
-    second: "Nova_UIM\xF3vil Audio icono Click"
+    second: "Nova_UIM\xF3vil_ContadorFragmentos"
   - first:
       213: -8857894409811310714
-    second: "Nova_UIM\xF3vil Reset icono"
+    second: "Nova_UIM\xF3vil_Mapa"
   - first:
       213: 6132325613352534833
-    second: "Nova_UIM\xF3vil Reset icono Click"
+    second: "Nova_UIM\xF3vil_MapaClick"
   - first:
       213: -2285325274309284545
-    second: "Nova_UIM\xF3vil Menu recuadro"
+    second: "Nova_UIM\xF3vil_Progreso"
   - first:
       213: 4830257665946310843
-    second: "Nova_UIM\xF3vil Gr\xE1ficos icono"
+    second: "Nova_UIM\xF3vil_ProgresoClick"
   - first:
       213: -20409616956622786
-    second: "Nova_UIM\xF3vil Gr\xE1ficos icono Click"
+    second: "Nova_UIM\xF3vil_JugarClick"
   - first:
       213: 1275386023476818686
-    second: "Nova_UIM\xF3vil Menu icono"
+    second: "Nova_UIM\xF3vil_Audio"
   - first:
       213: 6320338186337280467
-    second: "Nova_UIM\xF3vil Menu icono Click"
+    second: "Nova_UIM\xF3vil_AudioClick"
   - first:
       213: 7499481618192086402
-    second: "Nova_UIM\xF3vil Cerrar icono"
+    second: "Nova_UIM\xF3vil_Men"
   - first:
       213: -2894240823060585247
-    second: "Nova_UIM\xF3vil Cerrar icono Click"
+    second: "Nova_UIM\xF3vil_Men\xFAClick"
   - first:
       213: 5539463317955135905
-    second: "Nova_UIM\xF3vil Salir icono"
+    second: "Nova_UIM\xF3vil_Cerrar"
   - first:
       213: 5293351173439243847
-    second: "Nova_UIM\xF3vil Salir icono Click"
+    second: "Nova_UIM\xF3vil_CerrarClick"
+  - first:
+      213: 5112366695856521823
+    second: "Nova_UIM\xF3vil_T\xEDtuloMen\xFA"
+  - first:
+      213: -1209176551754450757
+    second: "Nova_UIM\xF3vil_Progreso"
+  - first:
+      213: -7183492158812025978
+    second: "Nova_UIM\xF3vil_ProgresoClick"
+  - first:
+      213: -5415458722544203226
+    second: "Nova_UIM\xF3vil_Atr\xE1s"
+  - first:
+      213: -4775178904306127402
+    second: "Nova_UIM\xF3vil_Atr\xE1sClick"
+  - first:
+      213: 4855731519361763647
+    second: "Nova_UIM\xF3vil_Men\xFA"
+  - first:
+      213: 5402343642486310346
+    second: "Nova_UIM\xF3vil_Inicio"
+  - first:
+      213: -3405789778755035547
+    second: "Nova_UIM\xF3vil_InicioClick"
+  - first:
+      213: 563374425011793878
+    second: "Nova_UIM\xF3vil_Aceptar"
+  - first:
+      213: -7562894677989052514
+    second: "Nova_UIM\xF3vil_AceptarClick"
+  - first:
+      213: -4992006713534617193
+    second: "Nova_UIM\xF3vil_ManoTutorial"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -175,13 +208,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Mapa icono"
+      name: "Nova_UIM\xF3vil_Continuar"
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1754
-        width: 289
-        height: 289
+        x: 1
+        y: 1667
+        width: 382
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,13 +229,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Mapa icono Click"
+      name: "Nova_UIM\xF3vil_ContinuarClick"
       rect:
         serializedVersion: 2
-        x: 330
-        y: 1755
-        width: 286
-        height: 286
+        x: 388
+        y: 1667
+        width: 382
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,13 +250,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Deshacer icono"
+      name: "Nova_UIM\xF3vil_Deshacer"
       rect:
         serializedVersion: 2
-        x: 680
-        y: 1862
-        width: 184
-        height: 184
+        x: 784
+        y: 1786
+        width: 259
+        height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,13 +271,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Deshacer icono Click"
+      name: "Nova_UIM\xF3vil_DeshacerClick"
       rect:
         serializedVersion: 2
-        x: 908
-        y: 1865
-        width: 176
-        height: 176
+        x: 1049
+        y: 1786
+        width: 259
+        height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,13 +292,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil SelectorOpciones"
+      name: "Nova_UIM\xF3vil_Jugar"
       rect:
         serializedVersion: 2
-        x: 1128
-        y: 1968
-        width: 85
-        height: 81
+        x: 1315
+        y: 1587
+        width: 457
+        height: 457
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,13 +313,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil BarraOpciones Vac\xEDa"
+      name: "Nova_UIM\xF3vil_BarraOpcionesMarcador"
       rect:
         serializedVersion: 2
-        x: 1233
-        y: 2018
-        width: 874
-        height: 26
+        x: 1787
+        y: 1955
+        width: 92
+        height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,13 +334,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil BarraOpciones Llena"
+      name: "Nova_UIM\xF3vil_BarraOpcionesVac\xEDa"
       rect:
         serializedVersion: 2
-        x: 1237
-        y: 1981
-        width: 865
-        height: 20
+        x: 1887
+        y: 2016
+        width: 1086
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,13 +355,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Audio icono"
+      name: "Nova_UIM\xF3vil_BarraOpcionesLlena"
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1450
-        width: 289
-        height: 289
+        x: 1889
+        y: 1979
+        width: 1087
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,13 +376,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Audio icono Click"
+      name: "Nova_UIM\xF3vil_ContadorFragmentos"
       rect:
         serializedVersion: 2
-        x: 331
-        y: 1452
-        width: 286
-        height: 285
+        x: 1803
+        y: 1805
+        width: 428
+        height: 105
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,13 +397,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Reset icono"
+      name: "Nova_UIM\xF3vil_Mapa"
       rect:
         serializedVersion: 2
-        x: 680
-        y: 1644
-        width: 184
-        height: 184
+        x: 1
+        y: 1273
+        width: 382
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,13 +418,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Reset icono Click"
+      name: "Nova_UIM\xF3vil_MapaClick"
       rect:
         serializedVersion: 2
-        x: 908
-        y: 1648
-        width: 176
-        height: 176
+        x: 388
+        y: 1273
+        width: 382
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,13 +439,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Menu recuadro"
+      name: "Nova_UIM\xF3vil_Reset"
       rect:
         serializedVersion: 2
-        x: 2295
-        y: 1
-        width: 1773
-        height: 1774
+        x: 784
+        y: 1515
+        width: 259
+        height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,13 +460,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Gr\xE1ficos icono"
+      name: "Nova_UIM\xF3vil_ResetClick"
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1146
-        width: 289
-        height: 289
+        x: 1049
+        y: 1515
+        width: 259
+        height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,13 +481,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Gr\xE1ficos icono Click"
+      name: "Nova_UIM\xF3vil_JugarClick"
       rect:
         serializedVersion: 2
-        x: 331
-        y: 1148
-        width: 286
-        height: 286
+        x: 1315
+        y: 1112
+        width: 457
+        height: 457
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,13 +502,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Menu icono"
+      name: "Nova_UIM\xF3vil_Audio"
       rect:
         serializedVersion: 2
-        x: 680
-        y: 1427
-        width: 184
-        height: 184
+        x: 1
+        y: 886
+        width: 382
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,13 +523,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Menu icono Click"
+      name: "Nova_UIM\xF3vil_AudioClick"
       rect:
         serializedVersion: 2
-        x: 908
-        y: 1431
-        width: 176
-        height: 176
+        x: 388
+        y: 886
+        width: 382
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -511,13 +544,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Cerrar icono"
+      name: "Nova_UIM\xF3vil_Men"
       rect:
         serializedVersion: 2
-        x: 680
-        y: 1218
-        width: 184
-        height: 184
+        x: 784
+        y: 1244
+        width: 259
+        height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -532,13 +565,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Cerrar icono Click"
+      name: "Nova_UIM\xF3vil_Men\xFAClick"
       rect:
         serializedVersion: 2
-        x: 908
-        y: 1222
-        width: 176
-        height: 176
+        x: 1049
+        y: 1244
+        width: 259
+        height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -553,13 +586,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Salir icono"
+      name: "Nova_UIM\xF3vil_Cerrar"
       rect:
         serializedVersion: 2
-        x: 4
-        y: 842
-        width: 289
-        height: 289
+        x: 784
+        y: 973
+        width: 259
+        height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -574,13 +607,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Nova_UIM\xF3vil Salir icono Click"
+      name: "Nova_UIM\xF3vil_CerrarClick"
       rect:
         serializedVersion: 2
-        x: 331
-        y: 844
-        width: 286
-        height: 286
+        x: 1049
+        y: 973
+        width: 259
+        height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -590,6 +623,237 @@ TextureImporter:
       bones: []
       spriteID: 7464e3cc8d2c57940800000000000000
       internalID: 5293351173439243847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_T\xEDtuloMen\xFA"
+      rect:
+        serializedVersion: 2
+        x: 3214
+        y: 996
+        width: 853
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52c0146c66c2f640800000000000000
+      internalID: 5112366695856521823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_Progreso"
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 495
+        width: 382
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8b1f92554283fe0800000000000000
+      internalID: -1209176551754450757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_ProgresoClick"
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 495
+        width: 382
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b843bf0fb1f4c90800000000000000
+      internalID: -7183492158812025978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_Atr\xE1s"
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 702
+        width: 259
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a46f2fbfc68d4b0800000000000000
+      internalID: -5415458722544203226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_Atr\xE1sClick"
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 702
+        width: 259
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dde4e526182bbdb0800000000000000
+      internalID: -4775178904306127402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_Men\xFA"
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 1
+        width: 2304
+        height: 988
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39c9301716036340800000000000000
+      internalID: 4855731519361763647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_Inicio"
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 103
+        width: 382
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac58cf48beaf8fa40800000000000000
+      internalID: 5402343642486310346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_InicioClick"
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 104
+        width: 382
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e56a9ad343cb0d0800000000000000
+      internalID: -3405789778755035547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_Aceptar"
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 431
+        width: 259
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df2e5efd0281d700800000000000000
+      internalID: 563374425011793878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_AceptarClick"
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 431
+        width: 251
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f25cc3c533b0790800000000000000
+      internalID: -7562894677989052514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil_ManoTutorial"
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 88
+        width: 204
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7996763c754d8bab0800000000000000
+      internalID: -4992006713534617193
       vertices: []
       indices: 
       edges: []
