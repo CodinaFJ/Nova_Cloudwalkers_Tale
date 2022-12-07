@@ -13,6 +13,7 @@ public class OptionsMenuController : MonoBehaviour
     [SerializeField] TextMeshProUGUI resolutionOption;
     [SerializeField] Button resolutionRightButton;
     [SerializeField] Button resolutionLeftButton;
+    [SerializeField] GameObject levelUI;
 
     [SerializeField]
     List<OptionsSection> OptionsSectionsList = new List<OptionsSection>();
@@ -33,22 +34,17 @@ public class OptionsMenuController : MonoBehaviour
     void Start()
     {
         OptionsBackground.SetActive(true);
-
         gameManager = FindObjectOfType<GameManager>();
         levelLoader = FindObjectOfType<LevelLoader>();
         pauseMenuInput = GetComponent<PlayerInput>();
-       
-
         FullscreenToggle.isOn = Screen.fullScreen;
         fullscreenBool = Screen.fullScreen;
-
         resolutions = Screen.resolutions;
         
         for (int i = 0; i < resolutions.Length ; i++)
         {
             string option = resolutions[i].width + "x" + resolutions[i].height;
             resolutionOptions.Add(option);
-
             if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
             {
                 currentResolutionIndex = i;
@@ -67,12 +63,14 @@ public class OptionsMenuController : MonoBehaviour
     public void ToAudioOptions() => LoadOptionsSection(OptionsSectionTag.OptionsAudio);
     public void ToVideoOptions() => LoadOptionsSection(OptionsSectionTag.OptionsVideo);
     public void ToPauseLevel(){
+        if (levelUI) levelUI.SetActive(false);
         LoadOptionsSection(OptionsSectionTag.PauseLevel);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseLevel;
     } 
     public void ToPauseMap(){
+        if (levelUI) levelUI.SetActive(false);
         LoadOptionsSection(OptionsSectionTag.PauseMap);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
@@ -101,7 +99,6 @@ public class OptionsMenuController : MonoBehaviour
         LoadOptionsSection(pauseMenuToGo);
     }
 
-
     public void ToGame()
     {
         foreach(OptionsSection section in OptionsSectionsList){
@@ -113,6 +110,7 @@ public class OptionsMenuController : MonoBehaviour
         pauseMenuInput.enabled = false;
         pauseMenuInput.DeactivateInput();
         
+        if (levelUI) levelUI.SetActive(true);
         if(gameManager != null) gameManager.ResumeGame();
         SFXManager.PlayCloseMenu();
     }
@@ -194,7 +192,6 @@ public class OptionsMenuController : MonoBehaviour
         ToGame();
         GameManager.instance.OnRestart();
     }
-
 
     public void LoadOptionsSection(OptionsSectionTag optionsSectionTag){
         foreach(OptionsSection section in OptionsSectionsList.FindAll(x => x.tag != optionsSectionTag)){

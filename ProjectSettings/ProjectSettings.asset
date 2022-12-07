@@ -753,7 +753,7 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
-    Build: 0
+    Build: 1
     Collab: 0
     Game Performance: 0
     Legacy Analytics: 0
@@ -773,11 +773,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 1
-  cloudProjectId: 61ff03da-bd14-44d8-82e7-374142804c9e
+  cloudProjectId: 6ad2d711-06e1-4ae3-a401-73c13d94261a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: NovaTests
-  organizationId: nova-f6b28ec7-abaa-4875-ac5f-383073d54654
+  projectName: NovaCT
+  organizationId: codi1994
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0
