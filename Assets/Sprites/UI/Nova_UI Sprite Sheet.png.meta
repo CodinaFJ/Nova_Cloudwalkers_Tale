@@ -68,6 +68,12 @@ TextureImporter:
   - first:
       213: 5608850119652856679
     second: Nova_UI Candado abierto
+  - first:
+      213: -8247910729017791883
+    second: Nova_UI Fondo Skip
+  - first:
+      213: 6031199433916033256
+    second: "Nova_UI T\xEDtulo"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1102,7 +1108,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nova_UI Deshace icono
+      name: Nova_UI Deshacer icono
       rect:
         serializedVersion: 2
         x: 2435
@@ -1110,7 +1116,7 @@ TextureImporter:
         width: 170
         height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1131,7 +1137,7 @@ TextureImporter:
         width: 170
         height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1152,7 +1158,7 @@ TextureImporter:
         width: 170
         height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1160,6 +1166,48 @@ TextureImporter:
       bones: []
       spriteID: 83d4f0a7329871890800000000000000
       internalID: -7487365070015476424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Fondo Skip
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 1543
+        width: 261
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ae2c924e8898d80800000000000000
+      internalID: -8247910729017791883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UI T\xEDtulo"
+      rect:
+        serializedVersion: 2
+        x: 3113
+        y: 588
+        width: 984
+        height: 796
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e82a143eef13b350800000000000000
+      internalID: 6031199433916033256
       vertices: []
       indices: 
       edges: []
