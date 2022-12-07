@@ -10,62 +10,39 @@ public class TitleMenuController : MonoBehaviour
     [SerializeField] GameObject optionCanvas;
     [SerializeField] GameObject optionsMenu;
     [SerializeField] GameObject quitMenu;
-    [SerializeField] GameObject mainMenuNewGame;
-    [SerializeField] GameObject mainMenuContinue;
+    [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject credits;
     LevelLoader levelLoader;
-
-    GameObject mainMenu;
-
 
     void Start()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
         quitMenu.SetActive(false);
-
-        if (!File.Exists(SaveSystem.FilePath))
-        {
-            mainMenuNewGame.SetActive(true);
-            mainMenuContinue.SetActive(false);
-
-            mainMenu = mainMenuNewGame;
-        } 
-        else
-        {
-            mainMenuNewGame.SetActive(false);
-            mainMenuContinue.SetActive(true);
-
-            mainMenu = mainMenuContinue;
-        }
-
-        foreach ( Sound sound in AudioManager.instance.musics)
+        mainMenu.SetActive(true);
+        foreach (Sound sound in AudioManager.instance.musics)
         {
             if(AudioManager.instance.IsPlaying(sound.name))StartCoroutine(AudioManager.instance.FadeOutMusic(sound.name));
         }
-
-        if(!AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
-
+        if (!AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
         MouseMatrixScript.ReleasePointer();
     }
 
-
-    public void StartButton()
+    public void StartNewGame()
     {
-        //StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));
         if(GameProgressManager.instance != null) Destroy(GameProgressManager.instance.gameObject);
         MouseMatrixScript.BlockPointer();
         levelLoader.LoadLevel("Cinematic1");
     }
 
-    public void ContinueButton()
+    public void PlayButton()
     {
+        if (!(File.Exists(SaveSystem.FilePath)))
+        {
+            StartNewGame();
+            return ;
+        }
         GameProgressManager.instance.LoadGameState();
         ToMap();
-    }
-
-    public void ControlsButton()
-    {
-        levelLoader.LoadLevel("ControlsMenu");
     }
 
     public void QuitButton()

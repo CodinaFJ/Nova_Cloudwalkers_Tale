@@ -4,7 +4,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem 
 {
-    static string path = Path.Combine(Application.persistentDataPath, "games.bin");
+    static string path = Path.Combine(Application.persistentDataPath, "game.bin");
 
     public static string FilePath { get => path; }
 
