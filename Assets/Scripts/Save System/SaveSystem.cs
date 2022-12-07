@@ -4,11 +4,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem 
 {
+    static string path = Path.Combine(Application.persistentDataPath, "games.bin");
+
+    public static string FilePath { get => path; }
 
     public static void SaveGame()
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Path.Combine(Application.persistentDataPath, "game.bin");
         FileStream stream = new FileStream(path, FileMode.Create);  
 
         GameSaveData data = new GameSaveData();
@@ -19,7 +21,6 @@ public static class SaveSystem
 
     public static GameSaveData LoadGame ()
     {
-        string path = Path.Combine(Application.persistentDataPath, "game.bin");
         if (File.Exists(path))
         {
             Debug.Log(("File Exists"));
@@ -33,7 +34,7 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogError("Save file not found in " + path);
+            Debug.LogWarning("Save file not found in " + path);
             return null;
         }
     }

@@ -23,8 +23,7 @@ public class TitleMenuController : MonoBehaviour
         levelLoader = FindObjectOfType<LevelLoader>();
         quitMenu.SetActive(false);
 
-        string path = Path.Combine(Application.persistentDataPath, "game.bin");
-        if (!File.Exists(path))
+        if (!File.Exists(SaveSystem.FilePath))
         {
             mainMenuNewGame.SetActive(true);
             mainMenuContinue.SetActive(false);
