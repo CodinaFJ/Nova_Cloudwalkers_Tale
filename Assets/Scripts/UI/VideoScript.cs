@@ -83,8 +83,15 @@ public class VideoScript : MonoBehaviour
         MouseMatrixScript.BlockPointer();
 
         GameProgressManager.instance.SetPlayedCinematic(worldUnlocked);
-        if(worldUnlocked == 1) FindObjectOfType<LevelLoader>().LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
-        else FindObjectOfType<LevelLoader>().LoadLevel(LevelLoader.GetLevelContains("1-" + worldUnlocked));
+        if(worldUnlocked == 1)
+        {
+            string levelToLoad = LevelLoader.GetLevelContains("LevelSelectorMenu");
+            if (levelToLoad == null)
+                Debug.LogWarning("Level to Load not found");
+            else
+                LevelLoader.instance.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
+        } 
+        else LevelLoader.instance.LoadLevel(LevelLoader.GetLevelContains("1-" + worldUnlocked));
     }
 
     private void FingerDown(Finger finger)

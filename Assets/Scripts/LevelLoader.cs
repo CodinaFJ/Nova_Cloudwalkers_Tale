@@ -6,8 +6,13 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
    [SerializeField] Animator crossfade;
-
    [SerializeField] float transitionTime = 1f;
+
+   static public LevelLoader instance;
+
+   private void Awake() {
+    instance = this;
+   }
 
     public void LoadLevel()
     {
