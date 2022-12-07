@@ -13,7 +13,7 @@ public class OptionsMenuController : MonoBehaviour
     [SerializeField] TextMeshProUGUI resolutionOption;
     [SerializeField] Button resolutionRightButton;
     [SerializeField] Button resolutionLeftButton;
-    [SerializeField] GameObject levelUI;
+    GameObject levelUI;
 
     [SerializeField]
     List<OptionsSection> OptionsSectionsList = new List<OptionsSection>();
@@ -63,6 +63,7 @@ public class OptionsMenuController : MonoBehaviour
     public void ToAudioOptions() => LoadOptionsSection(OptionsSectionTag.OptionsAudio);
     public void ToVideoOptions() => LoadOptionsSection(OptionsSectionTag.OptionsVideo);
     public void ToPauseLevel(){
+        levelUI = FindObjectOfType<LevelUIController>().gameObject;
         if (levelUI) levelUI.SetActive(false);
         LoadOptionsSection(OptionsSectionTag.PauseLevel);
         Hotkeys.SetActive(false);
@@ -70,6 +71,7 @@ public class OptionsMenuController : MonoBehaviour
         pauseMenuToGo = OptionsSectionTag.PauseLevel;
     } 
     public void ToPauseMap(){
+        levelUI = FindObjectOfType<LevelUIController>().gameObject;
         if (levelUI) levelUI.SetActive(false);
         LoadOptionsSection(OptionsSectionTag.PauseMap);
         Hotkeys.SetActive(false);
