@@ -71,8 +71,8 @@ public class OptionsMenuController : MonoBehaviour
         pauseMenuToGo = OptionsSectionTag.PauseLevel;
     } 
     public void ToPauseMap(){
-        levelUI = FindObjectOfType<LevelUIController>().gameObject;
-        if (levelUI) levelUI.SetActive(false);
+        /*levelUI = FindObjectOfType<LevelUIController>().gameObject;
+        if (levelUI) levelUI.SetActive(false);*/
         LoadOptionsSection(OptionsSectionTag.PauseMap);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
