@@ -1,0 +1,924 @@
+fileFormatVersion: 2
+guid: 528d93050fd8861479910b7135480619
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1347362801844141894
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_0"
+  - first:
+      213: 5156713741824706847
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_1"
+  - first:
+      213: -5698829086076583917
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_2"
+  - first:
+      213: 5579571424284882423
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_3"
+  - first:
+      213: 1811993317991243830
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_4"
+  - first:
+      213: 2132679415772697150
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_5"
+  - first:
+      213: -2488320666696149350
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_6"
+  - first:
+      213: 8354445785517831089
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_7"
+  - first:
+      213: 3319357567215821667
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_8"
+  - first:
+      213: -5690003297246370491
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_9"
+  - first:
+      213: 1912076899259340943
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_10"
+  - first:
+      213: 5267147355420883895
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_11"
+  - first:
+      213: -3789798004837880683
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_12"
+  - first:
+      213: 4370668795833873224
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_13"
+  - first:
+      213: 1947161929075554600
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_14"
+  - first:
+      213: -8016597693058940611
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_15"
+  - first:
+      213: -3821272746199333533
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_16"
+  - first:
+      213: 4163862226725944477
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_17"
+  - first:
+      213: 4564489706638355993
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_18"
+  - first:
+      213: -766101876944288204
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_19"
+  - first:
+      213: -3312392770655544481
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_20"
+  - first:
+      213: -670052313966276197
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_21"
+  - first:
+      213: 2819269156448254142
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_22"
+  - first:
+      213: -7903140858685256799
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_23"
+  - first:
+      213: 1928243651138985830
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_24"
+  - first:
+      213: -2621870799919066895
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_25"
+  - first:
+      213: 1231375730042761089
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_26"
+  - first:
+      213: -6252663120910429582
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_27"
+  - first:
+      213: -4556802386809307909
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_28"
+  - first:
+      213: 2345522510271155691
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_29"
+  - first:
+      213: 8327351579641327693
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_30"
+  - first:
+      213: 4806464905292389801
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_31"
+  - first:
+      213: -6737906032419629142
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_32"
+  - first:
+      213: -5271204955855340257
+    second: "Nova_UIM\xF3vil Sprite SheetAnim_33"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 204
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fbe73645bc2b210800000000000000
+      internalID: 1347362801844141894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_1"
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1946d5a3d3509740800000000000000
+      internalID: 5156713741824706847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_2"
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310cdb0d321b9e0b0800000000000000
+      internalID: -5698829086076583917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_3"
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5bb6706ae9e6d40800000000000000
+      internalID: 5579571424284882423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_4"
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630ef36825e752910800000000000000
+      internalID: 1811993317991243830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_5"
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e325be411acc89d10800000000000000
+      internalID: 2132679415772697150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_6"
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96105e8985b77dd0800000000000000
+      internalID: -2488320666696149350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_7"
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3bc0d9d24f0f370800000000000000
+      internalID: 8354445785517831089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_8"
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3636764ee1ab01e20800000000000000
+      internalID: 3319357567215821667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_9"
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 1844
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54524d8e52c0901b0800000000000000
+      internalID: -5690003297246370491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_10"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88559b2fcf098a10800000000000000
+      internalID: 1912076899259340943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_11"
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbff7bfc9aa81940800000000000000
+      internalID: 5267147355420883895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_12"
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c67273bcee76bc0800000000000000
+      internalID: -3789798004837880683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_13"
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843ff8eec1cb7ac30800000000000000
+      internalID: 4370668795833873224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_14"
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82976be3575b50b10800000000000000
+      internalID: 1947161929075554600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_15"
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3181063fd25fb090800000000000000
+      internalID: -8016597693058940611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_16"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36548eceeac18fac0800000000000000
+      internalID: -3821272746199333533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_17"
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9cbaa552a209c930800000000000000
+      internalID: 4163862226725944477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_18"
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e2b195433585f30800000000000000
+      internalID: 4564489706638355993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_19"
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436c9f2e6624e55f0800000000000000
+      internalID: -766101876944288204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_20"
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1334
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b118c23540802d0800000000000000
+      internalID: -3312392770655544481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_21"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b919c1578fe73b6f0800000000000000
+      internalID: -670052313966276197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_22"
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb830545c5e002720800000000000000
+      internalID: 2819269156448254142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_23"
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab803cf247625290800000000000000
+      internalID: -7903140858685256799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_24"
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f9a8a626f72ca10800000000000000
+      internalID: 1928243651138985830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_25"
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1079
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0dad3166e3d9bd0800000000000000
+      internalID: -2621870799919066895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_26"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 722
+        width: 306
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f6c3ec3b9b61110800000000000000
+      internalID: 1231375730042761089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_27"
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 722
+        width: 306
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272d2f105041a39a0800000000000000
+      internalID: -6252663120910429582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_28"
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 722
+        width: 306
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc34964f5cf2c0c0800000000000000
+      internalID: -4556802386809307909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_29"
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 722
+        width: 306
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed0565cb48fc8020800000000000000
+      internalID: 2345522510271155691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_30"
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 722
+        width: 306
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d403f483422b09370800000000000000
+      internalID: 8327351579641327693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_31"
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 722
+        width: 306
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad95599d5ef3b240800000000000000
+      internalID: 4806464905292389801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_32"
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1589
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa79aa799262e72a0800000000000000
+      internalID: -6737906032419629142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Nova_UIM\xF3vil Sprite SheetAnim_33"
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 722
+        width: 306
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1db6fb450be8d6b0800000000000000
+      internalID: -5271204955855340257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
