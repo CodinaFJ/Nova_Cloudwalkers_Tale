@@ -301,10 +301,10 @@ TextureImporter:
       name: Nova_UI Mapa Nivel bloqueado
       rect:
         serializedVersion: 2
-        x: 3499
-        y: 3408
-        width: 68
-        height: 69
+        x: 3470
+        y: 3364
+        width: 130
+        height: 157
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -558,7 +558,7 @@ TextureImporter:
         width: 386
         height: 391
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

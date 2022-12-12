@@ -30,7 +30,7 @@ RectTransform:
   m_GameObject: {fileID: 6138862943481719166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.42083573, y: 0.42083573, z: 0.42083573}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6138862942858712850}
   - {fileID: 3595229459625137958}
@@ -40,7 +40,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -720, y: 17}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 130, y: 157}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6138862943481719138
 CanvasRenderer:
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8266584295067461652, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
+  m_Sprite: {fileID: 6879811007626669519, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -92,10 +92,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3f1f151aebd344583eb69783bb5b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockedLevel: {fileID: 4654447448122935379, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
-  unlockedLevel: {fileID: -8266584295067461652, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
+  lockedLevel: {fileID: -1122170097047487116, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
+  unlockedLevel: {fileID: 6879811007626669519, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
   selectLevel: {fileID: -3325390135830116362, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
-  semiCompletedLevel: {fileID: -6341532055901536491, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
+  semiCompletedLevel: {fileID: 5238283808725027230, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
   completedLevel: {fileID: 8989286318666022946, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
   activeLevel: {fileID: 4794443117659949820, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
   worldNumber: 1
@@ -134,7 +134,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: -3325390135830116362, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
     m_PressedSprite: {fileID: -3325390135830116362, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
     m_SelectedSprite: {fileID: -3325390135830116362, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
-    m_DisabledSprite: {fileID: 4654447448122935379, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
+    m_DisabledSprite: {fileID: -1122170097047487116, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -316,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 95321737322698980, guid: b806e732b86711e49ba24b0ca1db7c73, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 110
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 95321737322698980, guid: b806e732b86711e49ba24b0ca1db7c73, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -329,6 +329,14 @@ PrefabInstance:
     - target: {fileID: 95321737322698980, guid: b806e732b86711e49ba24b0ca1db7c73, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95321737322698981, guid: b806e732b86711e49ba24b0ca1db7c73, type: 3}
+      propertyPath: m_fontSize
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 95321737322698981, guid: b806e732b86711e49ba24b0ca1db7c73, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 95321737322698983, guid: b806e732b86711e49ba24b0ca1db7c73, type: 3}
       propertyPath: m_Name

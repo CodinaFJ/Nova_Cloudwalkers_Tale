@@ -76,12 +76,12 @@ public class LevelSelectorController : MonoBehaviour
             SFXManager.PlayOpenMenu();
             //if(FindObjectOfType<GameManager>() != null) FindObjectOfType<GameManager>().PauseGame();
         }
-        
     }
 
     public void OnCtrlPress(){
         ctrlPressed = true;
     }
+
     public void OnCtrlRelease(){
         ctrlPressed = true;
     }
