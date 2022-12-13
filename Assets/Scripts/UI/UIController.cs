@@ -4,11 +4,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class LevelUIController : MonoBehaviour
+public class UIController : MonoBehaviour
 {
     [SerializeField] GameObject OptionCanvas;
+    [SerializeField] GameObject levelsUIGO;
+    [SerializeField] GameObject worldsUIGO;
+
+    public static UIController instance;
     
     LevelLoader levelLoader;
+
+    private void Awake() {
+        instance = this;
+    }
 
     void Start()
     {
@@ -20,13 +28,6 @@ public class LevelUIController : MonoBehaviour
     public void restartButton()
     {
         GameManager.instance.OnRestart();
-    }
-    
-    public void Pause()
-    {
-        
-
-        
     }
 
     public void ToOptionsLevel(){
@@ -47,6 +48,16 @@ public class LevelUIController : MonoBehaviour
     public void undoButton()
     {
         LevelStateManager.instance.OnUndo();
+    }
+
+    public void ToWorlds(){
+        worldsUIGO.GetComponent<Animator>().Play("UI_fadeIn");
+        levelsUIGO.GetComponent<Animator>().Play("UI_fadeOut");
+    }
+
+    public void ToLevels(){
+        worldsUIGO.GetComponent<Animator>().Play("UI_fadeOut");
+        levelsUIGO.GetComponent<Animator>().Play("UI_fadeIn");
     }
 
 }

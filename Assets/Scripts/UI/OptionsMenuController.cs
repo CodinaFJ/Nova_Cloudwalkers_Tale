@@ -63,7 +63,7 @@ public class OptionsMenuController : MonoBehaviour
     public void ToAudioOptions() => LoadOptionsSection(OptionsSectionTag.OptionsAudio);
     public void ToVideoOptions() => LoadOptionsSection(OptionsSectionTag.OptionsVideo);
     public void ToPauseLevel(){
-        levelUI = FindObjectOfType<LevelUIController>().gameObject;
+        levelUI = FindObjectOfType<UIController>().gameObject;
         if (levelUI) levelUI.SetActive(false);
         LoadOptionsSection(OptionsSectionTag.PauseLevel);
         Hotkeys.SetActive(false);

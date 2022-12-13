@@ -7,14 +7,17 @@ using TMPro;
 public class ModifyAlphas : MonoBehaviour
 {
     Image[] images;
+    Button[] buttons;
     TextMeshProUGUI[] texts;
     [SerializeField]
-    float alphas = 1;
+    private float alphas = 1;
+    public float Alphas { get=>alphas;}
 
     void Start()
     {
         images = GetComponentsInChildren<Image>();
         texts = GetComponentsInChildren<TextMeshProUGUI>();
+        buttons = GetComponentsInChildren<Button>();
     }
 
     // Update is called once per frame
@@ -31,6 +34,13 @@ public class ModifyAlphas : MonoBehaviour
             Color color = text.color;
             color.a = alphas;
             text.color = color;
+        }
+        foreach(Button button in buttons)
+        {
+            if (alphas == 0)
+                button.gameObject.SetActive(false);
+            else
+                button.gameObject.SetActive(true);
         }
     }
 }

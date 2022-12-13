@@ -10,6 +10,7 @@ public class WorldsSelectorController : MonoBehaviour
     [SerializeField]
     List<GameObject> worldLevelsSelector;
 
+    GameObject activeWorld;
     Animator WorldsAnimator;
     private string currentState;
 
@@ -24,19 +25,19 @@ public class WorldsSelectorController : MonoBehaviour
 
     public void OnOpenWorld(int nbr)
     {
+        activeWorld = worldLevelsSelector[nbr - 1];
+        activeWorld.SetActive(true);
         ChangeAnimationStateWorlds("UI_selectWorld_" + nbr);
-        worldLevelsSelector[nbr - 1].SetActive(true);
-        ChangeAnimationStateLevels("UI_showLevels", worldLevelsSelector[nbr - 1].GetComponent<Animator>());
+        ChangeAnimationStateLevels("UI_showLevels", activeWorld.GetComponent<Animator>());
+        UIController.instance.ToLevels();
         BackgroundAnimationController.instance.ZoomIn();
     }
 
     public void BackToWorlds()
     {
-        List<GameObject> levelsMapGO = worldLevelsSelector.FindAll(x => x.activeSelf);
-        ChangeAnimationStateLevels("UI_exitLevels", levelsMapGO[0].GetComponent<Animator>());
-        /*foreach (GameObject mapGO in levelsMapGO)
-            mapGO.SetActive(false);*/
+        ChangeAnimationStateLevels("UI_exitLevels", activeWorld.GetComponent<Animator>());
         ChangeAnimationStateWorlds("UI_returnWorlds");
+        UIController.instance.ToWorlds();
         BackgroundAnimationController.instance.ZoomOut();
     }
 

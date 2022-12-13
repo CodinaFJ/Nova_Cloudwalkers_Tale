@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
     }
     public void OnPause()
     {
-        FindObjectOfType<LevelUIController>().ToOptionsLevel();
+        FindObjectOfType<UIController>().ToOptionsLevel();
     }
 
 }
