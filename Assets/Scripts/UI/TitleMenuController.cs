@@ -42,6 +42,7 @@ public class TitleMenuController : MonoBehaviour
             return ;
         }
         GameProgressManager.instance.LoadGameState();
+        GameProgressManager.instance.WorldSelection = 0;
         ToMap();
     }
 
