@@ -412,9 +412,9 @@ TextureImporter:
       name: Mural_SpriteSheet 02.01-02_17
       rect:
         serializedVersion: 2
-        x: 2600
+        x: 2582
         y: 132
-        width: 522
+        width: 567
         height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -425,17 +425,53 @@ TextureImporter:
       bones: []
       spriteID: 275397b6be33d33f0800000000000000
       internalID: -919521662700276366
-      vertices: []
-      indices: 
+      vertices:
+      - {x: 0, y: 80}
+      - {x: 1.2622632, y: 0}
+      - {x: 567, y: 0}
+      - {x: 567, y: 80}
+      indices: 030000000100000000000000010000000300000002000000
       edges: []
-      weights: []
+      weights:
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
     - serializedVersion: 2
       name: Mural_SpriteSheet 02.01-02_18
       rect:
         serializedVersion: 2
-        x: 3200
+        x: 3184
         y: 127
-        width: 185
+        width: 217
         height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -446,17 +482,53 @@ TextureImporter:
       bones: []
       spriteID: 9490adffb2d785940800000000000000
       internalID: 5285111790648822089
-      vertices: []
-      indices: 
+      vertices:
+      - {x: 0, y: 96}
+      - {x: 217, y: 96}
+      - {x: 217, y: 0}
+      - {x: 0, y: 0}
+      indices: 020000000300000000000000000000000100000002000000
       edges: []
-      weights: []
+      weights:
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
     - serializedVersion: 2
       name: Mural_SpriteSheet 02.01-02_19
       rect:
         serializedVersion: 2
-        x: 3550
+        x: 3538
         y: 128
-        width: 190
+        width: 223
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -467,17 +539,53 @@ TextureImporter:
       bones: []
       spriteID: dc49ec5f0847d6220800000000000000
       internalID: 2480767066979603661
-      vertices: []
-      indices: 
+      vertices:
+      - {x: 0, y: 100}
+      - {x: 223, y: 100}
+      - {x: 223, y: 0}
+      - {x: 0, y: 0}
+      indices: 020000000300000000000000000000000100000002000000
       edges: []
-      weights: []
+      weights:
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
     - serializedVersion: 2
       name: Mural_SpriteSheet 02.01-02_20
       rect:
         serializedVersion: 2
-        x: 3924
+        x: 3910
         y: 128
-        width: 168
+        width: 186
         height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -488,18 +596,54 @@ TextureImporter:
       bones: []
       spriteID: 5848172c660f89550800000000000000
       internalID: 6167944013823444101
-      vertices: []
-      indices: 
+      vertices:
+      - {x: 0, y: 92}
+      - {x: 186, y: 92}
+      - {x: 184.22363, y: 0}
+      - {x: 0, y: 0}
+      indices: 020000000300000000000000000000000100000002000000
       edges: []
-      weights: []
+      weights:
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
     - serializedVersion: 2
       name: Mural_SpriteSheet 02.01-02_21
       rect:
         serializedVersion: 2
-        x: 2387
+        x: 2378
         y: 28
-        width: 34
-        height: 32
+        width: 50
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,10 +653,46 @@ TextureImporter:
       bones: []
       spriteID: d727254b3604159c0800000000000000
       internalID: -3940297402001231235
-      vertices: []
-      indices: 
+      vertices:
+      - {x: 50, y: 34}
+      - {x: 0, y: 34}
+      - {x: 50, y: 0}
+      - {x: 0, y: 0}
+      indices: 020000000300000001000000010000000000000002000000
       edges: []
-      weights: []
+      weights:
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
     - serializedVersion: 2
       name: Mural_SpriteSheet 02.01-02_22
       rect:
@@ -538,9 +718,9 @@ TextureImporter:
       name: Mural_SpriteSheet 02.01-02_23
       rect:
         serializedVersion: 2
-        x: 2547
+        x: 2531
         y: 6
-        width: 177
+        width: 205
         height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -551,17 +731,80 @@ TextureImporter:
       bones: []
       spriteID: 52d3243b937722dd0800000000000000
       internalID: -2512314552415011547
-      vertices: []
-      indices: 
+      vertices:
+      - {x: 0, y: 92}
+      - {x: 70.61801, y: 84.18645}
+      - {x: 133.38304, y: 84.77857}
+      - {x: 205, y: 92}
+      - {x: 205, y: 0}
+      - {x: 103.77689, y: 0}
+      - {x: 0, y: 0}
+      indices: 000000000100000006000000050000000600000001000000020000000100000000000000020000000400000005000000000000000300000002000000040000000200000003000000010000000200000005000000
       edges: []
-      weights: []
+      weights:
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
     - serializedVersion: 2
       name: Mural_SpriteSheet 02.01-02_24
       rect:
         serializedVersion: 2
-        x: 3004
+        x: 2988
         y: 17
-        width: 176
+        width: 207
         height: 86
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -572,17 +815,53 @@ TextureImporter:
       bones: []
       spriteID: 2f6abd919cc38dc20800000000000000
       internalID: 3231399567058249458
-      vertices: []
-      indices: 
+      vertices:
+      - {x: 0, y: 86}
+      - {x: 207, y: 86}
+      - {x: 207, y: 0}
+      - {x: 0, y: 0}
+      indices: 020000000300000000000000000000000100000002000000
       edges: []
-      weights: []
+      weights:
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
     - serializedVersion: 2
       name: Mural_SpriteSheet 02.01-02_25
       rect:
         serializedVersion: 2
-        x: 3460
-        y: 14
-        width: 174
+        x: 3446
+        y: 13
+        width: 206
         height: 91
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -593,17 +872,53 @@ TextureImporter:
       bones: []
       spriteID: 8113d2125dfb36ad0800000000000000
       internalID: -2710111628641357544
-      vertices: []
-      indices: 
+      vertices:
+      - {x: 0, y: 91}
+      - {x: 206, y: 91}
+      - {x: 206, y: 0}
+      - {x: 0, y: 0}
+      indices: 020000000300000000000000000000000100000002000000
       edges: []
-      weights: []
+      weights:
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
     - serializedVersion: 2
       name: Mural_SpriteSheet 02.01-02_26
       rect:
         serializedVersion: 2
-        x: 3922
+        x: 3911
         y: 15
-        width: 167
+        width: 185
         height: 81
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -614,10 +929,46 @@ TextureImporter:
       bones: []
       spriteID: b46a4f51153bc77d0800000000000000
       internalID: -2919261297600846261
-      vertices: []
-      indices: 
+      vertices:
+      - {x: 0, y: 81}
+      - {x: 185, y: 81}
+      - {x: 185, y: 0}
+      - {x: 0, y: 0}
+      indices: 020000000300000000000000000000000100000002000000
       edges: []
-      weights: []
+      weights:
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
     outline: []
     physicsShape: []
     bones: []

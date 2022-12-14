@@ -134,9 +134,12 @@ public class Pathfinding
 
         int crystalCost = 0;
 
-        if(MatrixManager.instance.GetMechanicsLayoutMatrix()[a.x, a.y] == MatrixManager.instance.valueCrystalCloudMechanic ||
-           MatrixManager.instance.GetMechanicsLayoutMatrix()[a.x, a.y] == MatrixManager.instance.valueForCrystalFloor)
-           crystalCost = 10;
+        if(MatrixManager.instance.GetMechanicsLayoutMatrix()[b.x, b.y] >= 3 &&
+           MatrixManager.instance.GetMechanicsLayoutMatrix()[b.x, b.y] <= 6)
+           crystalCost += 10;
+        if(MatrixManager.instance.GetMechanicsLayoutMatrix()[a.x, a.y] >= 3 &&
+           MatrixManager.instance.GetMechanicsLayoutMatrix()[a.x, a.y] <= 6)
+           crystalCost += 10;
         
         return ((xDistance + yDistance) * MOVE_COST) + crystalCost;
 

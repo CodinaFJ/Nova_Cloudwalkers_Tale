@@ -8,33 +8,13 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     [SerializeField] ParticleSystem particlesCloudOnClick;
     [SerializeField] float scaleTweenTime = 0.1f;
 
-    InstantiatedCloudBehavior[] cloudTiles;
+    //InstantiatedCloudBehavior[] cloudTiles;
 
     Vector3 posPrevious;
     Vector3 posDifference;
 
     bool pointerInCloud = false;
     bool cloudPointerClick = false;
-
-    void Start() 
-    {
-        cloudTiles = GetComponentsInChildren<InstantiatedCloudBehavior>();
-        posPrevious = transform.position;
-    }
-
-    private void Update() 
-    {
-        cloudTiles = GetComponentsInChildren<InstantiatedCloudBehavior>();
-        posDifference = transform.position - posPrevious;
-
-        foreach(InstantiatedCloudBehavior cloudTile in cloudTiles)
-        {
-            if(cloudTile.myMovementParticles != null) cloudTile.myMovementParticles.transform.position += posDifference;
-        }
-        posPrevious = transform.position;
-
-    }
-
     
 
     public void PlayClickParticles(Vector3 ClickPos)
@@ -49,30 +29,26 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
         particlesCloudOnClick.Stop();
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        // Do something.
+    public void OnPointerEnter(PointerEventData eventData){
+        if(MouseMatrixScript.PointerOnSteppedCloud()) return;
         if(!cloudPointerClick)TweenCloudScaleIn();
         pointerInCloud = true;
-        //Debug.Log("OnPointerEnter");
     }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        // Do something.
+    public void OnPointerExit(PointerEventData eventData){
         if(!cloudPointerClick)TweenCloudScaleOut();
         pointerInCloud = false;
-        //Debug.Log("OnPointerExit");
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
+    public void OnPointerDown(PointerEventData eventData){
+        if(MouseMatrixScript.PointerOnSteppedCloud()) return;
         cloudPointerClick = true;
-        TweenCloudScaleOut();
+        //TweenCloudScaleOut();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if(MouseMatrixScript.PointerOnSteppedCloud() || !cloudPointerClick) return;
         cloudPointerClick = false;
         TweenCloudScaleIn();
         if(!pointerInCloud)
@@ -84,7 +60,7 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void TweenCloudScaleIn()
     {
-        foreach(InstantiatedCloudBehavior cloudTile in gameObject.GetComponentsInChildren<InstantiatedCloudBehavior>())
+        foreach(TileBehavior cloudTile in gameObject.GetComponentsInChildren<TileBehavior>())
         {
             LeanTween.cancel(cloudTile.gameObject);
             LeanTween.scale(cloudTile.gameObject, new Vector3 (Mathf.Sign(cloudTile.transform.localScale.x) * 1.05f,Mathf.Sign(cloudTile.transform.localScale.y) * 1.05f, 1), scaleTweenTime).setEaseOutElastic();
@@ -94,7 +70,7 @@ public class ParentCloudScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void TweenCloudScaleOut()
     {
-        foreach(InstantiatedCloudBehavior cloudTile in gameObject.GetComponentsInChildren<InstantiatedCloudBehavior>())
+        foreach(TileBehavior cloudTile in gameObject.GetComponentsInChildren<TileBehavior>())
         {
             LeanTween.cancel(cloudTile.gameObject);
             LeanTween.scale(cloudTile.gameObject, new Vector3 (Mathf.Sign(cloudTile.transform.localScale.x) * 1f,Mathf.Sign(cloudTile.transform.localScale.y) *1f, 1), scaleTweenTime).setEaseOutExpo(); 

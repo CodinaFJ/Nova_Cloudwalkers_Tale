@@ -1,0 +1,638 @@
+fileFormatVersion: 2
+guid: 3c0b5bd1d5892154ca365606ca5f64e5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2463729482654546210
+    second: Nova_UI Mapa Oveja
+  - first:
+      213: -1954788621261669614
+    second: Nova_UI Mapa Candado
+  - first:
+      213: 2534832897874111519
+    second: Nova_UI Mapa Candado bloq
+  - first:
+      213: -2292797996074125056
+    second: Nova_UI Mapa FragmentosCandado
+  - first:
+      213: 6912254606950885785
+    second: Nova_UI Mapa Nivel completado
+  - first:
+      213: 5238283808725027230
+    second: Nova_UI Mapa niveldesbloq2
+  - first:
+      213: 6879811007626669519
+    second: Nova_UI Mapa Nova_UI Mapa niveldesbloq
+  - first:
+      213: -1122170097047487116
+    second: Nova_UI Mapa Nivel bloqueado
+  - first:
+      213: -1248736433169932100
+    second: Nova_UI Mapa Mural completado
+  - first:
+      213: 4528220747693890125
+    second: Nova_UI Mapa Mural desbloq
+  - first:
+      213: 2312894857513440724
+    second: Nova_UI Mapa Mural bloqueado
+  - first:
+      213: 2364580887212555092
+    second: Nova_UI Mapa Camino desbloq
+  - first:
+      213: -500082278847767337
+    second: Nova_UI Mapa Camino bloqeado
+  - first:
+      213: -2137333390961935646
+    second: Nova_UI Mapa Cocodrilo 01
+  - first:
+      213: 6783144973659121959
+    second: Nova_UI Mapa Cocodrilo 00
+  - first:
+      213: 4919831910313897439
+    second: Nova_UI Mapa Lobo 01
+  - first:
+      213: -5113555312974898719
+    second: Nova_UI Mapa Lobo 00
+  - first:
+      213: -5066680247688025069
+    second: Nova_UI Mapa Cuervo 01
+  - first:
+      213: -4522504748292508636
+    second: Nova_UI Mapa Cuervo 00
+  - first:
+      213: -986021557577178874
+    second: Nova_UI Mapa Candado desbloq
+  - first:
+      213: 600327873106218237
+    second: Nova_UI Mapa Nivel hoover
+  - first:
+      213: 2075039668836056525
+    second: Nova_UI Mapa Mural hoover
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nova_UI Mapa Oveja
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3013
+        width: 1599
+        height: 1084
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed608b3c6131fcdd0800000000000000
+      internalID: -2463729482654546210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Candado
+      rect:
+        serializedVersion: 2
+        x: 3087
+        y: 3706
+        width: 302
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bf8ba1b123fd4e0800000000000000
+      internalID: -1954788621261669614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Candado bloq
+      rect:
+        serializedVersion: 2
+        x: 3396
+        y: 3706
+        width: 302
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ca2ca27198d2320800000000000000
+      internalID: 2534832897874111519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa FragmentosCandado
+      rect:
+        serializedVersion: 2
+        x: 3705
+        y: 3944
+        width: 153
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009364ece585e20e0800000000000000
+      internalID: -2292797996074125056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Nivel completado
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 3364
+        width: 130
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9996d5c31f24def50800000000000000
+      internalID: 6912254606950885785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa niveldesbloq2
+      rect:
+        serializedVersion: 2
+        x: 3203
+        y: 3364
+        width: 130
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e994cb3de5f12b840800000000000000
+      internalID: 5238283808725027230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Nova_UI Mapa niveldesbloq
+      rect:
+        serializedVersion: 2
+        x: 3340
+        y: 3364
+        width: 130
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcde86f19aff97f50800000000000000
+      internalID: 6879811007626669519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Nivel bloqueado
+      rect:
+        serializedVersion: 2
+        x: 3470
+        y: 3364
+        width: 130
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d3be30e304d60f0800000000000000
+      internalID: -1122170097047487116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Mural completado
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 3193
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb061d284d89baee0800000000000000
+      internalID: -1248736433169932100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Mural desbloq
+      rect:
+        serializedVersion: 2
+        x: 3232
+        y: 3193
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a19da47c877de30800000000000000
+      internalID: 4528220747693890125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Mural bloqueado
+      rect:
+        serializedVersion: 2
+        x: 3389
+        y: 3193
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d59ae06e9d091020800000000000000
+      internalID: 2312894857513440724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Camino desbloq
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 3176
+        width: 1019
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b7bf0f9cda0d020800000000000000
+      internalID: 2364580887212555092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Camino bloqeado
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 3149
+        width: 1019
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc9fc221d95f09f0800000000000000
+      internalID: -500082278847767337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Cocodrilo 01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2033
+        width: 1693
+        height: 1037
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaf121ea9aa652e0800000000000000
+      internalID: -2137333390961935646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Cocodrilo 00
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 2033
+        width: 1693
+        height: 1037
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729ade63a62922e50800000000000000
+      internalID: 6783144973659121959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Lobo 01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1009
+        width: 1797
+        height: 1068
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd24e85e01c64440800000000000000
+      internalID: 4919831910313897439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Lobo 00
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 1009
+        width: 1797
+        height: 1068
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9d1de19800909b0800000000000000
+      internalID: -5113555312974898719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Cuervo 01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1375
+        height: 1018
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c211eb8298fa9b0800000000000000
+      internalID: -5066680247688025069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Cuervo 00
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 0
+        width: 1375
+        height: 1018
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424f10784e5dc31c0800000000000000
+      internalID: -4522504748292508636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Candado desbloq
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 3706
+        width: 386
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6012cb71e92f052f0800000000000000
+      internalID: -986021557577178874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Nivel hoover
+      rect:
+        serializedVersion: 2
+        x: 3621
+        y: 3364
+        width: 130
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc0349150bc45800800000000000000
+      internalID: 600327873106218237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Mural hoover
+      rect:
+        serializedVersion: 2
+        x: 3607
+        y: 3193
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd31d3b5950ccc10800000000000000
+      internalID: 2075039668836056525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 908b66e4adf44eb429e815e326cc1178, type: 3}
+      name: _Emission
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

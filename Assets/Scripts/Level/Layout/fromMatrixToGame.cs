@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -7,7 +7,8 @@ public class fromMatrixToGame : MonoBehaviour
 {
     [SerializeField] GameObject whiteCloud;
     [SerializeField] GameObject greyCloud;
-    [SerializeField] GameObject crystalCloud;
+    [SerializeField] GameObject crystalTopCloud;
+    [SerializeField] GameObject crystalBotCloud;
     [SerializeField] GameObject thunderCloud;
     [SerializeField] GameObject floor;
     [SerializeField] GameObject spikedFloor;
@@ -78,13 +79,8 @@ public class fromMatrixToGame : MonoBehaviour
             whiteCloudsTilemapRederers[i].enabled = false;
         }
 
-        if(!LevelInfo.instance.wallLevel)
-        {
-            floorTilemap.enabled = false;
-            floorTilemapRenderer.enabled = false;
-        }
-        
-
+        floorTilemap.enabled = false;
+        floorTilemapRenderer.enabled = false;
         spikedFloorTilemap.enabled = false;
         spikedFloorTilemapRenderer.enabled = false;
     
@@ -108,7 +104,8 @@ public class fromMatrixToGame : MonoBehaviour
     {
         Vector3 itemPosition = MatrixManager.instance.FromMatrixIndexToWorld(i, j);
 
-        Instantiate(crystalCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
+        GameObject crystalTile =  Instantiate(crystalTopCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
+        Instantiate(crystalBotCloud, itemPosition, Quaternion.identity, cloudsParents[whiteCloudNumber].transform);
     }
 
     void InstantiateThunderCloud(int i, int j, int whiteCloudNumber)
@@ -166,7 +163,7 @@ public class fromMatrixToGame : MonoBehaviour
     {
         if(item != MatrixManager.instance.valueForFloor && item != MatrixManager.instance.valueForCrystalFloor)
         {
-            foreach (Transform child in cloudsParents[item - 1].transform)
+            foreach (TileBehavior child in cloudsParents[item - 1].GetComponentsInChildren<TileBehavior>())
             {
                 child.gameObject.SetActive(false);
             }
@@ -177,13 +174,11 @@ public class fromMatrixToGame : MonoBehaviour
     {
         GameObject[] result = new GameObject[cloudsParents.Length + 1];
 
-        for (int index = 0; index < cloudsParents.Length; index++)
-        {
+        for (int index = 0; index < cloudsParents.Length; index++){
             result[index] = cloudsParents[index];
         }
 
         result[cloudsParents.Length] = Instantiate(cloudParent);
-
         cloudsParents = result;
     }
 
@@ -200,8 +195,10 @@ public class fromMatrixToGame : MonoBehaviour
 
         if (itemsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForFloor)
         {
-            if (mechanicsLayoutMatrix[i,j] ==  MatrixManager.instance.valueForFloor) InstantiateFloor(i,j);
-            else if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueSpikedFloorMechanic) InstantiateFloor(i,j);
+            if (mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueForFloor ||
+                mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueSpikedFloorMechanic ||
+                mechanicsLayoutMatrix[i,j] == MatrixManager.instance.valueBlockMechanic) 
+                InstantiateFloor(i,j);
         }
         if (mechanicsLayoutMatrix[i,j] ==  MatrixManager.instance.valueCrystalFloorMechanic ||
             mechanicsLayoutMatrix[i,j] ==  (MatrixManager.instance.valueCrystalFloorMechanic + 1)) InstantiateCrystalFloor(i,j);
@@ -221,8 +218,12 @@ public class fromMatrixToGame : MonoBehaviour
 
         foreach (GameObject child in cloudsParents)
         {
-            child.SetActive(false);
-            Destroy(child);
+            try{
+                child.SetActive(false);
+                Destroy(child);
+            }catch(MissingReferenceException ex){
+                Debug.LogWarning(ex.Message);
+            }
         }
         spikedFloorParent.SetActive(false);
         Destroy(spikedFloorParent);
@@ -267,4 +268,8 @@ public class fromMatrixToGame : MonoBehaviour
 
         return highestItemInMatrix;
     }
+
+
+    public GameObject GetFloorParent() => walkableFloorParent;
+    public GameObject GetSpikedFloorParent() => spikedFloorParent;
 }

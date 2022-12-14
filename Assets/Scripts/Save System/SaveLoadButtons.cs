@@ -6,11 +6,11 @@ public class SaveLoadButtons : MonoBehaviour
 {
     public void OnSave()
     {
-        GameState.instance.SaveGameState();
+        GameProgressManager.instance.SaveGameState();
     }
 
     public void OnLoad()
     {
-        GameState.instance.LoadGameState();
+        GameProgressManager.instance.LoadGameState();
     }
 }

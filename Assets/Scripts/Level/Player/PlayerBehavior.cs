@@ -4,26 +4,13 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
-    /*********************************************************************
-    PlayerBehavior.cs
-
-    Description:
-        Basic infos of the PJ 
-
-    Check also:
-
-        PjAnimationManager.cs
-        PjInputManager.cs
-        MatrixManager.cs
-
-    **********************************************************************/
-
     public static PlayerBehavior instance;
 
     //Cell the player occupies
     public int[] pjCell = new int[2];
 
     //Layout under the player
+    [SerializeField]
     int itemUnderPj;
     int mechanicUnderPj;
 
@@ -56,6 +43,9 @@ public class PlayerBehavior : MonoBehaviour
         UpdateItemUnderPj();
     }
 
+    private void OnDisable() {
+        instance = null;
+    }
 
     //Places PJ in the correct centered position within the cell it is
     void SnapPjToGrid()
@@ -83,6 +73,9 @@ public class PlayerBehavior : MonoBehaviour
         {
             itemUnderPj = MatrixManager.instance.GetItemsLayoutMatrix()[pjCell[0], pjCell[1]];
         }
+        if(MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]] == 5 ||
+           MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]] == 5)
+            MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]]++;
     }
 
     public bool GetRunningState() => running;
@@ -100,21 +93,21 @@ public class PlayerBehavior : MonoBehaviour
     public void LoadLevelStatePlayer(int[] _pjCell, int _starsCollected)
     {     
         //Update pj position - cell & transform
+        PjInputManager.instance.pjMoving = false;
         pjCell = (int[])_pjCell.Clone();
         transform.position = MatrixManager.instance.FromMatrixIndexToWorld(pjCell[0], pjCell[1]) + new Vector3(0, 0.65f, 0);
         UpdateItemUnderPj();
 
-        //Recover the total stars count in the game
-        GameState.instance.totalCollectedStars -= (starsCollected - _starsCollected);
+        //Recover the total stars count in the game - This might not be needed anymore since it is calculateTotalStarsInGame is called in levelFinished.cs
+        //GameProgressManager.instance. -= (starsCollected - _starsCollected);
 
         //Recover stars collected on saved state
         starsCollected = _starsCollected;
-        LevelInfo.instance.collectedStars = _starsCollected;
+        GameProgressManager.instance.SetCollectedStarsInLevel(_starsCollected);// SetCollectedStars(_starsCollected);
 
         //Set idle state
         running = false;
         sitting = false;
         sleeping = false;
-        PjInputManager.instance.pjMoving = false;
     }
 }

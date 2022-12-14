@@ -12,7 +12,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixerGroup sfxMixerGroup;
     [SerializeField] private AudioMixerGroup ambientMixerGroup;
     [SerializeField] float fadeInDuration = 2f;
+    [SerializeField] float fadeInDurationSFX = 0.1f;
     [SerializeField] float fadeOutDuration = 1f;
+    [SerializeField] float fadeOutDurationSFX = 0.3f;
 
     public static AudioManager instance;
 
@@ -67,26 +69,42 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound " + name + " not found!");
             return;
         }
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
-            s.source.outputAudioMixerGroup = sfxMixerGroup;
+        //Prevents spamming same SFX, would create performance problems
+        AudioSource[] identicalSources = Array.FindAll<AudioSource>(GetComponents<AudioSource>(), x => x.clip == s.clip);
+        if(identicalSources.Length > 3) Destroy(identicalSources[0]);
+
+        s.source = gameObject.AddComponent<AudioSource>();
+        s.source.clip = s.clip;
+        s.source.volume = s.volume;
+        s.source.pitch = s.pitch;
+        s.source.loop = s.loop;
+        s.source.outputAudioMixerGroup = sfxMixerGroup;
 
         s.source.Play();
-
+        
         StartCoroutine(DestroyOnFinishedClip(s.source));
+    }
+    public void PlaySound(string name, bool avoidMoreThanOne){
+        if(IsPlayingSFX(name) && avoidMoreThanOne) return;
+        PlaySound(name);
+    }
+    public void PlaySound(string name, string nameToStop){
+        if(IsPlayingSFX(nameToStop)) Stop(nameToStop);
+        PlaySound(name);
     }
 
     IEnumerator DestroyOnFinishedClip(AudioSource source)
     {
-        while(source.isPlaying)
+        bool isPlaying = true;
+        while(isPlaying)
         {
+            if(source == null) yield break;
+            else isPlaying = source.isPlaying;
             yield return null;
         }
 
-        Destroy(source);
+        try{Destroy(source);}
+        catch{}
         
         yield break;
     }
@@ -113,7 +131,7 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    public void Stop (string name)
+    public bool Stop (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null) s = Array.Find(musics, sound => sound.name == name);
@@ -121,9 +139,15 @@ public class AudioManager : MonoBehaviour
         if (s == null)
         {
             Debug.LogWarning("Clip " + name + " not found!");
-            return;
+            return false;
         }
-        s.source.Stop();
+        try{
+            s.source.Stop();
+            return true;
+        }
+        catch{
+            return  false;
+        }
     }
 
     public bool IsPlaying(string name)
@@ -138,6 +162,19 @@ public class AudioManager : MonoBehaviour
             return false;
         }
         isPlaying = s.source.isPlaying;
+        return isPlaying;
+    }
+
+    public bool IsPlayingSFX(string name)
+    {
+        bool isPlaying = false;
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound " + name + " not found!");
+            return false;
+        }
+        isPlaying = Array.Exists<AudioSource>(GetComponents<AudioSource>(), x => x.clip == s.clip);
         return isPlaying;
     }
 
@@ -181,5 +218,48 @@ public class AudioManager : MonoBehaviour
 			yield return null;
 		}
 		s.source.Stop();
+    }
+
+    public IEnumerator FadeInSFX(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound " + name + " not found!");
+            yield break;
+        }
+        s.source.Play();
+			s.source.volume = 0f;
+			while (s.source.volume < s.volume) 
+            {
+				s.source.volume += Time.deltaTime / fadeInDurationSFX;
+				yield return null;
+            }
+    }
+
+    public IEnumerator FadeOutSFX(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if(Array.FindAll<AudioSource>(GetComponents<AudioSource>(), x => x.clip == s.clip).Length > 1){
+            AudioSource[] sourcesPlaying = Array.FindAll<AudioSource>(GetComponents<AudioSource>(), x => x.clip == s.clip);
+            for(int i = 0; i < sourcesPlaying.Length - 1; i++){
+                sourcesPlaying[i].Stop();
+            }
+        } 
+        if (s == null)
+        {
+            Debug.LogWarning("Sound " + name + " not found!");
+            yield break;
+        }
+        else if(s.source == null) yield break;
+        float startVolume = s.source.volume;
+        float elapsedTime = 0;
+        while (s.source.volume > 0) {
+            elapsedTime += Time.deltaTime;
+            s.source.volume -= startVolume * Time.deltaTime / fadeOutDurationSFX; //Mathf.Lerp(startVolume, 0, elapsedTime/fadeOutDurationSFX);
+            yield return null;
+        }
+        s.source.Stop();
+        
     }
 }

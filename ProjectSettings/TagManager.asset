@@ -9,6 +9,9 @@ TagManager:
   - Star
   - UI_anim
   - Part_mov
+  - Event_system
+  - spike_tile
+  - Worlds
   layers:
   - Default
   - TransparentFX
@@ -18,9 +21,9 @@ TagManager:
   - UI
   - Transition/Blur
   - Player
-  - 
-  - 
-  - 
+  - Spikes
+  - SpikeFlipper
+  - SpikeMover
   - 
   - 
   - 
@@ -49,11 +52,11 @@ TagManager:
   - name: Background
     uniqueID: 1962110973
     locked: 0
-  - name: Particles_bottom
-    uniqueID: 3256949483
-    locked: 0
   - name: Shadows Layout
     uniqueID: 1424579157
+    locked: 0
+  - name: Particles_bottom
+    uniqueID: 3256949483
     locked: 0
   - name: Top Layout
     uniqueID: 399705075
@@ -72,6 +75,9 @@ TagManager:
     locked: 0
   - name: Shadows
     uniqueID: 2233883079
+    locked: 0
+  - name: Particles BelowPJ
+    uniqueID: 262149837
     locked: 0
   - name: Player
     uniqueID: 2686076535

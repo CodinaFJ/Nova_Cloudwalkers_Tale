@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -33,7 +33,8 @@ public class MatrixManager : MonoBehaviour
                valueCrystalCloudMechanic = 3, 
                valueCrystalFloorMechanic = 5, 
                valueThunderCloudMechanic = -1, 
-               valueSpikedFloorMechanic = -999;
+               valueSpikedFloorMechanic = -999,
+               valueBlockMechanic = -2;
     
     bool stateSaved = false;
     
@@ -41,8 +42,6 @@ public class MatrixManager : MonoBehaviour
     fromMatrixToGame FromMatrixToGame;
 
     PlayerBehavior playerBehavior;
-
-    CloudSfxManager cloudSfxManager;
 
     void Awake()
     {
@@ -60,8 +59,6 @@ public class MatrixManager : MonoBehaviour
         CreatePjMovementMatrix();
         CreateCloudsMovementMatrix();
         CreatePathNodesMatrix();
-
-        cloudSfxManager = FindObjectOfType<CloudSfxManager>();
     }
 
     void Start()
@@ -105,7 +102,7 @@ public class MatrixManager : MonoBehaviour
         }
 
         itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.borderTilemap, valueForBorder, itemsLayoutMatrix);
-        if(tilemapsLevelLayout.blockTilemap != null) itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.blockTilemap, valueForBorder, itemsLayoutMatrix);
+        if(tilemapsLevelLayout.blockTilemap != null) itemsLayoutMatrix = AddTilemapToItemsLayoutMatrix(tilemapsLevelLayout.blockTilemap, valueForFloor, itemsLayoutMatrix);
 
         for (int index = 0; index < tilemapsLevelLayout.cloudsTilemaps.Length; index++)
         {
@@ -142,7 +139,7 @@ public class MatrixManager : MonoBehaviour
                 if(tile == null) continue;
 
                 int[] matrixPosition = {(int)(coordinatesOriginMatrix.y - cellPosition.y), (int)(cellPosition.x - coordinatesOriginMatrix.x)};
-                if(tile.name == "CrystalRuleTile" && valueForItem == valueForFloor) itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem - 1;
+                if(tile.name == "FloorCrystalRuleTile") itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem - 1;
                 else if(itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] == valueForBorder) continue;
                 else itemsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForItem;
             }
@@ -292,6 +289,7 @@ public class MatrixManager : MonoBehaviour
 
         mechanicsLayoutMatrix = AddTilemapToMechanicsLayoutMatrix(tilemapsLevelLayout.floorTilemap, mechanicsLayoutMatrix);
         mechanicsLayoutMatrix = AddTilemapToMechanicsLayoutMatrix(tilemapsLevelLayout.spikedFloorTilemap, mechanicsLayoutMatrix);
+        if(tilemapsLevelLayout.blockTilemap != null) mechanicsLayoutMatrix = AddTilemapToMechanicsLayoutMatrix(tilemapsLevelLayout.blockTilemap, mechanicsLayoutMatrix);
     }
 
     public int[,] GetMechanicsLayoutMatrix()
@@ -301,12 +299,8 @@ public class MatrixManager : MonoBehaviour
 
     int[,] AddTilemapToMechanicsLayoutMatrix (Tilemap tilemapItem, int[,] mechanicsLayoutMatrix)
     {
-        tilemapItem.CompressBounds();
+        //tilemapItem.CompressBounds();
         BoundsInt bounds = tilemapItem.cellBounds;
-
-        bool floorTilemap = false;
-
-        if (tilemapItem == tilemapsLevelLayout.floorTilemap) floorTilemap = true;
 
         //Loop through all the tiles in the bounds of the tilemap
         for (int x = bounds.min.x; x < bounds.max.x; x++)
@@ -323,13 +317,14 @@ public class MatrixManager : MonoBehaviour
 
                 if(mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] == valueForBorder) continue;
 
-                     if(tile.name == "WhiteCloudsRuleTile")              mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueWhiteCloudMechanic;
-                else if(tile.name == "GreyCloudsRuleTile")               mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueGreyCloudMechanic;
-                else if(tile.name == "CrystalRuleTile" && !floorTilemap) mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueCrystalCloudMechanic;
-                else if(tile.name == "CrystalRuleTile" && floorTilemap)  mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueCrystalFloorMechanic;
-                else if(tile.name == "ThunderCloudsRuleTile")            mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueThunderCloudMechanic;
-                else if(tile.name == "FloorRuleTile")                    mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForFloor;
-                else if(tile.name == "SpikedFloorRuleTile")              mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueSpikedFloorMechanic;
+                     if(tile.name == "WhiteCloudsRuleTile")   mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueWhiteCloudMechanic;
+                else if(tile.name == "GreyCloudsRuleTile")    mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueGreyCloudMechanic;
+                else if(tile.name == "CrystalRuleTile")       mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueCrystalCloudMechanic;
+                else if(tile.name == "FloorCrystalRuleTile")  mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueCrystalFloorMechanic;
+                else if(tile.name == "ThunderCloudsRuleTile") mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueThunderCloudMechanic;
+                else if(tile.name == "FloorRuleTile")         mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueForFloor;
+                else if(tile.name == "SpikedFloorRuleTile")   mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueSpikedFloorMechanic;
+                else                                          mechanicsLayoutMatrix[matrixPosition[0], matrixPosition[1]] = valueBlockMechanic;
                 
             }
         }
@@ -469,9 +464,14 @@ public class MatrixManager : MonoBehaviour
 
     public void SearchGreyCloudContact(int item)
     {
+        VFXManager.instance.SetCloudToJoin(item);
+        SFXManager.instance.SetCloudToJoin(item);
         if(AttachGreyCloudInMatrix(item))
         {
             FromMatrixToGame.ReInstantiateItem(item);
+            playerBehavior.UpdateItemUnderPj();
+            RefreshCloudsMovementMatrix();
+            RefreshPjMovementMatrix();
         }
     }
 
@@ -488,19 +488,13 @@ public class MatrixManager : MonoBehaviour
             }
             
             //FromMatrixToGame.ReInstantiateItem(item);
-            playerBehavior.UpdateItemUnderPj();
-            RefreshCloudsMovementMatrix();
-            RefreshPjMovementMatrix();
-            cloudSfxManager.PlayCloudConnect();
+            
+            
 
             
             if(mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] == valueCrystalCloudMechanic ||
-                mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] == valueCrystalFloorMechanic)
-            {
-                mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] ++; 
-                Debug.Log("Mechanic in tile under PJ: " + mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]]);
-            }
-            
+               mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] == valueCrystalFloorMechanic)
+                mechanicsLayoutMatrix[PlayerBehavior.instance.pjCell[0], PlayerBehavior.instance.pjCell[1]] ++;             
         }
         else stateSaved = false;
     }
@@ -541,6 +535,8 @@ public class MatrixManager : MonoBehaviour
                                 if (mechanicsLayoutMatrix[i + k, j + u] == valueGreyCloudMechanic)
                                 {
                                     attachingCloud = true;
+                                    VFXManager.instance.InstantiateGreyParticles(new Vector2(i,j), new Vector2(k, u));
+                                    SFXManager.instance.PlayCloudConnect(new Vector2(i,j));
 
                                     mechanicsLayoutMatrix[i + k, j + u] = mechanicsLayoutMatrix[i,j];                             
 
@@ -585,38 +581,50 @@ public class MatrixManager : MonoBehaviour
         }
     }
 
-    public void CrackCrystalFloor()
+    public void CrackCrystalFloor(int cell0, int cell1)
     {
-        if(mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] == 6)
+        if(mechanicsLayoutMatrix[cell0, cell1] == 6 || mechanicsLayoutMatrix[cell0, cell1] == 5)
         {
 
-            mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] = 0;
-            itemsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] = 0;
+            mechanicsLayoutMatrix[cell0, cell1] = 0;
+            itemsLayoutMatrix[cell0, cell1] = 0;
+
+            foreach(TileBehavior tile in FromMatrixToGame.GetFloorParent().GetComponentsInChildren<TileBehavior>()){
+                tile.SetCorrectSpritesAfterCrack();
+            }
 
             RefreshPjMovementMatrix();
             RefreshCloudsMovementMatrix();
-            //FromMatrixToGame.ReInstantiateItem(998);
-            //TODO: START CRYSTAL CRACK ANIMATION
+
+            TileBehavior crystalTile = Array.Find(FromMatrixToGame.GetFloorParent().GetComponentsInChildren<TileBehavior>(),
+                                                  x => x.GetTileCoordinates()[0] == cell0 && x.GetTileCoordinates()[1] == cell1);
+
+            crystalTile.gameObject.SetActive(false);
+            Destroy(crystalTile.gameObject);
+            
+            SFXManager.PlayCrystalFloorBreak();
+            VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalFloorBreak, FromMatrixIndexToWorld(cell0, cell1));
         }
     }
 
-    public void CrackCrystalCloud()
+    public void CrackCrystalCloud(int cell0, int cell1)
     {
-        int[] crystalCell = playerBehavior.pjCell;
-        if(mechanicsLayoutMatrix[crystalCell[0], crystalCell[1]] == 4)
+        int[] crystalCell = new int[]{cell0, cell1};
+        if(mechanicsLayoutMatrix[cell0, cell1] == 4 || mechanicsLayoutMatrix[cell0, cell1] == 3)
         {
-            int item = itemsLayoutMatrix[crystalCell[0], crystalCell[1]];
+            int item = itemsLayoutMatrix[cell0, cell1];
 
-            mechanicsLayoutMatrix[crystalCell[0], crystalCell[1]] = 0;
-            itemsLayoutMatrix[crystalCell[0], crystalCell[1]] = 0;
+            mechanicsLayoutMatrix[cell0, cell1] = 0;
+            itemsLayoutMatrix[cell0, cell1] = 0;
 
             RefreshPjMovementMatrix();
             RefreshCloudsMovementMatrix();
-            //TODO: START CRYSTAL CRACK ANIMATION
+            SFXManager.PlayCrystalCloudBreak();
+            VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalCloudBreak, FromMatrixIndexToWorld(cell0, cell1));
             //FromMatrixToGame.DeactivateItem(item);
 
-
             DivideSeparatedCloudsInMatrix(crystalCell, item);
+            PlayerBehavior.instance.UpdateItemUnderPj();
         }
     }
 
@@ -690,6 +698,9 @@ public void LoadLevelStateMatrixManager(int[,] _itemsLayoutMatrix, int[,] _mecha
 
 //MATRIX UTILITIES
 
+    public Vector3 FromMatrixIndexToWorld(Vector3 v) => FromMatrixIndexToWorld((int)v.x, (int)v.y);
+    public Vector3 FromMatrixIndexToWorld(Vector2 v) => FromMatrixIndexToWorld((int)v.x, (int)v.y);
+    public Vector3 FromMatrixIndexToWorld(float i, float j) => FromMatrixIndexToWorld((int)i, (int)j);
     public Vector3 FromMatrixIndexToWorld(int i, int j)
     {
         Vector3 worldPosition = new Vector3 (coordinatesOriginMatrix.x + j + (0.5f * tilemapsLevelLayout.GetGridCellSize()), coordinatesOriginMatrix.y - i + (0.5f * tilemapsLevelLayout.GetGridCellSize()), 0f);

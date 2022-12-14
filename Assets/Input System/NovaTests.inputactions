@@ -202,6 +202,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CtrlPress",
+                    "type": "Button",
+                    "id": "589a9d06-8ad7-456b-ad38-a94c50435713",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CtrlRelease",
+                    "type": "Button",
+                    "id": "12d06a69-f1e4-483b-8465-9d76ead31f8a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UnlockAllLevels",
+                    "type": "Button",
+                    "id": "bdf3bf89-90a6-4798-888a-51582a38fd4a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -587,6 +614,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "UndoRelease",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5480621e-7b60-4c96-80a5-64826e8d39db",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CtrlPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "952a81fd-c2aa-41f9-aa67-f4ccc091c32d",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CtrlRelease",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "def9edf7-921c-49ff-bd8a-deeba417a595",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UnlockAllLevels",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

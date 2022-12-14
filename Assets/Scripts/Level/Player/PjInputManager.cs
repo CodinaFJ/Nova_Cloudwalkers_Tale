@@ -7,31 +7,16 @@ using UnityEngine.EventSystems;
 
 public class PjInputManager : MonoBehaviour
 {
-    /*********************************************************************
-    PjInputManager.cs
-
-    Description:
-        Read keyboard for PJ movement (WASD and arrows).
-        Values from keyboard are translated into commands and stored in
-        command movements arrays (pjMovementsPress and pjMovementsHold)
-        Those commands execute movement coroutines which update the position
-        of the Player object.
-        Player states are defined and controlled for animations.
-
-    Check also:
-
-        PjAnimationManager.cs
-        PlayerBehavior.cs
-
-        MatrixManager.cs
-
-    **********************************************************************/
     [SerializeField] float PjMovementTime;
     [SerializeField] float sittingTime;
     [SerializeField] float sleepingTime;
     [SerializeField] int movementsMemory = 2;
     [SerializeField] float releaseMouseTolerance = 1f;
     [SerializeField] bool wallLevel = false;
+    [SerializeField][Range(0,0.5f)]
+    float timeStepOvershootCorrection = 0.1f;
+    [SerializeField][Range(0,0.2f)]
+    float arriveToFinalPositionBuffer = 0.01f;
     
     public static PjInputManager instance;
 
@@ -56,6 +41,10 @@ public class PjInputManager : MonoBehaviour
     PjAnimationManager pjAnimationManager;
 
     Vector3 onClickMouseWorldPos;
+    public Vector3 OnClickMouseWorldPos{
+        get => onClickMouseWorldPos;
+        set => onClickMouseWorldPos = value;
+    }
 
     private void Awake() 
     {
@@ -71,7 +60,7 @@ public class PjInputManager : MonoBehaviour
     void Start()
     {
         //Initialize all matrixes
-        matrixManager = FindObjectOfType<MatrixManager>();
+        matrixManager = MatrixManager.instance;
         itemsLayoutMatrix = matrixManager.GetItemsLayoutMatrix();
         mechanicsLayoutMatrix = matrixManager.GetMechanicsLayoutMatrix();
         pjMovementMatrix = matrixManager.GetPjMovementMatrix();
@@ -145,13 +134,11 @@ public class PjInputManager : MonoBehaviour
         UpdateMovementState(movementDone);
         
         //Variables for the position calculations
-        float finishTime = PjMovementTime;
         Vector3 pjInitialPosition = playerBehavior.gameObject.transform.position;
         Vector3 pjMovementDirection = new Vector3 (0, 0, 0);
 
         //If we are starting movement from a crystal it must break
-        matrixManager.CrackCrystalFloor();
-        matrixManager.CrackCrystalCloud();
+        StartCoroutine(WaitForCrystalBreak(playerBehavior.pjCell[0], playerBehavior.pjCell[1]));
 
         //Translate movement value to a direction vector 
         if(Mathf.Abs(movementDone)==1)
@@ -174,12 +161,15 @@ public class PjInputManager : MonoBehaviour
         Vector3 stepFinalPosition = pjInitialPosition + pjMovementDirection;
         float currentTime = 0;
 
-        while (!Vector3.Equals(playerBehavior.gameObject.transform.position, stepFinalPosition) && pjMoving)
-        {
+        while (Vector3.Magnitude(playerBehavior.gameObject.transform.position - stepFinalPosition) > arriveToFinalPositionBuffer && pjMoving){
             currentTime += Time.deltaTime;
-            playerBehavior.gameObject.transform.position = Vector3.Lerp(pjInitialPosition, stepFinalPosition, Mathf.Clamp(currentTime / PjMovementTime, 0f, 1f));
+            playerBehavior.gameObject.transform.position = Vector3.Lerp(pjInitialPosition, 
+                                                                        stepFinalPosition, 
+                                                                        Mathf.Clamp(currentTime / PjMovementTime + PjMovementTime* timeStepOvershootCorrection, 0f, 1f));
             yield return null;
         }
+
+        if(pjMovementsPress.Length == 0 && pjMoving) playerBehavior.gameObject.transform.position = stepFinalPosition;
 
         //If stepped on crystal, prepare it to break when leaving the tile
         matrixManager.CheckForCrystal();
@@ -189,9 +179,20 @@ public class PjInputManager : MonoBehaviour
         pjMoving = false;// Bool to control if coroutine is active
 
         if(pjMovementsPress.Length > 0 || pjMovementsHold.Length > 0)
-        {
             MovePlayer();
+    }
+
+    IEnumerator WaitForCrystalBreak(int cell0,int cell1)
+    {
+        float currentTime = 0f;
+        while(currentTime < PjMovementTime/2)
+        {
+            currentTime += Time.deltaTime;
+            if (!pjMoving) yield break;
+            yield return null;
         }
+        matrixManager.CrackCrystalFloor(cell0, cell1);
+        matrixManager.CrackCrystalCloud(cell0, cell1);
     }
 
     IEnumerator WaitForSittingPJ()
@@ -387,12 +388,13 @@ public class PjInputManager : MonoBehaviour
         pjIdle = false;  
     }
 
-    void OnFindPath()
-    {
+    void OnFindPath() => FindPath(GetMouseWorldPos());
+   
+    public void FindPath(Vector3 mouseWorldPos){
         //Initial mouse and cloud values needed for cloud movement algorythm
-        Vector3 mouseWorldPos = GetMouseWorldPos();
         Vector3 mouseCellCenter = new Vector3(Mathf.FloorToInt(mouseWorldPos.x), Mathf.FloorToInt(mouseWorldPos.y), 0f) + new Vector3(0.5f, 0.5f, 0f);
-        int[] onClickMatrixCoor = GetMouseMatrixIndex();
+        int[] onClickMatrixCoor = GetMouseMatrixIndex(mouseWorldPos);
+        //Debug.Log("On finger down walk cell:" + onClickMatrixCoor[0] + ", " + onClickMatrixCoor[1]);
         if(onClickMatrixCoor == null) return;
 
         if(matrixManager.InsideLevelMatrix(onClickMatrixCoor) && matrixManager.GetPjMovementMatrix()[onClickMatrixCoor[0], onClickMatrixCoor[1]])
@@ -409,7 +411,8 @@ public class PjInputManager : MonoBehaviour
             {
                 pjMovementsPress = (int[])pjMovementsArray.Clone();
                 if(!LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
-            } 
+            }
+            else SFXManager.PlayWrong();
 
             pjAnimationManager.PjClickAnimation(mouseCellCenter);
 
@@ -430,12 +433,12 @@ public class PjInputManager : MonoBehaviour
         return worldPoint;
     }
 
-    int[] GetMouseMatrixIndex()
+    int[] GetMouseMatrixIndex(Vector3 mousePosition)
     {
         int[] mouseMatrixIndex = new int[2];
 
         //Truncate position and add (0.5, 0.5, 0) to match cell center
-        Vector3 mouseWorldPosTruncated = new Vector3(Mathf.FloorToInt(GetMouseWorldPos().x), Mathf.FloorToInt(GetMouseWorldPos().y), 0f);
+        Vector3 mouseWorldPosTruncated = new Vector3(Mathf.FloorToInt(mousePosition.x), Mathf.FloorToInt(mousePosition.y), 0f);
 
         mouseMatrixIndex = matrixManager.FromWorldToMatrixIndex(mouseWorldPosTruncated + new Vector3(0.5f, 0.5f, 0f));
         if(mouseMatrixIndex == null) Debug.LogWarning("PjInputManager: Out of matrix");
@@ -443,17 +446,15 @@ public class PjInputManager : MonoBehaviour
         return mouseMatrixIndex;
     }
 
-    public void OnPause()
-    {
-        FindObjectOfType<LevelUIController>().exitButton();
-    }
+    
 
     public void OnReleaseLeftClick()
     {
-        if(Vector3.Magnitude(GetMouseWorldPos() - onClickMouseWorldPos) > releaseMouseTolerance && !LevelInfo.instance.wallLevel) return;
+        if(Vector3.Magnitude(GetMouseWorldPos() - onClickMouseWorldPos) > releaseMouseTolerance && !GameProgressManager.instance.GetActiveLevel().GetWallLevel()) return;
 
         if(!playerBehavior.clickIsForCloud)
-        OnFindPath();
+        //OnFindPath();
+        FindPath(GetMouseWorldPos());
     }
 
     public void OnLeftClick()

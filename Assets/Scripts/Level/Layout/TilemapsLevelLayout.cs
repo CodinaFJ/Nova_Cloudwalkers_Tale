@@ -26,24 +26,8 @@ public class TilemapsLevelLayout : MonoBehaviour
         if(instance == null) instance = this;
     }
 
-    void Update()
-    {
-        
-    }
-
-    public void FillCloudTilemaps()
-    {
-        cloudsTilemaps = cloudsGrid.GetComponentsInChildren<Tilemap>();
-    }
-
-    public int GetNumberOfClouds()
-    {
-        return cloudsTilemaps.Length;
-    }
-
-    public float GetGridCellSize()
-    {
-        return cloudsGrid.cellSize.x;
-    }
+    public void FillCloudTilemaps() => cloudsTilemaps = cloudsGrid.GetComponentsInChildren<Tilemap>();
+    public int GetNumberOfClouds() => cloudsTilemaps.Length;
+    public float GetGridCellSize() => cloudsGrid.cellSize.x;
 
 }

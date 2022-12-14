@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,29 +15,16 @@ public class MapLineScript : MonoBehaviour
     void Start()
     {
         myImage = GetComponent<Image>();
-
-        if(initialLevel2)
-        {
-            if(GameState.instance.totalCollectedStars >= 14)
-            {
-                myImage.sprite = filledLine;
-            }
-        }
-        else if(worldNumber == 1)
-        {
-            if(GameState.instance.completedLevelsWorld1[levelNumber - 1])
-            {
-                myImage.sprite = filledLine;
-            }
-        }
-        else if(worldNumber == 2)
-        {
-            if(GameState.instance.completedLevelsWorld2[levelNumber - 1])
-            {
-                myImage.sprite = filledLine;
-            }
-        }
-        
+        Level level;
+        try{
+            level = GameProgressManager.instance.GetLevel(worldNumber, levelNumber);
+            if(initialLevel2 && GameProgressManager.instance.GetCollectedStarsInGame() >= 14) myImage.sprite = filledLine;
+            else if(GameProgressManager.instance.GetLevel(worldNumber, levelNumber).GetLevelCompleted()) myImage.sprite = filledLine; 
+        }catch{
+            Debug.LogWarning("Error importing level on line for level: " + worldNumber + ", " + levelNumber);
+            return;
+        }   
     }
 
 }
+

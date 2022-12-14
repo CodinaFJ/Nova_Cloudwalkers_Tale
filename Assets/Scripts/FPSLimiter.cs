@@ -8,7 +8,9 @@ public class FPSLimiter : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
         Application.targetFrameRate = 60;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 
     // Update is called once per frame

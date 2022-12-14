@@ -2,18 +2,6 @@ using UnityEngine;
 
 public class PlayerHand : MonoBehaviour
 {
-    /*********************************************************************
-    PlayerHand.cs
-
-    Description:
-        Controls the animations of the hand of the player. 
-
-    Check also:
-
-        PlayerBehavior.cs
-
-    **********************************************************************/
-
     public static PlayerHand instance;
     Animator myAnimator;
 

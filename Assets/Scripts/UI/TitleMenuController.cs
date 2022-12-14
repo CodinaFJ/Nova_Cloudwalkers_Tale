@@ -10,60 +10,39 @@ public class TitleMenuController : MonoBehaviour
     [SerializeField] GameObject optionCanvas;
     [SerializeField] GameObject optionsMenu;
     [SerializeField] GameObject quitMenu;
-    [SerializeField] GameObject mainMenuNewGame;
-    [SerializeField] GameObject mainMenuContinue;
+    [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject credits;
     LevelLoader levelLoader;
-
-    GameObject mainMenu;
-
 
     void Start()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
         quitMenu.SetActive(false);
-
-        string path = Path.Combine(Application.persistentDataPath, "game.bin");
-        if (!File.Exists(path))
-        {
-            mainMenuNewGame.SetActive(true);
-            mainMenuContinue.SetActive(false);
-
-            mainMenu = mainMenuNewGame;
-        } 
-        else
-        {
-            mainMenuNewGame.SetActive(false);
-            mainMenuContinue.SetActive(true);
-
-            mainMenu = mainMenuContinue;
-        }
-
-        foreach ( Sound sound in AudioManager.instance.musics)
+        mainMenu.SetActive(true);
+        foreach (Sound sound in AudioManager.instance.musics)
         {
             if(AudioManager.instance.IsPlaying(sound.name))StartCoroutine(AudioManager.instance.FadeOutMusic(sound.name));
         }
-
-        if(!AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
+        if (!AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
+        MouseMatrixScript.ReleasePointer();
     }
 
-
-    public void StartButton()
+    public void StartNewGame()
     {
-        if(GameState.instance != null)Destroy(GameState.instance);
-        //StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));
+        if(GameProgressManager.instance != null) Destroy(GameProgressManager.instance.gameObject);
+        MouseMatrixScript.BlockPointer();
         levelLoader.LoadLevel("Cinematic1");
     }
 
-    public void ContinueButton()
+    public void PlayButton()
     {
-        GameState.instance.LoadGameState();
+        if (!(File.Exists(SaveSystem.FilePath)))
+        {
+            StartNewGame();
+            return ;
+        }
+        GameProgressManager.instance.LoadGameState();
         ToMap();
-    }
-
-    public void ControlsButton()
-    {
-        levelLoader.LoadLevel("ControlsMenu");
     }
 
     public void QuitButton()
@@ -73,14 +52,16 @@ public class TitleMenuController : MonoBehaviour
 
     public void ToMap()
     {
-        levelLoader.LoadLevel("LevelSelectorMenu");
+        MouseMatrixScript.BlockPointer();
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
         if(FindObjectOfType<MusicSelectionManager>() != null) FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
 
     public void ToOptions()
     {
         optionCanvas.SetActive(true);
-        optionsMenu.SetActive(true);
+        optionCanvas.GetComponent<OptionsMenuController>().ToPauseMenu();
+        SFXManager.PlayOpenMenu();
         gameObject.SetActive(false);
     }
 

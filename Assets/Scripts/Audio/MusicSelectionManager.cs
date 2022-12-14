@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class MusicSelectionManager : MonoBehaviour
 {
-    [SerializeField] string music;
-    [SerializeField] string ambient;
+    string music;
+    string ambient;
 
     void Start()
     {
+
+        music = "World" + GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber();
+        ambient = "Ambient" + GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber();
+
+        if(GameProgressManager.instance.GetActiveLevel().GetWallLevel()) music = "WallLevel";
+        
         foreach ( Sound sound in AudioManager.instance.musics)
         {
             if(sound.name != music)
