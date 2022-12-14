@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class OptionsMenuController : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class OptionsMenuController : MonoBehaviour
 
     void Start()
     {
-        OptionsBackground.SetActive(true);
+        OptionsBackground.SetActive(false);
         gameManager = FindObjectOfType<GameManager>();
         levelLoader = FindObjectOfType<LevelLoader>();
         pauseMenuInput = GetComponent<PlayerInput>();
@@ -127,7 +128,7 @@ public class OptionsMenuController : MonoBehaviour
     public void ToMainMenu()
     {
         MouseMatrixScript.BlockPointer();
-        levelLoader.LoadLevel("StartMenu_IDD");
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains("StartMenu"));
         SFXManager.PlaySelectUI_B();
     }
 
@@ -193,6 +194,12 @@ public class OptionsMenuController : MonoBehaviour
     {
         ToGame();
         GameManager.instance.OnRestart();
+    }
+
+    public void OnClearProgress()
+    {
+        Destroy(GameProgressManager.instance?.gameObject);
+        SceneManager.LoadScene(LevelLoader.GetLevelContains("LevelSelector"));
     }
 
     public void LoadOptionsSection(OptionsSectionTag optionsSectionTag){

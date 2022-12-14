@@ -11,13 +11,28 @@ public class ModifyAlphas : MonoBehaviour
     TextMeshProUGUI[] texts;
     [SerializeField]
     private float alphas = 1;
-    public float Alphas { get=>alphas;}
+    public float Alphas { 
+        get => alphas; 
+        set
+        {
+            if (value == 0 || value == 1)
+                alphas = value;
+            else
+                Debug.LogWarning(("ModifyAlphas: Wrong alphas"));
+        }
+    }
+    [SerializeField]
+    int worldNumber;
 
     void Start()
     {
         images = GetComponentsInChildren<Image>();
         texts = GetComponentsInChildren<TextMeshProUGUI>();
         buttons = GetComponentsInChildren<Button>();
+        if (worldNumber == GameProgressManager.instance.WorldSelection)
+            alphas = 1;
+        else
+            alphas = 0;
     }
 
     // Update is called once per frame

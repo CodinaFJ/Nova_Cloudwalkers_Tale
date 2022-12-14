@@ -28,6 +28,9 @@ public class GameProgressManager : MonoBehaviour
 
     private bool endReached = false;
     private bool allStarsCollected = false;
+
+    public int worldSelection = 0;
+    public int WorldSelection { get=>worldSelection; set=> worldSelection = value;}
     
     private void Awake() {
         int numInstances = FindObjectsOfType<GameProgressManager>().Length;
