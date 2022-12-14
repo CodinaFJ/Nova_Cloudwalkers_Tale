@@ -61,15 +61,21 @@ public class UIController : MonoBehaviour
     }
 
     public void EnableLevelsUI(){
-        Debug.Log("Levels UI");
         worldsUIGO.GetComponent<Animator>().Play("UI_inactive");
         levelsUIGO.GetComponent<Animator>().Play("UI_active");
     }
 
     public void EnableWorldsUI(){
-        Debug.Log("Log");
         worldsUIGO.GetComponent<Animator>().Play("UI_active");
         levelsUIGO.GetComponent<Animator>().Play("UI_inactive");
+    }
+
+    public void DisableUI(){
+        worldsUIGO.GetComponent<Animator>().Play("UI_inactive");
+    }
+
+    public void EnableUI(){
+        worldsUIGO.GetComponent<Animator>().Play("UI_active");
     }
 
 }

@@ -34,7 +34,7 @@ public class OptionsMenuController : MonoBehaviour
 
     void Start()
     {
-        OptionsBackground.SetActive(false);
+        OptionsBackground.SetActive(true);
         gameManager = FindObjectOfType<GameManager>();
         levelLoader = FindObjectOfType<LevelLoader>();
         pauseMenuInput = GetComponent<PlayerInput>();
@@ -72,8 +72,8 @@ public class OptionsMenuController : MonoBehaviour
         pauseMenuToGo = OptionsSectionTag.PauseLevel;
     } 
     public void ToPauseMap(){
-        /*levelUI = FindObjectOfType<LevelUIController>().gameObject;
-        if (levelUI) levelUI.SetActive(false);*/
+        levelUI = FindObjectOfType<UIController>().gameObject;
+        if (levelUI) levelUI.GetComponent<UIController>().DisableUI();
         LoadOptionsSection(OptionsSectionTag.PauseMap);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
@@ -113,7 +113,13 @@ public class OptionsMenuController : MonoBehaviour
         pauseMenuInput.enabled = false;
         pauseMenuInput.DeactivateInput();
         
-        if (levelUI) levelUI.SetActive(true);
+        if (levelUI)
+        {
+            levelUI.SetActive(true);
+            try{
+                levelUI.GetComponent<UIController>().EnableUI();
+            } catch{}
+        } 
         if(gameManager != null) gameManager.ResumeGame();
         SFXManager.PlayCloseMenu();
     }
@@ -122,6 +128,7 @@ public class OptionsMenuController : MonoBehaviour
     {
         SFXManager.PlaySelectUI_B();
         MouseMatrixScript.BlockPointer();
+        GameProgressManager.instance.WorldSelection = GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber();
         if(gameManager != null) gameManager.ToMap();
     }
 
