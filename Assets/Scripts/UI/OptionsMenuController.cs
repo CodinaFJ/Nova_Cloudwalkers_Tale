@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class OptionsMenuController : MonoBehaviour
 {
@@ -71,8 +72,8 @@ public class OptionsMenuController : MonoBehaviour
         pauseMenuToGo = OptionsSectionTag.PauseLevel;
     } 
     public void ToPauseMap(){
-        /*levelUI = FindObjectOfType<LevelUIController>().gameObject;
-        if (levelUI) levelUI.SetActive(false);*/
+        levelUI = FindObjectOfType<UIController>().gameObject;
+        if (levelUI) levelUI.GetComponent<UIController>().DisableUI();
         LoadOptionsSection(OptionsSectionTag.PauseMap);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
@@ -112,7 +113,13 @@ public class OptionsMenuController : MonoBehaviour
         pauseMenuInput.enabled = false;
         pauseMenuInput.DeactivateInput();
         
-        if (levelUI) levelUI.SetActive(true);
+        if (levelUI)
+        {
+            levelUI.SetActive(true);
+            try{
+                levelUI.GetComponent<UIController>().EnableUI();
+            } catch{}
+        } 
         if(gameManager != null) gameManager.ResumeGame();
         SFXManager.PlayCloseMenu();
     }
@@ -127,7 +134,8 @@ public class OptionsMenuController : MonoBehaviour
     public void ToMainMenu()
     {
         MouseMatrixScript.BlockPointer();
-        levelLoader.LoadLevel("StartMenu_IDD");
+        GameProgressManager.instance.SaveGameState();
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains("StartMenu"));
         SFXManager.PlaySelectUI_B();
     }
 
@@ -193,6 +201,12 @@ public class OptionsMenuController : MonoBehaviour
     {
         ToGame();
         GameManager.instance.OnRestart();
+    }
+
+    public void OnClearProgress()
+    {
+        Destroy(GameProgressManager.instance?.gameObject);
+        SceneManager.LoadScene(LevelLoader.GetLevelContains("LevelSelector"));
     }
 
     public void LoadOptionsSection(OptionsSectionTag optionsSectionTag){
