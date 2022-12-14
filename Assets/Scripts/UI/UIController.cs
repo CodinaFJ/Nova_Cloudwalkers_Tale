@@ -60,22 +60,4 @@ public class UIController : MonoBehaviour
         levelsUIGO.GetComponent<Animator>().Play("UI_fadeIn");
     }
 
-    public void EnableLevelsUI(){
-        worldsUIGO.GetComponent<Animator>().Play("UI_inactive");
-        levelsUIGO.GetComponent<Animator>().Play("UI_active");
-    }
-
-    public void EnableWorldsUI(){
-        worldsUIGO.GetComponent<Animator>().Play("UI_active");
-        levelsUIGO.GetComponent<Animator>().Play("UI_inactive");
-    }
-
-    public void DisableUI(){
-        worldsUIGO.GetComponent<Animator>().Play("UI_inactive");
-    }
-
-    public void EnableUI(){
-        worldsUIGO.GetComponent<Animator>().Play("UI_active");
-    }
-
 }

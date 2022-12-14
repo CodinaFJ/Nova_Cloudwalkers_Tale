@@ -80,7 +80,6 @@ public class VideoScript : MonoBehaviour
     public void CheckOver(VideoPlayer vp)
     {
         print("Video Is Over");
-        if (GameProgressManager.instance) GameProgressManager.instance.WorldSelection = 0;
         MouseMatrixScript.BlockPointer();
 
         GameProgressManager.instance.SetPlayedCinematic(worldUnlocked);

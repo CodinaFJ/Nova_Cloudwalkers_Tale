@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1724479985401790304}
   - component: {fileID: 2342218029722234401}
   - component: {fileID: 1422416886808527479}
-  - component: {fileID: 4290339114198884551}
+  - component: {fileID: 7332492557668564830}
   m_Layer: 5
   m_Name: Level UI
   m_TagString: Untagged
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4290339114198884551
+--- !u!114 &7332492557668564830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,12 +112,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2801352136507301160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f165a11e4535b3f4b97b09e4d93e2b79, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f5b8e2d7d063624b8e5698621bbf75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OptionCanvas: {fileID: 0}
-  levelsUIGO: {fileID: 0}
-  worldsUIGO: {fileID: 0}
 --- !u!1 &3346032906812388117
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,8 +237,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4290339114198884551}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+      - m_Target: {fileID: 7332492557668564830}
+        m_TargetAssemblyTypeName: LevelUIController, Assembly-CSharp
         m_MethodName: undoButton
         m_Mode: 1
         m_Arguments:
@@ -384,8 +382,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4290339114198884551}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+      - m_Target: {fileID: 7332492557668564830}
+        m_TargetAssemblyTypeName: LevelUIController, Assembly-CSharp
         m_MethodName: restartButton
         m_Mode: 1
         m_Arguments:
@@ -529,8 +527,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4290339114198884551}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+      - m_Target: {fileID: 7332492557668564830}
+        m_TargetAssemblyTypeName: LevelUIController, Assembly-CSharp
         m_MethodName: ToOptionsLevel
         m_Mode: 1
         m_Arguments:

@@ -2880,7 +2880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4560200595598332595
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7177,13 +7177,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5004256901317995909, guid: d6f384327a71da3449b2c422c976a525, type: 3}
       propertyPath: m_text
-      value: 'Clear Progress
-
-'
+      value: Select Level
       objectReference: {fileID: 0}
     - target: {fileID: 5457403105590505564, guid: d6f384327a71da3449b2c422c976a525, type: 3}
       propertyPath: m_Name
-      value: ClearProgress
+      value: ResetProgress
       objectReference: {fileID: 0}
     - target: {fileID: 5684167192511587556, guid: d6f384327a71da3449b2c422c976a525, type: 3}
       propertyPath: m_Pivot.x
@@ -7295,7 +7293,7 @@ PrefabInstance:
       objectReference: {fileID: 8333424986176356319}
     - target: {fileID: 7140058923247507402, guid: d6f384327a71da3449b2c422c976a525, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClearProgress
+      value: ToMap
       objectReference: {fileID: 0}
     - target: {fileID: 8039052295854962683, guid: d6f384327a71da3449b2c422c976a525, type: 3}
       propertyPath: m_Sprite
