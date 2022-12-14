@@ -9,8 +9,6 @@ public class WorldsSelectorController : MonoBehaviour
     GameObject worldsSelector;
     [SerializeField]
     List<GameObject> worldLevelsSelector;
-    [SerializeField]
-    GameObject worldsBg;
 
     GameObject activeWorld;
     Animator WorldsAnimator;
@@ -22,11 +20,7 @@ public class WorldsSelectorController : MonoBehaviour
 
     void Start()
     {
-        WorldsAnimator = worldsSelector.GetComponent<Animator>();
-        if (GameProgressManager.instance.WorldSelection == 0)
-            StartOnClosedWorlds();
-        else
-            StartOnOpenedWorld(GameProgressManager.instance.WorldSelection);
+        WorldsAnimator = worldsSelector.GetComponent<Animator>();  
     }
 
     public void OnOpenWorld(int nbr)
@@ -39,35 +33,12 @@ public class WorldsSelectorController : MonoBehaviour
         BackgroundAnimationController.instance.ZoomIn();
     }
 
-    public void OnCloseWorld()
+    public void BackToWorlds()
     {
         ChangeAnimationStateLevels("UI_exitLevels", activeWorld.GetComponent<Animator>());
         ChangeAnimationStateWorlds("UI_returnWorlds");
         UIController.instance.ToWorlds();
         BackgroundAnimationController.instance.ZoomOut();
-    }
-
-    public void StartOnOpenedWorld(int nbr){
-        foreach (GameObject openedWorld in worldLevelsSelector)
-        {
-           ChangeAnimationStateLevels("UI_levelsInactive", openedWorld.GetComponent<Animator>());
-        }
-        activeWorld = worldLevelsSelector[nbr - 1];
-        activeWorld.SetActive(true);
-        ChangeAnimationStateLevels("UI_levelsActive", activeWorld.GetComponent<Animator>());
-        ChangeAnimationStateWorlds("UI_selectWorld_inactive");
-        UIController.instance.EnableLevelsUI();
-        //BackgroundAnimationController.instance.ZoomIn();
-    }
-
-      public void StartOnClosedWorlds(){
-        foreach (GameObject openedWorld in worldLevelsSelector)
-        {
-           ChangeAnimationStateLevels("UI_levelsInactive", openedWorld.GetComponent<Animator>());
-        }
-        ChangeAnimationStateWorlds("UI_selectWorld_active");
-        UIController.instance.EnableWorldsUI();
-        //BackgroundAnimationController.instance.ZoomOut();
     }
 
     public void ChangeAnimationStateWorlds(string newState)
