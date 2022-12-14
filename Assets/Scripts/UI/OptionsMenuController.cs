@@ -128,13 +128,13 @@ public class OptionsMenuController : MonoBehaviour
     {
         SFXManager.PlaySelectUI_B();
         MouseMatrixScript.BlockPointer();
-        GameProgressManager.instance.WorldSelection = GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber();
         if(gameManager != null) gameManager.ToMap();
     }
 
     public void ToMainMenu()
     {
         MouseMatrixScript.BlockPointer();
+        GameProgressManager.instance.SaveGameState();
         levelLoader.LoadLevel(LevelLoader.GetLevelContains("StartMenu"));
         SFXManager.PlaySelectUI_B();
     }
