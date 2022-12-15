@@ -68,6 +68,18 @@ TextureImporter:
   - first:
       213: 2075039668836056525
     second: Nova_UI Mapa Mural hoover
+  - first:
+      213: -5500343927037216125
+    second: Nova_UI Mapa Sprite Sheet_7
+  - first:
+      213: 2369003129541517404
+    second: Nova_UI Mapa Sprite Sheet_8
+  - first:
+      213: -3754599820190719128
+    second: Nova_UI Mapa Sprite Sheet_9
+  - first:
+      213: -3056535003490205817
+    second: Nova_UI Mapa Sprite Sheet_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -182,9 +194,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3087
-        y: 3706
+        y: 3709
         width: 302
-        height: 391
+        height: 388
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,9 +215,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3396
-        y: 3706
+        y: 3709
         width: 302
-        height: 391
+        height: 388
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +571,10 @@ TextureImporter:
       name: Nova_UI Mapa Candado desbloq
       rect:
         serializedVersion: 2
-        x: 2709
-        y: 3706
-        width: 386
-        height: 391
+        x: 2721
+        y: 3709
+        width: 364
+        height: 388
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,6 +626,90 @@ TextureImporter:
       bones: []
       spriteID: dcd31d3b5950ccc10800000000000000
       internalID: 2075039668836056525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 3709
+        width: 364
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a3876275adaa3b0800000000000000
+      internalID: -5500343927037216125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 3709
+        width: 364
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c506c187bc360e020800000000000000
+      internalID: 2369003129541517404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 3233
+        width: 364
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86369c33b5bf4ebc0800000000000000
+      internalID: -3754599820190719128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 3233
+        width: 364
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f3b69cb910595d0800000000000000
+      internalID: -3056535003490205817
       vertices: []
       indices: 
       edges: []
