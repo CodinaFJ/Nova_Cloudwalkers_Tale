@@ -23,7 +23,7 @@ public class WorldUnlockStarCount : MonoBehaviour
 
         string starCollectedNumberText;
 
-        starCollectedNumberText = GameProgressManager.instance.GetCollectedStarsInGame().ToString();/*(Mathf.Clamp(14 - GameState.instance.totalCollectedStars, 0, 14)).ToString();*/
+        starCollectedNumberText = GameProgressManager.instance.GetCollectedStarsInGame().ToString();
 
         countText.text = starCollectedNumberText + "/" + starsToOpen;
 
