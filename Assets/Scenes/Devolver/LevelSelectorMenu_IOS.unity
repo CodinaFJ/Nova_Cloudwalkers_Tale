@@ -2338,6 +2338,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorldLock 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6105597761155495851, guid: 8a68a87e8c666ab448d3ea3735163dbf, type: 3}
+      propertyPath: starsToOpen
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105597761155495851, guid: 8a68a87e8c666ab448d3ea3735163dbf, type: 3}
+      propertyPath: levelToUnlock
+      value: 
+      objectReference: {fileID: 1613884966}
+    - target: {fileID: 6105597761155495851, guid: 8a68a87e8c666ab448d3ea3735163dbf, type: 3}
+      propertyPath: worldToUnlock
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a68a87e8c666ab448d3ea3735163dbf, type: 3}
 --- !u!224 &454130888 stripped
@@ -5540,7 +5552,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18003c1097830140838090e8aa982e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldsSelector: {fileID: 1378694822}
+  worldsSelectorAnimator: {fileID: 1378694824}
+  worldsButtons:
+  - {fileID: 5344908}
+  - {fileID: 1692801154}
+  - {fileID: 1866221539}
+  - {fileID: 779837980}
   worldLevelsSelector:
   - {fileID: 168118030}
   - {fileID: 316686062}
@@ -8725,6 +8742,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorldLock 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5627487880029143435, guid: 8a68a87e8c666ab448d3ea3735163dbf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105597761155495851, guid: 8a68a87e8c666ab448d3ea3735163dbf, type: 3}
+      propertyPath: levelToUnlock
+      value: 
+      objectReference: {fileID: 1701390836}
     m_RemovedComponents:
     - {fileID: 6235459143846885559, guid: 8a68a87e8c666ab448d3ea3735163dbf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8a68a87e8c666ab448d3ea3735163dbf, type: 3}
@@ -9290,6 +9315,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7f64409f2676854d879224842f4eaa3, type: 3}
+--- !u!114 &1613884966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138862943481719140, guid: dd7a8dc0f0378eb479702ac436a956a7, type: 3}
+  m_PrefabInstance: {fileID: 1038153206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3f1f151aebd344583eb69783bb5b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1619176162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10014,7 +10050,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1692801158}
   m_OnClick:
     m_PersistentCalls:
@@ -10085,6 +10121,17 @@ MonoBehaviour:
   color_g: 0
   color_b: 0
   color_a: 0
+--- !u!114 &1701390836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138862943481719140, guid: dd7a8dc0f0378eb479702ac436a956a7, type: 3}
+  m_PrefabInstance: {fileID: 692340662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3f1f151aebd344583eb69783bb5b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1840131307
 GameObject:
   m_ObjectHideFlags: 0
@@ -10227,7 +10274,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1866221543}
   m_OnClick:
     m_PersistentCalls:
@@ -12047,6 +12094,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
+      propertyPath: unlockedWorlds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
+      propertyPath: unlockedWorlds.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
+      propertyPath: unlockedWorlds.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
       propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[1].unlockedLevel
       value: 1
       objectReference: {fileID: 0}
@@ -12073,6 +12132,10 @@ PrefabInstance:
     - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
       propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[8].unlockedLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
+      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[1].collectedStars
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}

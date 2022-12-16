@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WorldsSelectorController : MonoBehaviour
 {
-    WorldsSelectorController instance;
+    public static WorldsSelectorController instance;
     [SerializeField]
-    GameObject worldsSelector;
+    Animator worldsSelectorAnimator;
+    [SerializeField]
+    List<GameObject> worldsButtons;
     [SerializeField]
     List<GameObject> worldLevelsSelector;
     [SerializeField]
     GameObject worldsBg;
 
     GameObject activeWorld;
-    Animator WorldsAnimator;
     private string currentState;
 
     private void Awake() {
@@ -22,7 +24,6 @@ public class WorldsSelectorController : MonoBehaviour
 
     void Start()
     {
-        WorldsAnimator = worldsSelector.GetComponent<Animator>();
         if (GameProgressManager.instance.WorldSelection == 0)
             StartOnClosedWorlds();
         else
@@ -70,13 +71,21 @@ public class WorldsSelectorController : MonoBehaviour
         //BackgroundAnimationController.instance.ZoomOut();
     }
 
+    public void UnlockWorld(int nbr)
+    {
+        //ChangeAnimationStateLevels("UI_exitLevels", activeWorld.GetComponent<Animator>());
+        StartCoroutine(UnlockWorldAfterAnimation("UI_returnUnlock_" + nbr, nbr));
+        UIController.instance.ToWorlds();
+    }
+
     public void ChangeAnimationStateWorlds(string newState)
     {
         //stop the same animation from interrupting itself
         if(currentState == newState) return;
 
+        Debug.Log(("Animation: " + newState));
         //play the animation
-        WorldsAnimator.Play(newState);
+        worldsSelectorAnimator.Play(newState);
         //myAnimator.GetNextAnimatorStateInfo(0).
 
         //reassign the current state
@@ -86,5 +95,24 @@ public class WorldsSelectorController : MonoBehaviour
     public void ChangeAnimationStateLevels(string newState, Animator myAnimator)
     {
         myAnimator.Play(newState);
+    }
+
+    private IEnumerator UnlockWorldAfterAnimation(string newState, int nbr)
+    {
+        Debug.Log("PlayAnimationNext: " + newState);
+        while (true){
+            if (worldsSelectorAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !worldsSelectorAnimator.IsInTransition(0)) break;
+            yield return null;
+        }
+        foreach (GameObject openedWorld in worldLevelsSelector)
+        {
+           ChangeAnimationStateLevels("UI_levelsInactive", openedWorld.GetComponent<Animator>());
+        }
+        ChangeAnimationStateWorlds(newState);
+        while (true){
+            if (worldsSelectorAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !worldsSelectorAnimator.IsInTransition(0)) break;
+            yield return null;
+        }
+        worldsButtons[nbr - 1].GetComponent<Button>().interactable = true;
     }
 }

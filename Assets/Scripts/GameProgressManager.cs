@@ -23,6 +23,8 @@ public class GameProgressManager : MonoBehaviour
 
     [SerializeField]
     private List<bool> playedCinematics;
+    [SerializeField]
+    private List<bool> unlockedWorlds;
 
     private int totalStarsInGame = 0;
 
@@ -158,5 +160,12 @@ public class GameProgressManager : MonoBehaviour
         CalculateCollectedStarsInGame();
     }
 
+    public bool CheckUnlockedWorld(int n){
+        return unlockedWorlds[n - 1];
+    }
 
+    public void UnlockWorld(int n){
+        unlockedWorlds[n - 1] = true;
+        WorldsSelectorController.instance.UnlockWorld(n);
+    }
 }
