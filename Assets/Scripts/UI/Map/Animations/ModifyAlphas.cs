@@ -22,17 +22,13 @@ public class ModifyAlphas : MonoBehaviour
         }
     }
     [SerializeField]
-    int worldNumber;
+    bool onlyImages = false;
 
     void Start()
     {
         images = GetComponentsInChildren<Image>();
         texts = GetComponentsInChildren<TextMeshProUGUI>();
         buttons = GetComponentsInChildren<Button>();
-        if (worldNumber == GameProgressManager.instance.WorldSelection)
-            alphas = 1;
-        else
-            alphas = 0;
     }
 
     // Update is called once per frame

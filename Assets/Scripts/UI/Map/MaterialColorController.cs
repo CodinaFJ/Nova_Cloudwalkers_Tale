@@ -24,6 +24,6 @@ public class MaterialColorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myMaterial.SetColor("_Color", new Color(color_r, color_g, color_b, color_a));
+        myMaterial.SetColor("Color_e7fe3bb708f846cd94141b3c465d79cc", new Color(color_r, color_g, color_b, color_a));
     }
 }
