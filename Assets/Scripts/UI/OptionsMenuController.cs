@@ -121,6 +121,7 @@ public class OptionsMenuController : MonoBehaviour
     {
         SFXManager.PlaySelectUI_B();
         MouseMatrixScript.BlockPointer();
+        GameProgressManager.instance.SetCollectedStarsInLevel(0);
         if(gameManager != null) gameManager.ToMap();
     }
 
