@@ -86,7 +86,6 @@ public class WorldsSelectorController : MonoBehaviour
         Debug.Log(("Animation: " + newState));
         //play the animation
         worldsSelectorAnimator.Play(newState);
-        //myAnimator.GetNextAnimatorStateInfo(0).
 
         //reassign the current state
         currentState = newState;
@@ -113,6 +112,24 @@ public class WorldsSelectorController : MonoBehaviour
             if (worldsSelectorAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !worldsSelectorAnimator.IsInTransition(0)) break;
             yield return null;
         }
+        yield return null;
+        while (true){
+            if (worldsSelectorAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !worldsSelectorAnimator.IsInTransition(0)) break;
+            yield return null;
+        }
         worldsButtons[nbr - 1].GetComponent<Button>().interactable = true;
+        worldsSelectorAnimator.enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        worldsSelectorAnimator.enabled = true;
+        //worldsSelectorAnimator.controller
+    }
+
+    private IEnumerator DisableAfterPlay(Animator animator)
+    {
+        while (true){
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !worldsSelectorAnimator.IsInTransition(0)) break;
+            yield return null;
+        }
+        worldsSelectorAnimator.enabled = false;
     }
 }
