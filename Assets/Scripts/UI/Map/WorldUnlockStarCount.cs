@@ -17,13 +17,13 @@ public class WorldUnlockStarCount : MonoBehaviour
         if (GameProgressManager.instance.CheckUnlockedWorld(worldToUnlock))
         {
             Debug.Log("World is unlocked");
-            GetComponentInParent<ModifyAlphas>().gameObject.GetComponent<Button>().interactable = true;
+            GetComponentInParent<Button>().interactable = true;
             gameObject.SetActive(false);
             return ;
         }
         else
         {
-            GetComponentInParent<ModifyAlphas>().gameObject.GetComponent<Button>().interactable = false;
+            GetComponentInParent<Button>().interactable = false;
         }
 
         string starCollectedNumberText;
@@ -41,13 +41,13 @@ public class WorldUnlockStarCount : MonoBehaviour
         if (GameProgressManager.instance.CheckUnlockedWorld(worldToUnlock))
         {
             Debug.Log("World is unlocked");
-            GetComponentInParent<ModifyAlphas>().gameObject.GetComponent<Button>().interactable = true;
-            gameObject.SetActive(false);
+            GetComponentInParent<Button>().interactable = true;
+            //gameObject.SetActive(false);
             return ;
         }
         else
         {
-            GetComponentInParent<ModifyAlphas>().gameObject.GetComponent<Button>().interactable = false;
+            GetComponentInParent<Button>().interactable = false;
         }
     }
     

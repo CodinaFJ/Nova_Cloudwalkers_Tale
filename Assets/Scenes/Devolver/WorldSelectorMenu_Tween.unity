@@ -351,8 +351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0220a822d4982244cb03267081d98add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutTime: 0.5
-  moveCenterTime: 0.75
+  fadeOutTime: 1
+  moveCenterTime: 0.7
+  scaleUpTime: 1
 --- !u!1 &1066839650
 GameObject:
   m_ObjectHideFlags: 0
