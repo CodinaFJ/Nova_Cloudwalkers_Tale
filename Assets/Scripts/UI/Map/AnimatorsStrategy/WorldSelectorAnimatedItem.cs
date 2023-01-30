@@ -14,33 +14,6 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     AnimatedItemType animatedItemType;
 
     /**************************************************************************************************
-    Animations //!ALL THESE MIGHT BE DEPRECATED
-    **************************************************************************************************/
-
-    private void Show()
-    {
-        Debug.Log("Show world from wherever it was");
-    }
-    private void Hide(int world)
-    {
-        Debug.Log("Hide world, this should change depending on the world given");
-    }
-    private void Unlock(int world)
-    {
-        if (worldNumber == world)
-            Debug.Log("Do unlock world animation if there is any");
-    }
-    private void Open()
-    {
-        Debug.Log("Do open animation if there is any");
-    }
-    private void Close(int world)
-    {
-        if (worldNumber == world)
-            Debug.Log("Do close animation if there is any");
-    }
-
-    /**************************************************************************************************
     Animation control methods
     **************************************************************************************************/
     /// <summary>
