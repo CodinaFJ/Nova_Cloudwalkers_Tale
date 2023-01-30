@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Context for the Machine State Pattern of the level selector menu.
+/// </summary>
 public class MapContextController : MonoBehaviour
 {
     public static MapContextController Instance;
@@ -11,7 +14,13 @@ public class MapContextController : MonoBehaviour
     private MapState levelsMapState;
     private MapState mapState;
 
+    private WorldSelectorAnimatedItem[] animatedItemsArray;
+
     private int openWorld;
+
+    /**************************************************************************************************
+    Initializers
+    **************************************************************************************************/
 
     private void Awake() {
         Instance = this;
@@ -20,8 +29,13 @@ public class MapContextController : MonoBehaviour
     void Start()
     {
         InitializeStates();
+        SetMapState(worldsMapState);
+        animatedItemsArray = FindObjectsOfType<WorldSelectorAnimatedItem>();
     }
 
+    /// <summary>
+    /// Instantiate one object of each state.
+    /// </summary>
     private void InitializeStates()
     {
         worldsMapState = new WorldsMapState(this);
@@ -29,11 +43,44 @@ public class MapContextController : MonoBehaviour
         levelsMapState = new LevelsMapState(this);
     }
 
-    //SETTERS
+    /**************************************************************************************************
+    Control Actions
+    **************************************************************************************************/
+
+    public void SelectWorld(int world) => mapState.SelectWorldAction(world);
+    public void CloseWorld(int world) => mapState.CloseWorldAction();
+
+    /**************************************************************************************************
+    Animation Control Methods
+    **************************************************************************************************/
+
+    public void PlaySelectWorldAnimations(int world)
+    {
+        foreach(var animatedItem in animatedItemsArray)
+            animatedItem.PlaySelectWorldAnimation(world);
+    }
+
+    public void PlayCloseWorldAnimations(int world)
+    {
+        foreach(var animatedItem in animatedItemsArray)
+            animatedItem.PlayCloseWorldAnimation(world);
+    }
+
+    public void PlayUnlockWorldAnimations(int world)
+    {
+        foreach(var animatedItem in animatedItemsArray)
+            animatedItem.PlayUnlockWorldAnimation(world);
+    }
+
+    /**************************************************************************************************
+    Setters
+    **************************************************************************************************/
     public void SetMapState (MapState mapState) => this.mapState = mapState;
     public void SetOpenWorld(int openWorld) => this.openWorld = openWorld;
 
-    //GETTERS
+    /**************************************************************************************************
+    Getters
+    **************************************************************************************************/
     public MapState GetWorldsMapState() => worldsMapState;
     public MapState GetUnlockingWorldsMapState() => unlockingWorldsMapState;
     public MapState GetLevelsMapState() => levelsMapState;
