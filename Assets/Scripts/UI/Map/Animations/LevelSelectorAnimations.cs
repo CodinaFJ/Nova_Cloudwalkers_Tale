@@ -10,6 +10,7 @@ public class LevelSelectorAnimations : MonoBehaviour
     [Header("World Selection")]
     [SerializeField] float[] worldButtonSelectTimes = new float[3];
     [SerializeField] float[] worldButtonHideTimes = new float[3];
+    [SerializeField] float[] worldButtonShowTimes = new float[3];
 
     private float objectAlpha;
 
@@ -36,7 +37,14 @@ public class LevelSelectorAnimations : MonoBehaviour
     {
         LeanTween.cancel(go);
         StartCoroutine(WorldButtonTransformHideAnimation(go, selectedWorldGO));
-        //TODO: Call animation of world moving away from screen.
+        //TODO: Activate animator to fade out gameObject.
+    }
+
+    public void PlayWorldButtonShowAnimation(GameObject go)
+    {
+        LeanTween.cancel(go);
+        StartCoroutine(WorldButtonTransformShowAnimation(go));
+        //TODO: Activate animator to fade in gameObject.
     }
 
     /**************************************************************************************************
@@ -67,5 +75,20 @@ public class LevelSelectorAnimations : MonoBehaviour
         yield return new WaitForSeconds(worldButtonHideTimes[0]);
         LeanTween.move(go, finalPos, worldButtonHideTimes[1]);
         yield return new WaitForSeconds(worldButtonHideTimes[1]);
+    }
+
+    /// <summary>
+    /// World button animation when showing: scales up & moves from center to position.
+    /// </summary>
+    /// <param name="go"> Game Object </param>
+    public IEnumerator WorldButtonTransformShowAnimation(GameObject go)
+    {
+        //TODO: Correctly define animation.
+        //! This is just a copy paste from select animation.
+        yield return new WaitForSeconds(worldButtonShowTimes[0]);
+        LeanTween.move(go, Vector2.zero, worldButtonShowTimes[1]);
+        LeanTween.scale(go, new Vector2(1.05f, 1.05f), worldButtonShowTimes[1]);
+        yield return new WaitForSeconds(worldButtonShowTimes[1]);
+        LeanTween.scale(go, new Vector2(1.50f, 1.50f), worldButtonShowTimes[2]);
     }
 }
