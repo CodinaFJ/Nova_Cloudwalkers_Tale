@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,10 +20,10 @@ public class LevelSelectorAnimations : MonoBehaviour
     }
 
     /**************************************************************************************************
-    World buttons
+    World buttons actions
     **************************************************************************************************/
     /// <summary>
-    /// Start animations when world is selected
+    /// Start world opening animations when world is selected
     /// </summary>
     /// <param name="go"> Game Object </param>
     public void PlayWorldButtonSelectAnimation(GameObject go)
@@ -33,6 +33,11 @@ public class LevelSelectorAnimations : MonoBehaviour
         //TODO: Activate animator to fade out gameObject.
     }
 
+    /// <summary>
+    /// Start hiding animations when world is selected
+    /// </summary>
+    /// <param name="go"> Game Object to hide </param>
+    /// <param name="selectedWorldGO"> Selected world Game Object </param>
     public void PlayWorldButtonHideAnimation(GameObject go, GameObject selectedWorldGO)
     {
         LeanTween.cancel(go);
@@ -40,6 +45,10 @@ public class LevelSelectorAnimations : MonoBehaviour
         //TODO: Activate animator to fade out gameObject.
     }
 
+    /// <summary>
+    /// Start show animations when a world is closed
+    /// </summary>
+    /// <param name="go"> Game Object to show </param>
     public void PlayWorldButtonShowAnimation(GameObject go)
     {
         LeanTween.cancel(go);
@@ -70,7 +79,7 @@ public class LevelSelectorAnimations : MonoBehaviour
     /// <param name="selectedWorldGO"> Other selected world game object </param>
     public IEnumerator WorldButtonTransformHideAnimation(GameObject go, GameObject selectedWorldGO)
     {
-        // TODO: Animation times
+        // TODO: Animation times (assignation in unity editor)
         Vector2 finalPos = go.transform.position + (go.transform.position - selectedWorldGO.transform.position);
         yield return new WaitForSeconds(worldButtonHideTimes[0]);
         LeanTween.move(go, finalPos, worldButtonHideTimes[1]);
@@ -83,12 +92,17 @@ public class LevelSelectorAnimations : MonoBehaviour
     /// <param name="go"> Game Object </param>
     public IEnumerator WorldButtonTransformShowAnimation(GameObject go)
     {
-        //TODO: Correctly define animation.
-        //! This is just a copy paste from select animation.
+        // TODO: Animation times (assignation in unity editor)
+        WorldSelectorAnimatedItem animatedItem;
+
+        animatedItem = null;
+        go.transform.position = Vector2.zero;
+        go.transform.localScale = Vector2.zero;
+        try{animatedItem = go.GetComponent<WorldSelectorAnimatedItem>();}
+        catch(Exception ex){Debug.LogWarning(System.Reflection.MethodBase.GetCurrentMethod().Name +
+            "-Not an animated item: " + ex.Message);}
         yield return new WaitForSeconds(worldButtonShowTimes[0]);
-        LeanTween.move(go, Vector2.zero, worldButtonShowTimes[1]);
-        LeanTween.scale(go, new Vector2(1.05f, 1.05f), worldButtonShowTimes[1]);
-        yield return new WaitForSeconds(worldButtonShowTimes[1]);
-        LeanTween.scale(go, new Vector2(1.50f, 1.50f), worldButtonShowTimes[2]);
+        LeanTween.move(go, animatedItem.GetInitialPos(), worldButtonShowTimes[1]);
+        LeanTween.scale(go, animatedItem.GetInitialScale(), worldButtonShowTimes[1]);
     }
 }

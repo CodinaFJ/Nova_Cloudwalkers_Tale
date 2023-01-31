@@ -21,10 +21,13 @@ public class WorldsMapState : MapState
 	/// <summary>
 	/// Open selected world and updates openWorld in context.
 	/// </summary>
-	/// <param name="world"> Selected world </param>
-	public override void SelectWorldAction(int world)
+	/// <param name="selectWorldGO"> Selected world GO </param>
+	public override void SelectWorldAction(GameObject selectWorldGO)
 	{
-		mapContextController.PlaySelectWorldAnimations(world);
+		int world;
+
+		world = selectWorldGO.GetComponent<WorldSelectorAnimatedItem>().GetWorldNumber();
+		mapContextController.PlaySelectWorldAnimations(world, selectWorldGO);
         mapContextController.SetOpenWorld(world);
         mapContextController.SetMapState(mapContextController.GetLevelsMapState());
 	}

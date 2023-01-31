@@ -41,7 +41,7 @@ public class MapState
     /// State Machine Action: Select one of the worlds to enter to its levels.
     /// </summary>
     /// <param name="world"> World selected </param>
-    public virtual void SelectWorldAction(int world)
+    public virtual void SelectWorldAction(GameObject selectWorldGO)
     {
         throw new System.NotImplementedException("Cannot perform " + System.Reflection.MethodBase.GetCurrentMethod().Name + "while in " + this.GetType().Name);
     }

@@ -44,20 +44,20 @@ public class MapContextController : MonoBehaviour
     }
 
     /**************************************************************************************************
-    Control Actions
+    Buttons Control Actions
     **************************************************************************************************/
 
-    public void SelectWorld(int world) => mapState.SelectWorldAction(world);
+    public void SelectWorld(GameObject selectWorldGO) => mapState.SelectWorldAction(selectWorldGO);
     public void CloseWorld(int world) => mapState.CloseWorldAction();
 
     /**************************************************************************************************
     Animation Control Methods
     **************************************************************************************************/
 
-    public void PlaySelectWorldAnimations(int world)
+    public void PlaySelectWorldAnimations(int world, GameObject selectWorldGO)
     {
         foreach(var animatedItem in animatedItemsArray)
-            animatedItem.PlaySelectWorldAnimation(world);
+            animatedItem.PlaySelectWorldAnimation(world, selectWorldGO);
     }
 
     public void PlayCloseWorldAnimations(int world)

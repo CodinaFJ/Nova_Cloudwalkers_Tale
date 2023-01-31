@@ -8,11 +8,19 @@ using UnityEngine;
 public class WorldSelectorAnimatedItem : MonoBehaviour
 {
 
-    [SerializeField] private int worldNumber;//TODO: World number should be set parents of hierarchy
-
+    [SerializeField] 
+    private int worldNumber;//TODO: World number should be set parents of hierarchy
     [SerializeField]
     AnimatedItemType animatedItemType;
 
+    private Vector2 initialPos;
+    private Vector2 initialScale;
+
+    private void Start() 
+    {
+        initialPos = transform.position;
+        initialScale = transform.localScale;
+    }
     /**************************************************************************************************
     Animation control methods
     **************************************************************************************************/
@@ -20,15 +28,16 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     /// Play animations when world is selected.
     /// </summary>
     /// <param name="world"> World selected </param>
-    public void PlaySelectWorldAnimation(int world)
+    public void PlaySelectWorldAnimation(int world, GameObject selectedWorldGO)
     {
+        //TODO: Take animations to another method so fade in/out and position animations can be done with one method.
         if (worldNumber == world && animatedItemType == AnimatedItemType.WorldButton)
             LevelSelectorAnimations.instance.PlayWorldButtonSelectAnimation(this.gameObject);
         else if(animatedItemType == AnimatedItemType.UI)
             //TODO: Play selectWorld animation of UI item.
             return ;
         else
-            //TODO: Play hide animation (Implemented with leanTween?)
+            LevelSelectorAnimations.instance.PlayWorldButtonHideAnimation(this.gameObject, selectedWorldGO);
             return ;
     }
 
@@ -58,5 +67,12 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     /**************************************************************************************************
     Setters
     **************************************************************************************************/
-    public void SetWorldNumber(int worldNumber) => this.worldNumber = worldNumber;
+    public void     SetWorldNumber(int worldNumber) => this.worldNumber = worldNumber;
+
+    /**************************************************************************************************
+    Getters
+    **************************************************************************************************/
+    public Vector2  GetInitialPos()     => this.initialPos;
+    public Vector2  GetInitialScale()   => this.initialScale;
+    public int      GetWorldNumber()    => this.worldNumber;
 }
