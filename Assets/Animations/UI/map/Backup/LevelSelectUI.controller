@@ -37,7 +37,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -6431054302871785317}
-    m_Position: {x: 240, y: 50, z: 0}
+    m_Position: {x: 260, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8706332692677283285}
     m_Position: {x: 40, y: 60, z: 0}
@@ -59,7 +59,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -8706332692677283285}
+  m_DefaultState: {fileID: 2407988625858682018}
 --- !u!1102 &-6431054302871785317
 AnimatorState:
   serializedVersion: 6
@@ -67,7 +67,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UI_fadeIn
+  m_Name: UIOpenWorld
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

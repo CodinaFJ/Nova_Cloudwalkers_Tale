@@ -51,7 +51,7 @@ public class LevelsMapState : MapState
 	/// <param name="world"> World to close. </param>
     private void CloseWorld(int world)
     {
-        mapContextController.PlayCloseWorldAnimations(world);
+        mapContextController.AnimationControlWorldClosed(world);
         mapContextController.SetOpenWorld(0);
     }
 }

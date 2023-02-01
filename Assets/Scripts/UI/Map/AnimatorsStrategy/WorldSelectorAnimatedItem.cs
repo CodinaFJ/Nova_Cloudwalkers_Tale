@@ -8,18 +8,19 @@ using UnityEngine;
 public class WorldSelectorAnimatedItem : MonoBehaviour
 {
 
-    [SerializeField] 
-    private int worldNumber;//TODO: World number should be set parents of hierarchy
-    [SerializeField]
-    AnimatedItemType animatedItemType;
+    [SerializeField] int                worldNumber;//TODO: World number should be set parents of hierarchy
+    [SerializeField] AnimatedItemType   animatedItemType;
 
-    private Vector2 initialPos;
-    private Vector2 initialScale;
+    private Vector2     initialPos;
+    private Vector2     initialScale;
+    private Animator    animator;
+    private string      currentState;
 
     private void Start() 
     {
         initialPos = transform.position;
         initialScale = transform.localScale;
+        animator = GetComponent<Animator>();
     }
     /**************************************************************************************************
     Animation control methods
@@ -28,24 +29,24 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     /// Play animations when world is selected.
     /// </summary>
     /// <param name="world"> World selected </param>
-    public void PlaySelectWorldAnimation(int world, GameObject selectedWorldGO)
+    public void AnimationControlWorldSelected(int world, GameObject selectedWorldGO)
     {
         //TODO: Take animations to another method so fade in/out and position animations can be done with one method.
         if (worldNumber == world && animatedItemType == AnimatedItemType.WorldButton)
-            LevelSelectorAnimations.instance.PlayWorldButtonSelectAnimation(this.gameObject);
+            PlayOpenWorldAnimation();
+        else if(worldNumber == world && animatedItemType == AnimatedItemType.Levels)
+            PlayShowLevelsAnimation();
         else if(animatedItemType == AnimatedItemType.UI)
-            //TODO: Play selectWorld animation of UI item.
-            return ;
+            PlayOpenWorldUIAnimation();
         else
-            LevelSelectorAnimations.instance.PlayWorldButtonHideAnimation(this.gameObject, selectedWorldGO);
-            return ;
+            PlayHideWorldAnimation(selectedWorldGO);
     }
 
     /// <summary>
     /// Play animation when world is closing.
     /// </summary>
     /// <param name="world"> World closing </param>
-    public void PlayCloseWorldAnimation(int world)
+    public void AnimationControlWorldClosed(int world)
     {
         //TODO: Play closeWorld animation of item.
     }
@@ -54,14 +55,69 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     /// Play animation when world is unlocking
     /// </summary>
     /// <param name="world"> World unlocking </param>
-    public void PlayUnlockWorldAnimation(int world)
+    public void AnimationControlWorldUnlock(int world)
     {
         if (worldNumber == world)
             //TODO: Play unlockWorld animation of item.
             return ;
     }
 
-    //TODO: Apply animation existence test with: https://answers.unity.com/questions/957649/check-animation-state-exists-before-playing-it.html
+    /**************************************************************************************************
+    Animations
+    **************************************************************************************************/
+
+    /// <summary>
+    /// Play open world animations
+    /// </summary>
+    private void    PlayOpenWorldAnimation()
+    {
+        LevelSelectorAnimations.instance.PlayWorldButtonSelectAnimation(this.gameObject);
+        PlayAnimation("WorldOpenFadeOut");
+    }
+
+    /// <summary>
+    /// Play hide world animations
+    /// </summary>
+    private void    PlayHideWorldAnimation(GameObject selectedWorldGO)
+    {
+        LevelSelectorAnimations.instance.PlayWorldButtonHideAnimation(this.gameObject, selectedWorldGO);
+        PlayAnimation("WorldHideFadeOut");
+    }
+
+    private void    PlayShowLevelsAnimation()
+    {
+        PlayAnimation("LevelsShow");
+    }
+
+    private void    PlayOpenWorldUIAnimation()
+    {
+        PlayAnimation("UIOpenWorld");
+    }
+
+
+    /**************************************************************************************************
+    Animator control
+    **************************************************************************************************/
+
+    /// <summary>
+    /// Plays requested animation if possible. Protected against no animator o no animation in animator.
+    /// </summary>
+    /// <param name="newState">Requested state name</param>
+    private void    PlayAnimation(string newState)
+    {
+        if (!animator || newState == currentState)
+        {
+            Debug.LogWarning("No animator for animating state: " + newState);
+            return ;
+        }
+        if (animator.HasState(0, Animator.StringToHash(newState)))
+        {
+            animator.Play(newState);
+            currentState = newState;
+        }
+        else
+            Debug.LogWarning("No state: " + newState);
+    }
 
 
     /**************************************************************************************************

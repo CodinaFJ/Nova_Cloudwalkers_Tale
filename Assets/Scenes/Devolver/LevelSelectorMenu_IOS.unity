@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 5344912}
   - component: {fileID: 5344911}
   - component: {fileID: 5344910}
+  - component: {fileID: 5344914}
   m_Layer: 5
   m_Name: World1
   m_TagString: Untagged
@@ -270,6 +271,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5344908}
   m_CullTransparentMesh: 1
+--- !u!95 &5344914
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344908}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3531f02cf5dced3409f7c8801b4d45a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &18676073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1045,8 +1065,9 @@ GameObject:
   - component: {fileID: 168118031}
   - component: {fileID: 168118033}
   - component: {fileID: 168118032}
+  - component: {fileID: 168118034}
   m_Layer: 5
-  m_Name: World (1)
+  m_Name: LevelsWorld1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1106,6 +1127,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &168118034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168118030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldNumber: 1
+  animatedItemType: 0
 --- !u!1001 &208602807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1780,8 +1815,9 @@ GameObject:
   - component: {fileID: 316686063}
   - component: {fileID: 316686065}
   - component: {fileID: 316686064}
+  - component: {fileID: 316686066}
   m_Layer: 5
-  m_Name: World (2)
+  m_Name: LevelsWorld2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1841,6 +1877,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &316686066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316686062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldNumber: 2
+  animatedItemType: 0
 --- !u!1001 &340976089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1989,6 +2039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375641815}
   - component: {fileID: 375641816}
+  - component: {fileID: 375641817}
   m_Layer: 5
   m_Name: LevelSelectUI
   m_TagString: Untagged
@@ -2035,6 +2086,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &375641817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375641814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldNumber: 0
+  animatedItemType: 3
 --- !u!1 &417102773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5608936877654080870, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
@@ -2579,6 +2644,8 @@ GameObject:
   - component: {fileID: 543597204}
   - component: {fileID: 543597206}
   - component: {fileID: 543597205}
+  - component: {fileID: 543597208}
+  - component: {fileID: 543597207}
   m_Layer: 5
   m_Name: WorldsBg
   m_TagString: Untagged
@@ -2643,6 +2710,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543597203}
   m_CullTransparentMesh: 1
+--- !u!95 &543597207
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543597203}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 744c31419e93d8a4b822385c1beb7bd0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &543597208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543597203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldNumber: 0
+  animatedItemType: 3
 --- !u!1001 &594284785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3782,8 +3882,9 @@ GameObject:
   - component: {fileID: 769175965}
   - component: {fileID: 769175967}
   - component: {fileID: 769175966}
+  - component: {fileID: 769175968}
   m_Layer: 5
-  m_Name: World (3)
+  m_Name: LevelsWorld3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3843,6 +3944,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &769175968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769175964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldNumber: 3
+  animatedItemType: 0
 --- !u!1 &779837980
 GameObject:
   m_ObjectHideFlags: 0
@@ -3857,6 +3972,7 @@ GameObject:
   - component: {fileID: 779837983}
   - component: {fileID: 779837982}
   - component: {fileID: 779837986}
+  - component: {fileID: 779837987}
   m_Layer: 5
   m_Name: World4
   m_TagString: Untagged
@@ -3894,7 +4010,7 @@ Animator:
   m_GameObject: {fileID: 779837980}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a24f832528ce3e04b8b4f7eeecc135ca, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3531f02cf5dced3409f7c8801b4d45a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4011,6 +4127,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alphas: 1
   onlyImages: 0
+--- !u!114 &779837987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779837980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldNumber: 4
+  animatedItemType: 1
 --- !u!1001 &800436920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5537,17 +5667,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldButtonSelectTimes:
-  - 0
-  - 0
-  - 0
+  - 0.16666667
+  - 0.6666667
+  - 0.33333334
   worldButtonHideTimes:
-  - 0
-  - 0
-  - 0
+  - 0.16666667
+  - 0.6666667
   worldButtonShowTimes:
   - 0
   - 0
   - 0
+  UIMenuButtonTimes: []
+  easeOpenWorldMoveCenter: 16
+  easeOpenWorldScaleUp: 14
 --- !u!114 &954337407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7817,9 +7949,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330117298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8332bc906145fb74cbf0f715f7e04702, type: 3}
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worldNumber: 0
+  animatedItemType: 3
 --- !u!1001 &1356603215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8139,8 +8273,9 @@ GameObject:
   - component: {fileID: 1410196276}
   - component: {fileID: 1410196278}
   - component: {fileID: 1410196277}
+  - component: {fileID: 1410196279}
   m_Layer: 5
-  m_Name: World (4)
+  m_Name: LevelsWorld4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8200,6 +8335,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1410196279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410196275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldNumber: 4
+  animatedItemType: 0
 --- !u!1001 &1423550782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9944,9 +10093,8 @@ GameObject:
   - component: {fileID: 1692801159}
   - component: {fileID: 1692801158}
   - component: {fileID: 1692801157}
-  - component: {fileID: 1692801160}
   - component: {fileID: 1692801156}
-  - component: {fileID: 1692801161}
+  - component: {fileID: 1692801162}
   m_Layer: 5
   m_Name: World2
   m_TagString: Untagged
@@ -9983,11 +10131,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1692801154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cb4374eda0377348a8b02c0990f0dae, type: 3}
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphas: 1
-  onlyImages: 0
+  worldNumber: 2
+  animatedItemType: 1
 --- !u!114 &1692801157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10082,36 +10230,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692801154}
   m_CullTransparentMesh: 1
---- !u!114 &1692801160
-MonoBehaviour:
+--- !u!95 &1692801162
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692801154}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60538ceafbd29a45924d410fe651ef5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color_r: 0
-  color_g: 0
-  color_b: 0
-  color_a: 0
---- !u!114 &1692801161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692801154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 741c37b51b2341d4a864cec9d2bccaa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 1692801158}
-  alpha: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3531f02cf5dced3409f7c8801b4d45a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1701390836 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6138862943481719140, guid: dd7a8dc0f0378eb479702ac436a956a7, type: 3}
@@ -10177,9 +10314,8 @@ GameObject:
   - component: {fileID: 1866221544}
   - component: {fileID: 1866221543}
   - component: {fileID: 1866221542}
-  - component: {fileID: 1866221541}
   - component: {fileID: 1866221545}
-  - component: {fileID: 1866221546}
+  - component: {fileID: 1866221541}
   m_Layer: 5
   m_Name: World3
   m_TagString: Untagged
@@ -10217,7 +10353,7 @@ Animator:
   m_GameObject: {fileID: 1866221539}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a24f832528ce3e04b8b4f7eeecc135ca, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3531f02cf5dced3409f7c8801b4d45a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -10329,27 +10465,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1866221539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60538ceafbd29a45924d410fe651ef5, type: 3}
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color_r: 0
-  color_g: 0
-  color_b: 0
-  color_a: 0
---- !u!114 &1866221546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866221539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cb4374eda0377348a8b02c0990f0dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alphas: 1
-  onlyImages: 0
+  worldNumber: 3
+  animatedItemType: 1
 --- !u!1001 &1878291860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11866,6 +11986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2111784704}
   - component: {fileID: 2111784705}
+  - component: {fileID: 2111784706}
   m_Layer: 5
   m_Name: WorldSelectUI
   m_TagString: Untagged
@@ -11912,6 +12033,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2111784706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111784703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c3029051aafd14bb39e12cb43f2806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldNumber: 0
+  animatedItemType: 3
 --- !u!224 &770516518086278339
 RectTransform:
   m_ObjectHideFlags: 0

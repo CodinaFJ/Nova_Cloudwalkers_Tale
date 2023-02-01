@@ -43,7 +43,7 @@ AnimatorStateMachine:
     m_Position: {x: 280, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8811352883652725606}
-    m_Position: {x: 70, y: 210, z: 0}
+    m_Position: {x: 30, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1679321097457872233}
     m_Position: {x: 280, y: 130, z: 0}
@@ -66,7 +66,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: World1
+  m_Name: Levels
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -141,7 +141,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UI_showLevels
+  m_Name: LevelsShow
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

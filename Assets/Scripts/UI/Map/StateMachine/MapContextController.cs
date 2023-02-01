@@ -9,14 +9,12 @@ public class MapContextController : MonoBehaviour
 {
     public static MapContextController Instance;
 
-    private MapState worldsMapState;
-    private MapState unlockingWorldsMapState;
-    private MapState levelsMapState;
-    private MapState mapState;
-
+    private int                         openWorld;
+    private MapState                    worldsMapState;
+    private MapState                    unlockingWorldsMapState;
+    private MapState                    levelsMapState;
+    private MapState                    mapState;
     private WorldSelectorAnimatedItem[] animatedItemsArray;
-
-    private int openWorld;
 
     /**************************************************************************************************
     Initializers
@@ -47,29 +45,45 @@ public class MapContextController : MonoBehaviour
     Buttons Control Actions
     **************************************************************************************************/
 
+    /// <summary> Called with UI world button. </summary>
     public void SelectWorld(GameObject selectWorldGO) => mapState.SelectWorldAction(selectWorldGO);
+
+    /// <summary> Called with UI close world button. </summary>
     public void CloseWorld(int world) => mapState.CloseWorldAction();
 
     /**************************************************************************************************
     Animation Control Methods
     **************************************************************************************************/
 
-    public void PlaySelectWorldAnimations(int world, GameObject selectWorldGO)
+    /// <summary>
+    /// Order to all animated items to play animations when world is selected.
+    /// </summary>
+    /// <param name="world"> Number of selected world </param>
+    /// <param name="selectWorldGO"> Game Object of selected world </param>
+    public void AnimationControlWorldSelected(int world, GameObject selectWorldGO)
     {
         foreach(var animatedItem in animatedItemsArray)
-            animatedItem.PlaySelectWorldAnimation(world, selectWorldGO);
+            animatedItem.AnimationControlWorldSelected(world, selectWorldGO);
     }
 
-    public void PlayCloseWorldAnimations(int world)
+    /// <summary>
+    /// Order to all animated items to play animations when world is closed.
+    /// </summary>
+    /// <param name="world"> Number of closed world </param>
+    public void AnimationControlWorldClosed(int world)
     {
         foreach(var animatedItem in animatedItemsArray)
-            animatedItem.PlayCloseWorldAnimation(world);
+            animatedItem.AnimationControlWorldClosed(world);
     }
 
-    public void PlayUnlockWorldAnimations(int world)
+    /// <summary>
+    /// Order to all animated items to play animations when world is unlocked.
+    /// </summary>
+    /// <param name="world"> Number of unlocked world </param>
+    public void AnimationControlWorldUnlock(int world)
     {
         foreach(var animatedItem in animatedItemsArray)
-            animatedItem.PlayUnlockWorldAnimation(world);
+            animatedItem.AnimationControlWorldUnlock(world);
     }
 
     /**************************************************************************************************
@@ -85,5 +99,5 @@ public class MapContextController : MonoBehaviour
     public MapState GetUnlockingWorldsMapState() => unlockingWorldsMapState;
     public MapState GetLevelsMapState() => levelsMapState;
     public MapState GetMapState() => mapState;
-    public int GetOpenWorld() => openWorld;
+    public int      GetOpenWorld() => openWorld;
 }
