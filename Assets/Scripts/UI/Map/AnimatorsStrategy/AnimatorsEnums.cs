@@ -6,5 +6,6 @@ public enum AnimatedItemType{
     Levels,
     WorldButton,
     Lock,
-    UI
+    UI,
+    WorldsContainer
 }

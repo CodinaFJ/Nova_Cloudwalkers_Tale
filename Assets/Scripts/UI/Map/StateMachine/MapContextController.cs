@@ -49,7 +49,7 @@ public class MapContextController : MonoBehaviour
     public void SelectWorld(GameObject selectWorldGO) => mapState.SelectWorldAction(selectWorldGO);
 
     /// <summary> Called with UI close world button. </summary>
-    public void CloseWorld(int world) => mapState.CloseWorldAction();
+    public void CloseWorld() => mapState.CloseWorldAction();
 
     /**************************************************************************************************
     Animation Control Methods

@@ -31,14 +31,13 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     /// <param name="world"> World selected </param>
     public void AnimationControlWorldSelected(int world, GameObject selectedWorldGO)
     {
-        //TODO: Take animations to another method so fade in/out and position animations can be done with one method.
         if (worldNumber == world && animatedItemType == AnimatedItemType.WorldButton)
             PlayOpenWorldAnimation();
         else if(worldNumber == world && animatedItemType == AnimatedItemType.Levels)
-            PlayShowLevelsAnimation();
-        else if(animatedItemType == AnimatedItemType.UI)
-            PlayOpenWorldUIAnimation();
-        else
+            PlayWorldOpenAnimation();
+        else if(animatedItemType == AnimatedItemType.UI || animatedItemType == AnimatedItemType.Lock)
+            PlayWorldOpenAnimation();
+        else if (animatedItemType == AnimatedItemType.WorldButton)
             PlayHideWorldAnimation(selectedWorldGO);
     }
 
@@ -48,7 +47,10 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     /// <param name="world"> World closing </param>
     public void AnimationControlWorldClosed(int world)
     {
-        //TODO: Play closeWorld animation of item.
+        if (animatedItemType == AnimatedItemType.WorldsContainer)
+            LevelSelectorAnimations.instance.PlayWorldsContainerScaleDownAnimation(this.gameObject);
+        else
+            PlayCloseWorldAnimation();
     }
 
     /// <summary>
@@ -65,33 +67,31 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     /**************************************************************************************************
     Animations
     **************************************************************************************************/
+    /************************************************
+    Open World
+    ************************************************/
 
-    /// <summary>
-    /// Play open world animations
-    /// </summary>
     private void    PlayOpenWorldAnimation()
     {
         LevelSelectorAnimations.instance.PlayWorldButtonSelectAnimation(this.gameObject);
         PlayAnimation("WorldOpenFadeOut");
     }
 
-    /// <summary>
-    /// Play hide world animations
-    /// </summary>
     private void    PlayHideWorldAnimation(GameObject selectedWorldGO)
     {
         LevelSelectorAnimations.instance.PlayWorldButtonHideAnimation(this.gameObject, selectedWorldGO);
         PlayAnimation("WorldHideFadeOut");
     }
 
-    private void    PlayShowLevelsAnimation()
-    {
-        PlayAnimation("LevelsShow");
-    }
+    private void    PlayWorldOpenAnimation() => PlayAnimation("WorldOpen");
 
-    private void    PlayOpenWorldUIAnimation()
+    /************************************************
+    Close World
+    ************************************************/
+
+    private void    PlayCloseWorldAnimation()
     {
-        PlayAnimation("UIOpenWorld");
+        PlayAnimation("WorldClose");
     }
 
 

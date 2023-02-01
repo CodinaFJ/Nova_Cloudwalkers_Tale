@@ -11,6 +11,7 @@ public class LevelSelectorAnimations : MonoBehaviour
     [SerializeField] float[]    worldButtonSelectTimes = new float[3];
     [SerializeField] float[]    worldButtonHideTimes = new float[2];
     [SerializeField] float[]    worldButtonShowTimes = new float[3];
+    [SerializeField] float[]    worldsContainerShowTimes = new float[2];
 
     [Header ("UI Animation Times")]
     [SerializeField] float[]    UIMenuButtonTimes;
@@ -18,6 +19,7 @@ public class LevelSelectorAnimations : MonoBehaviour
     [Header("Easing curves")]
     [SerializeField] LeanTweenType  easeOpenWorldMoveCenter;
     [SerializeField] LeanTweenType  easeOpenWorldScaleUp;
+    [SerializeField] LeanTweenType  easeWorldsContainerScaleDown;
 
     private float   objectAlpha;
 
@@ -62,6 +64,12 @@ public class LevelSelectorAnimations : MonoBehaviour
         //TODO: Activate animator to fade in gameObject.
     }
 
+    public void PlayWorldsContainerScaleDownAnimation(GameObject go)
+    {
+        LeanTween.cancel(go);
+        StartCoroutine(WorldsContainerScaleDownAnimation(go));
+    }
+
     /**************************************************************************************************
     Animations Definitions
     **************************************************************************************************/
@@ -80,6 +88,9 @@ public class LevelSelectorAnimations : MonoBehaviour
         LeanTween.scale(go, new Vector2(1.05f, 1.05f), worldButtonSelectTimes[1]).setEase(LeanTweenType.easeInOutSine);
         yield return new WaitForSeconds(worldButtonSelectTimes[1]);
         LeanTween.scale(go, new Vector2(1.50f, 1.50f), worldButtonSelectTimes[2]).setEase(LeanTweenType.easeInSine);
+        yield return new WaitForSeconds(worldButtonSelectTimes[2]);
+        go.transform.position = go.GetComponent<WorldSelectorAnimatedItem>().GetInitialPos();
+        go.transform.localScale = go.GetComponent<WorldSelectorAnimatedItem>().GetInitialScale();
     }
 
     /// <summary>
@@ -93,6 +104,9 @@ public class LevelSelectorAnimations : MonoBehaviour
         yield return new WaitForSeconds(worldButtonHideTimes[0]);
         LeanTween.move(go, finalPos, worldButtonHideTimes[1]);
         LeanTween.scale(go, new Vector2(0.6f, 0.6f), worldButtonHideTimes[1]);
+        yield return new WaitForSeconds(worldButtonHideTimes[1]);
+        go.transform.position = go.GetComponent<WorldSelectorAnimatedItem>().GetInitialPos();
+        go.transform.localScale = go.GetComponent<WorldSelectorAnimatedItem>().GetInitialScale();
     }
 
     /// <summary>
@@ -116,6 +130,13 @@ public class LevelSelectorAnimations : MonoBehaviour
     }
 
     /***********************
-    UI buttons
+    Worlds Container
     ***********************/
+
+    private IEnumerator WorldsContainerScaleDownAnimation(GameObject go)
+    {
+        go.transform.localScale = new Vector2(5, 5);
+        LeanTween.scale(go, new Vector2(1, 1), worldsContainerShowTimes[0]).setEase(easeWorldsContainerScaleDown);
+        yield return new WaitForSeconds(worldsContainerShowTimes[0]);
+    }
 }
