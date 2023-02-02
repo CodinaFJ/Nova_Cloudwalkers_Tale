@@ -50,7 +50,6 @@ public class LevelSelectorAnimations : MonoBehaviour
     {
         LeanTween.cancel(go);
         StartCoroutine(WorldButtonTransformHideAnimation(go, selectedWorldGO));
-        //TODO: Activate animator to fade out gameObject.
     }
 
     /// <summary>
@@ -61,7 +60,6 @@ public class LevelSelectorAnimations : MonoBehaviour
     {
         LeanTween.cancel(go);
         StartCoroutine(WorldButtonTransformShowAnimation(go));
-        //TODO: Activate animator to fade in gameObject.
     }
 
     public void PlayWorldsContainerScaleDownAnimation(GameObject go)

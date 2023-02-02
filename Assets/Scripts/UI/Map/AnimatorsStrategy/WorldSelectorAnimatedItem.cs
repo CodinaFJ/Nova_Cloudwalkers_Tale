@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Items with animation attached in Level Selector Menu.
@@ -60,8 +61,7 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     public void AnimationControlWorldUnlock(int world)
     {
         if (worldNumber == world)
-            //TODO: Play unlockWorld animation of item.
-            return ;
+            PlayUnlockWorldAnimation();
     }
 
     /**************************************************************************************************
@@ -94,6 +94,17 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
         PlayAnimation("WorldClose");
     }
 
+    /************************************************
+    Unlock World
+    ************************************************/
+
+    private void    PlayUnlockWorldAnimation()
+    {
+        Button worldButton;
+        if (worldButton = this.gameObject.GetComponent<Button>())
+            worldButton.interactable = true;
+        PlayAnimation("WorldUnlock");
+    }
 
     /**************************************************************************************************
     Animator control

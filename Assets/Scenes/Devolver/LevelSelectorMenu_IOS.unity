@@ -4098,6 +4098,7 @@ GameObject:
   - component: {fileID: 779837983}
   - component: {fileID: 779837982}
   - component: {fileID: 779837987}
+  - component: {fileID: 779837986}
   m_Layer: 5
   m_Name: World4
   m_TagString: Untagged
@@ -4238,6 +4239,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779837980}
   m_CullTransparentMesh: 1
+--- !u!114 &779837986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779837980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60538ceafbd29a45924d410fe651ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color_r: 0
+  color_g: 0
+  color_b: 0
+  color_a: 0
 --- !u!114 &779837987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10232,6 +10249,7 @@ GameObject:
   - component: {fileID: 1692801157}
   - component: {fileID: 1692801156}
   - component: {fileID: 1692801162}
+  - component: {fileID: 1692801160}
   m_Layer: 5
   m_Name: World2
   m_TagString: Untagged
@@ -10312,7 +10330,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1692801158}
   m_OnClick:
     m_PersistentCalls:
@@ -10367,6 +10385,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692801154}
   m_CullTransparentMesh: 1
+--- !u!114 &1692801160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692801154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60538ceafbd29a45924d410fe651ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color_r: 0
+  color_g: 0
+  color_b: 0
+  color_a: 0
 --- !u!95 &1692801162
 Animator:
   serializedVersion: 3
@@ -10453,6 +10487,7 @@ GameObject:
   - component: {fileID: 1866221542}
   - component: {fileID: 1866221545}
   - component: {fileID: 1866221541}
+  - component: {fileID: 1866221546}
   m_Layer: 5
   m_Name: World3
   m_TagString: Untagged
@@ -10607,6 +10642,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldNumber: 3
   animatedItemType: 1
+--- !u!114 &1866221546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866221539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60538ceafbd29a45924d410fe651ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color_r: 0
+  color_g: 0
+  color_b: 0
+  color_a: 0
 --- !u!1001 &1878291860
 PrefabInstance:
   m_ObjectHideFlags: 0

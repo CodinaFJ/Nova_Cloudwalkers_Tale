@@ -27,9 +27,10 @@ public class WorldsMapState : MapState
 		int world;
 
 		world = selectWorldGO.GetComponent<WorldSelectorAnimatedItem>().GetWorldNumber();
-		mapContextController.AnimationControlWorldSelected(world, selectWorldGO);
-        mapContextController.SetOpenWorld(world);
-        mapContextController.SetMapState(mapContextController.GetLevelsMapState());
+		//!THIS IS THE CORRECT LINE: mapContextController.AnimationControlWorldSelected(world, selectWorldGO);
+		UnlockWorldAction(2);
+       //! mapContextController.SetOpenWorld(world);
+        //!mapContextController.SetMapState(mapContextController.GetLevelsMapState());
 	}
 
 	/// <summary>

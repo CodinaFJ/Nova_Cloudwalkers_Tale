@@ -34,6 +34,7 @@ public class UnlockingWorldMapstate : MapState
 	/// <param name="world"> World to unlock </param>
 	public override void UnlockWorldAction(int world)
 	{
+		Debug.Log("Unlocking world " + world);
 		mapContextController.AnimationControlWorldUnlock(world);
         FinishUnlockWorldAction();
 	}

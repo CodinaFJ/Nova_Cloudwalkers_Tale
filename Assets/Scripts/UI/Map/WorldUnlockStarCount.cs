@@ -38,7 +38,7 @@ public class WorldUnlockStarCount : MonoBehaviour
     }
 
     private void Update() {
-        if (GameProgressManager.instance.CheckUnlockedWorld(worldToUnlock))
+        /*if (GameProgressManager.instance.CheckUnlockedWorld(worldToUnlock))
         {
             Debug.Log("World is unlocked");
             GetComponentInParent<Button>().interactable = true;
@@ -48,7 +48,7 @@ public class WorldUnlockStarCount : MonoBehaviour
         else
         {
             GetComponentInParent<Button>().interactable = false;
-        }
+        }*/
     }
     
 }
