@@ -11,6 +11,7 @@ public class LevelSelectorAnimations : MonoBehaviour
     [SerializeField] float[]    worldButtonSelectTimes = new float[3];
     [SerializeField] float[]    worldButtonHideTimes = new float[2];
     [SerializeField] float[]    worldButtonShowTimes = new float[3];
+    [SerializeField] float[]    worldButtonUnlockTimes = new float[3];
     [SerializeField] float[]    worldsContainerShowTimes = new float[2];
 
     [Header ("UI Animation Times")]
@@ -60,6 +61,16 @@ public class LevelSelectorAnimations : MonoBehaviour
     {
         LeanTween.cancel(go);
         StartCoroutine(WorldButtonTransformShowAnimation(go));
+    }
+
+    /// <summary>
+    /// Start unlock animations when a world is unlocked
+    /// </summary>
+    /// <param name="go"> Game Object to show </param>
+    public void PlayWorldButtonUnlockAnimation(GameObject go)
+    {
+        LeanTween.cancel(go);
+        StartCoroutine(WorldButtonTransformUnlockAnimation(go));
     }
 
     public void PlayWorldsContainerScaleDownAnimation(GameObject go)
@@ -113,7 +124,6 @@ public class LevelSelectorAnimations : MonoBehaviour
     /// <param name="go"> Game Object </param>
     private IEnumerator WorldButtonTransformShowAnimation(GameObject go)
     {
-        // TODO: Animation times (assignation in unity editor)
         WorldSelectorAnimatedItem animatedItem;
 
         animatedItem = null;
@@ -125,6 +135,18 @@ public class LevelSelectorAnimations : MonoBehaviour
         yield return new WaitForSeconds(worldButtonShowTimes[0]);
         LeanTween.move(go, animatedItem.GetInitialPos(), worldButtonShowTimes[1]);
         LeanTween.scale(go, animatedItem.GetInitialScale(), worldButtonShowTimes[1]);
+    }
+
+    /// <summary>
+    /// World button animation when unlocked
+    /// </summary>
+    /// <param name="go"> Game Object </param>
+    private IEnumerator WorldButtonTransformUnlockAnimation(GameObject go)
+    {
+        yield return new WaitForSeconds(worldButtonSelectTimes[0]);
+        LeanTween.scale(go, new Vector2(0.44f, 0.44f), worldButtonSelectTimes[1]).setEase(LeanTweenType.easeInOutSine);
+        yield return new WaitForSeconds(worldButtonSelectTimes[1] + worldButtonSelectTimes[2]);
+        LeanTween.scale(go, new Vector2(0.4f, 0.4f), worldButtonSelectTimes[3]).setEase(LeanTweenType.easeInOutSine);
     }
 
     /***********************

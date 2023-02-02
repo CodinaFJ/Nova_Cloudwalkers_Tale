@@ -83,7 +83,7 @@ public class LevelSelectorController : MonoBehaviour
     }
 
     public void OnCtrlRelease(){
-        ctrlPressed = true;
+        ctrlPressed = false;
     }
 
     public void OnUnlockAllLevels(){

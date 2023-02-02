@@ -61,7 +61,11 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     public void AnimationControlWorldUnlock(int world)
     {
         if (worldNumber == world)
+        {
+            if (animatedItemType == AnimatedItemType.WorldButton)
+                LevelSelectorAnimations.instance.PlayWorldButtonUnlockAnimation(this.gameObject);
             PlayUnlockWorldAnimation();
+        }
     }
 
     /**************************************************************************************************

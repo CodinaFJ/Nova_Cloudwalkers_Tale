@@ -20,25 +20,30 @@ public class MapContextController : MonoBehaviour
     Initializers
     **************************************************************************************************/
 
-    private void Awake() {
+    private void    Awake() {
         Instance = this;
     }
 
-    void Start()
+    private void    Start()
     {
         InitializeStates();
-        SetMapState(worldsMapState);
+        SetInitialMapState();
         animatedItemsArray = FindObjectsOfType<WorldSelectorAnimatedItem>();
     }
 
     /// <summary>
     /// Instantiate one object of each state.
     /// </summary>
-    private void InitializeStates()
+    private void    InitializeStates()
     {
         worldsMapState = new WorldsMapState(this);
         unlockingWorldsMapState = new UnlockingWorldMapstate(this);
         levelsMapState = new LevelsMapState(this);
+    }
+
+    private void    SetInitialMapState()
+    {
+        SetMapState(worldsMapState);
     }
 
     /**************************************************************************************************
