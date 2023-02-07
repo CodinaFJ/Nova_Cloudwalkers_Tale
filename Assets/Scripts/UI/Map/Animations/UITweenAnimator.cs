@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// I think this is complete trash.
+/// TODO: Trash this if it is not needed
+/// </summary>
 public class UITweenAnimator : MonoBehaviour
 {
     [SerializeField] float fadeOutTime = 0.5f;

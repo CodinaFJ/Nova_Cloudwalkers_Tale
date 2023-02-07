@@ -2162,6 +2162,7 @@ GameObject:
   - component: {fileID: 375641815}
   - component: {fileID: 375641816}
   - component: {fileID: 375641817}
+  - component: {fileID: 375641818}
   m_Layer: 5
   m_Name: LevelSelectUI
   m_TagString: Untagged
@@ -2221,7 +2222,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldNumber: 0
-  animatedItemType: 3
+  animatedItemType: 4
+--- !u!114 &375641818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375641814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb4374eda0377348a8b02c0990f0dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphas: 1
+  onlyImages: 0
 --- !u!1 &417102773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5608936877654080870, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
@@ -2772,6 +2787,7 @@ GameObject:
   - component: {fileID: 543597205}
   - component: {fileID: 543597208}
   - component: {fileID: 543597207}
+  - component: {fileID: 543597209}
   m_Layer: 5
   m_Name: WorldsBg
   m_TagString: Untagged
@@ -2869,6 +2885,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldNumber: 0
   animatedItemType: 3
+--- !u!114 &543597209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543597203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb4374eda0377348a8b02c0990f0dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphas: 1
+  onlyImages: 0
 --- !u!1001 &594284785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5828,6 +5858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32caf9c281031dc42a63f72c246c468c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openWorld: 0
 --- !u!1001 &955830307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8089,7 +8120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldNumber: 0
-  animatedItemType: 3
+  animatedItemType: 6
 --- !u!1001 &1356603215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8412,7 +8443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldNumber: 0
-  animatedItemType: 4
+  animatedItemType: 3
 --- !u!1 &1410196275
 GameObject:
   m_ObjectHideFlags: 0
@@ -12105,6 +12136,7 @@ GameObject:
   - component: {fileID: 2111784704}
   - component: {fileID: 2111784705}
   - component: {fileID: 2111784706}
+  - component: {fileID: 2111784707}
   m_Layer: 5
   m_Name: WorldSelectUI
   m_TagString: Untagged
@@ -12165,6 +12197,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldNumber: 0
   animatedItemType: 3
+--- !u!114 &2111784707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111784703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb4374eda0377348a8b02c0990f0dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphas: 1
+  onlyImages: 0
 --- !u!224 &770516518086278339
 RectTransform:
   m_ObjectHideFlags: 0

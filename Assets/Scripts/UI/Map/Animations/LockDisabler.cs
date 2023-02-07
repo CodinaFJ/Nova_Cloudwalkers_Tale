@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
+/// <summary>
+/// This was just done because I was trying to not block properties with animator.
+/// TODO: remove this script and replace by functionality in code animations
+/// </summary>
 public class LockDisabler : MonoBehaviour
 {
     [SerializeField] Image lockImage;

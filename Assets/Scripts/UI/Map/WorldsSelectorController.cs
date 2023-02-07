@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Legacy. Should be replaced by MapContextController.
+/// </summary>
 public class WorldsSelectorController : MonoBehaviour
 {
     public static WorldsSelectorController instance;
@@ -24,29 +27,18 @@ public class WorldsSelectorController : MonoBehaviour
 
     void Start()
     {
+        //! Wouldn't it be better to leave all logic to the method itself?
         if (GameProgressManager.instance.WorldSelection == 0)
             StartOnClosedWorlds();
         else
             StartOnOpenedWorld(GameProgressManager.instance.WorldSelection);
     }
 
-    public void OnOpenWorld(int nbr)
-    {
-        activeWorld = worldLevelsSelector[nbr - 1];
-        activeWorld.SetActive(true);
-        ChangeAnimationStateWorlds("UI_selectWorld_" + nbr);
-        ChangeAnimationStateLevels("UI_showLevels", activeWorld.GetComponent<Animator>());
-        UIController.instance.ToLevels();
-        BackgroundAnimationController.instance.ZoomIn();
-    }
+    
 
-    public void OnCloseWorld()
-    {
-        ChangeAnimationStateLevels("UI_exitLevels", activeWorld.GetComponent<Animator>());
-        ChangeAnimationStateWorlds("UI_returnWorlds");
-        UIController.instance.ToWorlds();
-        BackgroundAnimationController.instance.ZoomOut();
-    }
+    /**************************************************************************************************
+    INITIAL STATE METHODS //!This should now be done with the machine state pattern
+    **************************************************************************************************/
 
     public void StartOnOpenedWorld(int nbr){
         foreach (GameObject openedWorld in worldLevelsSelector)
@@ -70,6 +62,10 @@ public class WorldsSelectorController : MonoBehaviour
         UIController.instance.EnableWorldsUI();
         //BackgroundAnimationController.instance.ZoomOut();
     }
+
+    /**************************************************************************************************
+    ANIMATION STATE METHODS //!All these are now controlled by new WorldSelectorAnimatedItem
+    **************************************************************************************************/
 
     public void UnlockWorld(int nbr)
     {

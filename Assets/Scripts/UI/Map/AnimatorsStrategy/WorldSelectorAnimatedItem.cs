@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class WorldSelectorAnimatedItem : MonoBehaviour
 {
 
-    [SerializeField] int                worldNumber;//TODO: World number should be set parents of hierarchy
+    [SerializeField] int                worldNumber;//TODO: World number should be set by parents in hierarchy
     [SerializeField] AnimatedItemType   animatedItemType;
 
     private Vector2     initialPos;
@@ -17,12 +17,16 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     private Animator    animator;
     private string      currentState;
 
+    private void Awake() {
+        animator = GetComponent<Animator>();
+    }
+
     private void Start() 
     {
         initialPos = transform.position;
         initialScale = transform.localScale;
-        animator = GetComponent<Animator>();
     }
+
     /**************************************************************************************************
     Animation control methods
     **************************************************************************************************/
@@ -36,7 +40,10 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
             PlayOpenWorldAnimation();
         else if(worldNumber == world && animatedItemType == AnimatedItemType.Levels)
             PlayWorldOpenAnimation();
-        else if(animatedItemType == AnimatedItemType.UI || animatedItemType == AnimatedItemType.Lock)
+        else if(animatedItemType == AnimatedItemType.UIWorlds
+                || animatedItemType == AnimatedItemType.UILevels
+                || animatedItemType == AnimatedItemType.Lock
+                || animatedItemType == AnimatedItemType.Background)
             PlayWorldOpenAnimation();
         else if (animatedItemType == AnimatedItemType.WorldButton)
             PlayHideWorldAnimation(selectedWorldGO);
@@ -66,6 +73,32 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
                 LevelSelectorAnimations.instance.PlayWorldButtonUnlockAnimation(this.gameObject);
             PlayUnlockWorldAnimation();
         }
+    }
+
+    public void AnimationControlStartWorldOpen(int world)
+    {
+        if (animatedItemType == AnimatedItemType.WorldButton
+            || animatedItemType == AnimatedItemType.Lock)
+            PlayStartOut();
+        else if (worldNumber == world
+                || animatedItemType == AnimatedItemType.UILevels
+                || animatedItemType == AnimatedItemType.Background)
+            PlayStartIn();
+        else
+            PlayStartOut();
+    }
+
+    public void AnimationControlStartWorldsClosed()
+    {
+        if (animatedItemType == AnimatedItemType.WorldButton
+            || animatedItemType == AnimatedItemType.Lock)
+            PlayStartIn();
+        else if (worldNumber != 0
+                || animatedItemType == AnimatedItemType.UILevels
+                || animatedItemType == AnimatedItemType.Background)
+            PlayStartOut();
+        else
+            PlayStartIn();
     }
 
     /**************************************************************************************************
@@ -110,6 +143,24 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
         PlayAnimation("WorldUnlock");
     }
 
+    /************************************************
+    Start In Screen
+    ************************************************/
+
+    private void    PlayStartIn()
+    {
+        PlayAnimation("StartIn");
+    }
+
+    /************************************************
+    Start Off Screen
+    ************************************************/
+
+    private void    PlayStartOut()
+    {
+        PlayAnimation("StartOut");
+    }
+
     /**************************************************************************************************
     Animator control
     **************************************************************************************************/
@@ -143,7 +194,8 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     /**************************************************************************************************
     Getters
     **************************************************************************************************/
-    public Vector2  GetInitialPos()     => this.initialPos;
-    public Vector2  GetInitialScale()   => this.initialScale;
-    public int      GetWorldNumber()    => this.worldNumber;
+    public Vector2          GetInitialPos()         => this.initialPos;
+    public Vector2          GetInitialScale()       => this.initialScale;
+    public int              GetWorldNumber()        => this.worldNumber;
+    public AnimatedItemType GetAnimatedItemType()   => this.animatedItemType;
 }

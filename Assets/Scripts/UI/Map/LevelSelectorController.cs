@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -6,67 +5,76 @@ using UnityEngine.SceneManagement;
 public class LevelSelectorController : MonoBehaviour
 {
     LevelLoader levelLoader;
+    PlayerInput mapPlayerInput;
+    PlayerInput optionPlayerInput;
     bool ctrlPressed = false;
     [SerializeField] GameObject OptionCanvas;
 
     void Start()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
-
+        mapPlayerInput = GetComponent<PlayerInput>();
+        optionPlayerInput = OptionCanvas.GetComponent<PlayerInput>();
+        //TODO: This musics management should be in a music manager class
         int numberOfMusics = 0;
-
         foreach ( Sound sound in AudioManager.instance.musics)
-        {
             if(AudioManager.instance.IsPlaying(sound.name)) numberOfMusics ++;
-        }
-
         if(numberOfMusics > 1)
         {
             foreach ( Sound sound in AudioManager.instance.musics)
-            {
                 if(AudioManager.instance.IsPlaying(sound.name)) StartCoroutine(AudioManager.instance.FadeOutMusic(sound.name));
-            }
-
             StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
         }
-
-        MouseMatrixScript.ReleasePointer();
+        MouseMatrixScript.ReleasePointer();//! This is also in UI controller. Redundant?
     }
 
     private void Update() 
     {
+        //TODO: This should not be in update
         if(OptionCanvas.activeSelf)
         {
-            GetComponent<PlayerInput>().enabled = false;
-            GetComponent<PlayerInput>().DeactivateInput();
+            mapPlayerInput.enabled = false;
+            mapPlayerInput.DeactivateInput();
 
-            OptionCanvas.GetComponent<PlayerInput>().enabled = true;
-            OptionCanvas.GetComponent<PlayerInput>().ActivateInput();
+            optionPlayerInput.enabled = true;
+            optionPlayerInput.ActivateInput();
         }
         else
         {
-            GetComponent<PlayerInput>().enabled = true;
-            GetComponent<PlayerInput>().ActivateInput();
+            mapPlayerInput.enabled = true;
+            mapPlayerInput.ActivateInput();
 
-            OptionCanvas.GetComponent<PlayerInput>().enabled = false;
-            OptionCanvas.GetComponent<PlayerInput>().DeactivateInput();
+            optionPlayerInput.enabled = false;
+            optionPlayerInput.DeactivateInput();
         }
     }
 
+    /// <summary>
+    /// Load level when level selected. Music fade out.
+    /// </summary>
+    /// <param name="name"> Name of level selected </param>
     public void LoadLevel(string name)
     {
         SFXManager.PlayEnterLevel();
         MouseMatrixScript.BlockPointer();
         if(AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));
-
         levelLoader.LoadLevel(name);
     }
 
+    /**************************************************************************************************
+    UI ACTIONS
+    **************************************************************************************************/
+
+    //! I am not sure if we are still using this
     public void ExitButton()
     {
         levelLoader.LoadLevel("StartMenu");
     }
 
+    /// <summary>
+    /// Open option canvas with SFX
+    /// </summary>
+    //! I am also doing stuff with option canvas in UI controller WTF
     public void OnPause()
     {
         if(!OptionCanvas.activeSelf)
@@ -78,16 +86,20 @@ public class LevelSelectorController : MonoBehaviour
         }
     }
 
-    public void OnCtrlPress(){
-        ctrlPressed = true;
-    }
+    /**************************************************************************************************
+    DEV CHEATS
+    **************************************************************************************************/
 
-    public void OnCtrlRelease(){
-        ctrlPressed = false;
-    }
+    public void OnCtrlPress() => ctrlPressed = true;
+    public void OnCtrlRelease() => ctrlPressed = false;
 
-    public void OnUnlockAllLevels(){
-        if(ctrlPressed){
+    /// <summary>
+    /// Cheat to unlock all levels
+    /// </summary>
+    public void OnUnlockAllLevels()
+    {
+        if(ctrlPressed)
+        {
             GameProgressManager.instance.UnlockAllLevels();
             SceneManager.LoadScene(LevelLoader.GetLevelContains("LevelSelector"));
         }

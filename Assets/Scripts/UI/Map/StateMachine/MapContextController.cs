@@ -9,12 +9,13 @@ public class MapContextController : MonoBehaviour
 {
     public static MapContextController Instance;
 
-    private int                         openWorld;
+    [SerializeField] private int                         openWorld;
     private MapState                    worldsMapState;
     private MapState                    unlockingWorldsMapState;
     private MapState                    levelsMapState;
     private MapState                    mapState;
     private WorldSelectorAnimatedItem[] animatedItemsArray;
+    private List<WorldSelectorAnimatedItem> animatedItemsList;
 
     /**************************************************************************************************
     Initializers
@@ -27,8 +28,12 @@ public class MapContextController : MonoBehaviour
     private void    Start()
     {
         InitializeStates();
-        SetInitialMapState();
         animatedItemsArray = FindObjectsOfType<WorldSelectorAnimatedItem>();
+        animatedItemsList = ArrayAnimatedItemsToList(animatedItemsArray);
+        //LoadMapState(GameProgressManager.instance.WorldSelection);
+        SetMapState(levelsMapState);
+        openWorld = 1;
+        LoadMapState();
     }
 
     /// <summary>
@@ -41,9 +46,24 @@ public class MapContextController : MonoBehaviour
         levelsMapState = new LevelsMapState(this);
     }
 
-    private void    SetInitialMapState()
+    private void    LoadMapState()
     {
-        SetMapState(worldsMapState);
+        if (mapState == worldsMapState)
+        {
+            AnimationControlStartWorldsClosed();
+        }
+        else
+        {
+            AnimationControlStartWorldOpen(openWorld);
+        }
+    }
+
+    private List<WorldSelectorAnimatedItem> ArrayAnimatedItemsToList(WorldSelectorAnimatedItem[] array)
+    {
+        List<WorldSelectorAnimatedItem> list = new List<WorldSelectorAnimatedItem>();
+        foreach(var x in array)
+            list.Add(x);
+        return list;
     }
 
     /**************************************************************************************************
@@ -67,7 +87,7 @@ public class MapContextController : MonoBehaviour
     /// <param name="selectWorldGO"> Game Object of selected world </param>
     public void AnimationControlWorldSelected(int world, GameObject selectWorldGO)
     {
-        foreach(var animatedItem in animatedItemsArray)
+        foreach(var animatedItem in animatedItemsList)
             animatedItem.AnimationControlWorldSelected(world, selectWorldGO);
     }
 
@@ -77,7 +97,7 @@ public class MapContextController : MonoBehaviour
     /// <param name="world"> Number of closed world </param>
     public void AnimationControlWorldClosed(int world)
     {
-        foreach(var animatedItem in animatedItemsArray)
+        foreach(var animatedItem in animatedItemsList)
             animatedItem.AnimationControlWorldClosed(world);
     }
 
@@ -87,8 +107,20 @@ public class MapContextController : MonoBehaviour
     /// <param name="world"> Number of unlocked world </param>
     public void AnimationControlWorldUnlock(int world)
     {
-        foreach(var animatedItem in animatedItemsArray)
+        foreach(var animatedItem in animatedItemsList)
             animatedItem.AnimationControlWorldUnlock(world);
+    }
+
+    public void AnimationControlStartWorldOpen(int world)
+    {
+        foreach(var animatedItem in animatedItemsList)
+            animatedItem.AnimationControlStartWorldOpen(world);
+    }
+
+    public void AnimationControlStartWorldsClosed()
+    {
+        foreach(var animatedItem in animatedItemsList)
+            animatedItem.AnimationControlStartWorldsClosed();
     }
 
     /**************************************************************************************************

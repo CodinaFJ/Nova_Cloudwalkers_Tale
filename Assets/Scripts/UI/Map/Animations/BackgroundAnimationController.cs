@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class is legacy. Replaced by WorldSelectorAnimatedItem
+/// </summary>
 public class BackgroundAnimationController : MonoBehaviour
 {
     public static BackgroundAnimationController instance;

@@ -26,7 +26,6 @@ public class MapState
     /// </summary>
     public virtual void CloseWorldAction()
     {
-        throw new System.NotImplementedException("Cannot perform " + System.Reflection.MethodBase.GetCurrentMethod().Name + "while in " + this.GetType().Name);
     }
 
     /// <summary>
@@ -34,7 +33,6 @@ public class MapState
     /// </summary>
     public virtual void FinishUnlockWorldAction()
     {
-        throw new System.NotImplementedException("Cannot perform " + System.Reflection.MethodBase.GetCurrentMethod().Name + "while in " + this.GetType().Name);
     }
 
     /// <summary>
@@ -43,7 +41,6 @@ public class MapState
     /// <param name="world"> World selected </param>
     public virtual void SelectWorldAction(GameObject selectWorldGO)
     {
-        throw new System.NotImplementedException("Cannot perform " + System.Reflection.MethodBase.GetCurrentMethod().Name + "while in " + this.GetType().Name);
     }
 
     /// <summary>
@@ -52,6 +49,5 @@ public class MapState
     /// <param name="world"> World to unlock </param>
     public virtual void UnlockWorldAction(int world)
     {
-        throw new System.NotImplementedException("Cannot perform " + System.Reflection.MethodBase.GetCurrentMethod().Name + "while in " + this.GetType().Name);
     }
 }

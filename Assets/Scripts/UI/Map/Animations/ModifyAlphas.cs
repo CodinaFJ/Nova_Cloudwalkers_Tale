@@ -1,16 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
 public class ModifyAlphas : MonoBehaviour
 {
-    Image[] images;
-    Button[] buttons;
-    TextMeshProUGUI[] texts;
-    [SerializeField]
-    private float alphas = 1;
+    [SerializeField] private float alphas = 1;
+    [SerializeField] bool onlyImages = false;
+
+    private Image[] images;
+    private Button[] buttons;
+    private TextMeshProUGUI[] texts;
+    private Color color;
+
+    /*Properties*/
+
     public float Alphas { 
         get => alphas; 
         set
@@ -21,8 +24,6 @@ public class ModifyAlphas : MonoBehaviour
                 Debug.LogWarning(("ModifyAlphas: Wrong alphas"));
         }
     }
-    [SerializeField]
-    bool onlyImages = false;
 
     void Start()
     {
@@ -31,21 +32,22 @@ public class ModifyAlphas : MonoBehaviour
         buttons = GetComponentsInChildren<Button>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //TODO: The right way of doing this would probably be to have each object identify its alpha from a parent.
         foreach(Image image in images)
         {
-            Color color = image.color;
+            color = image.color;
             color.a = alphas; 
             image.color = color;
         }
         foreach(TextMeshProUGUI text in texts)
         {
-            Color color = text.color;
+            color = text.color;
             color.a = alphas;
             text.color = color;
         }
+        //! Probably I should not do this
         foreach(Button button in buttons)
         {
             if (alphas == 0)

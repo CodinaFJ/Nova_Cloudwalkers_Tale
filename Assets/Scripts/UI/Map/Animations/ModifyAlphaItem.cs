@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
+/// <summary>
+/// Legacy. I don't even know why I had this
+/// </summary>
 public class ModifyAlphaItem : MonoBehaviour
 {
     [SerializeField] Image image;
