@@ -139,19 +139,28 @@ public class GameProgressManager : MonoBehaviour
     /// </summary>
     /// <param name="n"> World number </param>
     /// <returns> True if world is unlocked </returns>
-    public bool CheckUnlockedWorld(int n)
+    public bool GetUnlockedWorld(int n)
     {
         return unlockedWorlds[n - 1];
+    }
+
+    /// <summary>
+    /// Load with world as unlocked
+    /// </summary>
+    /// <param name="n"> World number </param>
+    public void LoadWithUnlockWorld(int n)
+    {
+        MapContextController.Instance.SetLoadWithUnlockWorld(n);
     }
 
     /// <summary>
     /// Set world as unlocked
     /// </summary>
     /// <param name="n"> World number </param>
-    public void UnlockWorld(int n)
+    public void SetUnlockWorld(int n)
     {
         unlockedWorlds[n - 1] = true;
-        WorldsSelectorController.instance.UnlockWorld(n);
+        MapContextController.Instance.UpdateLocksState();
     }
 
     /**************************************************************************************************

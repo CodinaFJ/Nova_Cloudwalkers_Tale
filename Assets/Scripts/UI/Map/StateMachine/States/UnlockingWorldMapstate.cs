@@ -22,8 +22,9 @@ public class UnlockingWorldMapstate : MapState
 	/// <summary>
 	/// Sets state back to GetWorldsMapState.
 	/// </summary>
-	public override void FinishUnlockWorldAction()
+	public override void FinishUnlockWorldAction(int world)
 	{
+		GameProgressManager.instance.SetUnlockWorld(world);
 		mapContextController.SetMapState(mapContextController.GetWorldsMapState());
 	}
 
@@ -34,8 +35,6 @@ public class UnlockingWorldMapstate : MapState
 	/// <param name="world"> World to unlock </param>
 	public override void UnlockWorldAction(int world)
 	{
-		Debug.Log("Unlocking world " + world);
 		mapContextController.AnimationControlWorldUnlock(world);
-        FinishUnlockWorldAction();
 	}
 }

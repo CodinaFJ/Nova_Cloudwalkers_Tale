@@ -31,7 +31,7 @@ public class MapState
     /// <summary>
     /// State Machine Action: Finish animation of world unlocking.
     /// </summary>
-    public virtual void FinishUnlockWorldAction()
+    public virtual void FinishUnlockWorldAction(int world)
     {
     }
 

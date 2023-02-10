@@ -9,13 +9,15 @@ public class MapContextController : MonoBehaviour
 {
     public static MapContextController Instance;
 
-    [SerializeField] private int                         openWorld;
+    [SerializeField] private int        openWorld;
     private MapState                    worldsMapState;
     private MapState                    unlockingWorldsMapState;
     private MapState                    levelsMapState;
     private MapState                    mapState;
     private WorldSelectorAnimatedItem[] animatedItemsArray;
     private List<WorldSelectorAnimatedItem> animatedItemsList;
+    private int                         loadWithUnlockWorld = 0;
+    private LockScript[]                locks;
 
     /**************************************************************************************************
     Initializers
@@ -29,12 +31,23 @@ public class MapContextController : MonoBehaviour
     {
         InitializeStates();
         animatedItemsArray = FindObjectsOfType<WorldSelectorAnimatedItem>();
+        locks = FindObjectsOfType<LockScript>();
         animatedItemsList = ArrayAnimatedItemsToList(animatedItemsArray);
-        //LoadMapState(GameProgressManager.instance.WorldSelection);
-        SetMapState(levelsMapState);
-        openWorld = 1;
+        StartState();
         LoadMapState();
     }
+
+    private List<WorldSelectorAnimatedItem> ArrayAnimatedItemsToList(WorldSelectorAnimatedItem[] array)
+    {
+        List<WorldSelectorAnimatedItem> list = new List<WorldSelectorAnimatedItem>();
+        foreach(var x in array)
+            list.Add(x);
+        return list;
+    }
+
+    /**************************************************************************************************
+    Preparation for Machine State Pattern
+    **************************************************************************************************/
 
     /// <summary>
     /// Instantiate one object of each state.
@@ -46,24 +59,36 @@ public class MapContextController : MonoBehaviour
         levelsMapState = new LevelsMapState(this);
     }
 
-    private void    LoadMapState()
+    private void    StartState()
     {
-        if (mapState == worldsMapState)
+        int worldLoad = GameProgressManager.instance.WorldSelection;
+        if (worldLoad == 0)
         {
-            AnimationControlStartWorldsClosed();
+            SetMapState(worldsMapState);
+            openWorld = 0;
         }
         else
         {
-            AnimationControlStartWorldOpen(openWorld);
+            SetMapState(levelsMapState);
+            openWorld = worldLoad;
+            if (loadWithUnlockWorld != 0)
+                StartCoroutine(StartAtUnlockWorld(loadWithUnlockWorld));
         }
     }
 
-    private List<WorldSelectorAnimatedItem> ArrayAnimatedItemsToList(WorldSelectorAnimatedItem[] array)
+    private void    LoadMapState()
     {
-        List<WorldSelectorAnimatedItem> list = new List<WorldSelectorAnimatedItem>();
-        foreach(var x in array)
-            list.Add(x);
-        return list;
+        if (mapState == worldsMapState)
+            AnimationControlStartWorldsClosed();
+        else
+            AnimationControlStartWorldOpen(openWorld);
+    }
+
+    IEnumerator     StartAtUnlockWorld(int world)
+    {
+        yield return new WaitForSeconds(4);
+        Debug.Log("Coroutine to unlock");
+        mapState.UnlockWorldAction(world);
     }
 
     /**************************************************************************************************
@@ -124,10 +149,31 @@ public class MapContextController : MonoBehaviour
     }
 
     /**************************************************************************************************
+    Locks
+    **************************************************************************************************/
+
+    public void UpdateLocksState()
+    {
+        foreach(var mapLock in locks)
+        {
+            mapLock.UpdateLockState();
+        }
+    }
+
+    public void FinishWorldCloseAnimation(int world)
+    {
+        if (world != 0)
+        {
+            mapState.UnlockWorldAction(world);
+        }
+    }
+
+    /**************************************************************************************************
     Setters
     **************************************************************************************************/
     public void SetMapState (MapState mapState) => this.mapState = mapState;
     public void SetOpenWorld(int openWorld) => this.openWorld = openWorld;
+    public void SetLoadWithUnlockWorld(int unlockWorld) => this.loadWithUnlockWorld = unlockWorld;
 
     /**************************************************************************************************
     Getters
@@ -137,4 +183,6 @@ public class MapContextController : MonoBehaviour
     public MapState GetLevelsMapState() => levelsMapState;
     public MapState GetMapState() => mapState;
     public int      GetOpenWorld() => openWorld;
+    public int      GetLoadWithUnlockWorld() => loadWithUnlockWorld;
+
 }

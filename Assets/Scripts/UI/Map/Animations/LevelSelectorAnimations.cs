@@ -145,7 +145,7 @@ public class LevelSelectorAnimations : MonoBehaviour
     {
         yield return new WaitForSeconds(worldButtonSelectTimes[0]);
         LeanTween.scale(go, new Vector2(0.44f, 0.44f), worldButtonSelectTimes[1]).setEase(LeanTweenType.easeInOutSine);
-        yield return new WaitForSeconds(worldButtonSelectTimes[1] + worldButtonSelectTimes[2]);
+        yield return new WaitForSeconds(worldButtonSelectTimes[1] /*+ worldButtonSelectTimes[2]*/);
         LeanTween.scale(go, new Vector2(0.4f, 0.4f), worldButtonSelectTimes[3]).setEase(LeanTweenType.easeInOutSine);
     }
 
@@ -159,4 +159,8 @@ public class LevelSelectorAnimations : MonoBehaviour
         LeanTween.scale(go, new Vector2(1, 1), worldsContainerShowTimes[0]).setEase(easeWorldsContainerScaleDown);
         yield return new WaitForSeconds(worldsContainerShowTimes[0]);
     }
+
+    /**************************************************************************************************
+    Getter
+    **************************************************************************************************/
 }

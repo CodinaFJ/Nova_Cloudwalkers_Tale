@@ -332,7 +332,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5627487880029143434}
   - component: {fileID: 6105597761155495851}
-  - component: {fileID: 8377588917448180584}
   - component: {fileID: 5832173998795843233}
   - component: {fileID: 1016758831158572681}
   - component: {fileID: 7719319478834743507}
@@ -373,28 +372,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5627487880029143435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4172c807d1f2f3442a40eeaa3697891b, type: 3}
+  m_Script: {fileID: 11500000, guid: e0d29f82c10390246bb6f49fb84785fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starsToOpen: 11
+  starsToOpen: 0
   levelToUnlock: {fileID: 0}
-  worldToUnlock: 2
+  worldToUnlock: 0
   countText: {fileID: 5627487878967912856}
---- !u!114 &8377588917448180584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5627487880029143435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7181671d4035d654592240c4088596cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lockImage: {fileID: 5627487879905007697}
-  counter: {fileID: 5627487879911886226}
-  lockEnabled: 1
+  lockGO: {fileID: 5627487879905007699}
+  counterGO: {fileID: 5627487879911886226}
 --- !u!114 &5832173998795843233
 MonoBehaviour:
   m_ObjectHideFlags: 0

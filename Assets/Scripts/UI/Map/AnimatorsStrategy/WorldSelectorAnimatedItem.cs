@@ -25,6 +25,8 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     {
         initialPos = transform.position;
         initialScale = transform.localScale;
+        if (animatedItemType == AnimatedItemType.WorldButton)
+            SetWorldButtonState();
     }
 
     /**************************************************************************************************
@@ -59,6 +61,8 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
             LevelSelectorAnimations.instance.PlayWorldsContainerScaleDownAnimation(this.gameObject);
         else
             PlayCloseWorldAnimation();
+        if (animatedItemType == AnimatedItemType.WorldButton && worldNumber == 1)
+            StartCoroutine(OnFinishAnimationClose(world));
     }
 
     /// <summary>
@@ -71,6 +75,8 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
         {
             if (animatedItemType == AnimatedItemType.WorldButton)
                 LevelSelectorAnimations.instance.PlayWorldButtonUnlockAnimation(this.gameObject);
+            else if (animatedItemType == AnimatedItemType.Lock)
+                StartCoroutine(OnFinishAnimationUnlock());
             PlayUnlockWorldAnimation();
         }
     }
@@ -99,6 +105,38 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
             PlayStartOut();
         else
             PlayStartIn();
+    }
+
+    /**************************************************************************************************
+    On Finish Animation
+    **************************************************************************************************/
+
+    IEnumerator OnFinishAnimationUnlock()
+    {
+        yield return new WaitForSeconds(2/60);
+        while(true)
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))
+            {
+                break ;
+            }
+            yield return null;
+        }
+        MapContextController.Instance.GetMapState().FinishUnlockWorldAction(worldNumber);
+    }
+
+    IEnumerator OnFinishAnimationClose(int world)
+    {
+        yield return new WaitForSeconds(2/60);
+        while(true)
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))
+            {
+                break ;
+            }
+            yield return null;
+        }
+        MapContextController.Instance.FinishWorldCloseAnimation(world);
     }
 
     /**************************************************************************************************
@@ -144,7 +182,7 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     }
 
     /************************************************
-    Start In Screen
+    Start State
     ************************************************/
 
     private void    PlayStartIn()
@@ -152,13 +190,20 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
         PlayAnimation("StartIn");
     }
 
-    /************************************************
-    Start Off Screen
-    ************************************************/
-
     private void    PlayStartOut()
     {
         PlayAnimation("StartOut");
+    }
+
+    private void    SetWorldButtonState()
+    {
+        Button worldButton;
+
+        worldButton = this.gameObject.GetComponent<Button>();
+        if (GameProgressManager.instance.GetUnlockedWorld(worldNumber))
+            worldButton.interactable = true;
+        else
+            worldButton.interactable = false;
     }
 
     /**************************************************************************************************

@@ -24,8 +24,7 @@ public class LevelsMapState : MapState
 	/// </summary>
 	public override void CloseWorldAction()
 	{
-		CloseWorld(mapContextController.GetOpenWorld());
-        mapContextController.SetMapState(mapContextController.GetWorldsMapState());
+		CloseWorld(0);
 	}
 
 	/// <summary>
@@ -35,9 +34,7 @@ public class LevelsMapState : MapState
 	/// <param name="world"> World to unlock. </param>
 	public override void UnlockWorldAction(int world)
 	{
-		CloseWorld(mapContextController.GetOpenWorld());
-        Debug.Log("Waiting for world to be closed");
-        mapContextController.GetMapState().UnlockWorldAction(world);
+		CloseWorld(world);
 	}
 
     /**************************************************************************************************
@@ -53,5 +50,6 @@ public class LevelsMapState : MapState
     {
         mapContextController.AnimationControlWorldClosed(world);
         mapContextController.SetOpenWorld(0);
+		mapContextController.SetMapState(mapContextController.GetWorldsMapState());
     }
 }
