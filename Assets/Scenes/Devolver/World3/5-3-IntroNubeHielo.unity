@@ -15494,10 +15494,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 4007958891869981195, guid: 542039fd2ee66a24ca298a1779c4e69e, type: 3}
-      propertyPath: orthographic size
-      value: 3.75
-      objectReference: {fileID: 0}
     - target: {fileID: 4007958891869981428, guid: 542039fd2ee66a24ca298a1779c4e69e, type: 3}
       propertyPath: m_RootOrder
       value: 1

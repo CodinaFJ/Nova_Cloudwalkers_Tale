@@ -11369,11 +11369,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774686, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774686, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Size.x
@@ -13281,11 +13281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830460657897, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830460657897, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830460657898, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -14699,10 +14699,6 @@ PrefabInstance:
     - target: {fileID: 4007958891869981192, guid: 542039fd2ee66a24ca298a1779c4e69e, type: 3}
       propertyPath: m_Name
       value: Main Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007958891869981195, guid: 542039fd2ee66a24ca298a1779c4e69e, type: 3}
-      propertyPath: orthographic size
-      value: 4.85
       objectReference: {fileID: 0}
     - target: {fileID: 4007958891869981428, guid: 542039fd2ee66a24ca298a1779c4e69e, type: 3}
       propertyPath: m_RootOrder
