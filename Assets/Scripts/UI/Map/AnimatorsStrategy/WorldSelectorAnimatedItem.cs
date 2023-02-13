@@ -62,6 +62,11 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     {
         if (animatedItemType == AnimatedItemType.WorldsContainer)
             LevelSelectorAnimations.instance.PlayWorldsContainerScaleDownAnimation(this.gameObject);
+        else if (animatedItemType == AnimatedItemType.Levels)
+        {
+            if (MapContextController.Instance.GetOpenWorld() == worldNumber)
+                PlayCloseWorldAnimation();
+        }
         else
             PlayCloseWorldAnimation();
         if (animatedItemType == AnimatedItemType.WorldButton && worldNumber == 1)

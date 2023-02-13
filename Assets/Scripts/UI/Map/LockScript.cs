@@ -11,7 +11,7 @@ using TMPro;
 public class LockScript : MonoBehaviour
 {
     [SerializeField] int starsToOpen;
-    [SerializeField] levelButton levelToUnlock;
+    //[SerializeField] levelButton levelToUnlock;
     [SerializeField] int worldToUnlock;
     [SerializeField] TextMeshProUGUI countText;
     [SerializeField] GameObject lockGO;

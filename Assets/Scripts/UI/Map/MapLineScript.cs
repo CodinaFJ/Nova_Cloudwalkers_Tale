@@ -18,8 +18,11 @@ public class MapLineScript : MonoBehaviour
         Level level;
         try{
             level = GameProgressManager.instance.GetLevel(worldNumber, levelNumber);
-            if(initialLevel2 && GameProgressManager.instance.GetCollectedStarsInGame() >= 14) myImage.sprite = filledLine;
-            else if(GameProgressManager.instance.GetLevel(worldNumber, levelNumber).GetLevelCompleted()) myImage.sprite = filledLine; 
+            //if(initialLevel2 && GameProgressManager.instance.GetCollectedStarsInGame() >= 14) myImage.sprite = filledLine;
+            if(GameProgressManager.instance.GetLevel(worldNumber, levelNumber).GetLevelCompleted())
+            {
+                myImage.sprite = filledLine;
+            }  
         }catch{
             Debug.LogWarning("Error importing level on line for level: " + worldNumber + ", " + levelNumber);
             return;

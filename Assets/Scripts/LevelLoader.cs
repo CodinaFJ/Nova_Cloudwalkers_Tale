@@ -9,9 +9,15 @@ public class LevelLoader : MonoBehaviour
    [SerializeField] float transitionTime = 1f;
 
    static public LevelLoader instance;
+   bool transitionEnded = false;
 
    private void Awake() {
     instance = this;
+   }
+
+   private void Start() {
+        transitionEnded = false;
+        StartCoroutine(SetAnimationEnd());
    }
 
     public void LoadLevel()
@@ -31,6 +37,7 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevelFading(int levelIndex)
     {
+        transitionEnded = false;
         crossfade.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
@@ -40,6 +47,7 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevelFading(string levelName)
     {
+        transitionEnded = false;
         crossfade.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
@@ -49,13 +57,15 @@ public class LevelLoader : MonoBehaviour
 
     public void FadeOut()
     {
+        transitionEnded = false;
         crossfade.Play("Crossfade_Out");
     }
 
-
     public void FadeIn()
     {
+        transitionEnded = false;
         crossfade.Play("Crossfade_In");
+        StartCoroutine(SetAnimationEnd());
     }
 
     public static string GetLevelContains(string levelNameID){
@@ -70,4 +80,20 @@ public class LevelLoader : MonoBehaviour
 
         return sceneToLoad;
     }
+
+    public bool GetTransitionEnded() => transitionEnded;
+
+    IEnumerator SetAnimationEnd()
+    {
+        while(true)
+        {
+            if (crossfade.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !crossfade.IsInTransition(0))
+            {
+                break ;
+            }
+            yield return null;
+        }
+        transitionEnded = true;
+    }
+    
 }
