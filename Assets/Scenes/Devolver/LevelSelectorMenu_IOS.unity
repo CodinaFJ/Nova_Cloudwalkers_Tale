@@ -12494,7 +12494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
       propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[6].unlockedLevel
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
       propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[7].unlockedLevel

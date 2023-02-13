@@ -32,7 +32,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UI_LevelUnlock
+  m_Name: UI_MuralLevelUnlock
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -85,7 +85,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 149991582751121000}
-    m_Position: {x: 220, y: 120, z: 0}
+    m_Position: {x: 230, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3278932917879940967}
     m_Position: {x: 230, y: 170, z: 0}
