@@ -6,91 +6,91 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Devolver/StartMenu_IOS.unity
+    path: Assets/Scenes/Master_build/StartMenu.unity
     guid: 29ccefa0c1e9e6f44a030ea3a852f6ba
   - enabled: 1
-    path: Assets/Scenes/Cinematics/Cinematic1.unity
+    path: Assets/Scenes/Master_build/Cinematics/Cinematic1.unity
     guid: 01bc9bb302f917640bf3d412c655ff07
   - enabled: 1
-    path: Assets/Scenes/Cinematics/Cinematic2.unity
+    path: Assets/Scenes/Master_build/Cinematics/Cinematic2.unity
     guid: 9ad82a7f50bb0f54c9d66d9f0ac33f39
   - enabled: 1
     path: Assets/Scenes/Devolver/FinalDemo_Devolver.unity
     guid: afb1212b1248ec840bd5ee393422a6c4
   - enabled: 1
-    path: Assets/Scenes/Devolver/LevelSelectorMenu_IOS.unity
-    guid: 1734b97cf64e05349b33974f6cad8bf0
+    path: Assets/Scenes/Master_build/LevelSelectorMenu.unity
+    guid: b097d8faf03818e47bb7b89c59b241b5
   - enabled: 1
-    path: Assets/Scenes/Devolver/World1/1-1-Tutorial1.unity
+    path: Assets/Scenes/Master_build/World1/1-1-Tutorial1.unity
     guid: 176573d46cf560f4c996370c1ece70f1
   - enabled: 1
-    path: Assets/Scenes/Devolver/World1/2-1-Tutorial2.unity
+    path: Assets/Scenes/Master_build/World1/2-1-Tutorial2.unity
     guid: 1b58686312d4e684c8afc2f68f00d309
   - enabled: 1
-    path: Assets/Scenes/Devolver/World1/3-1-Tutorial3.unity
+    path: Assets/Scenes/Master_build/World1/3-1-Tutorial3.unity
     guid: aade1c135f49c6b428d045f0544fe887
   - enabled: 1
-    path: Assets/Scenes/Devolver/World1/4-1-LevelU.unity
+    path: Assets/Scenes/Master_build/World1/4-1-LevelU.unity
     guid: 6301345a161897b4da06d0c0a9c34a28
   - enabled: 1
-    path: Assets/Scenes/Devolver/World1/5-1-NubesEncerradas.unity
+    path: Assets/Scenes/Master_build/World1/5-1-NubesEncerradas.unity
     guid: 89c6cabc59988bf4dab02efbd5fb943c
   - enabled: 1
-    path: Assets/Scenes/Devolver/World1/6-1-gg3 girado.unity
+    path: Assets/Scenes/Master_build/World1/6-1-gg3 girado.unity
     guid: e8eb908904ba9b24aa81ccb03b8225b5
   - enabled: 1
-    path: Assets/Scenes/Devolver/World1/8-1-IntroSurf.unity
+    path: Assets/Scenes/Master_build/World1/8-1-IntroSurf.unity
     guid: 90ecc7472b1bfb7449c48153153d3fbc
   - enabled: 1
-    path: Assets/Scenes/Devolver/World1/9-1-LevelColumnas.unity
+    path: Assets/Scenes/Master_build/World1/9-1-LevelColumnas.unity
     guid: e09d2243fba0cf24eb9945dd3be45876
   - enabled: 1
-    path: Assets/Scenes/Devolver/World1/7-1-LevelMural 01.01.unity
+    path: Assets/Scenes/Master_build/World1/7-1-LevelMural 01.01.unity
     guid: 1e96ed4cb79b61c4db6020c754dbfca1
   - enabled: 1
-    path: Assets/Scenes/Devolver/World2/1-2-IntroDark.unity
+    path: Assets/Scenes/Master_build/World2/1-2-IntroDark.unity
     guid: 45bcc0db90f9828419a5b6cd3e1c3f61
   - enabled: 1
-    path: Assets/Scenes/Devolver/World2/2-2-gg7 ezpz.unity
+    path: Assets/Scenes/Master_build/World2/2-2-gg7 ezpz.unity
     guid: 1bbe130381b022045820dbd863eceb75
   - enabled: 1
-    path: Assets/Scenes/Devolver/World2/3-2-GrisesGordas BugApanio.unity
+    path: Assets/Scenes/Master_build/World2/3-2-GrisesGordas BugApanio.unity
     guid: 82d8af2d6074b674ca555d7f1c6950de
   - enabled: 1
-    path: Assets/Scenes/Devolver/World2/4-2-Carriles.unity
+    path: Assets/Scenes/Master_build/World2/4-2-Carriles.unity
     guid: aae60177ab34c224eada5ef9ce542b36
   - enabled: 1
-    path: Assets/Scenes/Devolver/World2/5-2-LevelMural 02.01.unity
+    path: Assets/Scenes/Master_build/World2/5-2-LevelMural 02.01.unity
     guid: 4417b26718aa71448b2636741a554e5a
   - enabled: 1
-    path: Assets/Scenes/Devolver/World2/6-2-GrisesLargas.unity
+    path: Assets/Scenes/Master_build/World2/6-2-GrisesLargas.unity
     guid: 7e8057f28ee45ae4a96b61763b4e0703
   - enabled: 1
-    path: Assets/Scenes/Devolver/World2/7-2-Level + Crema.unity
+    path: Assets/Scenes/Master_build/World2/7-2-Level + Crema.unity
     guid: 6bfbaf71117a3324483638b5b36c456a
   - enabled: 1
-    path: Assets/Scenes/Devolver/World3/1-3-Solohielo Small.unity
+    path: Assets/Scenes/Master_build/World3/1-3-Solohielo Small.unity
     guid: 30a37aed3d4a67346bb74b395a449f2b
   - enabled: 1
-    path: Assets/Scenes/Devolver/World3/3-3-FollowMe.unity
+    path: Assets/Scenes/Master_build/World3/3-3-FollowMe.unity
     guid: 3004950ae4bda964484cf9fb0a5340cc
   - enabled: 1
-    path: Assets/Scenes/Devolver/World3/2-3-OneTrickyMove.unity
+    path: Assets/Scenes/Master_build/World3/2-3-OneTrickyMove.unity
     guid: 052b38fc4cfe5454d82e425d9de214af
   - enabled: 1
-    path: Assets/Scenes/Devolver/World3/4-3-LevelMural 03.01.unity
+    path: Assets/Scenes/Master_build/World3/4-3-LevelMural 03.01.unity
     guid: 6e5165eeb5a68ab4db481efcb5f498fc
   - enabled: 1
-    path: Assets/Scenes/Devolver/World3/5-3-IntroNubeHielo.unity
+    path: Assets/Scenes/Master_build/World3/5-3-IntroNubeHielo.unity
     guid: feefae3f896ce2b409d6d22cbb659e4b
   - enabled: 1
-    path: Assets/Scenes/Devolver/World3/6-3-Nubehielos 4x1.unity
+    path: Assets/Scenes/Master_build/World3/6-3-Nubehielos 4x1.unity
     guid: eac9e328b6cc63d49ae11e38f2402cba
   - enabled: 1
-    path: Assets/Scenes/Devolver/World3/7-3-Triple HieloNubesyGrises.unity
+    path: Assets/Scenes/Master_build/World3/7-3-Triple HieloNubesyGrises.unity
     guid: 2b04fb2453c433446a40991fea7b7ee9
   - enabled: 1
-    path: Assets/Scenes/Devolver/World3/8-3-TresHielitos SuperLevel.unity
+    path: Assets/Scenes/Master_build/World3/8-3-TresHielitos SuperLevel.unity
     guid: 94cc309d9b275f9458f5d12da18d9fce
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 67b6f2b3104188242a8ff244006eb075, type: 2}
