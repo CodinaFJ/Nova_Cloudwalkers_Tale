@@ -26,6 +26,7 @@ public class WorldsMapState : MapState
 	{
 		int world;
 
+		mapContextController.EnableInput(false);
 		world = selectWorldGO.GetComponent<WorldSelectorAnimatedItem>().GetWorldNumber();
 		mapContextController.AnimationControlWorldSelected(world, selectWorldGO);
         mapContextController.SetOpenWorld(world);

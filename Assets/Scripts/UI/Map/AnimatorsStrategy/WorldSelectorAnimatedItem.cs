@@ -39,7 +39,10 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     public void AnimationControlWorldSelected(int world, GameObject selectedWorldGO)
     {
         if (worldNumber == world && animatedItemType == AnimatedItemType.WorldButton)
+        {
             PlayOpenWorldAnimation();
+            StartCoroutine(OnFinishAnimationSelect());
+        }
         else if(worldNumber == world && animatedItemType == AnimatedItemType.Levels)
             PlayWorldOpenAnimation();
         else if(animatedItemType == AnimatedItemType.UIWorlds
@@ -137,6 +140,20 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
             yield return null;
         }
         MapContextController.Instance.FinishWorldCloseAnimation(world);
+    }
+
+    IEnumerator OnFinishAnimationSelect()
+    {
+        yield return new WaitForSeconds(2/60);
+        while(true)
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))
+            {
+                break ;
+            }
+            yield return null;
+        }
+        MapContextController.Instance.FinishSelectWorldAnimation();
     }
 
     /**************************************************************************************************

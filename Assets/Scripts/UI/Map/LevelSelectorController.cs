@@ -25,28 +25,7 @@ public class LevelSelectorController : MonoBehaviour
                 if(AudioManager.instance.IsPlaying(sound.name)) StartCoroutine(AudioManager.instance.FadeOutMusic(sound.name));
             StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
         }
-        MouseMatrixScript.ReleasePointer();//! This is also in UI controller. Redundant?
-    }
-
-    private void Update() 
-    {
-        //TODO: This should not be in update
-        if(OptionCanvas.activeSelf)
-        {
-            mapPlayerInput.enabled = false;
-            mapPlayerInput.DeactivateInput();
-
-            optionPlayerInput.enabled = true;
-            optionPlayerInput.ActivateInput();
-        }
-        else
-        {
-            mapPlayerInput.enabled = true;
-            mapPlayerInput.ActivateInput();
-
-            optionPlayerInput.enabled = false;
-            optionPlayerInput.DeactivateInput();
-        }
+        MouseMatrixScript.ReleasePointer();
     }
 
     /// <summary>
@@ -77,13 +56,58 @@ public class LevelSelectorController : MonoBehaviour
     //! I am also doing stuff with option canvas in UI controller WTF
     public void OnPause()
     {
-        if(!OptionCanvas.activeSelf)
+        if (MapContextController.Instance.GetMapState() == MapContextController.Instance.GetWorldsMapState())
         {
-            OptionCanvas.SetActive(true);
-            OptionCanvas.GetComponent<OptionsMenuController>().ToPauseMap();
-            SFXManager.PlayOpenMenu();
-            //if(FindObjectOfType<GameManager>() != null) FindObjectOfType<GameManager>().PauseGame();
+            if(!OptionCanvas.activeSelf)
+            {
+                OptionCanvas.SetActive(true);
+                OptionsInput(true);
+                OptionCanvas.GetComponent<OptionsMenuController>().ToPauseMap();
+                SFXManager.PlayOpenMenu();
+                //if(FindObjectOfType<GameManager>() != null) FindObjectOfType<GameManager>().PauseGame();
+            }
         }
+        else if (MapContextController.Instance.GetMapState() == MapContextController.Instance.GetLevelsMapState())
+        {
+            MapContextController.Instance.CloseWorld();
+        }
+    }
+
+    public void OptionsInput(bool value)
+    {
+        if(value)
+        {
+            if (mapPlayerInput)
+            {
+                LevelSelectorInputState(false);
+            }
+            if (optionPlayerInput)
+            {
+                optionPlayerInput.enabled = true;
+                optionPlayerInput.ActivateInput();
+            }
+        }
+        else
+        {
+            if (mapPlayerInput)
+            {
+                LevelSelectorInputState(true);
+            }
+            if (optionPlayerInput)
+            {
+                optionPlayerInput.enabled = false;
+                optionPlayerInput.DeactivateInput();
+            }
+        }
+    }
+
+    public void LevelSelectorInputState(bool value)
+    {
+        mapPlayerInput.enabled = value;
+        if (value)
+            mapPlayerInput.ActivateInput();
+        else
+            mapPlayerInput.DeactivateInput();
     }
 
     /**************************************************************************************************

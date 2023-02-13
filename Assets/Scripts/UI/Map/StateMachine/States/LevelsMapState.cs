@@ -48,6 +48,7 @@ public class LevelsMapState : MapState
 	/// <param name="world"> World to close. </param>
     private void CloseWorld(int world)
     {
+		mapContextController.EnableInput(false);
         mapContextController.AnimationControlWorldClosed(world);
         mapContextController.SetOpenWorld(0);
 		mapContextController.SetMapState(mapContextController.GetWorldsMapState());

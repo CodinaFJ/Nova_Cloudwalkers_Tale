@@ -21,6 +21,7 @@ public class OptionsMenuController : MonoBehaviour
 
     GameManager gameManager;
     LevelLoader levelLoader;
+    LevelSelectorController levelSelectorController;
     [HideInInspector]
     public PlayerInput pauseMenuInput;
 
@@ -37,6 +38,7 @@ public class OptionsMenuController : MonoBehaviour
         OptionsBackground.SetActive(true);
         gameManager = FindObjectOfType<GameManager>();
         levelLoader = FindObjectOfType<LevelLoader>();
+        levelSelectorController = FindObjectOfType<LevelSelectorController>();
         pauseMenuInput = GetComponent<PlayerInput>();
         FullscreenToggle.isOn = Screen.fullScreen;
         fullscreenBool = Screen.fullScreen;
@@ -63,30 +65,44 @@ public class OptionsMenuController : MonoBehaviour
     public void ToOptions() => LoadOptionsSection(OptionsSectionTag.Options);
     public void ToAudioOptions() => LoadOptionsSection(OptionsSectionTag.OptionsAudio);
     public void ToVideoOptions() => LoadOptionsSection(OptionsSectionTag.OptionsVideo);
-    public void ToPauseLevel(){
+
+    public void ToPauseLevel()
+    {
         levelUI = FindObjectOfType<UIController>().gameObject;
-        if (levelUI) levelUI.SetActive(false);
+        if (levelUI)
+            levelUI.SetActive(false);
         LoadOptionsSection(OptionsSectionTag.PauseLevel);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseLevel;
-    } 
-    public void ToPauseMap(){
-        levelUI = FindObjectOfType<UIController>().gameObject;
-        if (levelUI) levelUI.GetComponent<UIController>().DisableUI();
+    }
+
+    public void ToPauseMap()
+    {
+        if (MapContextController.Instance.GetMapState() != MapContextController.Instance.GetWorldsMapState())
+            return ;
+        levelUI = GameObject.FindGameObjectWithTag("OverlayUI");
+        if (levelUI)
+        {
+            levelUI.SetActive(false);
+        }
         LoadOptionsSection(OptionsSectionTag.PauseMap);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
         OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseMap;
-    } 
-    public void ToPauseMenu(){
+    }
+
+    public void ToPauseMenu()
+    {
         LoadOptionsSection(OptionsSectionTag.Options);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseMenu;
-    } 
-    public void ToQuitMenu(){
+    }
+
+    public void ToQuitMenu()
+    {
         LoadOptionsSection(OptionsSectionTag.Quit);
         OptionsBackground.SetActive(false);
     }
@@ -96,7 +112,7 @@ public class OptionsMenuController : MonoBehaviour
             try{
                 OptionsSectionsList.Find(x => x.tag == OptionsSectionTag.PauseMenu).sectionGameObject.SetActive(true);
                 ToGame();
-            }catch{throw new NullReferenceException();}
+            }catch{Debug.LogWarning(("Failed back to pause"));}
         }
         OptionsBackground.SetActive(true);
         LoadOptionsSection(pauseMenuToGo);
@@ -120,7 +136,8 @@ public class OptionsMenuController : MonoBehaviour
                 levelUI.GetComponent<UIController>().EnableUI();
             } catch{}
         } 
-        if(gameManager != null) gameManager.ResumeGame();
+        if (gameManager) gameManager.ResumeGame();
+        else if (levelSelectorController) levelSelectorController.OptionsInput(false);
         SFXManager.PlayCloseMenu();
     }
 

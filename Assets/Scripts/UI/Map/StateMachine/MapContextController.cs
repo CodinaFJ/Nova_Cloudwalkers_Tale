@@ -18,6 +18,7 @@ public class MapContextController : MonoBehaviour
     private List<WorldSelectorAnimatedItem> animatedItemsList;
     private int                         loadWithUnlockWorld = 0;
     private LockScript[]                locks;
+    private LevelSelectorController     levelSelectorController;
 
     /**************************************************************************************************
     Initializers
@@ -31,6 +32,7 @@ public class MapContextController : MonoBehaviour
     {
         InitializeStates();
         animatedItemsArray = FindObjectsOfType<WorldSelectorAnimatedItem>();
+        levelSelectorController = FindObjectOfType<LevelSelectorController>();
         locks = FindObjectsOfType<LockScript>();
         animatedItemsList = ArrayAnimatedItemsToList(animatedItemsArray);
         StartState();
@@ -158,6 +160,7 @@ public class MapContextController : MonoBehaviour
         {
             mapLock.UpdateLockState();
         }
+        EnableInput(true);
     }
 
     public void FinishWorldCloseAnimation(int world)
@@ -166,6 +169,25 @@ public class MapContextController : MonoBehaviour
         {
             mapState.UnlockWorldAction(world);
         }
+        EnableInput(true);
+    }
+
+    public void FinishSelectWorldAnimation()
+    {
+        EnableInput(true);
+    }
+
+    /**************************************************************************************************
+    Input Controllers
+    **************************************************************************************************/
+
+    public void EnableInput(bool value)
+    {
+        levelSelectorController.LevelSelectorInputState(value);
+        if (value)
+            MouseMatrixScript.ReleasePointer();
+        else
+            MouseMatrixScript.BlockPointer();
     }
 
     /**************************************************************************************************
@@ -184,5 +206,6 @@ public class MapContextController : MonoBehaviour
     public MapState GetMapState() => mapState;
     public int      GetOpenWorld() => openWorld;
     public int      GetLoadWithUnlockWorld() => loadWithUnlockWorld;
+    public GameObject GetAnimatedItemOfType(AnimatedItemType animatedItemType) => animatedItemsList.Find(x => x.GetAnimatedItemType() == animatedItemType).gameObject;
 
 }
