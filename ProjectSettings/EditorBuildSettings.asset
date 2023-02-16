@@ -22,75 +22,153 @@ EditorBuildSettings:
     guid: b097d8faf03818e47bb7b89c59b241b5
   - enabled: 1
     path: Assets/Scenes/Master_build/World1/1-1-Tutorial1.unity
-    guid: 176573d46cf560f4c996370c1ece70f1
+    guid: f33340d3ac1f011458561e1a8c9d5131
   - enabled: 1
     path: Assets/Scenes/Master_build/World1/2-1-Tutorial2.unity
-    guid: 1b58686312d4e684c8afc2f68f00d309
+    guid: 5cd3b9e986f2ff0448c5fdbebd6bac24
   - enabled: 1
     path: Assets/Scenes/Master_build/World1/3-1-Tutorial3.unity
-    guid: aade1c135f49c6b428d045f0544fe887
+    guid: 067dff37ac78df04e8f19ccd8f9b6761
   - enabled: 1
     path: Assets/Scenes/Master_build/World1/4-1-LevelU.unity
-    guid: 6301345a161897b4da06d0c0a9c34a28
+    guid: e018754b8e0360d4aaf4608c717899be
   - enabled: 1
     path: Assets/Scenes/Master_build/World1/5-1-NubesEncerradas.unity
-    guid: 89c6cabc59988bf4dab02efbd5fb943c
+    guid: c50e698802540364783e4b79395b372a
   - enabled: 1
     path: Assets/Scenes/Master_build/World1/6-1-gg3 girado.unity
-    guid: e8eb908904ba9b24aa81ccb03b8225b5
+    guid: f402cc7f509cbd745801be386c07b71a
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World1/7-1-level Ls pocho.unity
+    guid: c0d28bf76d4de6c419dae22ec6ee550b
   - enabled: 1
     path: Assets/Scenes/Master_build/World1/8-1-IntroSurf.unity
-    guid: 90ecc7472b1bfb7449c48153153d3fbc
+    guid: deecd4846de0dea4e930b5a4a7323387
   - enabled: 1
-    path: Assets/Scenes/Master_build/World1/9-1-LevelColumnas.unity
-    guid: e09d2243fba0cf24eb9945dd3be45876
+    path: Assets/Scenes/Master_build/World1/9-1-LevelMural 01.01.unity
+    guid: 4f74d117f074e25489f765afb332a6f0
   - enabled: 1
-    path: Assets/Scenes/Master_build/World1/7-1-LevelMural 01.01.unity
-    guid: 1e96ed4cb79b61c4db6020c754dbfca1
+    path: Assets/Scenes/Master_build/World1/10-1-Enganchadas.unity
+    guid: ad4eb4fed8df98544bff5cb72ecbb534
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World1/11-1-LevelColumnas.unity
+    guid: 126394f5d8c979d4e954df271251abba
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World1/12-1-Ls.unity
+    guid: 362aa7aba442e2f438908fd4c6d80365
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World1/13-1-Idea + y + doble OK v4 1.unity
+    guid: 02234afa86017bb4886c96a612366905
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World1/14-1-PequeHard.unity
+    guid: 88eba7a1ee06e6944ab93ae2cc7ac694
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World1/15-1-Nubes3Hard.unity
+    guid: 3fb684697cdb0eb44bd204b7481ee9ab
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World1/16-1-LevelMural 01.02 Arreglar.unity
+    guid: 9e4c21da526ae80429c55b46cdef9fa7
   - enabled: 1
     path: Assets/Scenes/Master_build/World2/1-2-IntroDark.unity
-    guid: 45bcc0db90f9828419a5b6cd3e1c3f61
+    guid: 94174a71da94cbe4385ae61781fef220
   - enabled: 1
-    path: Assets/Scenes/Master_build/World2/2-2-gg7 ezpz.unity
-    guid: 1bbe130381b022045820dbd863eceb75
+    path: Assets/Scenes/Master_build/World2/2-2-rectaEz.unity
+    guid: 7703723ce64f227468effd6dc04748f7
   - enabled: 1
-    path: Assets/Scenes/Master_build/World2/3-2-GrisesGordas BugApanio.unity
-    guid: 82d8af2d6074b674ca555d7f1c6950de
+    path: Assets/Scenes/Master_build/World2/3-2-UInvertidaMEH.unity
+    guid: 5a0279883b4394246847c6d7168c7290
   - enabled: 1
-    path: Assets/Scenes/Master_build/World2/4-2-Carriles.unity
-    guid: aae60177ab34c224eada5ef9ce542b36
+    path: Assets/Scenes/Master_build/World2/4-2-Surround.unity
+    guid: 41badd9aa27bea149b59e89ce976ec7a
   - enabled: 1
-    path: Assets/Scenes/Master_build/World2/5-2-LevelMural 02.01.unity
-    guid: 4417b26718aa71448b2636741a554e5a
+    path: Assets/Scenes/Master_build/World2/5-2-gg7 ezpz.unity
+    guid: ee465328c60a02047a1f75ab8900ada1
   - enabled: 1
-    path: Assets/Scenes/Master_build/World2/6-2-GrisesLargas.unity
-    guid: 7e8057f28ee45ae4a96b61763b4e0703
+    path: Assets/Scenes/Master_build/World2/6-2-CarrilesColchones.unity
+    guid: 27d3b10aa4271cd41accf7b9cc1e61be
   - enabled: 1
-    path: Assets/Scenes/Master_build/World2/7-2-Level + Crema.unity
-    guid: 6bfbaf71117a3324483638b5b36c456a
+    path: Assets/Scenes/Master_build/World2/7-2-GrisesGordas Correct.unity
+    guid: 2ae25a9268df37643b4234b9b3ef54a8
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/8-2-GrisesLargas.unity
+    guid: 87963939e49571f4ca5a51797bb7f0d7
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/9-2-MuchasGrisesMeh.unity
+    guid: 010417afc5e0ab64d940e5ea32cafdad
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/10-2-LevelMural 02.01.unity
+    guid: f23c880dc06022041a7a6e4ff836fcdc
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/11-2-Doble Oo.unity
+    guid: 3c12fb7c27eab364a9189cf1fe24bde2
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/12-2-Surfeo preUnir.unity
+    guid: cf26f15e0f4f5184cad7deba071cef2b
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/13-2-HardDemoSteam.unity
+    guid: b9397f0add407f94a80329dc475ce48d
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/14-2-Level + Crema 1.unity
+    guid: 3075b1c60e7196f4abab0e3b4f3ead30
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/16-2-IrPerdiendo4Nubes.unity
+    guid: ef00e5764a516ff4eb1238ab98983076
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/17-2-UltimoJamModif.unity
+    guid: 56dd5d26b1dba8d4397fc3a402e66f54
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/18-2-EvitarUnaGrisTricky.unity
+    guid: 6c0dcc35b52106345855204a57fba0d8
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World2/19-2-GaliciaRotado.unity
+    guid: 941db355ccb00db468f158cfb41db0dc
   - enabled: 1
     path: Assets/Scenes/Master_build/World3/1-3-Solohielo Small.unity
-    guid: 30a37aed3d4a67346bb74b395a449f2b
+    guid: a0a4bf8831856f74da72cf9feaa25e7f
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World3/2-3-NuevoEasy.unity
+    guid: 6d954e98cc9dfcf46b5ff4eeeded51fd
   - enabled: 1
     path: Assets/Scenes/Master_build/World3/3-3-FollowMe.unity
-    guid: 3004950ae4bda964484cf9fb0a5340cc
-  - enabled: 1
-    path: Assets/Scenes/Master_build/World3/2-3-OneTrickyMove.unity
-    guid: 052b38fc4cfe5454d82e425d9de214af
+    guid: 0b2b7af1e417deb4481ae90687ed4e63
   - enabled: 1
     path: Assets/Scenes/Master_build/World3/4-3-LevelMural 03.01.unity
-    guid: 6e5165eeb5a68ab4db481efcb5f498fc
+    guid: 804382f9385819146a0193f9e11b02a0
   - enabled: 1
-    path: Assets/Scenes/Master_build/World3/5-3-IntroNubeHielo.unity
-    guid: feefae3f896ce2b409d6d22cbb659e4b
+    path: Assets/Scenes/Master_build/World3/5-3-OneTrickyMove.unity
+    guid: bea99682af618894e965242bf75ee56c
   - enabled: 1
-    path: Assets/Scenes/Master_build/World3/6-3-Nubehielos 4x1.unity
-    guid: eac9e328b6cc63d49ae11e38f2402cba
-  - enabled: 1
-    path: Assets/Scenes/Master_build/World3/7-3-Triple HieloNubesyGrises.unity
-    guid: 2b04fb2453c433446a40991fea7b7ee9
+    path: Assets/Scenes/Master_build/World3/7-3-IntroNubeHielo.unity
+    guid: c78b73afbb9c7374db05334ac9947f04
   - enabled: 1
     path: Assets/Scenes/Master_build/World3/8-3-TresHielitos SuperLevel.unity
-    guid: 94cc309d9b275f9458f5d12da18d9fce
+    guid: a33c391c1687e5a49a831ac0e9f957a5
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World3/17-3-NubeHielo3 4x1.unity
+    guid: b1eaa67bce6dbd5458cb18d129bcec25
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World3/25-3-Triple HieloNubesyGrises.unity
+    guid: d241ad5129d3eed40b8669cf53e2bed1
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World4/1-4-IntroElec.unity
+    guid: 192b79f71329f394db6fda1c7d45ff0c
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World4/2-4-EasyTripleElecHori.unity
+    guid: 869b8bd214ac5dc489c4dbd229675c58
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World4/3-4 CuadradosElec.unity
+    guid: b359cd2eada89b8418a8f9aae93fc79f
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World4/4-4-NiceDoblePuerta.unity
+    guid: a7b10ed2bc8b82149841c9929b325b81
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World4/5-4-MuyMehLs.unity
+    guid: 4878fe138b2c764499a4da6aaaa6650e
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World4/6-4 TrafficJamConPincho.unity
+    guid: 8e463cf3b49db4a40aa37da3c897140a
+  - enabled: 1
+    path: Assets/Scenes/Master_build/World4/8-4 Ranita.unity
+    guid: 62932b174ca784a43a4600adf3cf6d2a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 67b6f2b3104188242a8ff244006eb075, type: 2}

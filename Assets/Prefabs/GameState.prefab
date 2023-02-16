@@ -356,7 +356,47 @@ MonoBehaviour:
       wallLevel: 1
       unlockedLevel: 0
   - worldNumber: 4
-    levelsList: []
+    levelsList:
+    - levelNumber: 1
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 1
+    - levelNumber: 2
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 1
+    - levelNumber: 3
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 1
+    - levelNumber: 4
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 1
+    - levelNumber: 5
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 1
+    - levelNumber: 6
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 1
+    - levelNumber: 7
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 1
+    - levelNumber: 8
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 1
   playedCinematics: 0000010101
   unlockedWorlds: 01000000
   activeLevel:

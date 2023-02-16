@@ -114,6 +114,8 @@ public class GameProgressManager : MonoBehaviour
     }
 
     public void UnlockAllLevels(){
+        for (int i = 0; i < unlockedWorlds.Count ; i++)
+            unlockedWorlds[i] = true;
         foreach(World world in worldsWithLevels){
             foreach(Level level in world.GetLevelsList()){
                 level.SetLevelUnlocked(true);

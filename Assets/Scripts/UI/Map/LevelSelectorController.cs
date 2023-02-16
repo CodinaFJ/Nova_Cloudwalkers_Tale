@@ -34,6 +34,8 @@ public class LevelSelectorController : MonoBehaviour
     /// <param name="name"> Name of level selected </param>
     public void LoadLevel(string name)
     {
+        if (name == null)
+            return ;
         SFXManager.PlayEnterLevel();
         MouseMatrixScript.BlockPointer();
         if(AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeOutMusic("Main Theme"));

@@ -2672,11 +2672,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251046106430, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251046106430, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251157421000, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -3620,11 +3620,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251157421001, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251157421001, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251505586112, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_ChunkCullingBounds.x
@@ -21983,10 +21983,6 @@ PrefabInstance:
     - target: {fileID: 4007958891869981192, guid: 542039fd2ee66a24ca298a1779c4e69e, type: 3}
       propertyPath: m_Name
       value: Main Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007958891869981195, guid: 542039fd2ee66a24ca298a1779c4e69e, type: 3}
-      propertyPath: orthographic size
-      value: 4.25
       objectReference: {fileID: 0}
     - target: {fileID: 4007958891869981428, guid: 542039fd2ee66a24ca298a1779c4e69e, type: 3}
       propertyPath: m_RootOrder

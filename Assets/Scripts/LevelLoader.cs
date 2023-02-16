@@ -75,7 +75,11 @@ public class LevelLoader : MonoBehaviour
         string[] scenes = new string[sceneCount];
         for( int i = 0; i < sceneCount; i++ ){
             scenes[i] = System.IO.Path.GetFileNameWithoutExtension(UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex( i ));
-            if(scenes[i].Contains(levelNameID)) sceneToLoad = scenes[i];
+            if(scenes[i].Contains(levelNameID))
+            {
+                sceneToLoad = scenes[i];
+                break ;
+            }
         }
 
         return sceneToLoad;
