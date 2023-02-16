@@ -77,9 +77,9 @@ MonoBehaviour:
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 7
-      numberOfStars: 0
+      numberOfStars: 3
       collectedStars: 0
-      wallLevel: 1
+      wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 8
       numberOfStars: 2
@@ -87,9 +87,44 @@ MonoBehaviour:
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 9
+      numberOfStars: 0
+      collectedStars: 0
+      wallLevel: 1
+      unlockedLevel: 0
+    - levelNumber: 10
       numberOfStars: 2
       collectedStars: 0
       wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 11
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 12
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 13
+      numberOfStars: 3
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 14
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 15
+      numberOfStars: 3
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 16
+      numberOfStars: 0
+      collectedStars: 0
+      wallLevel: 1
       unlockedLevel: 0
   - worldNumber: 2
     levelsList:
@@ -104,19 +139,19 @@ MonoBehaviour:
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 3
-      numberOfStars: 2
+      numberOfStars: 1
       collectedStars: 0
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 4
-      numberOfStars: 2
+      numberOfStars: 1
       collectedStars: 0
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 5
-      numberOfStars: 0
+      numberOfStars: 1
       collectedStars: 0
-      wallLevel: 1
+      wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 6
       numberOfStars: 2
@@ -124,7 +159,67 @@ MonoBehaviour:
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 7
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 8
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 9
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 10
+      numberOfStars: 0
+      collectedStars: 0
+      wallLevel: 1
+      unlockedLevel: 0
+    - levelNumber: 11
+      numberOfStars: 3
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 12
       numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 13
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 14
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 15
+      numberOfStars: 0
+      collectedStars: 0
+      wallLevel: 1
+      unlockedLevel: 0
+    - levelNumber: 16
+      numberOfStars: 3
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 17
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 18
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 19
+      numberOfStars: 2
       collectedStars: 0
       wallLevel: 0
       unlockedLevel: 0
@@ -141,14 +236,14 @@ MonoBehaviour:
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 3
-      numberOfStars: 2
+      numberOfStars: 1
       collectedStars: 0
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 4
-      numberOfStars: 0
+      numberOfStars: 2
       collectedStars: 0
-      wallLevel: 1
+      wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 5
       numberOfStars: 2
@@ -156,20 +251,112 @@ MonoBehaviour:
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 6
-      numberOfStars: 1
+      numberOfStars: 2
       collectedStars: 0
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 7
-      numberOfStars: 3
+      numberOfStars: 0
       collectedStars: 0
-      wallLevel: 0
+      wallLevel: 1
       unlockedLevel: 0
     - levelNumber: 8
       numberOfStars: 2
       collectedStars: 0
       wallLevel: 0
       unlockedLevel: 0
+    - levelNumber: 9
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 10
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 11
+      numberOfStars: 3
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 12
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 13
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 14
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 15
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 16
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 17
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 18
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 19
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 20
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 21
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 22
+      numberOfStars: 3
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 23
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 24
+      numberOfStars: 1
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 25
+      numberOfStars: 3
+      collectedStars: 0
+      wallLevel: 0
+      unlockedLevel: 0
+    - levelNumber: 26
+      numberOfStars: 0
+      collectedStars: 0
+      wallLevel: 1
+      unlockedLevel: 0
+  - worldNumber: 4
+    levelsList: []
   playedCinematics: 0000010101
   unlockedWorlds: 01000000
   activeLevel:
