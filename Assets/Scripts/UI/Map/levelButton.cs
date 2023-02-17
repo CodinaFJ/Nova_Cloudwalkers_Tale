@@ -36,13 +36,11 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
         }catch{
             Debug.LogWarning("Error importing level on button for level: " + worldNumber + ", " +levelNumber);
         }
-        if(GameProgressManager.instance.GetActiveLevel().GetLevelNumber() == levelNumber && GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber() == worldNumber){
-            GameObject activeLevelAnim = GameObject.FindGameObjectWithTag("ActiveLevel");
-            activeLevelAnim.transform.SetParent(transform, false);
-        }
+        SetActiveLevelAnimation();
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         try{
             level = GameProgressManager.instance.GetLevel(worldNumber, levelNumber);
             SelectButtonStatus();
@@ -51,8 +49,9 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
         }
     }
 
-    public int GetLevelNumber() => levelNumber;
-    public int GetWorldNumber() => worldNumber;
+    /**************************************************************************************************
+    Button mechanics
+    **************************************************************************************************/
 
     public void LoadLevel(){
         GameProgressManager.instance.SetActiveLevel(worldNumber, levelNumber);
@@ -63,6 +62,30 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
         }
 
         FindObjectOfType<LevelSelectorController>().LoadLevel(LevelLoader.GetLevelContains(levelNameID));
+    }
+    
+    public void OnPointerEnter(PointerEventData eventData){
+        if(myButton.interactable) SFXManager.PlayHoverLevel();
+    }
+
+    /**************************************************************************************************
+    Initial status - unlock animation
+    **************************************************************************************************/
+
+    private void SetActiveLevelAnimation()
+    {
+        int activeLevel = GameProgressManager.instance.GetActiveLevel().GetLevelNumber();
+        int activeWorld = GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber();
+        bool wallLevel = GameProgressManager.instance.GetActiveLevel().GetWallLevel();
+        GameObject activeLevelAnim = GameObject.FindGameObjectWithTag("ActiveLevel");
+
+        if(activeLevel == levelNumber && activeWorld == worldNumber)
+        {
+            activeLevelAnim.transform.SetParent(transform, false);
+            Debug.Log("Active level is wall level: " + wallLevel);
+            //ActiveLevelAnimator.instance.SetWallLevel(wallLevel);
+            //ActiveLevelAnimator.instance.SetAnimation();
+        }
     }
 
     private void SelectButtonStatus(){
@@ -86,7 +109,6 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
         {
             UnlockLevel();
         }
-        
     }
 
     private bool UnlockLevelQuery(){
@@ -102,12 +124,9 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
 
     IEnumerator DelayUnlockAnimationStart(string newState)
     {
-        Debug.Log("Delay Unlock 1. Time Scale: " + Time.timeScale);
         yield return new WaitWhile(GetTransitionEnded);
-        Debug.Log("Delay Unlock 2");
         if(levelNumber == 1) SFXManager.PlayUnlockWorld();
         else SFXManager.PlayUnlockLevel();
-        Debug.Log("Delay Unlock 3");
         ChangeAnimationState(newState);
         myButton.interactable = true;
         level.SetLevelUnlocked(true);
@@ -120,21 +139,22 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
         return !(LevelLoader.instance.GetTransitionEnded());
     }
 
-    public void ChangeAnimationState(string newState)
-    {
-        Debug.Log("animation");
-        myButton.GetComponent<Animator>().enabled = true;
-        myButton.GetComponent<Animator>().Play(newState);
-    }
-    
-    public void OnPointerEnter(PointerEventData eventData){
-        if(myButton.interactable) SFXManager.PlayHoverLevel();
-    }
-
     public void UnlockLevel()
     {
         if(!GameProgressManager.instance.GetLevel(worldNumber, levelNumber).GetLevelUnlocked())
             StartCoroutine(DelayUnlockAnimationStart("UI_LevelUnlock"));
     }
 
+    public void ChangeAnimationState(string newState)
+    {
+        myButton.GetComponent<Animator>().enabled = true;
+        myButton.GetComponent<Animator>().Play(newState);
+    }
+
+    /**************************************************************************************************
+    Getters
+    **************************************************************************************************/
+
+    public int GetLevelNumber() => levelNumber;
+    public int GetWorldNumber() => worldNumber;
 }
