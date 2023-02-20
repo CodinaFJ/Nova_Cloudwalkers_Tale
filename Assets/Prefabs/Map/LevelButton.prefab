@@ -101,6 +101,7 @@ MonoBehaviour:
   worldNumber: 1
   levelNumber: 1
   unlockerLevels: 
+  starsCounterGO: {fileID: 6138862942858712849}
   completed: 0
 --- !u!114 &6138862943481719136
 MonoBehaviour:
@@ -348,6 +349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b806e732b86711e49ba24b0ca1db7c73, type: 3}
+--- !u!1 &6138862942858712849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 95321737322698983, guid: b806e732b86711e49ba24b0ca1db7c73, type: 3}
+  m_PrefabInstance: {fileID: 6080767484134756342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6138862942858712850 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 95321737322698980, guid: b806e732b86711e49ba24b0ca1db7c73, type: 3}

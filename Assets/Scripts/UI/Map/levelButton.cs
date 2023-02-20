@@ -18,6 +18,7 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
     [SerializeField] private int worldNumber;
     [SerializeField] private int levelNumber;
     [SerializeField] private int[] unlockerLevels;
+    [SerializeField] private GameObject starsCounterGO;
 
     Button myButton;
     Image myImage;
@@ -37,6 +38,7 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
             Debug.LogWarning("Error importing level on button for level: " + worldNumber + ", " +levelNumber);
         }
         SetActiveLevelAnimation();
+        SetCounterState();
     }
 
     private void OnEnable()
@@ -70,8 +72,17 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
     }
 
     /**************************************************************************************************
-    Initial status - unlock animation
+    Initial status
     **************************************************************************************************/
+
+    private void SetCounterState()
+    {
+        bool status = GameProgressManager.instance.GetLevel(worldNumber, levelNumber).GetLevelUnlocked();
+
+        if (!starsCounterGO)
+            return ;
+        starsCounterGO.SetActive(status);
+    }
 
     private void SetActiveLevelAnimation()
     {
@@ -124,10 +135,12 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
         if(levelNumber == 1) SFXManager.PlayUnlockWorld();
         else SFXManager.PlayUnlockLevel();
         ChangeAnimationState(newState);
-        myButton.interactable = true;
         level.SetLevelUnlocked(true);
+        myButton.interactable = true;
         myButton.GetComponentInChildren<ParticleSystem>().Play();
-        yield break;
+        yield return new WaitForSeconds(0.3f);
+        if (starsCounterGO)
+            starsCounterGO.SetActive(true);
     }
 
     private bool GetTransitionEnded()
