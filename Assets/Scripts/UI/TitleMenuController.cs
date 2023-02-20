@@ -25,6 +25,8 @@ public class TitleMenuController : MonoBehaviour
         }
         if (!AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
         MouseMatrixScript.ReleasePointer();
+        GameProgressManager.instance.LoadGameState();
+        GameProgressManager.instance.WorldSelection = 0;
     }
 
     public void StartNewGame()
@@ -41,8 +43,8 @@ public class TitleMenuController : MonoBehaviour
             StartNewGame();
             return ;
         }
-        GameProgressManager.instance.LoadGameState();
-        GameProgressManager.instance.WorldSelection = 0;
+        // GameProgressManager.instance.LoadGameState();
+        // GameProgressManager.instance.WorldSelection = 0;
         ToMap();
     }
 

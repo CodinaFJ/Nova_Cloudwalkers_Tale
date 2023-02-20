@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class MouseMatrixScript 
 {
+    static Vector3 mousePos;
+
     public static  Vector3 GetMouseWorldPos()
     {
         Vector3 mousePos = Mouse.current.position.ReadValue();
@@ -51,11 +53,14 @@ public class MouseMatrixScript
                                                   PlayerBehavior.instance.GetItemUnderPj();
 
     public static void BlockPointer(){
+        mousePos = Mouse.current.position.ReadValue();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
     public static void ReleasePointer(){
         Cursor.lockState = CursorLockMode.None;
+        if (mousePos != null)
+            Mouse.current.WarpCursorPosition(mousePos);
         Cursor.visible = true;
     }
     

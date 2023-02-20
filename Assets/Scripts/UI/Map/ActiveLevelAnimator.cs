@@ -54,6 +54,4 @@ public class ActiveLevelAnimator : MonoBehaviour
         else
             Debug.LogWarning("No state: " + newState);
     }
-
-    //public void SetWallLevel(bool value) => this.wallLevel = value;
 }

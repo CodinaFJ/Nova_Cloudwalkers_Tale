@@ -41,8 +41,7 @@ public class GameProgressManager : MonoBehaviour
     }
 
     private void Start() {
-        CalculateCollectedStarsInGame();
-        CalculateTotalStarsInGame();
+        UpdateStarsInGame();
         try{FindObjectOfType<TotalStarsCounter>().UpdateCounter();}catch{}
     }
 
@@ -68,14 +67,18 @@ public class GameProgressManager : MonoBehaviour
 
     public void SaveGameState()
     {
+        Debug.Log("SAVE");
         SaveSystem.SaveGame();
     }
 
     public void LoadGameState()
     {
+        Debug.Log("LOAD");
         GameSaveData data = SaveSystem.LoadGame();
         if (data != null){
             this.worldsWithLevels = new List<World>(data.worldsWithLevels);
+            this.unlockedWorlds = new List<bool>(data.unlockedWorlds);
+            this.playedCinematics = new List<bool>(data.playedCinematics);
             this.activeLevel = data.activeLevel;
             this.activeWorld = data.activeWorld;
         }
@@ -137,16 +140,6 @@ public class GameProgressManager : MonoBehaviour
     **************************************************************************************************/
 
     /// <summary>
-    /// Check if a world is unlocked
-    /// </summary>
-    /// <param name="n"> World number </param>
-    /// <returns> True if world is unlocked </returns>
-    public bool GetUnlockedWorld(int n)
-    {
-        return unlockedWorlds[n - 1];
-    }
-
-    /// <summary>
     /// Load with world as unlocked
     /// </summary>
     /// <param name="n"> World number </param>
@@ -163,6 +156,7 @@ public class GameProgressManager : MonoBehaviour
     {
         unlockedWorlds[n - 1] = true;
         MapContextController.Instance.UpdateLocksState();
+        SaveGameState();
     }
 
     /**************************************************************************************************
@@ -237,5 +231,29 @@ public class GameProgressManager : MonoBehaviour
     public int GetTotalStarsInGame() => this.totalStarsInGame;
     public bool GetEndReached() => endReached;
     public bool GetAllStarsCollected() => allStarsCollected;
+    public List<bool> GetUnlockedWorlds() => unlockedWorlds;
+    public bool GetUnlockedWorld(int n) => unlockedWorlds[n - 1];
+    public int GetLastUnlockedWorld()
+    {
+        List<bool>  unlockedWorlds = new List<bool>(GetUnlockedWorlds());
+        int         maxWorldUnlocked = 0;
+
+        for (int i = 0; i < unlockedWorlds.Count; i++)
+        {
+            if (unlockedWorlds[i])
+                maxWorldUnlocked++;
+        }
+        return maxWorldUnlocked;
+    }
+    public List<bool> GetPlayedCinematics() => playedCinematics;
     public bool GetPlayedCinematic(int cinematic) => playedCinematics[cinematic - 1];
+    public int GetLastPlayedCinematic()
+    {
+        int index;
+
+        index = playedCinematics.FindLastIndex(x => x == true);
+        index++;
+        index = Mathf.Clamp(index, 1, 4);
+        return (index + 1);
+    }
 }

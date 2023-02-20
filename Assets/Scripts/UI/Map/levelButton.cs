@@ -55,6 +55,7 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
 
     public void LoadLevel(){
         GameProgressManager.instance.SetActiveLevel(worldNumber, levelNumber);
+        GameProgressManager.instance.SaveGameState();
         string levelNameID = levelNumber.ToString() + "-" + worldNumber.ToString();
 
         if(levelNumber == 1 && !GameProgressManager.instance.GetPlayedCinematic(worldNumber) && worldNumber != 1){
@@ -80,12 +81,7 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
         GameObject activeLevelAnim = GameObject.FindGameObjectWithTag("ActiveLevel");
 
         if(activeLevel == levelNumber && activeWorld == worldNumber)
-        {
             activeLevelAnim.transform.SetParent(transform, false);
-            Debug.Log("Active level is wall level: " + wallLevel);
-            //ActiveLevelAnimator.instance.SetWallLevel(wallLevel);
-            //ActiveLevelAnimator.instance.SetAnimation();
-        }
     }
 
     private void SelectButtonStatus(){
