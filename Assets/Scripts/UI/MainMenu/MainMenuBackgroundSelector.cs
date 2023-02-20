@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainMenuBackgroundSelector : MonoBehaviour
 {
     [SerializeField] List<MainMenuBackground> backgroundsList;
+    [SerializeField] int lastPlayedCinematic;
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class MainMenuBackgroundSelector : MonoBehaviour
 
     private void SetMainMenubackground()
     {
-        int lastPlayedCinematic = GameProgressManager.instance.GetLastPlayedCinematic();
+        lastPlayedCinematic = GameProgressManager.instance.GetLastPlayedCinematic();
 
         foreach(var bg in backgroundsList)
         {

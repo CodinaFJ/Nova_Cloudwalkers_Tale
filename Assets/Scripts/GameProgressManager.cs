@@ -73,16 +73,21 @@ public class GameProgressManager : MonoBehaviour
 
     public void LoadGameState()
     {
-        Debug.Log("LOAD");
-        GameSaveData data = SaveSystem.LoadGame();
-        if (data != null){
-            this.worldsWithLevels = new List<World>(data.worldsWithLevels);
-            this.unlockedWorlds = new List<bool>(data.unlockedWorlds);
-            this.playedCinematics = new List<bool>(data.playedCinematics);
-            this.activeLevel = data.activeLevel;
-            this.activeWorld = data.activeWorld;
+        try{
+            GameSaveData data = SaveSystem.LoadGame();
+            if (data != null){
+                this.worldsWithLevels = new List<World>(data.worldsWithLevels);
+                this.unlockedWorlds = new List<bool>(data.unlockedWorlds);
+                this.playedCinematics = new List<bool>(data.playedCinematics);
+                this.activeLevel = data.activeLevel;
+                this.activeWorld = data.activeWorld;
+            }
+            CalculateCollectedStarsInGame();
         }
-        CalculateCollectedStarsInGame();
+        catch(Exception ex)
+        {
+            Debug.LogWarning(("Error loading data: " + ex.Message));
+        }
     }
 
     /**************************************************************************************************
@@ -254,6 +259,6 @@ public class GameProgressManager : MonoBehaviour
         index = playedCinematics.FindLastIndex(x => x == true);
         index++;
         index = Mathf.Clamp(index, 1, 4);
-        return (index + 1);
+        return (index);
     }
 }
