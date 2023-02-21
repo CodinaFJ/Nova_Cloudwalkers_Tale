@@ -45,91 +45,91 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: StarTake1
-    clip: {fileID: 8300000, guid: 700fb8d713f29bc4989356280b4a7d9e, type: 3}
+    clip: {fileID: 8300000, guid: 9d46e856908b94a43a006ca9710c09a0, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StarTake2
-    clip: {fileID: 8300000, guid: 080f28b782c18a14cbfb853f997495d8, type: 3}
+    clip: {fileID: 8300000, guid: 1cf4982bda46df745810d6c60c4c2876, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud1
-    clip: {fileID: 8300000, guid: d5934c8abcacbaf4387e9c106f53a464, type: 3}
+    clip: {fileID: 8300000, guid: f3a89453d361bfe4ebf67f71ce531e87, type: 3}
     volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud2
-    clip: {fileID: 8300000, guid: e8cb0f47face9744193396b9cd007e9d, type: 3}
+    clip: {fileID: 8300000, guid: d1385d1a252e923449ec7a6a5c1bde5c, type: 3}
     volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud3
-    clip: {fileID: 8300000, guid: 07eb2c09e375ebb40ac16569f1b3fcf2, type: 3}
+    clip: {fileID: 8300000, guid: e674bbb380b2d364cad98956a631ddf8, type: 3}
     volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud4
-    clip: {fileID: 8300000, guid: fb5ddf21eec5e68428016d26fd394c2b, type: 3}
+    clip: {fileID: 8300000, guid: 57877323be3653e448648eba4d7eed9f, type: 3}
     volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCloud5
-    clip: {fileID: 8300000, guid: 1e3e304841d23a741980f16c46b0ad45, type: 3}
+    clip: {fileID: 8300000, guid: f46ffa045e0448c4c8bae43fc7bca872, type: 3}
     volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCrystal1
-    clip: {fileID: 8300000, guid: 7df97b3e56f5ee94fba25328565b64d9, type: 3}
+    clip: {fileID: 8300000, guid: 73c2d5efec16ba24cb344250021c7887, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCrystal2
-    clip: {fileID: 8300000, guid: 348e61406465cea478b3416648ae4863, type: 3}
+    clip: {fileID: 8300000, guid: f3e62664187d2834ba4de5eb50363f63, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCrystal3
-    clip: {fileID: 8300000, guid: 6f6b71545fc73a046a490ebacda7ec67, type: 3}
+    clip: {fileID: 8300000, guid: 9bb431e4df870794c97d18d0d2c981cb, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepCrystal4
-    clip: {fileID: 8300000, guid: 3bdc3b93e164b7b449499776408b74ee, type: 3}
+    clip: {fileID: 8300000, guid: 4c92e71643b7d3646b37dc7e2176039a, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepStone1
-    clip: {fileID: 8300000, guid: 27645e93881e32c4b9802344dc7165f3, type: 3}
+    clip: {fileID: 8300000, guid: d5c8f1edb04d6df46a7647f1cdde7679, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepStone2
-    clip: {fileID: 8300000, guid: c54c6cf7de1ac5844a28217b5d3450a0, type: 3}
+    clip: {fileID: 8300000, guid: 3c1d1054e5fd1154f89f76cfe8fc3f62, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepStone3
-    clip: {fileID: 8300000, guid: 2a6388682efafea4c982cb2d58674a44, type: 3}
+    clip: {fileID: 8300000, guid: b312f178ed000c2428e861a235b9c0e2, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StepStone4
-    clip: {fileID: 8300000, guid: 6c8e609ad09ef9b4190d7ba0e4ea3384, type: 3}
+    clip: {fileID: 8300000, guid: 71ecfebee642a8747937e44e617ed692, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -141,67 +141,67 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: CloudConnectWhiteCloud
-    clip: {fileID: 8300000, guid: 3e0b670be326bd548b68588f8b428c7e, type: 3}
+    clip: {fileID: 8300000, guid: f69d7866ddf594b47b0155aadf1d18e2, type: 3}
     volume: 0.665
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudStormy
-    clip: {fileID: 8300000, guid: a3fe4784655f30a459f739aec106f070, type: 3}
+    clip: {fileID: 8300000, guid: ceb3c30d5fc14d04ebea4d395d4ac588, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipeWhiteCloud
-    clip: {fileID: 8300000, guid: 320539b455ea89d4ba82c6239586c9f0, type: 3}
+    clip: {fileID: 8300000, guid: 3f44afc2793b79348b0534f6999952bd, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: CloudSwipe_Release
-    clip: {fileID: 8300000, guid: 6d3f4efe14977ef4197391aaec53cb92, type: 3}
+    clip: {fileID: 8300000, guid: 13557b505a75cb0488e7561f0a0a6655, type: 3}
     volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipe_Tap1
-    clip: {fileID: 8300000, guid: a392884b42ed41349a1569ce63cb993d, type: 3}
+    clip: {fileID: 8300000, guid: 04ac48149af02a34c8547f101e87df2b, type: 3}
     volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipe_Tap2
-    clip: {fileID: 8300000, guid: e0e44e980cb2e6f42923f29f756defaa, type: 3}
+    clip: {fileID: 8300000, guid: 5dce7b4ad364a674a8721a14e912f0cd, type: 3}
     volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipe_Tap3
-    clip: {fileID: 8300000, guid: 85f6398cad191d7439f70271d9a43935, type: 3}
+    clip: {fileID: 8300000, guid: 83214795b49708e4986f81127900d5bc, type: 3}
     volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CrystalPlatformBreak
-    clip: {fileID: 8300000, guid: 04a67fd97cd5f044c9f54fa00515a236, type: 3}
+    clip: {fileID: 8300000, guid: 76b89292b99420c4fa37eb6057b32ff8, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: LevelExit
-    clip: {fileID: 8300000, guid: 96975c5c3a5a86146924b283dbc2979d, type: 3}
+    clip: {fileID: 8300000, guid: 98fb74af868b7c247b74c61b2dcc550b, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: ResetComplete
-    clip: {fileID: 8300000, guid: b4125a8b78248174c8f68a568d247c6d, type: 3}
+    clip: {fileID: 8300000, guid: 657f9a46758e2594ebfb8fdc95ff34f3, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: WrongAction
-    clip: {fileID: 8300000, guid: 439c8759749363d4882cdaeef4875913, type: 3}
+    clip: {fileID: 8300000, guid: a974d1f875920a9418cf7f1e0bccf565, type: 3}
     volume: 0.8
     pitch: 1
     loop: 0
@@ -213,37 +213,37 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: EnterLevel
-    clip: {fileID: 8300000, guid: f6349b18706439e4f8b4bcda57c0718b, type: 3}
+    clip: {fileID: 8300000, guid: 4717dc6043085a54e91f371451329787, type: 3}
     volume: 0.8
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CrystalCloudBreak
-    clip: {fileID: 8300000, guid: 5aafab08f4932b840ad809e0bea49955, type: 3}
+    clip: {fileID: 8300000, guid: e4fed96e14e03484f82eff7bbceab24d, type: 3}
     volume: 0.8
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudConnectCrystalCloudTop
-    clip: {fileID: 8300000, guid: d2f5f41490b84794c83e376e9e784d3b, type: 3}
+    clip: {fileID: 8300000, guid: dac1c0b7da3452a43b77a282c896b3e4, type: 3}
     volume: 0.35
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudConnectThunderCloud
-    clip: {fileID: 8300000, guid: 3e0b670be326bd548b68588f8b428c7e, type: 3}
+    clip: {fileID: 8300000, guid: f69d7866ddf594b47b0155aadf1d18e2, type: 3}
     volume: 0.35
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CloudSwipeCrystalCloudTop
-    clip: {fileID: 8300000, guid: 2a38322e62a0a55408264efa3ae272a0, type: 3}
+    clip: {fileID: 8300000, guid: b439d944ca087b640b4aa286681a4f81, type: 3}
     volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: CloudSwipeThunderCloud
-    clip: {fileID: 8300000, guid: 6746a2c48618aad4c932817df5522e8e, type: 3}
+    clip: {fileID: 8300000, guid: 6e82bdd2f0c4c5841a24a0b78a3efc0e, type: 3}
     volume: 0.8
     pitch: 1
     loop: 1
@@ -255,7 +255,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: CloseMenu
-    clip: {fileID: 8300000, guid: 35670fbe44d47e7488edb9dfad701660, type: 3}
+    clip: {fileID: 8300000, guid: 580f69c6e45137f499eae8dbd773209f, type: 3}
     volume: 0.8
     pitch: 1.4
     loop: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: UISelect_Level
-    clip: {fileID: 8300000, guid: f6349b18706439e4f8b4bcda57c0718b, type: 3}
+    clip: {fileID: 8300000, guid: 4717dc6043085a54e91f371451329787, type: 3}
     volume: 0.8
     pitch: 1
     loop: 0
@@ -291,38 +291,38 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: UnlockLevel
-    clip: {fileID: 8300000, guid: f6349b18706439e4f8b4bcda57c0718b, type: 3}
+    clip: {fileID: 8300000, guid: 4717dc6043085a54e91f371451329787, type: 3}
     volume: 0.8
     pitch: 0.6
     loop: 0
     source: {fileID: 0}
   - name: UnlockWorld
-    clip: {fileID: 8300000, guid: f6349b18706439e4f8b4bcda57c0718b, type: 3}
+    clip: {fileID: 8300000, guid: 4717dc6043085a54e91f371451329787, type: 3}
     volume: 0.9
     pitch: 1.2
     loop: 0
     source: {fileID: 0}
   musics:
   - name: Main Theme
-    clip: {fileID: 8300000, guid: be75bdbab4f029d4eba96660518d22f0, type: 3}
+    clip: {fileID: 8300000, guid: 8f77ce5c8307ab44a954c68a9d2b39ba, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: World1
-    clip: {fileID: 8300000, guid: 73cf20935a273d849a12b62334ca24e6, type: 3}
+    clip: {fileID: 8300000, guid: 01d4ff1355261e64fb82c7f5d08036c7, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: World2
-    clip: {fileID: 8300000, guid: 3562946212b1c144e97ac740aebd2cac, type: 3}
+    clip: {fileID: 8300000, guid: ca4d8117b7666de4090b9361946bc6d4, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: World3
-    clip: {fileID: 8300000, guid: 86b8e89f2242f1a48bfaa5a207412d08, type: 3}
+    clip: {fileID: 8300000, guid: 20353ea6baeb0d34093120afe243af8c, type: 3}
     volume: 1
     pitch: 1
     loop: 1
@@ -334,33 +334,33 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: WallLevel
-    clip: {fileID: 8300000, guid: 00dafe5d50edb3e4f9047d24cff7d83e, type: 3}
+    clip: {fileID: 8300000, guid: 73b0c6e0d8856a1438c129449b61ebdc, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   ambients:
   - name: Ambient1
-    clip: {fileID: 8300000, guid: 455d504cefce8bc48b4c95a4b4c83132, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: 134c33de2216c0e4fa417305d3db9532, type: 3}
+    volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Ambient2
-    clip: {fileID: 8300000, guid: 08d38bb9433a5d54c9d25b7f4a6bc2d5, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: 9363cfade3bcef64cb4830597fb78645, type: 3}
+    volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Ambient3
-    clip: {fileID: 8300000, guid: e2472506ff92c00419a18a45abe81f3e, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: eb209ce8d05d2084e96fbca4edfe58de, type: 3}
+    volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Ambient4
-    clip: {fileID: 8300000, guid: 0a45aeb54d67fe140b7c728f998fe108, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: 9a5f2d7c0117cdc47a885f66f65fc2ce, type: 3}
+    volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}

@@ -22332,6 +22332,18 @@ PrefabInstance:
       propertyPath: activeWorld.worldNumber
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
+      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[10].unlockedLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
+      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[13].unlockedLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
+      propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[14].unlockedLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
 --- !u!114 &8897340732176677224
