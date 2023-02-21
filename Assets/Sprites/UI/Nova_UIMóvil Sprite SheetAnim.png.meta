@@ -407,9 +407,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1589
-        width: 204
-        height: 204
+        y: 1538
+        width: 306
+        height: 306
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,10 +427,10 @@ TextureImporter:
       name: "Nova_UIM\xF3vil Sprite SheetAnim_11"
       rect:
         serializedVersion: 2
-        x: 255
-        y: 1589
-        width: 204
-        height: 204
+        x: 357
+        y: 1538
+        width: 306
+        height: 306
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,10 +448,10 @@ TextureImporter:
       name: "Nova_UIM\xF3vil Sprite SheetAnim_12"
       rect:
         serializedVersion: 2
-        x: 510
-        y: 1589
-        width: 204
-        height: 204
+        x: 714
+        y: 1538
+        width: 306
+        height: 306
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: "Nova_UIM\xF3vil Sprite SheetAnim_13"
       rect:
         serializedVersion: 2
-        x: 765
-        y: 1589
-        width: 204
-        height: 204
+        x: 1071
+        y: 1539
+        width: 306
+        height: 306
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,10 +490,10 @@ TextureImporter:
       name: "Nova_UIM\xF3vil Sprite SheetAnim_14"
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 1589
-        width: 204
-        height: 204
+        x: 1428
+        y: 1538
+        width: 306
+        height: 306
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -511,10 +511,10 @@ TextureImporter:
       name: "Nova_UIM\xF3vil Sprite SheetAnim_15"
       rect:
         serializedVersion: 2
-        x: 1275
-        y: 1589
-        width: 204
-        height: 204
+        x: 1785
+        y: 1538
+        width: 306
+        height: 306
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -868,12 +868,12 @@ TextureImporter:
       name: "Nova_UIM\xF3vil Sprite SheetAnim_32"
       rect:
         serializedVersion: 2
-        x: 1530
-        y: 1589
-        width: 204
-        height: 204
+        x: 2118
+        y: 1538
+        width: 306
+        height: 306
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -894,7 +894,7 @@ TextureImporter:
         width: 306
         height: 306
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
