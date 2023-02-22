@@ -80,6 +80,9 @@ TextureImporter:
   - first:
       213: -3056535003490205817
     second: Nova_UI Mapa Sprite Sheet_10
+  - first:
+      213: -147920383530864146
+    second: Nova_UI Mapa ContadorFragmentos
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -710,6 +713,27 @@ TextureImporter:
       bones: []
       spriteID: 78f3b69cb910595d0800000000000000
       internalID: -3056535003490205817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa ContadorFragmentos
+      rect:
+        serializedVersion: 2
+        x: 3661
+        y: 3015
+        width: 429
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee17a94e13b72fdf0800000000000000
+      internalID: -147920383530864146
       vertices: []
       indices: 
       edges: []
