@@ -69,17 +69,6 @@ public class InstantiatedTileBehavior : MonoBehaviour
                 //Mathf.Abs(i + j) == 1 used limit the checked tiles to the one at the right/left/up/down
                 if (Mathf.Abs(i + j) == 1 && indexInMatrixBoundaries)
                 {
-                    /*if(mechanicNumber == 5)
-                    {
-                       if (mechanicsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == mechanicNumber)
-                        {
-                            if ( i == -1 && j ==  0) adyacentTiles[0] =  true;
-                            if ( i ==  0 && j == -1) adyacentTiles[1] =  true;
-                            if ( i ==  1 && j ==  0) adyacentTiles[2] =  true;
-                            if ( i ==  0 && j ==  1) adyacentTiles[3] =  true;
-                            
-                        } 
-                    }*/
                     if(tileType == 999)
                     {
                         if (Mathf.Abs(itemsLayoutMatrix[matrixCoordinates[0] + i, matrixCoordinates[1] + j]) == Mathf.Abs(objectNumber))
@@ -177,10 +166,10 @@ public class InstantiatedTileBehavior : MonoBehaviour
         {
             mySpriteRenderer.sprite = tile3;
 
-                //   if(!adyacentTiles[0]) transform.Rotate(0,0,  0,Space.Self); Initial Position
-                if     (!adyacentTiles[1]) transform.Rotate(0,0, 90,Space.Self);
-                else if(!adyacentTiles[2]) transform.Rotate(0,0,180,Space.Self);
-                else if(!adyacentTiles[3]) transform.Rotate(0,0,-90,Space.Self);
+                if(!adyacentTiles[0]) transform.Rotate(0,0,  180,Space.Self);
+                else if(!adyacentTiles[1]) transform.Rotate(0,0,-90,Space.Self);
+                else if(!adyacentTiles[2]) transform.Rotate(0,0, 0,Space.Self);
+                else if(!adyacentTiles[3]) transform.Rotate(0,0,90,Space.Self);
         }
     
         else if(adyacentTilesNumber==4) mySpriteRenderer.sprite = tile4;
