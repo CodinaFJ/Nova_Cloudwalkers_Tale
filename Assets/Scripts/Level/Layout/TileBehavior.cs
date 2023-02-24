@@ -216,10 +216,10 @@ public class TileBehavior : MonoBehaviour
         else if(adyacentTilesNumber==3){
             mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.Three).sprite;
 
-                if(!adyacentTiles[0]) transform.Rotate(0,0,  180,Space.Self);
-                else if (!adyacentTiles[1]) transform.Rotate(0,0,-90,Space.Self);
-                else if (!adyacentTiles[2]) transform.Rotate(0,0, 0,Space.Self);
-                else if (!adyacentTiles[3]) transform.Rotate(0,0, 90,Space.Self);
+                //   if(!adyacentTiles[0]) transform.Rotate(0,0,  0,Space.Self); Initial Position
+                if     (!adyacentTiles[1]) transform.Rotate(0,0, 90,Space.Self);
+                else if(!adyacentTiles[2]) transform.Rotate(0,0,180,Space.Self);
+                else if(!adyacentTiles[3]) transform.Rotate(0,0,-90,Space.Self);
         }
     
         else if(adyacentTilesNumber==4) mySpriteRenderer.sprite = tileSpritesBundle.spritesList.Find(x => x.boundaries == SpriteBoundaries.Four).sprite;

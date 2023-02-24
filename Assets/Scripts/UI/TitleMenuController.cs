@@ -14,8 +14,6 @@ public class TitleMenuController : MonoBehaviour
     [SerializeField] GameObject credits;
     LevelLoader levelLoader;
 
-    bool    newGame = false;
-
     void Start()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
@@ -40,7 +38,7 @@ public class TitleMenuController : MonoBehaviour
 
     public void PlayButton()
     {
-        if (newGame)
+        if (!(File.Exists(SaveSystem.FilePath)))
         {
             StartNewGame();
             return ;
@@ -80,13 +78,6 @@ public class TitleMenuController : MonoBehaviour
     {
         gameObject.SetActive(false);
         credits.SetActive(true);
-    }
-
-    public void OnClearProgress()
-    {
-        Destroy(GameProgressManager.instance?.gameObject);
-        newGame = true;
-        //SceneManager.LoadScene(LevelLoader.GetLevelContains("StartMenu"));
     }
 
 }
