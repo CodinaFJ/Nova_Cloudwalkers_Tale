@@ -94,9 +94,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockedLevel: {fileID: -1122170097047487116, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
   unlockedLevel: {fileID: 6879811007626669519, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
-  selectLevel: {fileID: -3325390135830116362, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
+  selectLevel: {fileID: 600327873106218237, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
   semiCompletedLevel: {fileID: 5238283808725027230, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
-  completedLevel: {fileID: 8989286318666022946, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
+  completedLevel: {fileID: 6912254606950885785, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
   activeLevel: {fileID: 4794443117659949820, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
   worldNumber: 1
   levelNumber: 1
@@ -132,9 +132,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -3325390135830116362, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
-    m_PressedSprite: {fileID: -3325390135830116362, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
-    m_SelectedSprite: {fileID: -3325390135830116362, guid: ddd43aed853dac04288a52cc576a6fc9, type: 3}
+    m_HighlightedSprite: {fileID: 600327873106218237, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
+    m_PressedSprite: {fileID: 600327873106218237, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
+    m_SelectedSprite: {fileID: 600327873106218237, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
     m_DisabledSprite: {fileID: -1122170097047487116, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal

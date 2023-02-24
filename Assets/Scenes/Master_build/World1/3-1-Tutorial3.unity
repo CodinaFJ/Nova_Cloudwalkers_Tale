@@ -174,6 +174,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5297884410827111989, guid: c16c9bec97c24b04ca1382860b3a284c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToVideoOptions
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061998779172144250, guid: c16c9bec97c24b04ca1382860b3a284c, type: 3}
+      propertyPath: m_text
+      value: 'Video
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 8590076313580662416, guid: c16c9bec97c24b04ca1382860b3a284c, type: 3}
       propertyPath: m_Name
       value: InLevelUIs
