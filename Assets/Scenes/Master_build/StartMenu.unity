@@ -1179,8 +1179,16 @@ PrefabInstance:
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4644661815427408584, guid: 570c1004f9fab3d4b8594466183c7aee, type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: 570c1004f9fab3d4b8594466183c7aee, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644661815427408584, guid: 570c1004f9fab3d4b8594466183c7aee, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4644661815427408584, guid: 570c1004f9fab3d4b8594466183c7aee, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
@@ -5768,7 +5776,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
