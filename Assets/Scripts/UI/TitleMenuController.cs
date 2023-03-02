@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -9,17 +10,13 @@ public class TitleMenuController : MonoBehaviour
 {
     [SerializeField] GameObject optionCanvas;
     [SerializeField] GameObject optionsMenu;
-    [SerializeField] GameObject quitMenu;
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject credits;
     LevelLoader levelLoader;
 
-    bool    newGame = false;
-
     void Start()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
-        quitMenu.SetActive(false);
         mainMenu.SetActive(true);
         foreach (Sound sound in AudioManager.instance.musics)
         {
@@ -40,14 +37,10 @@ public class TitleMenuController : MonoBehaviour
 
     public void PlayButton()
     {
-        if (newGame)
-        {
+        if (SaveSystem.ExistsSavedGame())
+            ToMap();
+        else
             StartNewGame();
-            return ;
-        }
-        // GameProgressManager.instance.LoadGameState();
-        // GameProgressManager.instance.WorldSelection = 0;
-        ToMap();
     }
 
     public void QuitButton()
@@ -66,8 +59,10 @@ public class TitleMenuController : MonoBehaviour
     {
         optionCanvas.SetActive(true);
         optionCanvas.GetComponent<OptionsMenuController>().ToPauseMenu();
+        optionCanvas.GetComponent<PlayerInput>().enabled = true;
+        optionCanvas.GetComponent<PlayerInput>().ActivateInput();
         SFXManager.PlayOpenMenu();
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     public void ToMainMenu()
@@ -81,13 +76,5 @@ public class TitleMenuController : MonoBehaviour
         gameObject.SetActive(false);
         credits.SetActive(true);
     }
-
-    public void OnClearProgress()
-    {
-        Destroy(GameProgressManager.instance?.gameObject);
-        newGame = true;
-        //SceneManager.LoadScene(LevelLoader.GetLevelContains("StartMenu"));
-    }
-
 }
 
