@@ -39,4 +39,12 @@ public static class SaveSystem
         }
     }
 
+    public static void DestroySavedData()
+    {
+        if (File.Exists(path))
+            File.Delete(path);
+    }
+
+    public static bool ExistsSavedGame() => File.Exists(path);
+
 }

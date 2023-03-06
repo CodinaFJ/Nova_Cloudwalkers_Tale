@@ -65,6 +65,7 @@ public class OptionsMenuController : MonoBehaviour
     public void ToOptions() => LoadOptionsSection(OptionsSectionTag.Options);
     public void ToAudioOptions() => LoadOptionsSection(OptionsSectionTag.OptionsAudio);
     public void ToVideoOptions() => LoadOptionsSection(OptionsSectionTag.OptionsVideo);
+    public void ToClearProgress() => LoadOptionsSection(OptionsSectionTag.Quit);
 
     public void ToPauseLevel()
     {
@@ -89,13 +90,17 @@ public class OptionsMenuController : MonoBehaviour
         LoadOptionsSection(OptionsSectionTag.PauseMap);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
-        OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseMap;
     }
 
     public void ToPauseMenu()
     {
-        LoadOptionsSection(OptionsSectionTag.Options);
+        levelUI = GameObject.FindGameObjectWithTag("OverlayUI");
+        if (levelUI)
+        {
+            levelUI.SetActive(false);
+        }
+        LoadOptionsSection(OptionsSectionTag.PauseMenu);
         Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
         pauseMenuToGo = OptionsSectionTag.PauseMenu;
@@ -107,13 +112,8 @@ public class OptionsMenuController : MonoBehaviour
         OptionsBackground.SetActive(false);
     }
 
-    public void BackToPause(){
-        if(pauseMenuToGo == OptionsSectionTag.PauseMenu){
-            try{
-                OptionsSectionsList.Find(x => x.tag == OptionsSectionTag.PauseMenu).sectionGameObject.SetActive(true);
-                ToGame();
-            }catch{Debug.LogWarning(("Failed back to pause"));}
-        }
+    public void BackToPause()
+    {
         OptionsBackground.SetActive(true);
         LoadOptionsSection(pauseMenuToGo);
     }
@@ -132,9 +132,6 @@ public class OptionsMenuController : MonoBehaviour
         if (levelUI)
         {
             levelUI.SetActive(true);
-            try{
-                levelUI.GetComponent<UIController>().EnableUI();
-            } catch{}
         } 
         if (gameManager) gameManager.ResumeGame();
         else if (levelSelectorController) levelSelectorController.OptionsInput(false);
@@ -220,10 +217,11 @@ public class OptionsMenuController : MonoBehaviour
         GameManager.instance.OnRestart();
     }
 
-    public void OnClearProgress()
+    public void OnClearProgressConfirm()
     {
         Destroy(GameProgressManager.instance?.gameObject);
-        SceneManager.LoadScene(LevelLoader.GetLevelContains("LevelSelector"));
+        SaveSystem.DestroySavedData();
+        SceneManager.LoadScene(LevelLoader.GetLevelContains("StartMenu"));
     }
 
     public void LoadOptionsSection(OptionsSectionTag optionsSectionTag){
