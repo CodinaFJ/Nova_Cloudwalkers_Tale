@@ -130,6 +130,8 @@ public class PjInputManager : MonoBehaviour
     {
         if(LevelStateManager.instance.shortUndo) LevelStateManager.instance.SaveLevelState();
 
+        int previousItem = MatrixManager.instance.GetItemsLayoutMatrix()[playerBehavior.pjCell[0], playerBehavior.pjCell[1]];
+
         pjMoving = true;// Bool to control if coroutine is active
         UpdateMovementState(movementDone);
         
@@ -156,7 +158,7 @@ public class PjInputManager : MonoBehaviour
         if(movementPress) pjMovementsPress = matrixManager.RemoveFirstNumberFromArray(pjMovementsPress);
 
         //Tile under PJ is updated BEFORE movement is started
-        playerBehavior.UpdateItemUnderPj();
+        playerBehavior.AddItemUnderPj();
 
         Vector3 stepFinalPosition = pjInitialPosition + pjMovementDirection;
         float currentTime = 0;
@@ -172,6 +174,8 @@ public class PjInputManager : MonoBehaviour
         if(pjMovementsPress.Length == 0 && pjMoving) playerBehavior.gameObject.transform.position = stepFinalPosition;
 
         //If stepped on crystal, prepare it to break when leaving the tile
+        if (MatrixManager.instance.GetItemsLayoutMatrix()[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] != previousItem)
+            playerBehavior.RemoveItemUnderPj(previousItem);
         matrixManager.CheckForCrystal();
 
         playerBehavior.lastMovement = movementDone;

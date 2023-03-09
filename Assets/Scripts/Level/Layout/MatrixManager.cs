@@ -469,7 +469,7 @@ public class MatrixManager : MonoBehaviour
         if(AttachGreyCloudInMatrix(item))
         {
             FromMatrixToGame.ReInstantiateItem(item);
-            playerBehavior.UpdateItemUnderPj();
+            playerBehavior.AddItemUnderPj();
             RefreshCloudsMovementMatrix();
             RefreshPjMovementMatrix();
         }
@@ -621,10 +621,9 @@ public class MatrixManager : MonoBehaviour
             RefreshCloudsMovementMatrix();
             SFXManager.PlayCrystalCloudBreak();
             VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalCloudBreak, FromMatrixIndexToWorld(cell0, cell1));
-            //FromMatrixToGame.DeactivateItem(item);
 
             DivideSeparatedCloudsInMatrix(crystalCell, item);
-            PlayerBehavior.instance.UpdateItemUnderPj();
+            PlayerBehavior.instance.AddItemUnderPj();
         }
     }
 

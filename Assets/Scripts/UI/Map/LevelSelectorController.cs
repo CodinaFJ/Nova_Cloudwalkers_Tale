@@ -4,11 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelectorController : MonoBehaviour
 {
+    public static LevelSelectorController instance;
     LevelLoader levelLoader;
     PlayerInput mapPlayerInput;
     PlayerInput optionPlayerInput;
     bool ctrlPressed = false;
     [SerializeField] GameObject OptionCanvas;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {

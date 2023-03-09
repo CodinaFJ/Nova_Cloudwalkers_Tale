@@ -7255,6 +7255,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1731824979967764946, guid: 5804087fcb391574cbbbbb70943b2775, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -147920383530864146, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
+    - target: {fileID: 1731824979967764949, guid: 5804087fcb391574cbbbbb70943b2775, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 429
+      objectReference: {fileID: 0}
+    - target: {fileID: 1731824979967764949, guid: 5804087fcb391574cbbbbb70943b2775, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 107
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5804087fcb391574cbbbbb70943b2775, type: 3}
 --- !u!224 &600230419 stripped
@@ -13653,9 +13665,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954337403}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: ToOptionsMap
+      - m_Target: {fileID: 954337402}
+        m_TargetAssemblyTypeName: LevelSelectorController, Assembly-CSharp
+        m_MethodName: OnPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22644,10 +22656,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7911942044613766663, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToMainMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 8333424984756729475, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -22816,8 +22824,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2816868816206929162, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
 --- !u!1001 &2052576272
 PrefabInstance:

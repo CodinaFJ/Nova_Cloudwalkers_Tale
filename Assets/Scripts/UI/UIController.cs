@@ -25,17 +25,6 @@ public class UIController : MonoBehaviour
         OptionCanvas.SetActive(false);
         MouseMatrixScript.ReleasePointer();//! This is also in level selector controller. Redundant?
     }
-
-    /**************************************************************************************************
-    LEVEL SELECTOR UI METHODS
-    **************************************************************************************************/
-
-    public void ToOptionsMap()
-    {
-        OptionCanvas.SetActive(true);
-        OptionCanvas.GetComponent<OptionsMenuController>().ToPauseMap();
-        SFXManager.PlayOpenMenu();
-    }
     
     /**************************************************************************************************
     IN-LEVEL UI METHODS

@@ -251,14 +251,14 @@ MonoBehaviour:
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 6
-      numberOfStars: 2
-      collectedStars: 0
-      wallLevel: 0
-      unlockedLevel: 0
-    - levelNumber: 7
       numberOfStars: 0
       collectedStars: 0
       wallLevel: 1
+      unlockedLevel: 0
+    - levelNumber: 7
+      numberOfStars: 2
+      collectedStars: 0
+      wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 8
       numberOfStars: 2
@@ -306,7 +306,7 @@ MonoBehaviour:
       wallLevel: 0
       unlockedLevel: 0
     - levelNumber: 17
-      numberOfStars: 2
+      numberOfStars: 3
       collectedStars: 0
       wallLevel: 0
       unlockedLevel: 0
