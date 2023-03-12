@@ -66,6 +66,7 @@ public class OptionsMenuController : MonoBehaviour
     public void ToAudioOptions() => LoadOptionsSection(OptionsSectionTag.OptionsAudio);
     public void ToVideoOptions() => LoadOptionsSection(OptionsSectionTag.OptionsVideo);
     public void ToClearProgress() => LoadOptionsSection(OptionsSectionTag.Quit);
+    public void ToLanguageOptions() => LoadOptionsSection(OptionsSectionTag.Languages);
 
     public void ToPauseLevel()
     {
@@ -244,5 +245,6 @@ public enum OptionsSectionTag{
     PauseMenu, PauseMap, PauseLevel,
     Options, OptionsAudio, OptionsVideo,
     Credits,
+    Languages,
     Quit
 }
