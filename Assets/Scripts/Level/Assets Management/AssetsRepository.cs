@@ -27,7 +27,11 @@ public class AssetsRepository : MonoBehaviour
     public TileSpritesBundle GetSpritesBundle(TileType tileType, int worldNumber) => GetSpritesBundle(tileType, worldNumber, false);
     public TileSpritesBundle GetSpritesBundle(TileType tileType, int worldNumber, bool shadowTiles){
         if(tileType == TileType.Floor || tileType == TileType.SpikedFloor || tileType == TileType.CrystalFloor)
+        {
+            if (worldNumber == 0)
+                worldNumber = 1;
             return worldAssetsList.Find(x => x.worldNumber == worldNumber).floorTileSpritesBundles.Find(x => x.tileType == tileType && x.shadowTiles == shadowTiles);
+        }
 
         else
             return cloudTileSpritesBundles.Find(x => x.tileType == tileType && x.shadowTiles == shadowTiles);

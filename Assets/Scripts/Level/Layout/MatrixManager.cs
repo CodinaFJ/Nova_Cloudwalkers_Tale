@@ -577,6 +577,7 @@ public class MatrixManager : MonoBehaviour
     {
         if(mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] == 3 || mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] == 5)
         {
+            Debug.Log("CheckForCrystal ++");
             mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] ++;
         }
     }

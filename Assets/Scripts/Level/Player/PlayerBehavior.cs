@@ -76,7 +76,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             itemsUnderPj.Add(item);
         }
-        if(item == 5)
+        if(MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]] == 5)
             MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]]++;
     }
 
@@ -115,6 +115,7 @@ public class PlayerBehavior : MonoBehaviour
         PjInputManager.instance.pjMoving = false;
         pjCell = (int[])_pjCell.Clone();
         transform.position = MatrixManager.instance.FromMatrixIndexToWorld(pjCell[0], pjCell[1]) + new Vector3(0, 0.65f, 0);
+        itemsUnderPj.Clear();
         AddItemUnderPj();
 
         //Recover the total stars count in the game - This might not be needed anymore since it is calculateTotalStarsInGame is called in levelFinished.cs
