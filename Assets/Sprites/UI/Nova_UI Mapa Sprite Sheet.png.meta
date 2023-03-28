@@ -83,6 +83,12 @@ TextureImporter:
   - first:
       213: -147920383530864146
     second: Nova_UI Mapa ContadorFragmentos
+  - first:
+      213: 4565430897729968060
+    second: Nova_UI Mapa Nivel final Bloqueado
+  - first:
+      213: -8891664578223001650
+    second: Nova_UI Mapa Nivel Final
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -726,7 +732,7 @@ TextureImporter:
         width: 429
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -734,6 +740,48 @@ TextureImporter:
       bones: []
       spriteID: ee17a94e13b72fdf0800000000000000
       internalID: -147920383530864146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Nivel final Bloqueado
+      rect:
+        serializedVersion: 2
+        x: 3779
+        y: 3202
+        width: 137
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb799c9763bab5f30800000000000000
+      internalID: 4565430897729968060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nova_UI Mapa Nivel Final
+      rect:
+        serializedVersion: 2
+        x: 3922
+        y: 3202
+        width: 137
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf28191d267a9480800000000000000
+      internalID: -8891664578223001650
       vertices: []
       indices: 
       edges: []
