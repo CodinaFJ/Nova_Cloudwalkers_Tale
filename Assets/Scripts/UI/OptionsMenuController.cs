@@ -74,8 +74,8 @@ public class OptionsMenuController : MonoBehaviour
         if (levelUI)
             levelUI.SetActive(false);
         LoadOptionsSection(OptionsSectionTag.PauseLevel);
-        Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
+        Hotkeys.SetActive(false);
         pauseMenuToGo = OptionsSectionTag.PauseLevel;
     }
 
