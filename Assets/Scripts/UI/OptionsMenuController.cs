@@ -66,6 +66,7 @@ public class OptionsMenuController : MonoBehaviour
     public void ToAudioOptions() => LoadOptionsSection(OptionsSectionTag.OptionsAudio);
     public void ToVideoOptions() => LoadOptionsSection(OptionsSectionTag.OptionsVideo);
     public void ToClearProgress() => LoadOptionsSection(OptionsSectionTag.Quit);
+    public void ToLanguageOptions() => LoadOptionsSection(OptionsSectionTag.Languages);
 
     public void ToPauseLevel()
     {
@@ -73,8 +74,8 @@ public class OptionsMenuController : MonoBehaviour
         if (levelUI)
             levelUI.SetActive(false);
         LoadOptionsSection(OptionsSectionTag.PauseLevel);
-        Hotkeys.SetActive(false);
         OptionsBackground.SetActive(true);
+        Hotkeys.SetActive(false);
         pauseMenuToGo = OptionsSectionTag.PauseLevel;
     }
 
@@ -140,6 +141,7 @@ public class OptionsMenuController : MonoBehaviour
 
     public void ToMap()
     {
+        GameProgressManager.instance.SetCollectedStarsInLevel(0);
         SFXManager.PlaySelectUI_B();
         MouseMatrixScript.BlockPointer();
         if(gameManager != null) gameManager.ToMap();
@@ -243,5 +245,6 @@ public enum OptionsSectionTag{
     PauseMenu, PauseMap, PauseLevel,
     Options, OptionsAudio, OptionsVideo,
     Credits,
+    Languages,
     Quit
 }

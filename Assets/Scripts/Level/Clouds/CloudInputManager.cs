@@ -164,21 +164,14 @@ public class CloudInputManager : MonoBehaviour
 
             if((mechanic == -1 || mechanic == 1 || mechanic ==3) && !isSelecting)
             {
-                
                 if(cloudsParents[item - 1] != null)
                     cloudsParents[item - 1].GetComponent<ParentCloudScript>().PlayClickParticles(onClickMouseWorldPos);
 
                 SFXManager.PlayCloudSwipeTap();
                 SFXManager.instance.PlayCloudSwipeLoop(mechanic);
-
-                if(PlayerHand.instance != null) PlayerHand.instance.PutHandOut = true;
-
-                //TweenCloudScaleOnSelect();
             }
             cloudMoved = false;
-
             isSelecting = true;
-
             //Debug.Log("Initial Cell Coor: ( " + onClickMatrixCoor[0] + ", " + onClickMatrixCoor[1] + ")");
         }
     }
@@ -361,7 +354,7 @@ public class CloudInputManager : MonoBehaviour
 
     void moveCloud()
     {
-        if(!cloudIsMoving && playerBehavior.GetItemUnderPj() != item)
+        if(!cloudIsMoving && !playerBehavior.IsItemUnderPj(item))
         {
             for(int index = 0; index < mouseMovements.Length ; index++)
             {
@@ -386,7 +379,7 @@ public class CloudInputManager : MonoBehaviour
                 }
             }
         }
-        else if(playerBehavior.GetItemUnderPj() == item && !wrongActionPlayed)
+        else if(playerBehavior.IsItemUnderPj(item) && !wrongActionPlayed)
         {
             wrongActionPlayed = true;
             SFXManager.PlayWrong();

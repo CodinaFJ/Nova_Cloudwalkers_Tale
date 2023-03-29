@@ -79,9 +79,9 @@ public class VideoScript : MonoBehaviour
 
     public void CheckOver(VideoPlayer vp)
     {
-        print("Video Is Over");
         if (GameProgressManager.instance) GameProgressManager.instance.WorldSelection = 0;
         MouseMatrixScript.BlockPointer();
+        worldUnlocked = GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber();
 
         GameProgressManager.instance.SetPlayedCinematic(worldUnlocked);
         if(worldUnlocked == 1)
@@ -91,7 +91,7 @@ public class VideoScript : MonoBehaviour
                 Debug.LogWarning("Level to Load not found");
             else
                 LevelLoader.instance.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
-        } 
+        }
         else LevelLoader.instance.LoadLevel(LevelLoader.GetLevelContains("1-" + worldUnlocked));
     }
 
