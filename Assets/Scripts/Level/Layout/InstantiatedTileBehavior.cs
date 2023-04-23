@@ -14,6 +14,9 @@ public class InstantiatedTileBehavior : MonoBehaviour
     [SerializeField] Sprite tile3;
     [SerializeField] Sprite tile4;
 
+    [SerializeField] GameObject MixedWhiteCrystalPrefab;
+    [SerializeField] GameObject MixedWhiteThunderPrefab;
+
     //1 White Cloud / 2 Grey Cloud / 3 Cloud Crystal /  5 Floor Crystal / -1 Thunder Cloud / 999 Floor / -999 Spiked Floor
     [SerializeField] int tileType;
 
@@ -66,7 +69,7 @@ public class InstantiatedTileBehavior : MonoBehaviour
                 bool indexInMatrixBoundaries = matrixCoordinates[0] + i > 0                              && matrixCoordinates[1] + j > 0 &&
                                                matrixCoordinates[0] + i < itemsLayoutMatrix.GetLength(0) && matrixCoordinates[1] + j < itemsLayoutMatrix.GetLength(1);
 
-                //Mathf.Abs(i + j) == 1 used limit the checked tiles to the one at the right/left/up/down
+                //Mathf.Abs(i + j) == 1 limit the checked tiles to the one at the right/left/up/down
                 if (Mathf.Abs(i + j) == 1 && indexInMatrixBoundaries)
                 {
                     if(tileType == 999)
@@ -178,6 +181,7 @@ public class InstantiatedTileBehavior : MonoBehaviour
 
         //Once the tile is correctly instatiated, the proper shadow is instantiated
         InstantiateShadow();
+        InstantiateMixedCloudJoint(adyacentTiles);
     }
 
     private void InstantiateShadow()
@@ -229,6 +233,64 @@ public class InstantiatedTileBehavior : MonoBehaviour
         //Always instantiate if there is a cloud tile at the left/right that it doesn't have a cloud tile below
         else if(adyacentTilesForShadow[0] && !adyacentTilesForShadow[2]) Instantiate(tileShadow, transform.position + new Vector3(0, -shadowToWorldCorrection, 0), Quaternion.identity, gameObject.transform);
         else if(adyacentTilesForShadow[1] && !adyacentTilesForShadow[4]) Instantiate(tileShadow, transform.position + new Vector3(0, -shadowToWorldCorrection, 0), Quaternion.identity, gameObject.transform);
+    }
+
+    private void InstantiateMixedCloudJoint(bool[] adyacentTiles)
+    {
+        Vector2 adyacentTileCoordinates = Vector2Int.zero;
+        //int[] adyacentTileCoordinates = new int[2];
+        int adyacentTileMechanic;
+        GameObject mixedCloudJoinPrefab;
+
+        for (int i = 0; i < adyacentTiles.Length; i++)
+        {
+            if (!adyacentTiles[i]) continue;
+            adyacentTileCoordinates = FromAdyacentIndexToAdyacentVector(i);
+            adyacentTileCoordinates.x = matrixCoordinates[0] + adyacentTileCoordinates.x;
+            adyacentTileCoordinates.y = matrixCoordinates[1] + adyacentTileCoordinates.y;
+            adyacentTileMechanic = mechanicsLayoutMatrix[(int) adyacentTileCoordinates.x, (int) adyacentTileCoordinates.y];
+            mixedCloudJoinPrefab = SelectMixedCloudSprite(adyacentTileMechanic);
+            if (mixedCloudJoinPrefab == null) continue;
+            Instantiate(mixedCloudJoinPrefab, (Vector2) transform.position + adyacentTileCoordinates * 0.5f, Quaternion.identity, gameObject.transform);
+        }
+    }
+
+    private Vector2Int FromAdyacentIndexToAdyacentVector(int i)
+    {
+        Vector2Int u = Vector2Int.zero;
+
+        switch (i)
+        {
+            case 0:
+            u.x = 0;
+            u.y = 1;
+            break;
+
+            case 1:
+            u.x = -1;
+            u.y = 0;
+            break;
+
+            case 2:
+            u.x = 0;
+            u.y = -1;
+            break;
+
+            case 3:
+            u.x = 1;
+            u.y = 0;
+            break;
+        }
+        return u;
+    }
+
+    private GameObject SelectMixedCloudSprite(int adyacentTileMechanic)
+    {
+        if (adyacentTileMechanic == -1)
+            return MixedWhiteThunderPrefab;
+        else if (adyacentTileMechanic == 3 || adyacentTileMechanic == 4)
+            return MixedWhiteCrystalPrefab;
+        return null;
     }
 
     public int GetobjectNumber()

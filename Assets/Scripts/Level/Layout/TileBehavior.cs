@@ -17,8 +17,8 @@ public class TileBehavior : MonoBehaviour
     GameObject joinParticlesPrefab;
 
     [Header("Cloud union")]
-    [SerializeField] Sprite linkWhiteCrystal;
-    [SerializeField] Sprite linkWhiteThunder;
+    [SerializeField] GameObject MixedWhiteCrystalPrefab;
+    [SerializeField] GameObject MixedWhiteThunderPrefab;
     
     GameObject myMovementParticles;
     GameObject myJoinParticles;
@@ -51,7 +51,6 @@ public class TileBehavior : MonoBehaviour
 
         InitilizeTileInfo();
         SetCorrectSprites();
-        //InstantiateLinkBetweenClouds();
     }
 
     protected void InitilizeTileInfo()
@@ -77,6 +76,7 @@ public class TileBehavior : MonoBehaviour
 
         SetAdyacentTilesForShadow();
         InstantiateShadow();
+        InstantiateMixedCloudJoint(adyacentTiles);
     }
 
     public void SetCorrectSpritesAfterCrack(){
@@ -88,6 +88,7 @@ public class TileBehavior : MonoBehaviour
 
         SetAdyacentTilesForShadow();
         InstantiateShadow();
+        InstantiateMixedCloudJoint(adyacentTiles);
     }
 
 
@@ -294,44 +295,69 @@ public class TileBehavior : MonoBehaviour
         return TileType.WhiteCloud;
     }
 
-    private void InstantiateLinkBetweenClouds()
+    private void InstantiateMixedCloudJoint(bool[] adyacentTiles)
     {
-        if (mechanicNumber != 1)
-            return ;
-        for (int i = 0; i < adyacentTiles.Length ; i++)
+        LinkTransform linkTransform;
+        int adyacentTileMechanic;
+        GameObject mixedCloudJoinPrefab;
+        GameObject instantiatedLink;
+
+        if (tileType != TileType.WhiteCloud) return;
+        for (int i = 0; i < adyacentTiles.Length; i++)
         {
-            if (adyacentTiles[i])
-            {
-                InstantiateLink(i);
-            }
+            linkTransform = FromAdyacentIndexToTranform(i);
+            adyacentTileMechanic = mechanicsLayoutMatrix[matrixCoordinates[0] - (int) linkTransform.position.y, matrixCoordinates[1] + (int) linkTransform.position.x];
+            mixedCloudJoinPrefab = SelectMixedCloudSprite(adyacentTileMechanic);
+            if (mixedCloudJoinPrefab == null) continue;
+            instantiatedLink = Instantiate(mixedCloudJoinPrefab, (linkTransform.position * 0.5f) + (Vector2) transform.position, Quaternion.identity, gameObject.transform);
+            instantiatedLink.transform.Rotate(0, 0, linkTransform.rotation);
         }
     }
 
-    private void InstantiateLink(int side)
+    private LinkTransform FromAdyacentIndexToTranform(int i)
     {
-        Vector3 position;
+        LinkTransform linkTransform = new LinkTransform();
 
-        position = Vector3.zero;
-
-        switch(side)
+        switch (i)
         {
             case 0:
-            position = new Vector3(0, 0.5f, 0);
+            linkTransform.position.x = 0;
+            linkTransform.position.y = 1;
+            linkTransform.rotation = 90;
             break;
 
             case 1:
-            position = new Vector3(-0.5f, 0, 0);
+            linkTransform.position.x = -1;
+            linkTransform.position.y = 0;
+            linkTransform.rotation = 180;
             break;
 
             case 2:
-            position = new Vector3(0, -0.5f, 0);
+            linkTransform.position.x = 0;
+            linkTransform.position.y = -1;
+            linkTransform.rotation = -90;
             break;
 
             case 3:
-            position = new Vector3(0.5f, 0, 0);
+            linkTransform.position.x = 1;
+            linkTransform.position.y = 0;
+            linkTransform.rotation = 0;
             break;
         }
+        return linkTransform;
+    }
 
-        Instantiate(linkWhiteCrystal, transform.position + position, Quaternion.identity, gameObject.transform);
+    private GameObject SelectMixedCloudSprite(int adyacentTileMechanic)
+    {
+        if (adyacentTileMechanic == -1)
+            return MixedWhiteThunderPrefab;
+        else if (adyacentTileMechanic == 3 || adyacentTileMechanic == 4)
+            return MixedWhiteCrystalPrefab;
+        return null;
+    }
+
+    struct LinkTransform{
+        public Vector2 position;
+        public int rotation;
     }
 }
