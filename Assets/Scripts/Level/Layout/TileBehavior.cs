@@ -15,6 +15,10 @@ public class TileBehavior : MonoBehaviour
     GameObject movementParticlesPrefab;
     [SerializeField]
     GameObject joinParticlesPrefab;
+
+    [Header("Cloud union")]
+    [SerializeField] Sprite linkWhiteCrystal;
+    [SerializeField] Sprite linkWhiteThunder;
     
     GameObject myMovementParticles;
     GameObject myJoinParticles;
@@ -47,6 +51,7 @@ public class TileBehavior : MonoBehaviour
 
         InitilizeTileInfo();
         SetCorrectSprites();
+        //InstantiateLinkBetweenClouds();
     }
 
     protected void InitilizeTileInfo()
@@ -266,7 +271,7 @@ public class TileBehavior : MonoBehaviour
     public bool[] GetAdyacentTilesForShadow() => adyacentTilesForShadow;
     public TileSpritesBundle GetTileShadowsSpritesBundle() => tileShadowsSpritesBundle;
 
-    public static TileType MechanicNumberToTyleTipe(int mechanicNumber){
+    public static TileType MechanicNumberToTileType(int mechanicNumber){
         switch(mechanicNumber){
             case 1:
                 return TileType.WhiteCloud;
@@ -289,4 +294,44 @@ public class TileBehavior : MonoBehaviour
         return TileType.WhiteCloud;
     }
 
+    private void InstantiateLinkBetweenClouds()
+    {
+        if (mechanicNumber != 1)
+            return ;
+        for (int i = 0; i < adyacentTiles.Length ; i++)
+        {
+            if (adyacentTiles[i])
+            {
+                InstantiateLink(i);
+            }
+        }
+    }
+
+    private void InstantiateLink(int side)
+    {
+        Vector3 position;
+
+        position = Vector3.zero;
+
+        switch(side)
+        {
+            case 0:
+            position = new Vector3(0, 0.5f, 0);
+            break;
+
+            case 1:
+            position = new Vector3(-0.5f, 0, 0);
+            break;
+
+            case 2:
+            position = new Vector3(0, -0.5f, 0);
+            break;
+
+            case 3:
+            position = new Vector3(0.5f, 0, 0);
+            break;
+        }
+
+        Instantiate(linkWhiteCrystal, transform.position + position, Quaternion.identity, gameObject.transform);
+    }
 }
