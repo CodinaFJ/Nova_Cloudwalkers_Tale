@@ -16,7 +16,15 @@ public class AudioManager : MonoBehaviour
     [SerializeField] float fadeOutDuration = 1f;
     [SerializeField] float fadeOutDurationSFX = 0.3f;
 
+    const string PARAMETER_MUSIC = "musicVolume";
+    const string PARAMETER_SFX = "sfxVolume";
+    const string PARAMETER_AMBIENT = "ambientVolume";
+
     public static AudioManager instance;
+
+    public float MusicMixerValue { get; set; }
+    public float SfxMixerValue { get; set; }
+    public float AmbienMixerValue { get; set; }
 
     void Awake()
     {
@@ -66,7 +74,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             return;
         }
         //Prevents spamming same SFX, would create performance problems
@@ -114,7 +122,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(musics, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             return;
         }
         s.source.Play();
@@ -125,7 +133,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(ambients, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             return;
         }
         s.source.Play();
@@ -138,7 +146,7 @@ public class AudioManager : MonoBehaviour
         if (s == null) s = Array.Find(ambients, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Clip " + name + " not found!");
+            PrintNotFoundWarning(name);
             return false;
         }
         try{
@@ -158,7 +166,7 @@ public class AudioManager : MonoBehaviour
         if (s == null) s = Array.Find(ambients, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             return false;
         }
         isPlaying = s.source.isPlaying;
@@ -171,18 +179,11 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             return false;
         }
         isPlaying = Array.Exists<AudioSource>(GetComponents<AudioSource>(), x => x.clip == s.clip);
         return isPlaying;
-    }
-
-    public void UpdateMixerVolume()
-    {
-        musicMixerGroup.audioMixer.SetFloat("musicVolume", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
-        sfxMixerGroup.audioMixer.SetFloat("sfxVolume", Mathf.Log10(AudioOptionsManager.sfxVolume) * 20);
-        ambientMixerGroup.audioMixer.SetFloat("ambientVolume", Mathf.Log10(AudioOptionsManager.sfxVolume) * 20);
     }
 
     public IEnumerator FadeInMusic(string name)
@@ -191,7 +192,7 @@ public class AudioManager : MonoBehaviour
         if (s == null) s = Array.Find(ambients, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             yield break;
         }
         s.source.Play();
@@ -209,7 +210,7 @@ public class AudioManager : MonoBehaviour
         if (s == null) s = Array.Find(ambients, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             yield break;
         }
         float startVolume = s.source.volume;
@@ -225,7 +226,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             yield break;
         }
         s.source.Play();
@@ -248,7 +249,7 @@ public class AudioManager : MonoBehaviour
         } 
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             yield break;
         }
         else if(s.source == null) yield break;
@@ -261,5 +262,28 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Stop();
         
+    }
+
+    private void PrintNotFoundWarning(string name)
+    {
+        Debug.LogWarning("Sound " + name + " not found!");
+    }
+
+    public void SetMixerVolume(float volume, MixerParameter mixerParameter)
+    {
+        switch (mixerParameter)
+        {
+            case MixerParameter.musicVolume:
+            MusicMixerValue = volume;
+            break;
+
+            case MixerParameter.sfxVolume:
+            SfxMixerValue = volume;
+            break;
+
+            case MixerParameter.ambientVolume:
+            AmbienMixerValue = volume;
+            break;
+        }
     }
 }

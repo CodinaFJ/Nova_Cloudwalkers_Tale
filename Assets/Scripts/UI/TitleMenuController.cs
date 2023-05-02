@@ -14,6 +14,10 @@ public class TitleMenuController : MonoBehaviour
     [SerializeField] GameObject credits;
     LevelLoader levelLoader;
 
+    const string CINEMATIC_1 = "Cinematic1";
+    const string LEVEL_SELECTOR = "LevelSelectorMenu";
+    const string MAIN_MUSIC = "Main Theme";
+
     void Start()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
@@ -22,7 +26,7 @@ public class TitleMenuController : MonoBehaviour
         {
             if(AudioManager.instance.IsPlaying(sound.name))StartCoroutine(AudioManager.instance.FadeOutMusic(sound.name));
         }
-        if (!AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
+        if (!AudioManager.instance.IsPlaying(MAIN_MUSIC)) StartCoroutine(AudioManager.instance.FadeInMusic(MAIN_MUSIC));
         MouseMatrixScript.ReleasePointer();
         GameProgressManager.instance.LoadGameState();
         GameProgressManager.instance.WorldSelection = 0;
@@ -32,7 +36,7 @@ public class TitleMenuController : MonoBehaviour
     {
         if(GameProgressManager.instance != null) Destroy(GameProgressManager.instance.gameObject);
         MouseMatrixScript.BlockPointer();
-        levelLoader.LoadLevel("Cinematic1");
+        levelLoader.LoadLevel(CINEMATIC_1);
     }
 
     public void PlayButton()
@@ -51,7 +55,7 @@ public class TitleMenuController : MonoBehaviour
     public void ToMap()
     {
         MouseMatrixScript.BlockPointer();
-        levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains(LEVEL_SELECTOR));
         if(FindObjectOfType<MusicSelectionManager>() != null) FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
 

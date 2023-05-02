@@ -21,5 +21,19 @@ public class GameSaveData
         activeLevel = GameProgressManager.instance.GetActiveLevel();
         activeWorld = GameProgressManager.instance.GetActiveWorld();
     }
+}
 
+[System.Serializable]
+public class ConfigurationSaveData
+{
+    public string language;
+    public Resolution resolution;
+    public bool fullscreen;
+
+    
+
+    public ConfigurationSaveData ()
+    {
+
+    }
 }

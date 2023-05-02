@@ -8,8 +8,8 @@ public class LanguageSelector : MonoBehaviour
 {
     private bool active = false;
 
-    [SerializeField] Button resolutionRightButton;
-    [SerializeField] Button resolutionLeftButton;
+    [SerializeField] Button languageRightButton;
+    [SerializeField] Button languageLeftButton;
 
     private void Start()
     {
@@ -25,11 +25,11 @@ public class LanguageSelector : MonoBehaviour
 
     private void InitializeLanguageButtons()
     {
-        if(LanguageController.ActiveLanguageID <= 0) resolutionLeftButton.interactable = false;
-        else resolutionLeftButton.interactable = true;
+        if(LanguageController.ActiveLanguageID <= 0) languageLeftButton.interactable = false;
+        else languageLeftButton.interactable = true;
 
-        if(LanguageController.ActiveLanguageID >= LocalizationSettings.AvailableLocales.Locales.Count - 1) resolutionRightButton.interactable = false; 
-        else resolutionRightButton.interactable = true;
+        if(LanguageController.ActiveLanguageID >= LocalizationSettings.AvailableLocales.Locales.Count - 1) languageRightButton.interactable = false; 
+        else languageRightButton.interactable = true;
     }
 
     public void NextLanguage()
@@ -38,12 +38,12 @@ public class LanguageSelector : MonoBehaviour
         SFXManager.PlaySelectUI_F();
         ChangeLanguage(LanguageController.ActiveLanguageID);
 
-        if(LanguageController.ActiveLanguageID == 0) resolutionLeftButton.interactable = false;
-        else if(!resolutionLeftButton.interactable) resolutionLeftButton.interactable = true;
+        if(LanguageController.ActiveLanguageID == 0) languageLeftButton.interactable = false;
+        else if(!languageLeftButton.interactable) languageLeftButton.interactable = true;
 
         
-        if(LanguageController.ActiveLanguageID == LocalizationSettings.AvailableLocales.Locales.Count - 1) resolutionRightButton.interactable = false; 
-        else if (!resolutionRightButton.interactable) resolutionRightButton.interactable = true;
+        if(LanguageController.ActiveLanguageID == LocalizationSettings.AvailableLocales.Locales.Count - 1) languageRightButton.interactable = false; 
+        else if (!languageRightButton.interactable) languageRightButton.interactable = true;
         
     }
 
@@ -53,11 +53,11 @@ public class LanguageSelector : MonoBehaviour
         SFXManager.PlaySelectUI_B();
         ChangeLanguage(LanguageController.ActiveLanguageID);
 
-        if(LanguageController.ActiveLanguageID <= 0) resolutionLeftButton.interactable = false;
-        else if(!resolutionLeftButton.interactable) resolutionLeftButton.interactable = true;
+        if(LanguageController.ActiveLanguageID <= 0) languageLeftButton.interactable = false;
+        else if(!languageLeftButton.interactable) languageLeftButton.interactable = true;
         
-        if(LanguageController.ActiveLanguageID >= LocalizationSettings.AvailableLocales.Locales.Count - 1) resolutionRightButton.interactable = false; 
-        else if (!resolutionRightButton.interactable) resolutionRightButton.interactable = true;
+        if(LanguageController.ActiveLanguageID >= LocalizationSettings.AvailableLocales.Locales.Count - 1) languageRightButton.interactable = false; 
+        else if (!languageRightButton.interactable) languageRightButton.interactable = true;
     }
 
     public void ChangeLanguage(int languageID)
