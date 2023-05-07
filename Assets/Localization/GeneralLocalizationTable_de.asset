@@ -10,52 +10,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: GeneralLocalizationTable_es
+  m_Name: GeneralLocalizationTable_de
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: es
+    m_Code: de
   m_SharedData: {fileID: 11400000, guid: 4c48058dbefd2b24b9da7ab5b076e3d3, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
   - m_Id: 14418939904
-    m_Localized: Jugar
+    m_Localized: Spielen
     m_Metadata:
       m_Items: []
   - m_Id: 263501877248
-    m_Localized: Opciones
+    m_Localized: Optionen
     m_Metadata:
       m_Items: []
   - m_Id: 416027742208
-    m_Localized: "Cr\xE9ditos"
+    m_Localized: Credits
     m_Metadata:
       m_Items: []
   - m_Id: 509195816960
-    m_Localized: Salir
+    m_Localized: Spiel beenden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 795763249152
+    m_Localized: Video
     m_Metadata:
       m_Items: []
   - m_Id: 692885360640
     m_Localized: Audio
     m_Metadata:
       m_Items: []
-  - m_Id: 795763249152
-    m_Localized: "V\xEDdeo"
-    m_Metadata:
-      m_Items: []
   - m_Id: 893708636160
-    m_Localized: Idioma
+    m_Localized: Sprache
     m_Metadata:
       m_Items: []
   - m_Id: 1111753723904
-    m_Localized: Borrar Progreso
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1296294711296
-    m_Localized: Opciones
+    m_Localized: "Fortschritt l\xF6schen"
     m_Metadata:
       m_Items: []
   - m_Id: 1465933336576
-    m_Localized: "Espa\xF1ol"
+    m_Localized: Deutsch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1296294711296
+    m_Localized: Optionen
     m_Metadata:
       m_Items: []
   references:

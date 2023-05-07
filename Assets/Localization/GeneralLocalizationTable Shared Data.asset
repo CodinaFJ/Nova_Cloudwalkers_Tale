@@ -15,12 +15,12 @@ MonoBehaviour:
   m_TableCollectionName: GeneralLocalizationTable
   m_TableCollectionNameGuidString: 4c48058dbefd2b24b9da7ab5b076e3d3
   m_Entries:
-  - m_Id: 14418939904
-    m_Key: MainMenu_Play
+  - m_Id: 692885360640
+    m_Key: AudioButton
     m_Metadata:
       m_Items: []
-  - m_Id: 263501877248
-    m_Key: Menu_Options
+  - m_Id: 1111753723904
+    m_Key: ClearProgressButton
     m_Metadata:
       m_Items: []
   - m_Id: 416027742208
@@ -31,28 +31,28 @@ MonoBehaviour:
     m_Key: ExitGame
     m_Metadata:
       m_Items: []
-  - m_Id: 692885360640
-    m_Key: AudioButton
-    m_Metadata:
-      m_Items: []
-  - m_Id: 795763249152
-    m_Key: VideoButton
-    m_Metadata:
-      m_Items: []
   - m_Id: 893708636160
     m_Key: LanguageButton
     m_Metadata:
       m_Items: []
-  - m_Id: 1111753723904
-    m_Key: ClearProgressButton
+  - m_Id: 1465933336576
+    m_Key: LanguageSelection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14418939904
+    m_Key: MainMenu_Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 263501877248
+    m_Key: Menu_Options
     m_Metadata:
       m_Items: []
   - m_Id: 1296294711296
     m_Key: OptionsTitle
     m_Metadata:
       m_Items: []
-  - m_Id: 1465933336576
-    m_Key: LanguageSelection
+  - m_Id: 795763249152
+    m_Key: VideoButton
     m_Metadata:
       m_Items: []
   m_Metadata:
