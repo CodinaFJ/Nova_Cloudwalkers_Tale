@@ -18,8 +18,9 @@ public class SliderScript : MonoBehaviour
         slider.value = Mathf.Pow(10, audioMixerValue/20);
 
         slider.onValueChanged.AddListener((v) => {
-            AudioManager.instance.SetMixerVolume(v, mixerParameter);
+            AudioManager.instance.ChangeMixerVolumeFromSlider(v, mixerParameter);
             audioMixerGroup.audioMixer.SetFloat(mixerParameter.ToString(), Mathf.Log10(v) * 20);
+            SaveSystem.SaveConfigData();
         });
     }
 }

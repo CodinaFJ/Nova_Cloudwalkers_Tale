@@ -37,12 +37,13 @@ public class GameProgressManager : MonoBehaviour
     private void Awake() 
     {
         EnsureSingleton();
-        ParseActiveLevel();      
+        ParseActiveLevel(); 
     }
 
     private void Start() {
         UpdateStarsInGame();
         try{FindObjectOfType<TotalStarsCounter>().UpdateCounter();}catch{}
+        InitializeConfiguration(); 
     }
 
     /**************************************************************************************************
@@ -71,11 +72,15 @@ public class GameProgressManager : MonoBehaviour
         SaveSystem.SaveGame();
     }
 
+    /// <summary>
+    /// Loads game state if possible.
+    /// </summary>
     public void LoadGameState()
     {
         try{
             GameSaveData data = SaveSystem.LoadGame();
-            if (data != null){
+            if (data != null)
+            {
                 this.worldsWithLevels = new List<World>(data.worldsWithLevels);
                 this.unlockedWorlds = new List<bool>(data.unlockedWorlds);
                 this.playedCinematics = new List<bool>(data.playedCinematics);
@@ -83,6 +88,26 @@ public class GameProgressManager : MonoBehaviour
                 this.activeWorld = data.activeWorld;
             }
             CalculateCollectedStarsInGame();
+        }
+        catch(Exception ex)
+        {
+            Debug.LogWarning(("Error loading data: " + ex.Message));
+        }
+    }
+
+    /// <summary>
+    /// Loads config file if possible. Initializes resolution, languaje and volumes.
+    /// </summary>
+    private void InitializeConfiguration()
+    {
+        try{
+            ConfigurationSaveData data = SaveSystem.LoadConfigData();
+            if (data != null)
+            {
+                AudioManager.instance.MusicMixerValue = data.MusicMixerValue;
+                AudioManager.instance.SfxMixerValue = data.SfxMixerValue;
+                AudioManager.instance.AmbientMixerValue = data.AmbientMixerValue;
+            }
         }
         catch(Exception ex)
         {

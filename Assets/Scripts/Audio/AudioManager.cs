@@ -21,10 +21,36 @@ public class AudioManager : MonoBehaviour
     const string PARAMETER_AMBIENT = "ambientVolume";
 
     public static AudioManager instance;
-
-    public float MusicMixerValue { get; set; }
-    public float SfxMixerValue { get; set; }
-    public float AmbienMixerValue { get; set; }
+    private float musicMixerValue;
+    public float MusicMixerValue 
+    { 
+        get => musicMixerValue;
+        set 
+        {
+            musicMixerValue = value;
+            SetMixerVolume(value, MixerParameter.musicVolume);
+        } 
+    }
+    private float sfxMixerValue;
+    public float SfxMixerValue
+    { 
+        get => sfxMixerValue;
+        set 
+        {
+            sfxMixerValue = value;
+            SetMixerVolume(value, MixerParameter.sfxVolume);
+        } 
+    }
+    private float ambientMixerValue;
+    public float AmbientMixerValue
+    { 
+        get => ambientMixerValue;
+        set 
+        {
+            ambientMixerValue = value;
+            SetMixerVolume(value, MixerParameter.ambientVolume);
+        } 
+    }
 
     void Awake()
     {
@@ -269,7 +295,15 @@ public class AudioManager : MonoBehaviour
         Debug.LogWarning("Sound " + name + " not found!");
     }
 
-    public void SetMixerVolume(float volume, MixerParameter mixerParameter)
+    #region MixerVolumes_Sliders
+
+    private void SetMixerVolume(float volume, MixerParameter mixerParameter)
+    {
+        Debug.Log("Set mixer volume for parameter: " + mixerParameter.ToString() + " " + volume);
+        musicMixerGroup.audioMixer.SetFloat(mixerParameter.ToString(), Mathf.Log10(volume) * 20);
+    }
+
+    public void ChangeMixerVolumeFromSlider(float volume, MixerParameter mixerParameter)
     {
         switch (mixerParameter)
         {
@@ -282,8 +316,17 @@ public class AudioManager : MonoBehaviour
             break;
 
             case MixerParameter.ambientVolume:
-            AmbienMixerValue = volume;
+            AmbientMixerValue = volume;
             break;
         }
     }
+
+    public void LoadMixerVolumes(ConfigurationSaveData configurationSaveData)
+    {
+        this.MusicMixerValue = configurationSaveData.MusicMixerValue;
+        this.SfxMixerValue = configurationSaveData.SfxMixerValue;
+        this.AmbientMixerValue = configurationSaveData.AmbientMixerValue;
+    }
+
+    #endregion
 }

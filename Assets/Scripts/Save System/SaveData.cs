@@ -26,14 +26,18 @@ public class GameSaveData
 [System.Serializable]
 public class ConfigurationSaveData
 {
-    public string language;
-    public Resolution resolution;
-    public bool fullscreen;
+    // public string language;
+    // public Resolution resolution;
+    // public bool fullscreen;
 
-    
+    public float MusicMixerValue;    
+    public float SfxMixerValue;    
+    public float AmbientMixerValue;    
 
     public ConfigurationSaveData ()
     {
-
+        MusicMixerValue = AudioManager.instance.MusicMixerValue;
+        SfxMixerValue = AudioManager.instance.SfxMixerValue;
+        AmbientMixerValue = AudioManager.instance.AmbientMixerValue;
     }
 }
