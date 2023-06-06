@@ -40,26 +40,7 @@ public class OptionsMenuController : MonoBehaviour
         levelLoader = FindObjectOfType<LevelLoader>();
         levelSelectorController = FindObjectOfType<LevelSelectorController>();
         pauseMenuInput = GetComponent<PlayerInput>();
-        FullscreenToggle.isOn = Screen.fullScreen;
-        fullscreenBool = Screen.fullScreen;
-        resolutions = Screen.resolutions;
-        
-        for (int i = 0; i < resolutions.Length ; i++)
-        {
-            string option = resolutions[i].width + "x" + resolutions[i].height;
-            resolutionOptions.Add(option);
-            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
-            {
-                currentResolutionIndex = i;
-            }
-        }
-
-        resolutionOption.text = resolutionOptions[currentResolutionIndex];
-        if(currentResolutionIndex <= 0) resolutionLeftButton.interactable = false;
-        else resolutionLeftButton.interactable = true;
-
-        if(currentResolutionIndex >= resolutionOptions.Count - 1) resolutionRightButton.interactable = false; 
-        else resolutionRightButton.interactable = true;
+        InitializeScreenResolutions();
     }
 
     public void ToOptions() => LoadOptionsSection(OptionsSectionTag.Options);
@@ -163,7 +144,7 @@ public class OptionsMenuController : MonoBehaviour
 
     public void SetFullscreen (bool isFullscreen)
     {
-        Screen.fullScreen = isFullscreen;
+        fullscreenBool = isFullscreen;
     }
 
     public void SetResolution(int resolutionIndex)
@@ -202,10 +183,11 @@ public class OptionsMenuController : MonoBehaviour
 
     public void OkResolutionOptions()
     {
-        Resolution resolution = resolutions[currentResolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        ScreenVideoManager.instance.Fullscreen = fullscreenBool;
+        ScreenVideoManager.instance.ResolutionIndex = currentResolutionIndex;
+        SaveSystem.SaveConfigData();
 
-        ToOptions();
+        BackToPause();
     }
 
     public void OnResumeGame()
@@ -232,6 +214,24 @@ public class OptionsMenuController : MonoBehaviour
         }
         try{OptionsSectionsList.Find(x => x.tag == optionsSectionTag).sectionGameObject.SetActive(true);}
         catch{throw new NullReferenceException("Exception loading: " + optionsSectionTag.ToString());}
+    }
+
+    private void InitializeScreenResolutions()
+    {
+        currentResolutionIndex = ScreenVideoManager.instance.ResolutionIndex;
+
+        for (int i = 0; i < ScreenVideoManager.instance.Resolutions.Length ; i++)
+        {
+            string option = ScreenVideoManager.instance.Resolutions[i].width + "x" + ScreenVideoManager.instance.Resolutions[i].height;
+            resolutionOptions.Add(option);
+        }
+
+        resolutionOption.text = resolutionOptions[currentResolutionIndex];
+        if(currentResolutionIndex <= 0) resolutionLeftButton.interactable = false;
+        else resolutionLeftButton.interactable = true;
+
+        if(currentResolutionIndex >= resolutionOptions.Count - 1) resolutionRightButton.interactable = false; 
+        else resolutionRightButton.interactable = true;
     }
 }
 

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7303096619275083183}
   - component: {fileID: 9057001675364576587}
+  - component: {fileID: 2283326304108396147}
   m_Layer: 0
   m_Name: GameState
   m_TagString: Untagged
@@ -470,13 +471,25 @@ MonoBehaviour:
   playedCinematics: 0000000000
   unlockedWorlds: 01000000
   activeLevel:
-    levelNumber: 0
+    levelNumber: 1
     numberOfStars: 0
     collectedStars: 0
     wallLevel: 0
     unlockedLevel: 0
   activeWorld:
-    worldNumber: 0
+    worldNumber: 1
     levelsList: []
   collectedStarsInLevel: 0
   collectedStarsInGame: 0
+--- !u!114 &2283326304108396147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7303096619275083177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1ec2d541f7da542bcac24164bd2c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

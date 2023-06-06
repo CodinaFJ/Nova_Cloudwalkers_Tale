@@ -107,6 +107,7 @@ public class GameProgressManager : MonoBehaviour
                 AudioManager.instance.MusicMixerValue = data.MusicMixerValue;
                 AudioManager.instance.SfxMixerValue = data.SfxMixerValue;
                 AudioManager.instance.AmbientMixerValue = data.AmbientMixerValue;
+                ScreenVideoManager.instance.LoadResolutionConfig(data);
             }
         }
         catch(Exception ex)

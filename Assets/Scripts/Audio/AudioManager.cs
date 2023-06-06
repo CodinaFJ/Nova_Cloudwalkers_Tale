@@ -299,7 +299,6 @@ public class AudioManager : MonoBehaviour
 
     private void SetMixerVolume(float volume, MixerParameter mixerParameter)
     {
-        Debug.Log("Set mixer volume for parameter: " + mixerParameter.ToString() + " " + volume);
         musicMixerGroup.audioMixer.SetFloat(mixerParameter.ToString(), Mathf.Log10(volume) * 20);
     }
 

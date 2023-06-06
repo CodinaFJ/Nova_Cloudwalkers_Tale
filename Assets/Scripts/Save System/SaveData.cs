@@ -27,8 +27,8 @@ public class GameSaveData
 public class ConfigurationSaveData
 {
     // public string language;
-    // public Resolution resolution;
-    // public bool fullscreen;
+    public int ResolutionIndex;
+    public bool Fullscreen;
 
     public float MusicMixerValue;    
     public float SfxMixerValue;    
@@ -39,5 +39,7 @@ public class ConfigurationSaveData
         MusicMixerValue = AudioManager.instance.MusicMixerValue;
         SfxMixerValue = AudioManager.instance.SfxMixerValue;
         AmbientMixerValue = AudioManager.instance.AmbientMixerValue;
+        ResolutionIndex = ScreenVideoManager.instance.ResolutionIndex;
+        Fullscreen = ScreenVideoManager.instance.Fullscreen;
     }
 }
