@@ -43,7 +43,7 @@ public class GameProgressManager : MonoBehaviour
     private void Start() {
         UpdateStarsInGame();
         try{FindObjectOfType<TotalStarsCounter>().UpdateCounter();}catch{}
-        InitializeConfiguration(); 
+        LoadGameConfiguration(); 
     }
 
     /**************************************************************************************************
@@ -98,7 +98,7 @@ public class GameProgressManager : MonoBehaviour
     /// <summary>
     /// Loads config file if possible. Initializes resolution, languaje and volumes.
     /// </summary>
-    private void InitializeConfiguration()
+    private void LoadGameConfiguration()
     {
         try{
             ConfigurationSaveData data = SaveSystem.LoadConfigData();
@@ -108,6 +108,7 @@ public class GameProgressManager : MonoBehaviour
                 AudioManager.instance.SfxMixerValue = data.SfxMixerValue;
                 AudioManager.instance.AmbientMixerValue = data.AmbientMixerValue;
                 ScreenVideoManager.instance.LoadResolutionConfig(data);
+                LanguageController.instance.ActiveLanguageName = data.Language;
             }
         }
         catch(Exception ex)

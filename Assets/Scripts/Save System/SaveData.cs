@@ -26,7 +26,7 @@ public class GameSaveData
 [System.Serializable]
 public class ConfigurationSaveData
 {
-    // public string language;
+    public string Language;
     public int ResolutionIndex;
     public bool Fullscreen;
 
@@ -36,6 +36,7 @@ public class ConfigurationSaveData
 
     public ConfigurationSaveData ()
     {
+        Language = LanguageController.instance.ActiveLanguageName;
         MusicMixerValue = AudioManager.instance.MusicMixerValue;
         SfxMixerValue = AudioManager.instance.SfxMixerValue;
         AmbientMixerValue = AudioManager.instance.AmbientMixerValue;

@@ -23,51 +23,63 @@ public class LanguageSelector : MonoBehaviour
         InitializeLanguageButtons();
     }
 
+    private void InitializeLanguage()
+    {
+        if (LanguageController.instance.ActiveLanguageID == -1)
+        {
+            for (LanguageController.instance.ActiveLanguageID = 0; LanguageController.instance.ActiveLanguageID < LocalizationSettings.AvailableLocales.Locales.Count; LanguageController.instance.ActiveLanguageID++)
+            {
+                if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[LanguageController.instance.ActiveLanguageID])
+                    break ;
+            }
+        }
+        else
+            ChangeLanguage(LanguageController.instance.ActiveLanguageID);
+    }
+
     private void InitializeLanguageButtons()
     {
-        if(LanguageController.ActiveLanguageID <= 0) languageLeftButton.interactable = false;
+        if(LanguageController.instance.ActiveLanguageID <= 0) languageLeftButton.interactable = false;
         else languageLeftButton.interactable = true;
 
-        if(LanguageController.ActiveLanguageID >= LocalizationSettings.AvailableLocales.Locales.Count - 1) languageRightButton.interactable = false; 
+        if(LanguageController.instance.ActiveLanguageID >= LocalizationSettings.AvailableLocales.Locales.Count - 1) languageRightButton.interactable = false; 
         else languageRightButton.interactable = true;
     }
 
     public void NextLanguage()
     {
-        LanguageController.ActiveLanguageID++;
+        LanguageController.instance.ActiveLanguageID++;
         SFXManager.PlaySelectUI_F();
-        ChangeLanguage(LanguageController.ActiveLanguageID);
+        ChangeLanguage(LanguageController.instance.ActiveLanguageID);
 
-        if(LanguageController.ActiveLanguageID == 0) languageLeftButton.interactable = false;
+        if(LanguageController.instance.ActiveLanguageID == 0) languageLeftButton.interactable = false;
         else if(!languageLeftButton.interactable) languageLeftButton.interactable = true;
 
         
-        if(LanguageController.ActiveLanguageID == LocalizationSettings.AvailableLocales.Locales.Count - 1) languageRightButton.interactable = false; 
+        if(LanguageController.instance.ActiveLanguageID == LocalizationSettings.AvailableLocales.Locales.Count - 1) languageRightButton.interactable = false; 
         else if (!languageRightButton.interactable) languageRightButton.interactable = true;
         
     }
 
     public void PreviousLanguage()
     {
-        LanguageController.ActiveLanguageID--;
+        LanguageController.instance.ActiveLanguageID--;
         SFXManager.PlaySelectUI_B();
-        ChangeLanguage(LanguageController.ActiveLanguageID);
+        ChangeLanguage(LanguageController.instance.ActiveLanguageID);
 
-        if(LanguageController.ActiveLanguageID <= 0) languageLeftButton.interactable = false;
+        if(LanguageController.instance.ActiveLanguageID <= 0) languageLeftButton.interactable = false;
         else if(!languageLeftButton.interactable) languageLeftButton.interactable = true;
         
-        if(LanguageController.ActiveLanguageID >= LocalizationSettings.AvailableLocales.Locales.Count - 1) languageRightButton.interactable = false; 
+        if(LanguageController.instance.ActiveLanguageID >= LocalizationSettings.AvailableLocales.Locales.Count - 1) languageRightButton.interactable = false; 
         else if (!languageRightButton.interactable) languageRightButton.interactable = true;
     }
 
     public void ChangeLanguage(int languageID)
     {
-        Debug.Log("ChangeLanguage 1");
         if (active)
             return;
         if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[languageID])
             return;
-        Debug.Log("ChangeLanguage 2");
         StartCoroutine(SetLanguage(languageID));
     }
 
@@ -76,29 +88,8 @@ public class LanguageSelector : MonoBehaviour
         active = true;
         yield return LocalizationSettings.InitializationOperation;
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[languageID];
-        LanguageController.ActiveLanguageName = LocalizationSettings.SelectedLocale.LocaleName;
+        LanguageController.instance.ActiveLanguageName = LocalizationSettings.SelectedLocale.LocaleName;
+        SaveSystem.SaveConfigData();
         active = false;
     }
-
-    private void InitializeLanguage()
-    {
-        if (LanguageController.ActiveLanguageID == -1)
-        {
-            for (LanguageController.ActiveLanguageID = 0; LanguageController.ActiveLanguageID < LocalizationSettings.AvailableLocales.Locales.Count; LanguageController.ActiveLanguageID++)
-            {
-                if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[LanguageController.ActiveLanguageID])
-                    break ;
-            }
-        }
-        else
-            ChangeLanguage(LanguageController.ActiveLanguageID);
-    }
-}
-
-public static class LanguageController
-{
-    public const string DEFAULT_LANGUAGE = "English";
-
-    public static string ActiveLanguageName {get; set;} = DEFAULT_LANGUAGE;
-    public static int ActiveLanguageID {get; set;} = -1;
 }
