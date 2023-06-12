@@ -36,10 +36,7 @@ public class PlayerBehavior : MonoBehaviour
         
     void Start()
     {
-        //In editor the PJ may not be perfectly placed
         SnapPjToGrid();
-
-        //Get starting layout under PJ
         AddItemUnderPj();
     }
 
@@ -47,7 +44,9 @@ public class PlayerBehavior : MonoBehaviour
         instance = null;
     }
 
-    //Places PJ in the correct centered position within the cell it is
+    /// <summary>
+    /// Places PJ in the correct centered position within the cell it is.
+    /// </summary>
     void SnapPjToGrid()
     {
         //Offset displacements so the exact cell where the PJ is can be calculated
@@ -61,7 +60,9 @@ public class PlayerBehavior : MonoBehaviour
         transform.position = playerPosition;
     }
 
-    //Updates the info about the layout under the PJ
+    /// <summary>
+    /// Updates the info about the layout under the PJ
+    /// </summary>
     public void AddItemUnderPj()
     {
         int item = MatrixManager.instance.GetItemsLayoutMatrix()[pjCell[0], pjCell[1]];
@@ -105,10 +106,16 @@ public class PlayerBehavior : MonoBehaviour
 
     public int GetMechanicUnderPj() => MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]];
 
-    //On level finished we need the PJ to keep walking towards the exit
-    public void ExitThroughDoor() => PjInputManager.instance.KeepMoving(lastMovement);
+    /// <summary>
+    /// On level finished we need the PJ to keep walking towards the exit
+    /// </summary>
+    public void ExitThroughDoor(Direction exitDirection) => PjInputManager.instance.KeepMoving(exitDirection);
 
-    //States saved while solving a puzzle. Ued for the UNDO button
+    /// <summary>
+    /// States saved while solving a puzzle. Ued for the UNDO button
+    /// </summary>
+    /// <param name="_pjCell"></param>
+    /// <param name="_starsCollected"></param>
     public void LoadLevelStatePlayer(int[] _pjCell, int _starsCollected)
     {     
         //Update pj position - cell & transform

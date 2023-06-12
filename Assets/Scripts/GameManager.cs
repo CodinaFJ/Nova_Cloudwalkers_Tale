@@ -74,12 +74,12 @@ public class GameManager : MonoBehaviour
         levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
     }
 
-    public void PjToExit()
+    public void PjToExit(Direction exitDirection)
     {
         MouseMatrixScript.BlockPointer();
         PauseGame(true);
         SFXManager.instance.StopCloudSwipeLoop();
-        FindObjectOfType<PlayerBehavior>().ExitThroughDoor();
+        FindObjectOfType<PlayerBehavior>().ExitThroughDoor(exitDirection);
     }
 
     public void ToEndDemo()

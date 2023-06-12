@@ -285,22 +285,13 @@ public class PjInputManager : MonoBehaviour
         return pjMovements;
     }
 
-    public void KeepMoving(int lastMovement)
+    public void KeepMoving(Direction exitDirection)
     {
-        int movementToAdd;
-        if(itemsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1] + 1] == 999)
-        {
-            movementToAdd = 1;
-        }
-        else
-        {
-            movementToAdd = 2;
-        }
-
         pjMovementsPress = new int[10];
+        Debug.Log("Exit direction is: " + exitDirection + " with number " + (int) exitDirection);
         for (int i = 0; i < 10; i++)
         {
-            pjMovementsPress[i] = movementToAdd;
+            pjMovementsPress[i] = (int) exitDirection;
         }
     }
 

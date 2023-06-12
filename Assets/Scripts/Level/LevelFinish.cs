@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelFinish : MonoBehaviour
 {
     [SerializeField] float levelLoadDelay = 1f;
+    [SerializeField] Direction exitDirection;
 
     GameManager gameManager;
 
@@ -14,9 +15,10 @@ public class LevelFinish : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            try{
+            try
+            {
                 Level level = GameProgressManager.instance.GetActiveLevel();
-                Debug.Log("Finished Level: " + level.GetLevelNumber() + " In world: "+ GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber());
+                //Debug.Log("Finished Level: " + level.GetLevelNumber() + " In world: "+ GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber());
 
                 level.SetLevelCompleted();
                 if(level.GetCollectedStars() < GameProgressManager.instance.GetCollectedStarsInLevel()){
@@ -25,7 +27,9 @@ public class LevelFinish : MonoBehaviour
                 }
 
                 GameProgressManager.instance.SaveGameState();
-            }catch(Exception ex){
+            }
+            catch(Exception ex)
+            {
                 Debug.LogWarning("Problem saving: " + ex.Message);
             }
             StartCoroutine(LoadNextLevel());
@@ -36,7 +40,7 @@ public class LevelFinish : MonoBehaviour
     IEnumerator LoadNextLevel()
     {
         gameManager = GameManager.instance;
-        GameManager.instance.PjToExit();
+        GameManager.instance.PjToExit(exitDirection);
         AudioManager.instance.PlaySound("LevelExit");
         yield return new WaitForSecondsRealtime(levelLoadDelay);
 
@@ -55,4 +59,12 @@ public class LevelFinish : MonoBehaviour
         else GameManager.instance.ToMap();
         
     }
+}
+
+public enum Direction
+{
+    North = 2,
+    West = -1,
+    South = -2,
+    East = 1
 }
