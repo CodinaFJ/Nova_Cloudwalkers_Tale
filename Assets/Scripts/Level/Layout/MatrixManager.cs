@@ -370,6 +370,17 @@ public class MatrixManager : MonoBehaviour
         return pjMovementMatrix;
     }
 
+    public void MakeAllWalkable()
+    {
+        for (int x = 0; x < pjMovementMatrix.GetLength(0); x++)
+        {
+            for (int y = 0; y < pjMovementMatrix.GetLength(1); y++)
+            {
+                pjMovementMatrix[x,y] = true;
+            }
+        }
+    }
+
 //CLOUD MOVEMENT MATRIX: Shows wether the clouds can move to a specific position or not
 //FALSE Cannot move / TRUE Can move
 

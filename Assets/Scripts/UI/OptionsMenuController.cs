@@ -26,7 +26,7 @@ public class OptionsMenuController : MonoBehaviour
     public PlayerInput pauseMenuInput;
 
     Resolution[] resolutions;
-    bool fullscreenBool;
+    FullScreenMode fullscreenMode;
 
     List<string> resolutionOptions = new List<string>();
     int currentResolutionIndex;
@@ -144,14 +144,18 @@ public class OptionsMenuController : MonoBehaviour
 
     public void SetFullscreen (bool isFullscreen)
     {
-        fullscreenBool = isFullscreen;
+        Debug.Log("Fullscreen toggle: " + isFullscreen);
+        if (isFullscreen)
+            fullscreenMode = FullScreenMode.ExclusiveFullScreen;
+        else
+            fullscreenMode = FullScreenMode.Windowed;
     }
 
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
+    // public void SetResolution(int resolutionIndex)
+    // {
+    //     Resolution resolution = resolutions[resolutionIndex];
+    //     Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    // }
 
     public void NextResolution()
     {
@@ -183,8 +187,9 @@ public class OptionsMenuController : MonoBehaviour
 
     public void OkResolutionOptions()
     {
-        ScreenVideoManager.instance.Fullscreen = fullscreenBool;
-        ScreenVideoManager.instance.ResolutionIndex = currentResolutionIndex;
+        ScreenVideoManager.instance.Fullscreen = fullscreenMode;
+        ScreenVideoManager.instance.ActiveResolution = ScreenVideoManager.instance.Resolutions[currentResolutionIndex];
+        ScreenVideoManager.instance.SetResolution();
         SaveSystem.SaveConfigData();
 
         BackToPause();
@@ -218,12 +223,13 @@ public class OptionsMenuController : MonoBehaviour
 
     private void InitializeScreenResolutions()
     {
-        currentResolutionIndex = ScreenVideoManager.instance.ResolutionIndex;
-
         for (int i = 0; i < ScreenVideoManager.instance.Resolutions.Length ; i++)
         {
             string option = ScreenVideoManager.instance.Resolutions[i].width + "x" + ScreenVideoManager.instance.Resolutions[i].height;
             resolutionOptions.Add(option);
+            if (ScreenVideoManager.instance.Resolutions[i].width == ScreenVideoManager.instance.ActiveResolution.width &&
+                ScreenVideoManager.instance.Resolutions[i].height == ScreenVideoManager.instance.ActiveResolution.height)
+                    currentResolutionIndex = i;
         }
 
         resolutionOption.text = resolutionOptions[currentResolutionIndex];

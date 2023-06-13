@@ -27,7 +27,7 @@ public class GameSaveData
 public class ConfigurationSaveData
 {
     public string Language;
-    public int ResolutionIndex;
+    public int[] ActiveResolution = new int[2];
     public bool Fullscreen;
 
     public float MusicMixerValue;    
@@ -40,7 +40,11 @@ public class ConfigurationSaveData
         MusicMixerValue = AudioManager.instance.MusicMixerValue;
         SfxMixerValue = AudioManager.instance.SfxMixerValue;
         AmbientMixerValue = AudioManager.instance.AmbientMixerValue;
-        ResolutionIndex = ScreenVideoManager.instance.ResolutionIndex;
-        Fullscreen = ScreenVideoManager.instance.Fullscreen;
+        ActiveResolution[0] = ScreenVideoManager.instance.ActiveResolution.width;
+        ActiveResolution[1] = ScreenVideoManager.instance.ActiveResolution.height;
+        if (ScreenVideoManager.instance.Fullscreen == FullScreenMode.ExclusiveFullScreen)
+            Fullscreen = true;
+        else
+            Fullscreen = false;
     }
 }

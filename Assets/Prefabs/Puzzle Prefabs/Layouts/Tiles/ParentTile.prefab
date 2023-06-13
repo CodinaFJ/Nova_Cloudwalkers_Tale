@@ -100,4 +100,6 @@ MonoBehaviour:
   shadowToWorldCorrection: 0.85
   movementParticlesPrefab: {fileID: 8478759500691322797, guid: 5ab4e9883271e7c41bcc1e856674c519, type: 3}
   joinParticlesPrefab: {fileID: 8478759500691322797, guid: ee834cdea37748744a39ef2516e927d6, type: 3}
+  MixedWhiteCrystalPrefab: {fileID: 2846388769528272283, guid: 2f8b43f26ae1d0c488b6ddf01d610373, type: 3}
+  MixedWhiteThunderPrefab: {fileID: 8101359473894236097, guid: 476c37a84af7a5444a12bdb00227c688, type: 3}
   adyacentTilesNumber: 0

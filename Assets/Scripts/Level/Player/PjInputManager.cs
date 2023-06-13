@@ -288,7 +288,6 @@ public class PjInputManager : MonoBehaviour
     public void KeepMoving(Direction exitDirection)
     {
         pjMovementsPress = new int[10];
-        Debug.Log("Exit direction is: " + exitDirection + " with number " + (int) exitDirection);
         for (int i = 0; i < 10; i++)
         {
             pjMovementsPress[i] = (int) exitDirection;

@@ -6,24 +6,23 @@ public class ScreenVideoManager : MonoBehaviour
 {
     public static ScreenVideoManager instance;
 
-    private int resolutionIndex;
-    public int ResolutionIndex 
+    private Resolution activeResolution;
+    public Resolution ActiveResolution 
     { 
-        get => resolutionIndex; 
+        get => activeResolution; 
         set
         {
-            resolutionIndex = value;
-            Screen.SetResolution(Resolutions[resolutionIndex].width, Resolutions[resolutionIndex].height, Screen.fullScreen);
+            activeResolution = value;
         } 
     }
-    private bool fullscreen;
-    public bool Fullscreen 
+    private FullScreenMode fullscreen;
+    public FullScreenMode Fullscreen 
     { 
         get => fullscreen; 
         set
         {
+            Debug.Log("New fullscreen mode: " + value);
             fullscreen = value;
-            Screen.fullScreen = Fullscreen;
         } 
     }
     public Resolution[] Resolutions {get; private set;}
@@ -46,20 +45,35 @@ public class ScreenVideoManager : MonoBehaviour
     void InitializeScreenResolutions()
     {
         Resolutions = Screen.resolutions;
-        Fullscreen = Screen.fullScreen;
+        SetFullscreenMode(Screen.fullScreen);
         
         for (int i = 0; i < Resolutions.Length ; i++)
         {
             if (Resolutions[i].width == Screen.currentResolution.width && Resolutions[i].height == Screen.currentResolution.height)
             {
-                ResolutionIndex = i;
+                ActiveResolution = Resolutions[i];
             }
         }
     }
 
     public void LoadResolutionConfig(ConfigurationSaveData data)
     {
-        Fullscreen = data.Fullscreen;
-        ResolutionIndex = data.ResolutionIndex;
+        SetFullscreenMode(data.Fullscreen);
+        activeResolution.width = data.ActiveResolution[0];
+        activeResolution.height = data.ActiveResolution[1];
+        Screen.SetResolution(activeResolution.width, activeResolution.height, fullscreen);
+    }
+
+    public void SetResolution()
+    {
+        Screen.SetResolution(activeResolution.width, activeResolution.height, fullscreen);
+    }
+
+    private void SetFullscreenMode(bool fullscreenBool)
+    {
+        if (fullscreenBool)
+            fullscreen = FullScreenMode.ExclusiveFullScreen;
+        else
+            fullscreen = FullScreenMode.Windowed;
     }
 }

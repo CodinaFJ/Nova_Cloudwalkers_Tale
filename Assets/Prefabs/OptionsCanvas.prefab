@@ -7555,9 +7555,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5004256901317995909, guid: d6f384327a71da3449b2c422c976a525, type: 3}
       propertyPath: m_text
-      value: 'Resume
-
-'
+      value: Video
       objectReference: {fileID: 0}
     - target: {fileID: 5457403105590505564, guid: d6f384327a71da3449b2c422c976a525, type: 3}
       propertyPath: m_Name
