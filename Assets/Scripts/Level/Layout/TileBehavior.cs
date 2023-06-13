@@ -306,9 +306,12 @@ public class TileBehavior : MonoBehaviour
         for (int i = 0; i < adyacentTiles.Length; i++)
         {
             linkTransform = FromAdyacentIndexToTranform(i);
+            if (itemsLayoutMatrix[matrixCoordinates[0] - (int) linkTransform.position.y, matrixCoordinates[1] + (int) linkTransform.position.x] != itemNumber)
+                continue;
             adyacentTileMechanic = mechanicsLayoutMatrix[matrixCoordinates[0] - (int) linkTransform.position.y, matrixCoordinates[1] + (int) linkTransform.position.x];
             mixedCloudJoinPrefab = SelectMixedCloudSprite(adyacentTileMechanic);
-            if (mixedCloudJoinPrefab == null) continue;
+            if (mixedCloudJoinPrefab == null)
+                continue;
             instantiatedLink = Instantiate(mixedCloudJoinPrefab, (linkTransform.position * 0.5f) + (Vector2) transform.position, Quaternion.identity, gameObject.transform);
             instantiatedLink.transform.Rotate(0, 0, linkTransform.rotation);
         }
