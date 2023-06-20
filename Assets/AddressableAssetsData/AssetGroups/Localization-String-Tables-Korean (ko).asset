@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-String-Tables-Chinese (Simplified) (zh-Hans)
+  m_Name: Localization-String-Tables-Korean (ko)
   m_EditorClassIdentifier: 
-  m_GroupName: Localization-String-Tables-Chinese (Simplified) (zh-Hans)
+  m_GroupName: Localization-String-Tables-Korean (ko)
   m_Data:
     m_SerializedData: []
-  m_GUID: bca4ba1a194c2cf49abaa119c6911c54
+  m_GUID: 8e511e3163c9d254bb5fcb26bb3e7b99
   m_SerializeEntries:
-  - m_GUID: efc88a4d92d2d5a4188d02d85a398452
-    m_Address: GeneralLocalizationTable_zh-Hans
+  - m_GUID: 5c742fcb2e5908949aea279a2fe3f3eb
+    m_Address: GeneralLocalizationTable_ko
     m_ReadOnly: 1
     m_SerializedLabels:
-    - Locale-zh-Hans
+    - Locale-ko
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 452fa8fb37dda8e42bb08d6690439225, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 8d37e211bd7de5140af03ae425287528, type: 2}
-    - {fileID: 11400000, guid: aac62045a5f0b9147a4a430a629b1c18, type: 2}
+    - {fileID: 11400000, guid: 0f8417d97354986489754fffaf070213, type: 2}
+    - {fileID: 11400000, guid: 7fdd563f7dcf27241ab54051170fef30, type: 2}
