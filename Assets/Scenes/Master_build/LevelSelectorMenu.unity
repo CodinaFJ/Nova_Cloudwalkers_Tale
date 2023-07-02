@@ -5561,7 +5561,7 @@ PrefabInstance:
       objectReference: {fileID: 2075039668836056525, guid: 3c0b5bd1d5892154ca365606ca5f64e5, type: 3}
     - target: {fileID: 1438210780867770743, guid: 48636d7d0ee5e464cb1301ba2d8a798b, type: 3}
       propertyPath: levelNumber
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1438210780867770743, guid: 48636d7d0ee5e464cb1301ba2d8a798b, type: 3}
       propertyPath: worldNumber
@@ -5569,11 +5569,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1438210780867770743, guid: 48636d7d0ee5e464cb1301ba2d8a798b, type: 3}
       propertyPath: unlockerLevels.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1438210780867770743, guid: 48636d7d0ee5e464cb1301ba2d8a798b, type: 3}
       propertyPath: unlockerLevels.Array.data[0]
-      value: 7
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1438210780867770743, guid: 48636d7d0ee5e464cb1301ba2d8a798b, type: 3}
       propertyPath: unlockerLevels.Array.data[1]
