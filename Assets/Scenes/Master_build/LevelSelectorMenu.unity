@@ -26460,15 +26460,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: unlockedWorlds.Array.data[1]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
       propertyPath: worldsWithLevels.Array.data[0].levelsList.Array.data[1].unlockedLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: worldsWithLevels.Array.data[1].levelsList.Array.data[0].unlockedLevel
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9057001675364576587, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}

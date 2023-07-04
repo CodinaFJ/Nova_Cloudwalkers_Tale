@@ -23,36 +23,6 @@ public class LockScript : MonoBehaviour
         StartCoroutine(SetLockState());
     }
 
-    /*private void Update() {
-        if (GameProgressManager.instance.CheckUnlockedWorld(worldToUnlock))
-        {
-            Debug.Log("World is unlocked");
-            GetComponentInParent<Button>().interactable = true;
-            //gameObject.SetActive(false);
-            return ;
-        }
-        else
-        {
-            GetComponentInParent<Button>().interactable = false;
-        }
-    }*/
-
-    /*private void SetWorldInitialState()
-    {
-        //TODO: Change to implementation in world button, not lock
-        if (GameProgressManager.instance.CheckUnlockedWorld(worldToUnlock))
-        {
-            Debug.Log("World is unlocked");
-            GetComponentInParent<Button>().interactable = true;
-            gameObject.SetActive(false);
-            return ;
-        }
-        else
-        {
-            GetComponentInParent<Button>().interactable = false;
-        }
-    }*/
-
     IEnumerator SetLockState()
     {
         //TODO: Change to implementation in world button, not lock
@@ -64,7 +34,7 @@ public class LockScript : MonoBehaviour
         if (GameProgressManager.instance.GetCollectedStarsInGame() >= starsToOpen && !GameProgressManager.instance.GetUnlockedWorld(worldToUnlock))
         {
             MapContextController.Instance.GetMapState().UnlockWorldAction(worldToUnlock);
-            //levelToUnlock.UnlockLevel();
+            GameProgressManager.instance.SetLevelUnlock(worldToUnlock, 1);
         }
         UpdateLockState();
     }

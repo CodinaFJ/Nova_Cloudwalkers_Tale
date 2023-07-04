@@ -247,6 +247,15 @@ public class GameProgressManager : MonoBehaviour
             activeWorld = new World();
         }
     }
+
+    public void SetLevelUnlock(int worldNumber, int levelNumber)
+    {
+        Level level;
+
+        level = worldsWithLevels.Find(x => x.GetLevelWorldNumber() == worldNumber).GetLevelsList().Find(x => x.GetLevelNumber() == levelNumber);
+        level.SetLevelUnlocked(true);
+    }
+    
     public void SetCollectedStarsInLevel(int collectedStarsInLevel) => this.collectedStarsInLevel = collectedStarsInLevel;
     public bool SetPlayedCinematic(int cinematic) => playedCinematics[cinematic - 1] = true;
 

@@ -84,6 +84,13 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
         starsCounterGO.SetActive(status);
     }
 
+    private void SetCounterState(bool status)
+    {
+        if (!starsCounterGO)
+            return ;
+        starsCounterGO.SetActive(status);
+    }
+
     private void SetActiveLevelAnimation()
     {
         int activeLevel = GameProgressManager.instance.GetActiveLevel().GetLevelNumber();
@@ -101,6 +108,7 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
             myImage.sprite = completedLevel;
             myButton.image.sprite = semiCompletedLevel;
             myButton.interactable = true;
+            SetCounterState(true);
 
             if(level.GetCollectedStars() >= level.GetNumberOfStars()){
                 myButton.image.sprite = completedLevel;
@@ -111,6 +119,7 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
             myImage.sprite = unlockedLevel;
             myButton.image.sprite = unlockedLevel;
             myButton.interactable = true;
+            SetCounterState(true);
         }
         else if(!level.GetLevelUnlocked() && UnlockLevelQuery())
         {
