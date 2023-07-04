@@ -9,7 +9,7 @@ public class ScreenVideoManager : MonoBehaviour
     private Resolution activeResolution;
     public Resolution ActiveResolution 
     { 
-        get => activeResolution; 
+        get => activeResolution;
         set
         {
             activeResolution = value;
@@ -21,7 +21,6 @@ public class ScreenVideoManager : MonoBehaviour
         get => fullscreen; 
         set
         {
-            Debug.Log("New fullscreen mode: " + value);
             fullscreen = value;
         } 
     }
@@ -31,9 +30,21 @@ public class ScreenVideoManager : MonoBehaviour
 
     void Awake()
     {
-        instance = this;
+        EnsureSingleton();
         SetScreenBasicOptions();
         InitializeScreenResolutions();
+    }
+
+    private void EnsureSingleton()
+    {
+        int numInstances = FindObjectsOfType<ScreenVideoManager>().Length;
+        if(numInstances > 1)
+            Destroy(gameObject);
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     void SetScreenBasicOptions()

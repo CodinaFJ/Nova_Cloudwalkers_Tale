@@ -14,6 +14,7 @@ public class OptionsMenuController : MonoBehaviour
     [SerializeField] TextMeshProUGUI resolutionOption;
     [SerializeField] Button resolutionRightButton;
     [SerializeField] Button resolutionLeftButton;
+    [SerializeField] Toggle fullscreenToggle;
     GameObject levelUI;
 
     [SerializeField]
@@ -144,18 +145,11 @@ public class OptionsMenuController : MonoBehaviour
 
     public void SetFullscreen (bool isFullscreen)
     {
-        Debug.Log("Fullscreen toggle: " + isFullscreen);
         if (isFullscreen)
             fullscreenMode = FullScreenMode.ExclusiveFullScreen;
         else
             fullscreenMode = FullScreenMode.Windowed;
     }
-
-    // public void SetResolution(int resolutionIndex)
-    // {
-    //     Resolution resolution = resolutions[resolutionIndex];
-    //     Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    // }
 
     public void NextResolution()
     {
@@ -223,6 +217,12 @@ public class OptionsMenuController : MonoBehaviour
 
     private void InitializeScreenResolutions()
     {
+        fullscreenMode = ScreenVideoManager.instance.Fullscreen;
+        if (fullscreenMode == FullScreenMode.ExclusiveFullScreen)
+            fullscreenToggle.isOn = true;
+        else
+            fullscreenToggle.isOn = false;
+
         for (int i = 0; i < ScreenVideoManager.instance.Resolutions.Length ; i++)
         {
             string option = ScreenVideoManager.instance.Resolutions[i].width + "x" + ScreenVideoManager.instance.Resolutions[i].height;
