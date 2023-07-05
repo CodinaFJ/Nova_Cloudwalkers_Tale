@@ -16,7 +16,41 @@ public class AudioManager : MonoBehaviour
     [SerializeField] float fadeOutDuration = 1f;
     [SerializeField] float fadeOutDurationSFX = 0.3f;
 
+    const string PARAMETER_MUSIC = "musicVolume";
+    const string PARAMETER_SFX = "sfxVolume";
+    const string PARAMETER_AMBIENT = "ambientVolume";
+
     public static AudioManager instance;
+    private float musicMixerValue;
+    public float MusicMixerValue 
+    { 
+        get => musicMixerValue;
+        set 
+        {
+            musicMixerValue = value;
+            SetMixerVolume(value, MixerParameter.musicVolume);
+        } 
+    }
+    private float sfxMixerValue;
+    public float SfxMixerValue
+    { 
+        get => sfxMixerValue;
+        set 
+        {
+            sfxMixerValue = value;
+            SetMixerVolume(value, MixerParameter.sfxVolume);
+        } 
+    }
+    private float ambientMixerValue;
+    public float AmbientMixerValue
+    { 
+        get => ambientMixerValue;
+        set 
+        {
+            ambientMixerValue = value;
+            SetMixerVolume(value, MixerParameter.ambientVolume);
+        } 
+    }
 
     void Awake()
     {
@@ -66,7 +100,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             return;
         }
         //Prevents spamming same SFX, would create performance problems
@@ -114,7 +148,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(musics, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             return;
         }
         s.source.Play();
@@ -125,7 +159,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(ambients, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             return;
         }
         s.source.Play();
@@ -138,7 +172,7 @@ public class AudioManager : MonoBehaviour
         if (s == null) s = Array.Find(ambients, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Clip " + name + " not found!");
+            PrintNotFoundWarning(name);
             return false;
         }
         try{
@@ -158,7 +192,7 @@ public class AudioManager : MonoBehaviour
         if (s == null) s = Array.Find(ambients, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             return false;
         }
         isPlaying = s.source.isPlaying;
@@ -171,18 +205,11 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             return false;
         }
         isPlaying = Array.Exists<AudioSource>(GetComponents<AudioSource>(), x => x.clip == s.clip);
         return isPlaying;
-    }
-
-    public void UpdateMixerVolume()
-    {
-        musicMixerGroup.audioMixer.SetFloat("musicVolume", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
-        sfxMixerGroup.audioMixer.SetFloat("sfxVolume", Mathf.Log10(AudioOptionsManager.sfxVolume) * 20);
-        ambientMixerGroup.audioMixer.SetFloat("ambientVolume", Mathf.Log10(AudioOptionsManager.sfxVolume) * 20);
     }
 
     public IEnumerator FadeInMusic(string name)
@@ -191,7 +218,7 @@ public class AudioManager : MonoBehaviour
         if (s == null) s = Array.Find(ambients, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             yield break;
         }
         s.source.Play();
@@ -209,7 +236,7 @@ public class AudioManager : MonoBehaviour
         if (s == null) s = Array.Find(ambients, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             yield break;
         }
         float startVolume = s.source.volume;
@@ -225,7 +252,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             yield break;
         }
         s.source.Play();
@@ -248,7 +275,7 @@ public class AudioManager : MonoBehaviour
         } 
         if (s == null)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
+            PrintNotFoundWarning(name);
             yield break;
         }
         else if(s.source == null) yield break;
@@ -262,4 +289,43 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
         
     }
+
+    private void PrintNotFoundWarning(string name)
+    {
+        Debug.LogWarning("Sound " + name + " not found!");
+    }
+
+    #region MixerVolumes_Sliders
+
+    private void SetMixerVolume(float volume, MixerParameter mixerParameter)
+    {
+        musicMixerGroup.audioMixer.SetFloat(mixerParameter.ToString(), Mathf.Log10(volume) * 20);
+    }
+
+    public void ChangeMixerVolumeFromSlider(float volume, MixerParameter mixerParameter)
+    {
+        switch (mixerParameter)
+        {
+            case MixerParameter.musicVolume:
+            MusicMixerValue = volume;
+            break;
+
+            case MixerParameter.sfxVolume:
+            SfxMixerValue = volume;
+            break;
+
+            case MixerParameter.ambientVolume:
+            AmbientMixerValue = volume;
+            break;
+        }
+    }
+
+    public void LoadMixerVolumes(ConfigurationSaveData configurationSaveData)
+    {
+        this.MusicMixerValue = configurationSaveData.MusicMixerValue;
+        this.SfxMixerValue = configurationSaveData.SfxMixerValue;
+        this.AmbientMixerValue = configurationSaveData.AmbientMixerValue;
+    }
+
+    #endregion
 }

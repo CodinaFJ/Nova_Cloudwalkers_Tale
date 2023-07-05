@@ -11978,11 +11978,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774686, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774686, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Size.x
@@ -13466,11 +13466,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830460657897, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830460657897, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830460657898, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -15534,6 +15534,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7058140977140247183, guid: ca594181dc375d34caac2b3a8a875445, type: 3}
+      propertyPath: exitDirection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8543908094484752152, guid: ca594181dc375d34caac2b3a8a875445, type: 3}
       propertyPath: m_RootOrder
       value: 4

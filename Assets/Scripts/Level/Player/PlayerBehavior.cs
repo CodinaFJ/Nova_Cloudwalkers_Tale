@@ -11,7 +11,7 @@ public class PlayerBehavior : MonoBehaviour
 
     //Layout under the player
     [SerializeField]
-    int itemUnderPj;
+    List<int> itemsUnderPj;
     int mechanicUnderPj;
 
     //How many stars have you callected in this level?
@@ -36,18 +36,17 @@ public class PlayerBehavior : MonoBehaviour
         
     void Start()
     {
-        //In editor the PJ may not be perfectly placed
         SnapPjToGrid();
-
-        //Get starting layout under PJ
-        UpdateItemUnderPj();
+        AddItemUnderPj();
     }
 
     private void OnDisable() {
         instance = null;
     }
 
-    //Places PJ in the correct centered position within the cell it is
+    /// <summary>
+    /// Places PJ in the correct centered position within the cell it is.
+    /// </summary>
     void SnapPjToGrid()
     {
         //Offset displacements so the exact cell where the PJ is can be calculated
@@ -61,42 +60,70 @@ public class PlayerBehavior : MonoBehaviour
         transform.position = playerPosition;
     }
 
-    //Updates the info about the layout under the PJ
-    public void UpdateItemUnderPj()
+    /// <summary>
+    /// Updates the info about the layout under the PJ
+    /// </summary>
+    public void AddItemUnderPj()
     {
-        if (MatrixManager.instance.GetItemsLayoutMatrix()[pjCell[0], pjCell[1]] > 4000)
+        int item = MatrixManager.instance.GetItemsLayoutMatrix()[pjCell[0], pjCell[1]];
+        if (IsItemUnderPj(item))
+            return;
+        if (item > 4000)
         {
             // Item > 4000 means cloud is reaching the point. This way we block the cloud before a glitch can happen and PJ can be left on air.
-            itemUnderPj = MatrixManager.instance.GetItemsLayoutMatrix()[pjCell[0], pjCell[1]] - 4000;
+            itemsUnderPj.Add(item - 4000);
         }
         else 
         {
-            itemUnderPj = MatrixManager.instance.GetItemsLayoutMatrix()[pjCell[0], pjCell[1]];
+            itemsUnderPj.Add(item);
         }
-        if(MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]] == 5 ||
-           MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]] == 5)
+        if(MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]] == 5)
             MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]]++;
+    }
+
+    public void RemoveItemUnderPj(int item)
+    {
+        if (!IsItemUnderPj(item))
+            return;    
+        itemsUnderPj.Remove(item);
+    }
+
+    public bool IsItemUnderPj(int value)
+    {
+        foreach(var item in itemsUnderPj)
+        {
+            if (item == value)
+                return true;
+        }
+        return false;
     }
 
     public bool GetRunningState() => running;
 
     public int GetStarsCollected() => starsCollected;
 
-    public int GetItemUnderPj() => itemUnderPj;
+    //public int GetItemUnderPj() => itemUnderPj;
 
     public int GetMechanicUnderPj() => MatrixManager.instance.GetMechanicsLayoutMatrix()[pjCell[0], pjCell[1]];
 
-    //On level finished we need the PJ to keep walking towards the exit
-    public void ExitThroughDoor() => PjInputManager.instance.KeepMoving(lastMovement);
+    /// <summary>
+    /// On level finished we need the PJ to keep walking towards the exit
+    /// </summary>
+    public void ExitThroughDoor(Direction exitDirection) => PjInputManager.instance.KeepMoving(exitDirection);
 
-    //States saved while solving a puzzle. Ued for the UNDO button
+    /// <summary>
+    /// States saved while solving a puzzle. Ued for the UNDO button
+    /// </summary>
+    /// <param name="_pjCell"></param>
+    /// <param name="_starsCollected"></param>
     public void LoadLevelStatePlayer(int[] _pjCell, int _starsCollected)
     {     
         //Update pj position - cell & transform
         PjInputManager.instance.pjMoving = false;
         pjCell = (int[])_pjCell.Clone();
         transform.position = MatrixManager.instance.FromMatrixIndexToWorld(pjCell[0], pjCell[1]) + new Vector3(0, 0.65f, 0);
-        UpdateItemUnderPj();
+        itemsUnderPj.Clear();
+        AddItemUnderPj();
 
         //Recover the total stars count in the game - This might not be needed anymore since it is calculateTotalStarsInGame is called in levelFinished.cs
         //GameProgressManager.instance. -= (starsCollected - _starsCollected);

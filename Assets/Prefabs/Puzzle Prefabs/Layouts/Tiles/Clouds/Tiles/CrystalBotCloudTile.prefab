@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: tileType
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8915423902217730175, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
+      propertyPath: shadowToWorldCorrection
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab8ec85e9fad8664fb37758c42ef021f, type: 3}
 --- !u!1 &5159312073458946680 stripped

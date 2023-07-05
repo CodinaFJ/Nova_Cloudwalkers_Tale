@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -1731023091914446820, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1731023091914446820, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_SortingOrder
       value: 100
       objectReference: {fileID: 0}
@@ -19,9 +23,21 @@ PrefabInstance:
       propertyPath: tileShadow
       value: 
       objectReference: {fileID: 3342565517161224840, guid: 737b9bf5628a3da439c9082706f5d826, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: MixedWhiteCrystalPrefab
+      value: 
+      objectReference: {fileID: 2846388769528272283, guid: 2f8b43f26ae1d0c488b6ddf01d610373, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: MixedWhiteThunderPrefab
+      value: 
+      objectReference: {fileID: 8101359473894236097, guid: 476c37a84af7a5444a12bdb00227c688, type: 3}
     - target: {fileID: 7075206057840484584, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_Name
       value: ParentCloudTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7075206057840484584, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8803683623780049414, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_RootOrder

@@ -7,21 +7,28 @@ using TMPro;
 
 public class SliderScript : MonoBehaviour
 {
-    [SerializeField] private Slider _slider;
-    //[SerializeField] private TextMeshProUGUI _sliderText;
-    [SerializeField] private AudioMixerGroup _audioMixerGroup;
-    [SerializeField] private string _mixerParameter;
+    [SerializeField] private Slider slider;
+    [SerializeField] private AudioMixerGroup audioMixerGroup;
+    [SerializeField] private MixerParameter mixerParameter;
 
     void Start()
     {
         float audioMixerValue;
-        _audioMixerGroup.audioMixer.GetFloat(_mixerParameter,out audioMixerValue);
-        _slider.value = Mathf.Pow(10, audioMixerValue/20);
+        audioMixerGroup.audioMixer.GetFloat(mixerParameter.ToString(),out audioMixerValue);
+        slider.value = Mathf.Pow(10, audioMixerValue/20);
 
-        _slider.onValueChanged.AddListener((v) => {
-            //_sliderText.text = ((int)(v*100)).ToString("0");
-            _audioMixerGroup.audioMixer.SetFloat(_mixerParameter, Mathf.Log10(v) * 20);
+        slider.onValueChanged.AddListener((v) => {
+            AudioManager.instance.ChangeMixerVolumeFromSlider(v, mixerParameter);
+            audioMixerGroup.audioMixer.SetFloat(mixerParameter.ToString(), Mathf.Log10(v) * 20);
+            SaveSystem.SaveConfigData();
         });
     }
+}
 
+public enum MixerParameter
+{
+    musicVolume,
+    sfxVolume,
+    ambientVolume,
+    masterVolume
 }

@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7651dd6525863e44597397190f6136d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveVector: {x: 0.05, y: 0, z: 0}
+  moveVector: {x: 0, y: 0, z: 0}
 --- !u!61 &256542405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7651dd6525863e44597397190f6136d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveVector: {x: 0.05, y: 0, z: 0}
+  moveVector: {x: 0, y: 0, z: 0}
 --- !u!61 &1255532858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7651dd6525863e44597397190f6136d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveVector: {x: 0.05, y: 0, z: 0}
+  moveVector: {x: 0, y: 0, z: 0}
 --- !u!61 &1632494242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10812,11 +10812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774686, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774686, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830320774687, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Size.x
@@ -12300,11 +12300,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830460657897, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830460657897, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.0024630427
+      value: 0.0049505234
       objectReference: {fileID: 0}
     - target: {fileID: 2525583830460657898, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -14176,6 +14176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mover
       objectReference: {fileID: 0}
+    - target: {fileID: 8622919625826071244, guid: 2af4b9ad207bab047a43f32a441cf1f3, type: 3}
+      propertyPath: moveVector.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2af4b9ad207bab047a43f32a441cf1f3, type: 3}
 --- !u!1001 &4007958892111917684
@@ -14433,6 +14437,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7058140977140247183, guid: ca594181dc375d34caac2b3a8a875445, type: 3}
+      propertyPath: exitDirection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8543908094484752152, guid: ca594181dc375d34caac2b3a8a875445, type: 3}
       propertyPath: m_RootOrder
       value: 4

@@ -49,8 +49,7 @@ public class MouseMatrixScript
         return matrixIndex;
     }
 
-    public static bool PointerOnSteppedCloud() => MatrixManager.instance.GetItemsLayoutMatrix()[GetMouseMatrixIndex()[0], GetMouseMatrixIndex()[1]] == 
-                                                  PlayerBehavior.instance.GetItemUnderPj();
+    public static bool PointerOnSteppedCloud() => PlayerBehavior.instance.IsItemUnderPj(MatrixManager.instance.GetItemsLayoutMatrix()[GetMouseMatrixIndex()[0], GetMouseMatrixIndex()[1]]);
 
     public static void BlockPointer(){
         mousePos = Mouse.current.position.ReadValue();

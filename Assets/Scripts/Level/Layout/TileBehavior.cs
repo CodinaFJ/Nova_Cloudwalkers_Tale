@@ -15,6 +15,10 @@ public class TileBehavior : MonoBehaviour
     GameObject movementParticlesPrefab;
     [SerializeField]
     GameObject joinParticlesPrefab;
+
+    [Header("Cloud union")]
+    [SerializeField] GameObject MixedWhiteCrystalPrefab;
+    [SerializeField] GameObject MixedWhiteThunderPrefab;
     
     GameObject myMovementParticles;
     GameObject myJoinParticles;
@@ -72,6 +76,7 @@ public class TileBehavior : MonoBehaviour
 
         SetAdyacentTilesForShadow();
         InstantiateShadow();
+        InstantiateMixedCloudJoint(adyacentTiles);
     }
 
     public void SetCorrectSpritesAfterCrack(){
@@ -83,6 +88,7 @@ public class TileBehavior : MonoBehaviour
 
         SetAdyacentTilesForShadow();
         InstantiateShadow();
+        InstantiateMixedCloudJoint(adyacentTiles);
     }
 
 
@@ -242,7 +248,7 @@ public class TileBehavior : MonoBehaviour
 
         //Instantiate needed shadows
         //Always instantiate if tile just below is empty
-        if (!adyacentTilesForShadow[3]) Instantiate(tileShadow, transform.position + new Vector3(0, -shadowToWorldCorrection, 0), Quaternion.identity, gameObject.transform);
+        if (!adyacentTilesForShadow[3] || tileType == TileType.CrystalFloor) Instantiate(tileShadow, transform.position + new Vector3(0, -shadowToWorldCorrection, 0), Quaternion.identity, gameObject.transform);
         //Always instantiate if there is a cloud tile at the side that does not have a cloud tile below
         else if(adyacentTilesForShadow[0] && !adyacentTilesForShadow[2]) Instantiate(tileShadow, transform.position + new Vector3(0, -shadowToWorldCorrection, 0), Quaternion.identity, gameObject.transform);
         else if(adyacentTilesForShadow[1] && !adyacentTilesForShadow[4]) Instantiate(tileShadow, transform.position + new Vector3(0, -shadowToWorldCorrection, 0), Quaternion.identity, gameObject.transform);
@@ -266,7 +272,7 @@ public class TileBehavior : MonoBehaviour
     public bool[] GetAdyacentTilesForShadow() => adyacentTilesForShadow;
     public TileSpritesBundle GetTileShadowsSpritesBundle() => tileShadowsSpritesBundle;
 
-    public static TileType MechanicNumberToTyleTipe(int mechanicNumber){
+    public static TileType MechanicNumberToTileType(int mechanicNumber){
         switch(mechanicNumber){
             case 1:
                 return TileType.WhiteCloud;
@@ -289,4 +295,72 @@ public class TileBehavior : MonoBehaviour
         return TileType.WhiteCloud;
     }
 
+    private void InstantiateMixedCloudJoint(bool[] adyacentTiles)
+    {
+        LinkTransform linkTransform;
+        int adyacentTileMechanic;
+        GameObject mixedCloudJoinPrefab;
+        GameObject instantiatedLink;
+
+        if (tileType != TileType.WhiteCloud) return;
+        for (int i = 0; i < adyacentTiles.Length; i++)
+        {
+            linkTransform = FromAdyacentIndexToTranform(i);
+            if (itemsLayoutMatrix[matrixCoordinates[0] - (int) linkTransform.position.y, matrixCoordinates[1] + (int) linkTransform.position.x] != itemNumber)
+                continue;
+            adyacentTileMechanic = mechanicsLayoutMatrix[matrixCoordinates[0] - (int) linkTransform.position.y, matrixCoordinates[1] + (int) linkTransform.position.x];
+            mixedCloudJoinPrefab = SelectMixedCloudSprite(adyacentTileMechanic);
+            if (mixedCloudJoinPrefab == null)
+                continue;
+            instantiatedLink = Instantiate(mixedCloudJoinPrefab, (linkTransform.position * 0.5f) + (Vector2) transform.position, Quaternion.identity, gameObject.transform);
+            instantiatedLink.transform.Rotate(0, 0, linkTransform.rotation);
+        }
+    }
+
+    private LinkTransform FromAdyacentIndexToTranform(int i)
+    {
+        LinkTransform linkTransform = new LinkTransform();
+
+        switch (i)
+        {
+            case 0:
+            linkTransform.position.x = 0;
+            linkTransform.position.y = 1;
+            linkTransform.rotation = 90;
+            break;
+
+            case 1:
+            linkTransform.position.x = -1;
+            linkTransform.position.y = 0;
+            linkTransform.rotation = 180;
+            break;
+
+            case 2:
+            linkTransform.position.x = 0;
+            linkTransform.position.y = -1;
+            linkTransform.rotation = -90;
+            break;
+
+            case 3:
+            linkTransform.position.x = 1;
+            linkTransform.position.y = 0;
+            linkTransform.rotation = 0;
+            break;
+        }
+        return linkTransform;
+    }
+
+    private GameObject SelectMixedCloudSprite(int adyacentTileMechanic)
+    {
+        if (adyacentTileMechanic == -1)
+            return MixedWhiteThunderPrefab;
+        else if (adyacentTileMechanic == 3 || adyacentTileMechanic == 4)
+            return MixedWhiteCrystalPrefab;
+        return null;
+    }
+
+    struct LinkTransform{
+        public Vector2 position;
+        public int rotation;
+    }
 }

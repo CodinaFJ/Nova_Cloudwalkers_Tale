@@ -59,5 +59,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLayout
       objectReference: {fileID: 0}
+    - target: {fileID: 6845816682257872047, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
+      propertyPath: thunderCloud
+      value: 
+      objectReference: {fileID: 8641507911687711038, guid: cf1a67e6f72d13a42a97a577355b8907, type: 3}
+    - target: {fileID: 6845816682257872047, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}
+      propertyPath: crystalBotCloud
+      value: 
+      objectReference: {fileID: 5159312073458946680, guid: 0ac77d007d8180240966ad35b9e55e81, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c43a7ff63eb444d48bc89afa654f8bc1, type: 3}

@@ -53,7 +53,7 @@ public class SFXManager : MonoBehaviour
     }
 
     public void PlayCloudSwipeLoop() => PlayCloudSwipeLoop(TileType.WhiteCloud);
-    public void PlayCloudSwipeLoop(int mechanicNumber) => PlayCloudSwipeLoop(TileBehavior.MechanicNumberToTyleTipe(mechanicNumber));
+    public void PlayCloudSwipeLoop(int mechanicNumber) => PlayCloudSwipeLoop(TileBehavior.MechanicNumberToTileType(mechanicNumber));
     public void PlayCloudSwipeLoop(TileType tileType) => AudioManager.instance.PlaySound(CLOUD_SWIPE_LOOP + tileType.ToString());
     
     private void PlayCloudConnect() => PlayCloudConnect(TileType.WhiteCloud);
@@ -62,7 +62,7 @@ public class SFXManager : MonoBehaviour
             PlayCloudConnect(MatrixManager.instance.GetMechanicsLayoutMatrix()[(int)coor.x, (int)coor.y]);
         }
     }
-    private void PlayCloudConnect(int mechanicNumber) => PlayCloudConnect(TileBehavior.MechanicNumberToTyleTipe(mechanicNumber));
+    private void PlayCloudConnect(int mechanicNumber) => PlayCloudConnect(TileBehavior.MechanicNumberToTileType(mechanicNumber));
     private void PlayCloudConnect(TileType tileType) => AudioManager.instance.PlaySound(CLOUD_CONNECT + tileType.ToString());
 
     public void SetCloudToJoin(int item){

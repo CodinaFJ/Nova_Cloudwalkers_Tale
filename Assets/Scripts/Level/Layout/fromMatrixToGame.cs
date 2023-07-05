@@ -259,13 +259,14 @@ public class fromMatrixToGame : MonoBehaviour
         {
             for (int j = 0; j < itemsLayoutMatrix.GetLength(1); j++)
             {
-                if(itemsLayoutMatrix[i,j] > 0 && itemsLayoutMatrix[i,j] < 999)
+                if(itemsLayoutMatrix[i,j] > 0 && itemsLayoutMatrix[i,j] < 100)
                 {
                     if(itemsLayoutMatrix[i,j] > highestItemInMatrix) highestItemInMatrix = itemsLayoutMatrix[i,j];
                 }
             }
         }
 
+        Debug.Log("Number of clouds is " + highestItemInMatrix);
         return highestItemInMatrix;
     }
 

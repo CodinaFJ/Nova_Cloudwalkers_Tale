@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -9,23 +10,23 @@ public class TitleMenuController : MonoBehaviour
 {
     [SerializeField] GameObject optionCanvas;
     [SerializeField] GameObject optionsMenu;
-    [SerializeField] GameObject quitMenu;
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject credits;
     LevelLoader levelLoader;
 
-    bool    newGame = false;
+    const string CINEMATIC_1 = "Cinematic1";
+    const string LEVEL_SELECTOR = "LevelSelectorMenu";
+    const string MAIN_MUSIC = "Main Theme";
 
     void Start()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
-        quitMenu.SetActive(false);
         mainMenu.SetActive(true);
         foreach (Sound sound in AudioManager.instance.musics)
         {
             if(AudioManager.instance.IsPlaying(sound.name))StartCoroutine(AudioManager.instance.FadeOutMusic(sound.name));
         }
-        if (!AudioManager.instance.IsPlaying("Main Theme")) StartCoroutine(AudioManager.instance.FadeInMusic("Main Theme"));
+        if (!AudioManager.instance.IsPlaying(MAIN_MUSIC)) StartCoroutine(AudioManager.instance.FadeInMusic(MAIN_MUSIC));
         MouseMatrixScript.ReleasePointer();
         GameProgressManager.instance.LoadGameState();
         GameProgressManager.instance.WorldSelection = 0;
@@ -35,19 +36,15 @@ public class TitleMenuController : MonoBehaviour
     {
         if(GameProgressManager.instance != null) Destroy(GameProgressManager.instance.gameObject);
         MouseMatrixScript.BlockPointer();
-        levelLoader.LoadLevel("Cinematic1");
+        levelLoader.LoadLevel(CINEMATIC_1);
     }
 
     public void PlayButton()
     {
-        if (newGame)
-        {
+        if (SaveSystem.ExistsSavedGame())
+            ToMap();
+        else
             StartNewGame();
-            return ;
-        }
-        // GameProgressManager.instance.LoadGameState();
-        // GameProgressManager.instance.WorldSelection = 0;
-        ToMap();
     }
 
     public void QuitButton()
@@ -58,7 +55,7 @@ public class TitleMenuController : MonoBehaviour
     public void ToMap()
     {
         MouseMatrixScript.BlockPointer();
-        levelLoader.LoadLevel(LevelLoader.GetLevelContains("LevelSelectorMenu"));
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains(LEVEL_SELECTOR));
         if(FindObjectOfType<MusicSelectionManager>() != null) FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
     }
 
@@ -66,8 +63,10 @@ public class TitleMenuController : MonoBehaviour
     {
         optionCanvas.SetActive(true);
         optionCanvas.GetComponent<OptionsMenuController>().ToPauseMenu();
+        optionCanvas.GetComponent<PlayerInput>().enabled = true;
+        optionCanvas.GetComponent<PlayerInput>().ActivateInput();
         SFXManager.PlayOpenMenu();
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     public void ToMainMenu()
@@ -81,13 +80,5 @@ public class TitleMenuController : MonoBehaviour
         gameObject.SetActive(false);
         credits.SetActive(true);
     }
-
-    public void OnClearProgress()
-    {
-        Destroy(GameProgressManager.instance?.gameObject);
-        newGame = true;
-        //SceneManager.LoadScene(LevelLoader.GetLevelContains("StartMenu"));
-    }
-
 }
 

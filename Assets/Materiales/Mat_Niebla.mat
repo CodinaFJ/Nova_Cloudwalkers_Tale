@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mat_Niebla
+  m_Shader: {fileID: -6465566751694194690, guid: 4738f9c742828fc42a6fcbed03381f49, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_42aaba68df064fd6b978953b3a7325fa: 5
+    - Vector1_dd170b651c014d5fa446d307b8e70d4d: 2
+    m_Colors:
+    - Color_7dadc909bc2c4f4cbd057b3c024a5e5c: {r: 0.15, g: 0.15, b: 0.2, a: 1}
+    - Color_e436e8c6fe394a738d988160c1c7df19: {r: 0.13434118, g: 0.11966275, b: 0.14901961, a: 1}
+    - Vector2_2ae5efb1cb7a4b6fafc933a976351f6d: {r: 0.001, g: -0.01, b: 0, a: 0}
+    - Vector2_827da84e28454a7baaa371173ebda3b0: {r: 0.15, g: -0.07, b: 0, a: 0}
+  m_BuildTextureStacks: []

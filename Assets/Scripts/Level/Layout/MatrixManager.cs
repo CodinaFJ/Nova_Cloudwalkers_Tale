@@ -370,6 +370,17 @@ public class MatrixManager : MonoBehaviour
         return pjMovementMatrix;
     }
 
+    public void MakeAllWalkable()
+    {
+        for (int x = 0; x < pjMovementMatrix.GetLength(0); x++)
+        {
+            for (int y = 0; y < pjMovementMatrix.GetLength(1); y++)
+            {
+                pjMovementMatrix[x,y] = true;
+            }
+        }
+    }
+
 //CLOUD MOVEMENT MATRIX: Shows wether the clouds can move to a specific position or not
 //FALSE Cannot move / TRUE Can move
 
@@ -469,7 +480,7 @@ public class MatrixManager : MonoBehaviour
         if(AttachGreyCloudInMatrix(item))
         {
             FromMatrixToGame.ReInstantiateItem(item);
-            playerBehavior.UpdateItemUnderPj();
+            playerBehavior.AddItemUnderPj();
             RefreshCloudsMovementMatrix();
             RefreshPjMovementMatrix();
         }
@@ -577,6 +588,7 @@ public class MatrixManager : MonoBehaviour
     {
         if(mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] == 3 || mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] == 5)
         {
+            Debug.Log("CheckForCrystal ++");
             mechanicsLayoutMatrix[playerBehavior.pjCell[0], playerBehavior.pjCell[1]] ++;
         }
     }
@@ -621,10 +633,9 @@ public class MatrixManager : MonoBehaviour
             RefreshCloudsMovementMatrix();
             SFXManager.PlayCrystalCloudBreak();
             VFXManager.instance.InstantiateParticles(ParticlesVFXType.CrystalCloudBreak, FromMatrixIndexToWorld(cell0, cell1));
-            //FromMatrixToGame.DeactivateItem(item);
 
             DivideSeparatedCloudsInMatrix(crystalCell, item);
-            PlayerBehavior.instance.UpdateItemUnderPj();
+            PlayerBehavior.instance.AddItemUnderPj();
         }
     }
 
