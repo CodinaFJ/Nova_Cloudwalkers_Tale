@@ -1,11 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.Audio;
 
 public class VideoScript : MonoBehaviour
 {
@@ -13,6 +13,7 @@ public class VideoScript : MonoBehaviour
     [SerializeField] Button textButton;
     [SerializeField] float waitForFadeOut = 1f;
     [SerializeField] VideoClip videoClip;
+    [SerializeField] private AudioMixerGroup musicMixerGroup;
     private int worldUnlocked;
     public VideoPlayer vid;
     double videoLength;
@@ -44,6 +45,8 @@ public class VideoScript : MonoBehaviour
  
     void Start()
     {
+        float volume;
+
         foreach ( Sound sound in AudioManager.instance.musics)
         {
             if(AudioManager.instance.IsPlaying(sound.name)) StartCoroutine(AudioManager.instance.FadeOutMusic(sound.name));
@@ -60,6 +63,8 @@ public class VideoScript : MonoBehaviour
         fadingOut = false;
 
         videoLength = vid.clip.length;
+        musicMixerGroup.audioMixer.GetFloat(MixerParameter.musicVolume.ToString(), out volume);
+        vid.SetDirectAudioVolume(0, Mathf.Pow(10, volume/20));
 
         InitializeWorldUnlocked();
         MouseMatrixScript.ReleasePointer();
@@ -67,14 +72,15 @@ public class VideoScript : MonoBehaviour
 
     private void Update() 
     {
-        if(timeElapsed > 50) CheckOver(vid);
+        if(timeElapsed > 50) 
+            CheckOver(vid);
         timeElapsed += Time.deltaTime;
     }
     
     private void InitializeWorldUnlocked(){
         string levelNumberString = Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value;
         worldUnlocked = int.Parse(levelNumberString);
-        Debug.Log("World Unlocked with this cinematic: " + worldUnlocked);
+        //Debug.Log("World Unlocked with this cinematic: " + worldUnlocked);
     }
 
     public void CheckOver(VideoPlayer vp)

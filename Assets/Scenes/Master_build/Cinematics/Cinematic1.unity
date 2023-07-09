@@ -207,6 +207,7 @@ MonoBehaviour:
   textButton: {fileID: 1823136749}
   waitForFadeOut: 2
   videoClip: {fileID: 0}
+  musicMixerGroup: {fileID: 3328788449262456128, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
   vid: {fileID: 115481422}
 --- !u!114 &115481425
 MonoBehaviour:

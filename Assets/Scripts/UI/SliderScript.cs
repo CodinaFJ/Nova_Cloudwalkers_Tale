@@ -16,19 +16,11 @@ public class SliderScript : MonoBehaviour
         float audioMixerValue;
         audioMixerGroup.audioMixer.GetFloat(mixerParameter.ToString(),out audioMixerValue);
         slider.value = Mathf.Pow(10, audioMixerValue/20);
-
+    
         slider.onValueChanged.AddListener((v) => {
             AudioManager.instance.ChangeMixerVolumeFromSlider(v, mixerParameter);
             audioMixerGroup.audioMixer.SetFloat(mixerParameter.ToString(), Mathf.Log10(v) * 20);
             SaveSystem.SaveConfigData();
         });
     }
-}
-
-public enum MixerParameter
-{
-    musicVolume,
-    sfxVolume,
-    ambientVolume,
-    masterVolume
 }

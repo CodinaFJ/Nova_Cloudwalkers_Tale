@@ -16,10 +16,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] float fadeOutDuration = 1f;
     [SerializeField] float fadeOutDurationSFX = 0.3f;
 
-    const string PARAMETER_MUSIC = "musicVolume";
-    const string PARAMETER_SFX = "sfxVolume";
-    const string PARAMETER_AMBIENT = "ambientVolume";
-
     public static AudioManager instance;
     private float musicMixerValue;
     public float MusicMixerValue 
@@ -63,16 +59,6 @@ public class AudioManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-
-        /*foreach (Sound s in sounds)
-        {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
-            s.source.outputAudioMixerGroup = sfxMixerGroup;
-        }*/
 
         foreach (Sound s in musics)
         {
@@ -328,4 +314,12 @@ public class AudioManager : MonoBehaviour
     }
 
     #endregion
+}
+
+public enum MixerParameter
+{
+    musicVolume,
+    sfxVolume,
+    ambientVolume,
+    masterVolume
 }
