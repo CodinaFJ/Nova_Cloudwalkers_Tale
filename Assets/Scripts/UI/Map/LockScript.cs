@@ -28,6 +28,12 @@ public class LockScript : MonoBehaviour
         //TODO: Change to implementation in world button, not lock
         string starCollectedNumberText;
 
+        if (GameProgressManager.instance.GetUnlockedWorld(worldToUnlock))
+        {
+            lockGO.SetActive(false);
+            counterGO.SetActive(false);
+        }
+
         starCollectedNumberText = GameProgressManager.instance.GetCollectedStarsInGame().ToString();
         countText.text = starCollectedNumberText + "/" + starsToOpen;
         yield return new WaitForSeconds(0.5f);
