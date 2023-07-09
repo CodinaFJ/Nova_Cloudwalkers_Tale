@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class UIButtonScaleOnEnter : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -9,10 +10,16 @@ public class UIButtonScaleOnEnter : MonoBehaviour, IPointerEnterHandler, IPointe
     [SerializeField]
     float scaleValue = 1.8f;
 
-    Vector3 initialScale;
+    Vector3 initialScale = Vector3.zero;
 
     private void Start() {
         initialScale = this.transform.localScale;
+    }
+
+    private void OnEnable() {
+        if (initialScale == Vector3.zero)
+            initialScale = this.transform.localScale;
+        this.transform.localScale = initialScale;
     }
 
     public void OnPointerEnter(PointerEventData eventData){
