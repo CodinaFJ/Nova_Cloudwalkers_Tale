@@ -26,6 +26,9 @@ public class SFXManager : MonoBehaviour
     const string UI_HOVER_LEVEL = "UIHover_Level";
     const string UI_UNLOCK_LEVEL = "UnlockLevel";
     const string UI_UNLOCK_WORLD = "UnlockWorld";
+    const string UI_HOVER_WORLD = "UIHover_Level";
+    const string UI_SELECT_WORLD = "SelectWorld";
+
 
     private List<Vector2> tilesWithCloudToJoin = new List<Vector2>();
 
@@ -87,4 +90,6 @@ public class SFXManager : MonoBehaviour
     public static void PlayHoverLevel() => AudioManager.instance.PlaySound(UI_HOVER_LEVEL);
     public static void PlayUnlockLevel() => AudioManager.instance.PlaySound(UI_UNLOCK_LEVEL, true);
     public static void PlayUnlockWorld() => AudioManager.instance.PlaySound(UI_UNLOCK_WORLD, UI_UNLOCK_LEVEL);
+    public static void PlayHoverWorld() => AudioManager.instance.PlaySound(UI_HOVER_WORLD);
+    public static void PlaySelectWorld() => AudioManager.instance.PlaySound(UI_SELECT_WORLD);
 }

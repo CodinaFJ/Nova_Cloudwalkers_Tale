@@ -302,6 +302,12 @@ MonoBehaviour:
     pitch: 1.2
     loop: 0
     source: {fileID: 0}
+  - name: SelectWorld
+    clip: {fileID: 8300000, guid: 4717dc6043085a54e91f371451329787, type: 3}
+    volume: 0.8
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
   musics:
   - name: Main Theme
     clip: {fileID: 8300000, guid: 8f77ce5c8307ab44a954c68a9d2b39ba, type: 3}

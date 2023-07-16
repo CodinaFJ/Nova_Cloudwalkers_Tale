@@ -104,10 +104,21 @@ public class AudioManager : MonoBehaviour
         
         StartCoroutine(DestroyOnFinishedClip(s.source));
     }
+    /// <summary>
+    /// Play sound avoiding that it gets played multiple times, so they do not overlap
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="avoidMoreThanOne"></param>
     public void PlaySound(string name, bool avoidMoreThanOne){
         if(IsPlayingSFX(name) && avoidMoreThanOne) return;
         PlaySound(name);
     }
+
+    /// <summary>
+    /// Play sound previously stopping other sound given.
+    /// </summary>
+    /// <param name="name"> Sound to play </param>
+    /// <param name="nameToStop"> Sound to stop before</param>
     public void PlaySound(string name, string nameToStop){
         if(IsPlayingSFX(nameToStop)) Stop(nameToStop);
         PlaySound(name);
