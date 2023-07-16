@@ -204,6 +204,22 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
     }
 
     /************************************************
+    Hovers
+    ************************************************/
+
+    public void    PlayHoverAnimation(bool glowIn)
+    {
+        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1 || animator.IsInTransition(0))
+        {
+            return ;
+        }
+        if (glowIn)
+            PlayAnimation("WorldGlowIn");
+        else
+            PlayAnimation("WorldGlowOut");
+    }
+
+    /************************************************
     Start State
     ************************************************/
 

@@ -31,7 +31,7 @@ public class UIButtonScaleOnEnter : MonoBehaviour, IPointerEnterHandler, IPointe
         LeanTween.scale(this.gameObject, new Vector3 (Mathf.Sign(this.transform.localScale.x) * scaleValue, Mathf.Sign(this.transform.localScale.y) * scaleValue, 1), scaleTweenTime).setEaseInCirc();
     }
 
-    public void OnPointerExit(PointerEventData eventData){
+    public virtual void OnPointerExit(PointerEventData eventData){
         LeanTween.cancel(this.gameObject);
             LeanTween.scale(this.gameObject, new Vector3 (Mathf.Sign(this.transform.localScale.x) * Mathf.Abs(initialScale.x), Mathf.Sign(this.transform.localScale.y) * Mathf.Abs(initialScale.y), 1), scaleTweenTime).setEaseOutExpo(); 
     }
