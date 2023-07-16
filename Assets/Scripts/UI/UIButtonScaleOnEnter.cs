@@ -22,7 +22,7 @@ public class UIButtonScaleOnEnter : MonoBehaviour, IPointerEnterHandler, IPointe
         this.transform.localScale = initialScale;
     }
 
-    public void OnPointerEnter(PointerEventData eventData){
+    public virtual void OnPointerEnter(PointerEventData eventData){
         try{
             Button myButton  = GetComponent<Button>();
             if(!myButton.interactable) return;
