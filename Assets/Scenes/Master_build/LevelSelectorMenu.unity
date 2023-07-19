@@ -20955,6 +20955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7015785404560429492, guid: e7f64409f2676854d879224842f4eaa3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7015785404560429502, guid: e7f64409f2676854d879224842f4eaa3, type: 3}
       propertyPath: transitionTime
       value: 2
@@ -25626,6 +25630,10 @@ PrefabInstance:
       value: OptionsCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 8333424986176356322, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333424986321275805, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
