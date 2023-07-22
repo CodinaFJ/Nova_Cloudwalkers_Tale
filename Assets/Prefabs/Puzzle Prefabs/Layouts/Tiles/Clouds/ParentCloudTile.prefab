@@ -31,6 +31,14 @@ PrefabInstance:
       propertyPath: MixedWhiteThunderPrefab
       value: 
       objectReference: {fileID: 8101359473894236097, guid: 476c37a84af7a5444a12bdb00227c688, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: MixedWhiteCrystalPrefab_St
+      value: 
+      objectReference: {fileID: 2846388769528272283, guid: 2f8b43f26ae1d0c488b6ddf01d610373, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: MixedWhiteThunderPrefab_St
+      value: 
+      objectReference: {fileID: 8101359473894236097, guid: 476c37a84af7a5444a12bdb00227c688, type: 3}
     - target: {fileID: 7075206057840484584, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_Name
       value: ParentCloudTile
