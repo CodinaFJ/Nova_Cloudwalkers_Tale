@@ -16,8 +16,8 @@ public class TileBehavior : MonoBehaviour
     GameObject joinParticlesPrefab;
 
     [Header("Cloud union")]
-    [SerializeField] GameObject MixedWhiteCrystalPrefab;
-    [SerializeField] GameObject MixedWhiteThunderPrefab;
+    [SerializeField] GameObject MixedWhiteCrystalPrefab_St;
+    [SerializeField] GameObject MixedWhiteThunderPrefab_St;
     
     GameObject myMovementParticles;
     GameObject myJoinParticles;
@@ -33,7 +33,7 @@ public class TileBehavior : MonoBehaviour
     int mechanicNumber;
 
     // 0-up, 1-left, 2-down, 3-right
-    bool[] adyacentTiles = new bool[4];
+    bool[] adyacentTiles = new bool[8];
     bool[] adyacentTilesForShadow = new bool[5];
 
     [SerializeField]
@@ -93,7 +93,7 @@ public class TileBehavior : MonoBehaviour
 
     protected virtual void SetAdyacentTiles(){
         // 0-North, 1-West, 2-South, 3-East
-        adyacentTiles = new bool[4];
+        adyacentTiles = new bool[8];
 
         for (int index = 0; index < adyacentTiles.Length; index ++){
             adyacentTiles[index] = false;
@@ -105,13 +105,12 @@ public class TileBehavior : MonoBehaviour
         
         for (int i = -1; i < 2; i++){
             for (int j = -1; j < 2; j++){
-                //Mathf.Abs(i + j) == 1 used to limit the checked tiles to the one at the right/left/up/down
-                if (Mathf.Abs(i + j) == 1 && CheckCoordinatesInMatrix(i,j) && AssignMatrixToCompare()[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == numberToCompare)
+                if (Mathf.Abs(i + j) != 0 && CheckCoordinatesInMatrix(i,j) && AssignMatrixToCompare()[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == numberToCompare)
                     FillAdyacentTiles(i,j);
             }
         }
 
-        for (int index = 0; index < adyacentTiles.Length; index ++)
+        for (int index = 0; index < 4; index ++)
             if(adyacentTiles[index])adyacentTilesNumber++;
     }
 
@@ -160,10 +159,14 @@ public class TileBehavior : MonoBehaviour
     }
 
     protected void FillAdyacentTiles(int i, int j){
-        if ( i == -1 && j ==  0) adyacentTiles[0] =  true;
-        if ( i ==  0 && j == -1) adyacentTiles[1] =  true;
-        if ( i ==  1 && j ==  0) adyacentTiles[2] =  true;
-        if ( i ==  0 && j ==  1) adyacentTiles[3] =  true;
+        if ( i == -1 && j ==  0) adyacentTiles[(int) adyacentTile.N] =  true;
+        if ( i ==  0 && j == -1) adyacentTiles[(int) adyacentTile.W] =  true;
+        if ( i ==  1 && j ==  0) adyacentTiles[(int) adyacentTile.S] =  true;
+        if ( i ==  0 && j ==  1) adyacentTiles[(int) adyacentTile.E] =  true;
+        if ( i == -1 && j == -1) adyacentTiles[(int) adyacentTile.NW] =  true;
+        if ( i ==  1 && j == -1) adyacentTiles[(int) adyacentTile.SW] =  true;
+        if ( i == -1 && j ==  1) adyacentTiles[(int) adyacentTile.NE] =  true;
+        if ( i ==  1 && j ==  1) adyacentTiles[(int) adyacentTile.SE] =  true;
     }
 
     protected void FillAdyacentShadowTiles(int i, int j){
@@ -302,7 +305,7 @@ public class TileBehavior : MonoBehaviour
         GameObject instantiatedLink;
 
         if (tileType != TileType.WhiteCloud) return;
-        for (int i = 0; i < adyacentTiles.Length; i++)
+        for (int i = 0; i < 4; i++)
         {
             linkTransform = FromAdyacentIndexToTranform(i);
             if (itemsLayoutMatrix[matrixCoordinates[0] - (int) linkTransform.position.y, matrixCoordinates[1] + (int) linkTransform.position.x] != itemNumber)
@@ -352,9 +355,9 @@ public class TileBehavior : MonoBehaviour
     private GameObject SelectMixedCloudSprite(int adyacentTileMechanic)
     {
         if (adyacentTileMechanic == -1)
-            return MixedWhiteThunderPrefab;
+            return MixedWhiteThunderPrefab_St;
         else if (adyacentTileMechanic == 3 || adyacentTileMechanic == 4)
-            return MixedWhiteCrystalPrefab;
+            return MixedWhiteCrystalPrefab_St;
         return null;
     }
 
@@ -362,4 +365,16 @@ public class TileBehavior : MonoBehaviour
         public Vector2 position;
         public int rotation;
     }
+}
+
+// 0-North, 1-West, 2-South, 3-East
+public enum adyacentTile{
+    N = 0,
+    W = 1,
+    S = 2,
+    E = 3,
+    NW = 4,
+    SW = 5,
+    SE = 6,
+    NE = 7
 }
