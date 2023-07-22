@@ -55,6 +55,52 @@ MonoBehaviour:
     m_Key: VideoButton
     m_Metadata:
       m_Items: []
+  - m_Id: 39876009323294720
+    m_Key: AudioOptions_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39877076509421568
+    m_Key: VideoOptions_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39879162739453952
+    m_Key: 'FullScreen
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39879900874043392
+    m_Key: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39881322483052544
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39881463784960000
+    m_Key: Ambient
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39881618714161152
+    m_Key: SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39887027957035008
+    m_Key: DeleteConfirmation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39887340055195648
+    m_Key: YesDelete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39887815617966080
+    m_Key: NoDelete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39889670515355648
+    m_Key: MainMenu
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
