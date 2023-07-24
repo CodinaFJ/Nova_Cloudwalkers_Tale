@@ -45,16 +45,23 @@ public class LevelFinish : MonoBehaviour
         yield return new WaitForSecondsRealtime(levelLoadDelay);
 
         GameProgressManager.instance.CalculateCollectedStarsInGame();
-
         
         if(GameProgressManager.instance.GetCollectedStarsInGame() >= GameProgressManager.instance.GetTotalStarsInGame() && !GameProgressManager.instance.GetAllStarsCollected()){
             GameProgressManager.instance.SetAllStarsCollected(true);
-            GameProgressManager.instance.SetEndReached(true);
-            GameManager.instance.ToEndDemo();
+            if (!GameProgressManager.instance.GetEndReached())
+            {
+                GameProgressManager.instance.SetEndReached(true);
+                GameManager.instance.ToEndGame();
+            }
+            else
+            {
+                GameProgressManager.instance.SetEndReached(true);
+                GameManager.instance.ToEndGame100();
+            }
         }
         else if(GameProgressManager.instance.AllLevelsCompleted() && !GameProgressManager.instance.GetEndReached()){
             GameProgressManager.instance.SetEndReached(true);
-            GameManager.instance.ToEndDemo();
+            GameManager.instance.ToEndGame();
         }
         else GameManager.instance.ToMap();
         

@@ -26,6 +26,7 @@ public class VideoScript : MonoBehaviour
 
     const string FADE_IN_ANIMATION = "skipCinematic_FadeIn";
     const string FADE_OUT_ANIMATION = "skipCinematic_FadeOut";
+    const string THANKS_FOR_PLAYING_SCENE = "ThanksForPlaying_Scene";
 
     string currentState;
 
@@ -80,11 +81,15 @@ public class VideoScript : MonoBehaviour
     private void InitializeWorldUnlocked(){
         string levelNumberString = Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value;
         worldUnlocked = int.Parse(levelNumberString);
-        //Debug.Log("World Unlocked with this cinematic: " + worldUnlocked);
     }
 
     public void CheckOver(VideoPlayer vp)
     {
+        if (GameProgressManager.instance.GetEndReached())
+        {
+            LevelLoader.instance.LoadLevel(LevelLoader.GetLevelContains(THANKS_FOR_PLAYING_SCENE));
+            return ;
+        }
         if (GameProgressManager.instance) GameProgressManager.instance.WorldSelection = 0;
         MouseMatrixScript.BlockPointer();
         worldUnlocked = GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber();

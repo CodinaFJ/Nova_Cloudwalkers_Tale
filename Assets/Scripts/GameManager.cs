@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public PlayerBehavior playerBehavior;
 
+    const string END_CINEMATIC = "CinematicEnd";
+    const string END_COMPLETE_GAME = "EndGame100";
+
     private void Awake() {
         if(instance == null)
            instance = this;
@@ -82,10 +85,13 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<PlayerBehavior>().ExitThroughDoor(exitDirection);
     }
 
-    public void ToEndDemo()
+    public void ToEndGame()
     {
-        levelLoader.LoadLevel(LevelLoader.GetLevelContains("FinalDemo"));
-        //FindObjectOfType<MusicSelectionManager>().FadeOutLevelMusic();
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains(END_CINEMATIC));
+    }
+    public void ToEndGame100()
+    {
+        levelLoader.LoadLevel(LevelLoader.GetLevelContains(END_COMPLETE_GAME));
     }
     public void OnPause()
     {

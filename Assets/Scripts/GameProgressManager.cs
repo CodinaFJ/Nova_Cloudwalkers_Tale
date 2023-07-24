@@ -68,7 +68,6 @@ public class GameProgressManager : MonoBehaviour
 
     public void SaveGameState()
     {
-        Debug.Log("SAVE");
         SaveSystem.SaveGame();
     }
 
@@ -89,9 +88,9 @@ public class GameProgressManager : MonoBehaviour
             }
             CalculateCollectedStarsInGame();
         }
-        catch(Exception ex)
+        catch
         {
-            Debug.LogWarning(("Error loading data: " + ex.Message));
+            //Debug.LogWarning(("Error loading data: " + ex.Message));
         }
     }
 
@@ -111,9 +110,9 @@ public class GameProgressManager : MonoBehaviour
                 LanguageController.instance.ActiveLanguageName = data.Language;
             }
         }
-        catch(Exception ex)
+        catch
         {
-            Debug.LogWarning(("Error loading data: " + ex.Message));
+            //Debug.LogWarning(("Error loading data: " + ex.Message));
         }
     }
 
@@ -136,13 +135,9 @@ public class GameProgressManager : MonoBehaviour
             world = int.Parse(levelNameParts[1]);
             Debug.Log("Loaded level: " + level.ToString() + " In world: " + world.ToString());
         }
-        catch(FormatException e)
+        catch
         {
-            Debug.Log("Not a puzle level: " + e.Message);
-        }
-        catch(Exception e)
-        {
-            Debug.Log("Error reading level name: " + e.Message);
+            //Debug.Log("Error reading level name: " + e.Message);
         }
 
         SetActiveLevel(level, world);
@@ -214,7 +209,6 @@ public class GameProgressManager : MonoBehaviour
                 collectedStarsInGame += level.GetCollectedStars();
             }
         }
-        Debug.Log("CollectedStars: " + collectedStarsInGame);
     }
 
     /// <summary>
