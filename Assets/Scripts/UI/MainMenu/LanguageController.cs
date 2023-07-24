@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
-using UnityEngine.UI;
+using System;
 
 public class LanguageController : MonoBehaviour
 {
+    [SerializeField] List<SpecialFontLanguage> specialFontsLanguages;
+    [SerializeField] public TMPro.TMP_FontAsset defaultFont;
     public const string DEFAULT_LANGUAGE = "English";
     public static LanguageController instance;
+
+    public TMPro.TMP_FontAsset activeFont;
+    public static Action fontModified;
 
     private string activeLanguageName;
     public string ActiveLanguageName 
@@ -16,6 +21,7 @@ public class LanguageController : MonoBehaviour
         set
         {
             activeLanguageName = value;
+            SetFont();
             SetLanguageIDFromActiveName();
         }
     }
@@ -25,7 +31,13 @@ public class LanguageController : MonoBehaviour
 
     private void Awake() 
     {
-		instance = this;
+		if(instance == null)
+           instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         activeLanguageName = DEFAULT_LANGUAGE;
     }
 
@@ -49,4 +61,26 @@ public class LanguageController : MonoBehaviour
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[languageID];
         active = false;
     }
+
+    public void SetFont()
+    {
+        if (!specialFontsLanguages.Exists(x => x.language == activeLanguageName) && activeFont == defaultFont)
+        {
+            if (activeFont == defaultFont) 
+                return;
+            else
+                activeFont = defaultFont;
+        }
+        else
+            activeFont = specialFontsLanguages.Find(x => x.language == activeLanguageName).font;
+        if (activeFont == null)
+            activeFont = defaultFont;
+        fontModified?.Invoke();
+    }
+}
+
+[System.Serializable]
+public struct SpecialFontLanguage{
+    public TMPro.TMP_FontAsset font;
+    public string language;
 }

@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.IO;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using TMPro;
 
 public class TitleMenuController : MonoBehaviour
 {

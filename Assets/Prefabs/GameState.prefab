@@ -506,3 +506,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8151f01d9ca1b46ae3b6c6d49e717d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  specialFontsLanguages:
+  - font: {fileID: 11400000, guid: bee113960ace4a4419ea3bd620c2b540, type: 2}
+    language: Japanese (ja)
+  - font: {fileID: 11400000, guid: 5ed600fb95ddef34a9058bc0baf84332, type: 2}
+    language: Korean (ko)
+  - font: {fileID: 11400000, guid: 4e93e7d5460e9044eb36006d8d31c2b2, type: 2}
+    language: Chinese (Simplified) (zh-Hans)
+  - font: {fileID: 11400000, guid: 0bede5b4e690f9f4c82003434c94f216, type: 2}
+    language: Thai (th)
+  - font: {fileID: 11400000, guid: 191b6f730d4d84a4285e4d5a38e0007c, type: 2}
+    language: Hindi (hi)
+  defaultFont: {fileID: 11400000, guid: eac47781f2c8cb24893e6a7ff10d7c2a, type: 2}
+  activeFont: {fileID: 11400000, guid: eac47781f2c8cb24893e6a7ff10d7c2a, type: 2}
