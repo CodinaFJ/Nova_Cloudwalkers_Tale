@@ -3773,6 +3773,7 @@ GameObject:
   - component: {fileID: 793483483}
   - component: {fileID: 793483482}
   - component: {fileID: 793483484}
+  - component: {fileID: 793483485}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3935,6 +3936,18 @@ MonoBehaviour:
         m_CallState: 1
   references:
     version: 1
+--- !u!114 &793483485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793483480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e6ee53462ac4a4f91db2a910a9c04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &796887385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5397,18 +5410,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 635817044452120118, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: specialFontsLanguages.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 635817044452120118, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: specialFontsLanguages.Array.data[4].font
-      value: 
-      objectReference: {fileID: 11400000, guid: 191b6f730d4d84a4285e4d5a38e0007c, type: 2}
-    - target: {fileID: 635817044452120118, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
-      propertyPath: specialFontsLanguages.Array.data[4].language
-      value: Hindi (hi)
-      objectReference: {fileID: 0}
     - target: {fileID: 7303096619275083177, guid: 9316e324c20c11849906060b43dd8ee6, type: 3}
       propertyPath: m_Name
       value: GameState
@@ -7787,6 +7788,7 @@ GameObject:
   - component: {fileID: 1462975871}
   - component: {fileID: 1462975870}
   - component: {fileID: 1462975872}
+  - component: {fileID: 1462975873}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -7949,6 +7951,18 @@ MonoBehaviour:
         m_CallState: 1
   references:
     version: 1
+--- !u!114 &1462975873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462975868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e6ee53462ac4a4f91db2a910a9c04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1466462425
 GameObject:
   m_ObjectHideFlags: 0

@@ -2112,7 +2112,6 @@ GameObject:
   - component: {fileID: 8261413998977349833}
   - component: {fileID: 7664543849797975966}
   - component: {fileID: 4329213230452484924}
-  - component: {fileID: 2336307163399225262}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2237,18 +2236,6 @@ MonoBehaviour:
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &4329213230452484924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5903113787162082857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37e6ee53462ac4a4f91db2a910a9c04e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2336307163399225262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3029,6 +3016,7 @@ GameObject:
   - component: {fileID: 6750915399174967911}
   - component: {fileID: 2767938532477216016}
   - component: {fileID: 4686207676742908321}
+  - component: {fileID: 1262769023283495913}
   m_Layer: 5
   m_Name: QuitText
   m_TagString: Untagged
@@ -3154,6 +3142,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1262769023283495913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8182615621242777755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e6ee53462ac4a4f91db2a910a9c04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8203322002157064315
 GameObject:
   m_ObjectHideFlags: 0
