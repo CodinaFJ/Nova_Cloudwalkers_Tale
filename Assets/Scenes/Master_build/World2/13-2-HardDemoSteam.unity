@@ -12229,6 +12229,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
+      propertyPath: m_Color.g
+      value: 0.89411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9019608
+      objectReference: {fileID: 0}
     - target: {fileID: 4581208783904548100, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
       propertyPath: m_Name
       value: Lights

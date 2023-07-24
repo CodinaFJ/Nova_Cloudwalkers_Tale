@@ -9781,7 +9781,7 @@ PrefabInstance:
     - target: {fileID: 2525583829340030256, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9a4c6d75c26b41340b2d293c80524804, type: 2}
+      objectReference: {fileID: 2100000, guid: 3848a52157f847140a5d51d36015f28d, type: 2}
     - target: {fileID: 2525583829538123842, guid: 6e90fa011f0ee97458fbe179cee408c8, type: 3}
       propertyPath: m_Name
       value: LevelLayout
@@ -12577,6 +12577,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
+      propertyPath: m_Intensity
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 4581208783904548100, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
       propertyPath: m_Name
       value: Lights
