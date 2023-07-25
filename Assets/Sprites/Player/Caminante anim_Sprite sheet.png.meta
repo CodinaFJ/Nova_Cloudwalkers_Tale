@@ -212,6 +212,18 @@ TextureImporter:
   - first:
       213: 8878326723523010505
     second: Caminante anim_Sprite sheet_69
+  - first:
+      213: 3950427898678773619
+    second: Caminante anim_Sprite sheet_70
+  - first:
+      213: 1865104710531408069
+    second: Caminante anim_Sprite sheet_71
+  - first:
+      213: -1381162985169031265
+    second: Caminante anim_Sprite sheet_72
+  - first:
+      213: -6240331878358964048
+    second: Caminante anim_Sprite sheet_73
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -871,8 +883,8 @@ TextureImporter:
       name: Caminante anim_Sprite sheet_27
       rect:
         serializedVersion: 2
-        x: 408
-        y: 2107
+        x: 407
+        y: 2106
         width: 408
         height: 357
       alignment: 0
@@ -1283,48 +1295,6 @@ TextureImporter:
       bones: []
       spriteID: 179bb7e34e172deb0800000000000000
       internalID: -4696566236279228047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Caminante anim_Sprite sheet_47
-      rect:
-        serializedVersion: 2
-        x: 1224
-        y: 883
-        width: 408
-        height: 357
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa89196e23db9cd70800000000000000
-      internalID: 9063983751374149802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Caminante anim_Sprite sheet_48
-      rect:
-        serializedVersion: 2
-        x: 1632
-        y: 883
-        width: 408
-        height: 357
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dfcb3e68aa197190800000000000000
-      internalID: -7964305155321770030
       vertices: []
       indices: 
       edges: []
@@ -1758,7 +1728,7 @@ TextureImporter:
         width: 361
         height: 339
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1766,6 +1736,90 @@ TextureImporter:
       bones: []
       spriteID: 9cf527b9d17263b70800000000000000
       internalID: 8878326723523010505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminante anim_Sprite sheet_70
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 3739
+        width: 408
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3778a8b5e3db2d630800000000000000
+      internalID: 3950427898678773619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminante anim_Sprite sheet_71
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 3739
+        width: 408
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0e12c3ade22e910800000000000000
+      internalID: 1865104710531408069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminante anim_Sprite sheet_72
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 2107
+        width: 408
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fe41c259f15dce0800000000000000
+      internalID: -1381162985169031265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminante anim_Sprite sheet_73
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 2107
+        width: 408
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b82ed52833e569a0800000000000000
+      internalID: -6240331878358964048
       vertices: []
       indices: 
       edges: []
