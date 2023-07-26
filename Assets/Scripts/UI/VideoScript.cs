@@ -14,6 +14,7 @@ public class VideoScript : MonoBehaviour
     [SerializeField] float waitForFadeOut = 1f;
     [SerializeField] VideoClip videoClip;
     [SerializeField] private AudioMixerGroup musicMixerGroup;
+    [SerializeField] private bool isThisFinalCinematic = false;
     private int worldUnlocked;
     public VideoPlayer vid;
     double videoLength;
@@ -67,7 +68,8 @@ public class VideoScript : MonoBehaviour
         musicMixerGroup.audioMixer.GetFloat(MixerParameter.musicVolume.ToString(), out volume);
         vid.SetDirectAudioVolume(0, Mathf.Pow(10, volume/20));
 
-        InitializeWorldUnlocked();
+        if (!isThisFinalCinematic)
+            InitializeWorldUnlocked();
         MouseMatrixScript.ReleasePointer();
     }
 
@@ -85,12 +87,14 @@ public class VideoScript : MonoBehaviour
 
     public void CheckOver(VideoPlayer vp)
     {
+        Debug.Log("End reached: " + GameProgressManager.instance.GetEndReached());
         if (GameProgressManager.instance.GetEndReached())
         {
             LevelLoader.instance.LoadLevel(LevelLoader.GetLevelContains(THANKS_FOR_PLAYING_SCENE));
             return ;
         }
-        if (GameProgressManager.instance) GameProgressManager.instance.WorldSelection = 0;
+        if (GameProgressManager.instance) 
+            GameProgressManager.instance.WorldSelection = 0;
         MouseMatrixScript.BlockPointer();
         worldUnlocked = GameProgressManager.instance.GetActiveWorld().GetLevelWorldNumber();
 
@@ -133,8 +137,6 @@ public class VideoScript : MonoBehaviour
             ChangeAnimationState(FADE_IN_ANIMATION);
             Invoke("EnableButton", 0.5f);
             fadingIn = true;
-
-            Debug.Log(textAnimator.GetCurrentAnimatorStateInfo(0));
         }
 
         currentTime = 0f;

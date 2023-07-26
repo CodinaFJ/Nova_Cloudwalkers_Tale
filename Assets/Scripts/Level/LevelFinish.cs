@@ -59,7 +59,7 @@ public class LevelFinish : MonoBehaviour
                 GameManager.instance.ToEndGame100();
             }
         }
-        else if(GameProgressManager.instance.AllLevelsCompleted() && !GameProgressManager.instance.GetEndReached()){
+        else if(GameProgressManager.instance.GetCompletedLastLevel() && !GameProgressManager.instance.GetEndReached()){
             GameProgressManager.instance.SetEndReached(true);
             GameManager.instance.ToEndGame();
         }

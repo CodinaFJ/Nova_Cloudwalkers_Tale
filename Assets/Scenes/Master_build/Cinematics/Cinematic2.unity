@@ -208,6 +208,7 @@ MonoBehaviour:
   waitForFadeOut: 1
   videoClip: {fileID: 32900000, guid: 6a0b61bbc86d08541893b7f511e0e959, type: 3}
   musicMixerGroup: {fileID: 3328788449262456128, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
+  isThisFinalCinematic: 0
   vid: {fileID: 115481422}
 --- !u!114 &115481425
 MonoBehaviour:
@@ -764,6 +765,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828779355562849027, guid: 905ce6364c5a7a948a462286887683bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 115481424}
+    - target: {fileID: 828779355562849027, guid: 905ce6364c5a7a948a462286887683bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 828779355562849027, guid: 905ce6364c5a7a948a462286887683bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 115481422}
     - target: {fileID: 828779355562849029, guid: 905ce6364c5a7a948a462286887683bc, type: 3}
       propertyPath: m_Name
       value: Skip

@@ -25,6 +25,7 @@ public class GameProgressManager : MonoBehaviour
     private bool endReached = false;
     private bool allStarsCollected = false;
     private int worldSelection = 0;
+    private bool completedLastLevel = false;
 
     /*Properties*/
 
@@ -252,6 +253,7 @@ public class GameProgressManager : MonoBehaviour
     
     public void SetCollectedStarsInLevel(int collectedStarsInLevel) => this.collectedStarsInLevel = collectedStarsInLevel;
     public bool SetPlayedCinematic(int cinematic) => playedCinematics[cinematic - 1] = true;
+    public bool SetCompletedLastLevel(bool value) => completedLastLevel = value;
 
     /**************************************************************************************************
     Getters
@@ -291,4 +293,5 @@ public class GameProgressManager : MonoBehaviour
         index = Mathf.Clamp(index, 1, 4);
         return (index);
     }
+    public bool GetCompletedLastLevel() => completedLastLevel;
 }

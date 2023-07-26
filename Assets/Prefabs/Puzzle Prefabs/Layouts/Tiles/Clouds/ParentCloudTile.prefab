@@ -24,6 +24,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3342565517161224840, guid: 737b9bf5628a3da439c9082706f5d826, type: 3}
     - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: MixedCloudPrefab
+      value: 
+      objectReference: {fileID: 2846388769528272283, guid: 2f8b43f26ae1d0c488b6ddf01d610373, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: MixedWhiteCrystalPrefab
       value: 
       objectReference: {fileID: 2846388769528272283, guid: 2f8b43f26ae1d0c488b6ddf01d610373, type: 3}
@@ -39,6 +43,86 @@ PrefabInstance:
       propertyPath: MixedWhiteThunderPrefab_St
       value: 
       objectReference: {fileID: 8101359473894236097, guid: 476c37a84af7a5444a12bdb00227c688, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionSprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ece17e697950d8d4597d092e6f79cb88, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionSprites.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f9b853c99fec0af448ba94697c538597, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionSprites.Array.data[2].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c8a002b173ef9642ad4247e52d32ce8, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionSprites.Array.data[3].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1be3dae49a2e0b441b7167e27621810f, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionSprites.Array.data[4].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 98e24ac607999164c9a5e8f85c4b8dc9, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionSprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e751736569586b545ae655bb1728d7af, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionSprites.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 877f696ec4bec604d9bb5c6d71756b97, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionSprites.Array.data[2].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 469ac2169a81e1940acb9c59c469c7cf, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionSprites.Array.data[3].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d6980d71bb5979245b4bdfc577c12130, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionSprites.Array.data[4].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 272839b76f485b845b6c084bbcba3eb0, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionSprites.Array.data[1].unionSpriteTile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionSprites.Array.data[2].unionSpriteTile
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionSprites.Array.data[3].unionSpriteTile
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionSprites.Array.data[4].unionSpriteTile
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionSprites.Array.data[1].unionSpriteTile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionSprites.Array.data[2].unionSpriteTile
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionSprites.Array.data[3].unionSpriteTile
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionSprites.Array.data[4].unionSpriteTile
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7075206057840484584, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: m_Name
       value: ParentCloudTile

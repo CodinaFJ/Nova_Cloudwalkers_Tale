@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class TileBehavior : MonoBehaviour
 {
@@ -16,8 +17,9 @@ public class TileBehavior : MonoBehaviour
     GameObject joinParticlesPrefab;
 
     [Header("Cloud union")]
-    [SerializeField] GameObject MixedWhiteCrystalPrefab_St;
-    [SerializeField] GameObject MixedWhiteThunderPrefab_St;
+    [SerializeField] GameObject MixedCloudPrefab;
+    [SerializeField] List<UnionSprite> ThunderUnionSprites;
+    [SerializeField] List<UnionSprite> CrystalUnionSprites;
     
     GameObject myMovementParticles;
     GameObject myJoinParticles;
@@ -41,6 +43,28 @@ public class TileBehavior : MonoBehaviour
 
     protected TileSpritesBundle tileSpritesBundle;
     protected TileSpritesBundle tileShadowsSpritesBundle;
+
+    struct LinkTransform{
+        public Vector2 position;
+        public int rotation;
+        public bool flipY;
+    }
+
+    [System.Serializable]
+    struct UnionSprite
+    {
+        public Sprite sprite;
+        public UnionSpriteTile unionSpriteTile;
+    }
+
+    enum UnionSpriteTile
+    {
+        Middle_W50_O50,
+        Side_W50_O50,
+        Solo_W50_O50,
+        Corner_W75_O25,
+        Corner_W25_O75
+    }
 
     private void Start() {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
@@ -105,7 +129,7 @@ public class TileBehavior : MonoBehaviour
         
         for (int i = -1; i < 2; i++){
             for (int j = -1; j < 2; j++){
-                if (Mathf.Abs(i + j) != 0 && CheckCoordinatesInMatrix(i,j) && AssignMatrixToCompare()[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == numberToCompare)
+                if (Mathf.Abs(i) + Mathf.Abs(j) != 0 && CheckCoordinatesInMatrix(i,j) && AssignMatrixToCompare()[matrixCoordinates[0] + i, matrixCoordinates[1] + j] == numberToCompare)
                     FillAdyacentTiles(i,j);
             }
         }
@@ -301,21 +325,26 @@ public class TileBehavior : MonoBehaviour
     {
         LinkTransform linkTransform;
         int adyacentTileMechanic;
-        GameObject mixedCloudJoinPrefab;
-        GameObject instantiatedLink;
+        List<UnionSprite> unionSpritesSet;
+        GameObject instantiatedUnion;
+        SpriteRenderer unionSpriteRenderer;
 
         if (tileType != TileType.WhiteCloud) return;
         for (int i = 0; i < 4; i++)
         {
             linkTransform = FromAdyacentIndexToTranform(i);
-            if (itemsLayoutMatrix[matrixCoordinates[0] - (int) linkTransform.position.y, matrixCoordinates[1] + (int) linkTransform.position.x] != itemNumber)
+            if (!adyacentTiles[i])
                 continue;
             adyacentTileMechanic = mechanicsLayoutMatrix[matrixCoordinates[0] - (int) linkTransform.position.y, matrixCoordinates[1] + (int) linkTransform.position.x];
-            mixedCloudJoinPrefab = SelectMixedCloudSprite(adyacentTileMechanic);
-            if (mixedCloudJoinPrefab == null)
+            Debug.Log("Adyacent tile mechanic( i = " + i + "): " + adyacentTileMechanic);
+            unionSpritesSet = new List<UnionSprite>(SelectUnionCloudSpritesType(adyacentTileMechanic));
+            if (unionSpritesSet.Count == 0)
                 continue;
-            instantiatedLink = Instantiate(mixedCloudJoinPrefab, (linkTransform.position * 0.5f) + (Vector2) transform.position, Quaternion.identity, gameObject.transform);
-            instantiatedLink.transform.Rotate(0, 0, linkTransform.rotation);
+            instantiatedUnion = Instantiate(MixedCloudPrefab, (linkTransform.position * 0.5f) + (Vector2) transform.position, Quaternion.identity, gameObject.transform);
+            instantiatedUnion.transform.Rotate(0, 0, linkTransform.rotation);
+            unionSpriteRenderer = instantiatedUnion.GetComponent<SpriteRenderer>();
+            unionSpriteRenderer.sprite = SelectCorrectUnionSprite_50_50(i, unionSpritesSet);
+            unionSpriteRenderer.flipY = linkTransform.flipY;
         }
     }
 
@@ -325,45 +354,101 @@ public class TileBehavior : MonoBehaviour
 
         switch (i)
         {
-            case 0:
+            case (int) adyacentTile.N:
             linkTransform.position.x = 0;
             linkTransform.position.y = 1;
             linkTransform.rotation = 90;
+            if (!adyacentTiles[(int) adyacentTile.NE] && adyacentTiles[(int) adyacentTile.NW])
+                linkTransform.flipY = true;
+            else
+                linkTransform.flipY = false;
             break;
 
-            case 1:
+            case (int) adyacentTile.W:
+            Debug.Log("Case W");
             linkTransform.position.x = -1;
             linkTransform.position.y = 0;
             linkTransform.rotation = 180;
+            if (!adyacentTiles[(int) adyacentTile.NW] && adyacentTiles[(int) adyacentTile.SW])
+                linkTransform.flipY = true;
+            else
+                linkTransform.flipY = false;
             break;
 
-            case 2:
+            case (int) adyacentTile.S:
             linkTransform.position.x = 0;
             linkTransform.position.y = -1;
             linkTransform.rotation = -90;
+            if (adyacentTiles[(int) adyacentTile.SE] && !adyacentTiles[(int) adyacentTile.SW])
+                linkTransform.flipY = true;
+            else
+                linkTransform.flipY = false;
             break;
 
-            case 3:
+            case (int) adyacentTile.E:
+            Debug.Log("Case E");
             linkTransform.position.x = 1;
             linkTransform.position.y = 0;
             linkTransform.rotation = 0;
+            if (adyacentTiles[(int) adyacentTile.NE] && !adyacentTiles[(int) adyacentTile.SE])
+                linkTransform.flipY = true;
+            else
+                linkTransform.flipY = false;
             break;
         }
         return linkTransform;
     }
 
-    private GameObject SelectMixedCloudSprite(int adyacentTileMechanic)
+    private List<UnionSprite> SelectUnionCloudSpritesType(int adyacentTileMechanic)
     {
         if (adyacentTileMechanic == -1)
-            return MixedWhiteThunderPrefab_St;
+            return ThunderUnionSprites;
         else if (adyacentTileMechanic == 3 || adyacentTileMechanic == 4)
-            return MixedWhiteCrystalPrefab_St;
-        return null;
+            return CrystalUnionSprites;
+        return new List<UnionSprite>();
     }
 
-    struct LinkTransform{
-        public Vector2 position;
-        public int rotation;
+    private Sprite SelectCorrectUnionSprite_50_50(int adyacentIndex, List<UnionSprite> unionSpritesSet)
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            Debug.Log("i(" + i + ") " + adyacentTiles[i]);
+        }
+        if (unionSpritesSet == null) return null;
+        if (adyacentIndex == (int)adyacentTile.N)
+        {
+            if (adyacentTiles[(int) adyacentTile.NW] && adyacentTiles[(int) adyacentTile.NE])
+                return unionSpritesSet.Find(x => x.unionSpriteTile == UnionSpriteTile.Middle_W50_O50).sprite;
+            else if (adyacentTiles[(int) adyacentTile.NW] || adyacentTiles[(int) adyacentTile.NE])
+                return unionSpritesSet.Find(x => x.unionSpriteTile == UnionSpriteTile.Side_W50_O50).sprite;
+        }
+        else if (adyacentIndex == (int)adyacentTile.E)
+        {
+            if (adyacentTiles[(int) adyacentTile.SE] && adyacentTiles[(int) adyacentTile.NE])
+                return unionSpritesSet.Find(x => x.unionSpriteTile == UnionSpriteTile.Middle_W50_O50).sprite;
+            else if (adyacentTiles[(int) adyacentTile.SE] || adyacentTiles[(int) adyacentTile.NE])
+                return unionSpritesSet.Find(x => x.unionSpriteTile == UnionSpriteTile.Side_W50_O50).sprite;
+        }
+        else if (adyacentIndex == (int)adyacentTile.S)
+        {
+            if (adyacentTiles[(int) adyacentTile.SW] && adyacentTiles[(int) adyacentTile.SE])
+                return unionSpritesSet.Find(x => x.unionSpriteTile == UnionSpriteTile.Middle_W50_O50).sprite;
+            else if (adyacentTiles[(int) adyacentTile.SW] || adyacentTiles[(int) adyacentTile.SE])
+                return unionSpritesSet.Find(x => x.unionSpriteTile == UnionSpriteTile.Side_W50_O50).sprite;
+        }
+        else if (adyacentIndex == (int)adyacentTile.W)
+        {
+            if (adyacentTiles[(int) adyacentTile.NW] && adyacentTiles[(int) adyacentTile.SW])
+                return unionSpritesSet.Find(x => x.unionSpriteTile == UnionSpriteTile.Middle_W50_O50).sprite;
+            else if (adyacentTiles[(int) adyacentTile.NW] || adyacentTiles[(int) adyacentTile.SW])
+                return unionSpritesSet.Find(x => x.unionSpriteTile == UnionSpriteTile.Side_W50_O50).sprite;
+        }
+        return unionSpritesSet.Find(x => x.unionSpriteTile == UnionSpriteTile.Solo_W50_O50).sprite;
+    }
+
+    private Sprite SelectCorrectUnionSprite_Corners(int adyacentIndex)
+    {
+        return null;
     }
 }
 
@@ -373,8 +458,8 @@ public enum adyacentTile{
     W = 1,
     S = 2,
     E = 3,
-    NW = 4,
-    SW = 5,
-    SE = 6,
-    NE = 7
+    NE = 4,
+    SE = 5,
+    SW = 6,
+    NW = 7
 }
