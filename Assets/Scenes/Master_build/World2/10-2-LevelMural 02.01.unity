@@ -287,6 +287,10 @@ PrefabInstance:
       propertyPath: ShapeModule.m_Scale.x
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2747607581059689106, guid: c19850ff7800f0b44952072c879a39d5, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 2747607581059689107, guid: c19850ff7800f0b44952072c879a39d5, type: 3}
       propertyPath: m_Name
       value: Par_Ondas (1)
@@ -7222,6 +7226,10 @@ PrefabInstance:
     - target: {fileID: 2747607581059689105, guid: c19850ff7800f0b44952072c879a39d5, type: 3}
       propertyPath: ShapeModule.m_Scale.x
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747607581059689106, guid: c19850ff7800f0b44952072c879a39d5, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 2747607581059689107, guid: c19850ff7800f0b44952072c879a39d5, type: 3}
       propertyPath: m_Name
@@ -56026,11 +56034,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6923640177245583778, guid: e8809d6988f148142893804b581589c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45.07097
+      value: -45.060772
       objectReference: {fileID: 0}
     - target: {fileID: 6923640177245583778, guid: e8809d6988f148142893804b581589c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.177922
+      value: -3.1779711
       objectReference: {fileID: 0}
     - target: {fileID: 6923640177245583778, guid: e8809d6988f148142893804b581589c0, type: 3}
       propertyPath: m_LocalPosition.z
