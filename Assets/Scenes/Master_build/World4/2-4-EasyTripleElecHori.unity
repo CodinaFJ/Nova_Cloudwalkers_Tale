@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1392211436562238435, guid: 5cc5f2306b26a2d448df2d28b2685d82, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1392211436562238435, guid: 5cc5f2306b26a2d448df2d28b2685d82, type: 3}
       propertyPath: m_LocalPosition.x
@@ -719,6 +719,10 @@ PrefabInstance:
     - target: {fileID: 6794402071129025548, guid: 63c96827068592740870c5e88f16304a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794402071129025551, guid: 63c96827068592740870c5e88f16304a, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63c96827068592740870c5e88f16304a, type: 3}
