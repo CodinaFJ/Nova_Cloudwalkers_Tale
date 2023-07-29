@@ -27,7 +27,7 @@ public class VideoScript : MonoBehaviour
 
     const string FADE_IN_ANIMATION = "skipCinematic_FadeIn";
     const string FADE_OUT_ANIMATION = "skipCinematic_FadeOut";
-    const string THANKS_FOR_PLAYING_SCENE = "ThanksForPlaying_Scene";
+    const string CREDITS_SCENE = "CreditsScene";
 
     string currentState;
 
@@ -90,7 +90,7 @@ public class VideoScript : MonoBehaviour
         Debug.Log("End reached: " + GameProgressManager.instance.GetEndReached());
         if (GameProgressManager.instance.GetEndReached())
         {
-            LevelLoader.instance.LoadLevel(LevelLoader.GetLevelContains(THANKS_FOR_PLAYING_SCENE));
+            LevelLoader.instance.LoadLevel(LevelLoader.GetLevelContains(CREDITS_SCENE));
             return ;
         }
         if (GameProgressManager.instance) 

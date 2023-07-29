@@ -13,7 +13,7 @@ public class ThanksScreenScript : MonoBehaviour
         try{
             GameProgressManager.instance.CalculateCollectedStarsInGame();
             GameProgressManager.instance.CalculateTotalStarsInGame();
-            collectedStarsText.text = "Star shards collected " + GameProgressManager.instance.GetCollectedStarsInGame() + "/" +  GameProgressManager.instance.GetTotalStarsInGame();
+            collectedStarsText.text = GameProgressManager.instance.GetCollectedStarsInGame() + "/" +  GameProgressManager.instance.GetTotalStarsInGame();
         }catch(Exception ex){
             Debug.LogWarning("Error in stars counters: " + ex.Message);
         }
