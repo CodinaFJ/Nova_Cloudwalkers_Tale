@@ -4478,10 +4478,6 @@ PrefabInstance:
       propertyPath: wallLevel
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8159789064767154787, guid: 71a9c4a337aa4cd4e998cb71850d594f, type: 3}
-      propertyPath: PjMovementTime
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 8159789064767154812, guid: 71a9c4a337aa4cd4e998cb71850d594f, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -9346,6 +9342,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 106667621126911689, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
+      propertyPath: tilemapsLevelLayout
+      value: 
+      objectReference: {fileID: 2047562087}
     - target: {fileID: 419630327606380183, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_Size.x
       value: 45
@@ -19408,7 +19408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251157421003, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1041690251505586119, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_Size.x
@@ -63410,6 +63410,22 @@ PrefabInstance:
       propertyPath: m_ChunkCullingBounds.y
       value: 0.0049505234
       objectReference: {fileID: 0}
+    - target: {fileID: 5074371797645052059, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
+      propertyPath: floorTilemap
+      value: 
+      objectReference: {fileID: 1954415394}
+    - target: {fileID: 5074371797645052059, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
+      propertyPath: whiteCloudsGrid
+      value: 
+      objectReference: {fileID: 275755257}
+    - target: {fileID: 5074371797645052059, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
+      propertyPath: spikedFloorTilemap
+      value: 
+      objectReference: {fileID: 1925853805}
+    - target: {fileID: 5074371797645052059, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
+      propertyPath: tilemapsLevelLayout
+      value: 
+      objectReference: {fileID: 2047562087}
     - target: {fileID: 5461845089628321137, guid: 10fbfe16959856b4bab240d1af0f741f, type: 3}
       propertyPath: m_IsActive
       value: 1

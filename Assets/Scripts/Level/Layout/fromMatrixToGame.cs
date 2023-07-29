@@ -22,7 +22,7 @@ public class fromMatrixToGame : MonoBehaviour
 
     int numberOfClouds;
 
-    TilemapsLevelLayout tilemapsLevelLayout;
+    [SerializeField] TilemapsLevelLayout tilemapsLevelLayout;
     MatrixManager matrixManager;
     int[,] itemsLayoutMatrix;
     int[,] mechanicsLayoutMatrix;
@@ -37,7 +37,7 @@ public class fromMatrixToGame : MonoBehaviour
 
     void Awake()
     {
-        tilemapsLevelLayout = FindObjectOfType<TilemapsLevelLayout>();
+        if (tilemapsLevelLayout == null) tilemapsLevelLayout = FindObjectOfType<TilemapsLevelLayout>();
         itemsLayoutMatrix = MatrixManager.instance.GetItemsLayoutMatrix();
         mechanicsLayoutMatrix = MatrixManager.instance.GetMechanicsLayoutMatrix();
 

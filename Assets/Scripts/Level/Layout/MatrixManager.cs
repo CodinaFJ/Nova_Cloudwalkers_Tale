@@ -18,7 +18,7 @@ public class MatrixManager : MonoBehaviour
 
     Vector3 coordinatesOriginMatrix = new Vector3 (0f,0f,0f);
 
-    TilemapsLevelLayout tilemapsLevelLayout;
+    [SerializeField] TilemapsLevelLayout tilemapsLevelLayout;
 
     [HideInInspector]
     public int valueForBorder = -9, 
@@ -53,7 +53,7 @@ public class MatrixManager : MonoBehaviour
             return;
         }
 
-        tilemapsLevelLayout = FindObjectOfType<TilemapsLevelLayout>();
+        if (tilemapsLevelLayout == null) tilemapsLevelLayout = FindObjectOfType<TilemapsLevelLayout>();
         CreateItemsLayoutMatrix();
         CreateMechanicsLayoutMatrix();
         CreatePjMovementMatrix();
