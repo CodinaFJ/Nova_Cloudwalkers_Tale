@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public PlayerBehavior playerBehavior;
 
     const string END_CINEMATIC = "CinematicEnd";
-    const string END_COMPLETE_GAME = "EndGame100";
+    const string END_COMPLETE_GAME = "ThanksForPlaying_Scene";
 
     private void Awake() {
         if(instance == null)
