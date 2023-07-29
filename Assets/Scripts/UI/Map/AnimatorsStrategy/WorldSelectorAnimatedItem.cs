@@ -10,7 +10,7 @@ public class WorldSelectorAnimatedItem : MonoBehaviour
 {
 
     [SerializeField] int                worldNumber;//TODO: World number should be set by parents in hierarchy
-    [SerializeField] AnimatedItemType   animatedItemType;
+    [SerializeField] public  AnimatedItemType   animatedItemType;
 
     private Vector2     initialPos;
     private Vector2     initialScale;

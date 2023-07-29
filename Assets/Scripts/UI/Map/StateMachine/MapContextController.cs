@@ -115,7 +115,11 @@ public class MapContextController : MonoBehaviour
     public void AnimationControlWorldSelected(int world, GameObject selectWorldGO)
     {
         foreach(var animatedItem in animatedItemsList)
+        {
             animatedItem.AnimationControlWorldSelected(world, selectWorldGO);
+            if (animatedItem.animatedItemType == AnimatedItemType.WorldButton)
+                animatedItem.gameObject.GetComponent<WorldButtonSFX>().SetSfxEnabled(false); 
+        }
     }
 
     /// <summary>
@@ -125,7 +129,11 @@ public class MapContextController : MonoBehaviour
     public void AnimationControlWorldClosed(int world)
     {
         foreach(var animatedItem in animatedItemsList)
+        {
             animatedItem.AnimationControlWorldClosed(world);
+            if (animatedItem.animatedItemType == AnimatedItemType.WorldButton)
+                animatedItem.gameObject.GetComponent<WorldButtonSFX>().SetSfxEnabled(true); 
+        }
     }
 
     /// <summary>
@@ -141,13 +149,22 @@ public class MapContextController : MonoBehaviour
     public void AnimationControlStartWorldOpen(int world)
     {
         foreach(var animatedItem in animatedItemsList)
+        {
             animatedItem.AnimationControlStartWorldOpen(world);
+            if (animatedItem.animatedItemType == AnimatedItemType.WorldButton)
+                animatedItem.gameObject.GetComponent<WorldButtonSFX>().SetSfxEnabled(false); 
+        }
+        
     }
 
     public void AnimationControlStartWorldsClosed()
     {
         foreach(var animatedItem in animatedItemsList)
+        {
             animatedItem.AnimationControlStartWorldsClosed();
+            if (animatedItem.animatedItemType == AnimatedItemType.WorldButton)
+                animatedItem.gameObject.GetComponent<WorldButtonSFX>().SetSfxEnabled(true); 
+        }
     }
 
     /**************************************************************************************************

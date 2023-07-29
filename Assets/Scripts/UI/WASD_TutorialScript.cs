@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class WASD_TutorialScript : MonoBehaviour
 {   
-    [SerializeField] GameObject clickAnim;
-    [SerializeField] GameObject pointerAnim;
-
     PlayerBehavior playerBehavior;
     Animator myAnimator;
     private string currentState;
@@ -27,14 +24,5 @@ public class WASD_TutorialScript : MonoBehaviour
 
         //reassign the current state
         currentState = newState;
-    }
-
-
-    public void FadeOutMouse()
-    {
-        //ChangeAnimationState("WASD_TutorialFadeOut");
-        Destroy(clickAnim);
-        Destroy(pointerAnim);
-        Destroy(gameObject);
     }
 }

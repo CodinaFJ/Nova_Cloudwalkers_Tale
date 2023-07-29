@@ -150,7 +150,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115481421}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 56652841b67d1234191fbae0f4b11683, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 1ff619949c16bc84ba61b1bb2be58c09, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -206,7 +206,7 @@ MonoBehaviour:
   textAnimator: {fileID: 547763630}
   textButton: {fileID: 547763631}
   waitForFadeOut: 1
-  videoClip: {fileID: 32900000, guid: 56652841b67d1234191fbae0f4b11683, type: 3}
+  videoClip: {fileID: 32900000, guid: 1ff619949c16bc84ba61b1bb2be58c09, type: 3}
   musicMixerGroup: {fileID: 3328788449262456128, guid: aa59a42c2cacdd84995068fa6275a73d, type: 2}
   isThisFinalCinematic: 0
   vid: {fileID: 115481422}

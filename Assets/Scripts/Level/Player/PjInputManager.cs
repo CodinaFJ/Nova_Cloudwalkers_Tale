@@ -410,7 +410,7 @@ public class PjInputManager : MonoBehaviour
 
             pjAnimationManager.PjClickAnimation(mouseCellCenter);
 
-            if(FindObjectOfType<WASD_TutorialScript>() != null) FindObjectOfType<WASD_TutorialScript>().FadeOutMouse();
+            if(FindObjectOfType<WASD_TutorialScript>() != null) FindObjectOfType<TutorialDisablemouse>().DisableMouse();
         }
     }
 

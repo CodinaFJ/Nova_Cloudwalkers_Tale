@@ -202,7 +202,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: WrongAction
     clip: {fileID: 8300000, guid: a974d1f875920a9418cf7f1e0bccf565, type: 3}
-    volume: 0.8
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -214,7 +214,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EnterLevel
     clip: {fileID: 8300000, guid: 4717dc6043085a54e91f371451329787, type: 3}
-    volume: 0.8
+    volume: 0.65
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -316,25 +316,25 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: World1
-    clip: {fileID: 8300000, guid: 01d4ff1355261e64fb82c7f5d08036c7, type: 3}
+    clip: {fileID: 8300000, guid: 6ac604a3432c95b418eb74c47aa1698a, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: World2
-    clip: {fileID: 8300000, guid: ca4d8117b7666de4090b9361946bc6d4, type: 3}
+    clip: {fileID: 8300000, guid: bc961e72aa724db44add34bf2af284b5, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: World3
-    clip: {fileID: 8300000, guid: 20353ea6baeb0d34093120afe243af8c, type: 3}
+    clip: {fileID: 8300000, guid: 6fcb154994a4ead4390fbe077c8158d5, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: World4
-    clip: {fileID: 8300000, guid: 830833d921d313f4eaf77fc0a367b326, type: 3}
+    clip: {fileID: 8300000, guid: 196184c8050cb5c439b2cff3e8bb455a, type: 3}
     volume: 1
     pitch: 1
     loop: 1
