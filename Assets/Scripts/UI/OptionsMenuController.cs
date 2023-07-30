@@ -15,6 +15,7 @@ public class OptionsMenuController : MonoBehaviour
     [SerializeField] Button resolutionRightButton;
     [SerializeField] Button resolutionLeftButton;
     [SerializeField] Toggle fullscreenToggle;
+    [SerializeField] GameObject MapLevelsBackButton;
     GameObject levelUI;
 
     [SerializeField]
@@ -115,6 +116,8 @@ public class OptionsMenuController : MonoBehaviour
         if (levelUI)
         {
             levelUI.SetActive(true);
+            if (MapLevelsBackButton != null)
+                MapLevelsBackButton.SetActive(false);
         } 
         if (gameManager) gameManager.ResumeGame();
         else if (levelSelectorController) levelSelectorController.OptionsInput(false);
