@@ -345,6 +345,12 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Ending
+    clip: {fileID: 8300000, guid: a5bad1fa8e3de09428ebc69d7a50d038, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   ambients:
   - name: Ambient1
     clip: {fileID: 8300000, guid: 134c33de2216c0e4fa417305d3db9532, type: 3}
