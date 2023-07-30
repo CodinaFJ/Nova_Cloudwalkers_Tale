@@ -20,6 +20,8 @@ public class TileBehavior : MonoBehaviour
     [SerializeField] GameObject MixedCloudPrefab;
     [SerializeField] List<UnionSprite> ThunderUnionSprites;
     [SerializeField] List<UnionSprite> CrystalUnionSprites;
+    [SerializeField] GameObject ThunderUnionShadowSprite;
+    [SerializeField] GameObject CrystalUnionShadowSprite;
     
     GameObject myMovementParticles;
     GameObject myJoinParticles;
@@ -336,7 +338,6 @@ public class TileBehavior : MonoBehaviour
             if (!adyacentTiles[i])
                 continue;
             adyacentTileMechanic = mechanicsLayoutMatrix[matrixCoordinates[0] - (int) linkTransform.position.y, matrixCoordinates[1] + (int) linkTransform.position.x];
-            Debug.Log("Adyacent tile mechanic( i = " + i + "): " + adyacentTileMechanic);
             unionSpritesSet = new List<UnionSprite>(SelectUnionCloudSpritesType(adyacentTileMechanic));
             if (unionSpritesSet.Count == 0)
                 continue;
@@ -345,6 +346,29 @@ public class TileBehavior : MonoBehaviour
             unionSpriteRenderer = instantiatedUnion.GetComponent<SpriteRenderer>();
             unionSpriteRenderer.sprite = SelectCorrectUnionSprite_50_50(i, unionSpritesSet);
             unionSpriteRenderer.flipY = linkTransform.flipY;
+            InstantiateUnionShadow(adyacentTileMechanic, i);
+        }
+    }
+
+    private void InstantiateUnionShadow(int adyacentTileMechanic, int i)
+    {
+        GameObject shadowSprite;
+        GameObject instantiated;
+        if (adyacentTileMechanic == -1)
+            shadowSprite = ThunderUnionShadowSprite;
+        else if (adyacentTileMechanic == 3 || adyacentTileMechanic == 4)
+            shadowSprite = CrystalUnionShadowSprite;
+        else
+            return;
+
+        if (i == (int) adyacentTile.E)
+        {
+            instantiated = Instantiate(shadowSprite, transform.position + new Vector3(0.5f, -shadowToWorldCorrection, 0), Quaternion.identity, gameObject.transform);
+        }
+        else if (i == (int) adyacentTile.W)
+        {
+            instantiated = Instantiate(shadowSprite, transform.position + new Vector3(-0.5f, -shadowToWorldCorrection, 0), Quaternion.identity, gameObject.transform);
+            instantiated.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 
@@ -365,7 +389,6 @@ public class TileBehavior : MonoBehaviour
             break;
 
             case (int) adyacentTile.W:
-            Debug.Log("Case W");
             linkTransform.position.x = -1;
             linkTransform.position.y = 0;
             linkTransform.rotation = 180;
@@ -386,7 +409,6 @@ public class TileBehavior : MonoBehaviour
             break;
 
             case (int) adyacentTile.E:
-            Debug.Log("Case E");
             linkTransform.position.x = 1;
             linkTransform.position.y = 0;
             linkTransform.rotation = 0;

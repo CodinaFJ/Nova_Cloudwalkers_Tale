@@ -36,6 +36,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8101359473894236097, guid: 476c37a84af7a5444a12bdb00227c688, type: 3}
     - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: CrystalUnionShadowSprite
+      value: 
+      objectReference: {fileID: 7233768246699584183, guid: c4d7b63149212e6469c9f1d6546ed099, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
+      propertyPath: ThunderUnionShadowSprite
+      value: 
+      objectReference: {fileID: 3743264637579948861, guid: dc504aabb30455342b079aab41c6ab17, type: 3}
+    - target: {fileID: 782790511341241064, guid: 57cdfd949c64fad488b181fde89d03ac, type: 3}
       propertyPath: MixedWhiteCrystalPrefab_St
       value: 
       objectReference: {fileID: 2846388769528272283, guid: 2f8b43f26ae1d0c488b6ddf01d610373, type: 3}
