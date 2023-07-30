@@ -103,14 +103,20 @@ public class levelButton : MonoBehaviour, IPointerEnterHandler
     }
 
     private void SelectButtonStatus(){
+        myButton.GetComponent<Animator>().enabled = false;
         if(level.GetLevelCompleted())
         {
+            if (myImage == null) Debug.Log("image null");
+            if (myButton == null) Debug.Log("button null");
+            if (completedLevel == null) Debug.Log("image null");
             myImage.sprite = completedLevel;
+            //Debug.Log(myImage.sprite);
             myButton.image.sprite = semiCompletedLevel;
             myButton.interactable = true;
             SetCounterState(true);
 
             if(level.GetCollectedStars() >= level.GetNumberOfStars()){
+                myImage.sprite = completedLevel;
                 myButton.image.sprite = completedLevel;
             }
         }
