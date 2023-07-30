@@ -5621,7 +5621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2182148297430431491, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2562700160850432722, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
       propertyPath: m_LocalScale.x
@@ -5681,6 +5681,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3251635244911752746, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
       propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595124875412066121, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 346.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595124875412066121, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3911866332315983266, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
