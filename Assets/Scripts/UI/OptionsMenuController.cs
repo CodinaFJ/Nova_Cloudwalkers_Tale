@@ -100,6 +100,7 @@ public class OptionsMenuController : MonoBehaviour
     {
         OptionsBackground.SetActive(true);
         LoadOptionsSection(pauseMenuToGo);
+        
     }
 
     public void ToGame()
