@@ -1434,7 +1434,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &456041778
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1447,10 +1447,11 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!212 &456041779
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2535,7 +2536,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &936861092
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2548,10 +2549,11 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!212 &936861093
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2917,7 +2919,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &1026370690
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2930,10 +2932,11 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!212 &1026370691
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4117,7 +4120,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &1340652994
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4130,10 +4133,11 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!212 &1340652995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55538,7 +55542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[1]
@@ -55558,35 +55562,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[5]
-      value: 667933567
-      objectReference: {fileID: 0}
-    - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[6]
       value: -620523989
       objectReference: {fileID: 0}
     - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[7]
+      propertyPath: m_ApplyToSortingLayers.Array.data[6]
       value: 301725409
       objectReference: {fileID: 0}
     - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[8]
+      propertyPath: m_ApplyToSortingLayers.Array.data[7]
       value: -408240329
       objectReference: {fileID: 0}
     - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[9]
+      propertyPath: m_ApplyToSortingLayers.Array.data[8]
       value: -1171190995
       objectReference: {fileID: 0}
     - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[10]
+      propertyPath: m_ApplyToSortingLayers.Array.data[9]
       value: -2061084217
       objectReference: {fileID: 0}
     - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[11]
+      propertyPath: m_ApplyToSortingLayers.Array.data[10]
       value: -1608890761
       objectReference: {fileID: 0}
     - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[11]
+      value: 825917939
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[12]
-      value: 2071266915
+      value: 284287631
       objectReference: {fileID: 0}
     - target: {fileID: 4581208783268612474, guid: 0a013fedda1fd83448afa8dfeed34f77, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[13]
@@ -56034,11 +56038,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6923640177245583778, guid: e8809d6988f148142893804b581589c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45.060772
+      value: -45.068985
       objectReference: {fileID: 0}
     - target: {fileID: 6923640177245583778, guid: e8809d6988f148142893804b581589c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1779711
+      value: -3.177931
       objectReference: {fileID: 0}
     - target: {fileID: 6923640177245583778, guid: e8809d6988f148142893804b581589c0, type: 3}
       propertyPath: m_LocalPosition.z
