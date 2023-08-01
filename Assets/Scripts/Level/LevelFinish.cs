@@ -39,6 +39,7 @@ public class LevelFinish : MonoBehaviour
 
     IEnumerator LoadNextLevel()
     {
+        AudioManager.instance.StopAmbients();
         gameManager = GameManager.instance;
         GameManager.instance.PjToExit(exitDirection);
         AudioManager.instance.PlaySound("LevelExit");

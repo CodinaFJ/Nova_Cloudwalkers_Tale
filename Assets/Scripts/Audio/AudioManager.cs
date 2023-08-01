@@ -325,6 +325,15 @@ public class AudioManager : MonoBehaviour
     }
 
     #endregion
+
+    public void StopAmbients()
+    {
+        foreach (Sound sound in ambients)
+        {
+            if(IsPlaying(sound.name))
+                Stop(sound.name);
+        }
+    }
 }
 
 public enum MixerParameter
