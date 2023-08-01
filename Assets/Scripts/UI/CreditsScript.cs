@@ -11,4 +11,9 @@ public class CreditsScript : MonoBehaviour
         mainMenu.SetActive(true);
         gameObject.SetActive(false);
     }
+
+    public void OnResumeGame()
+    {
+        ToMainMenu();
+    }
 }

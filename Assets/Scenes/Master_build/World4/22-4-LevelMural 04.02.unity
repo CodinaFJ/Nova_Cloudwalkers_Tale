@@ -308,7 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6923640177245583778, guid: e8809d6988f148142893804b581589c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.90838
+      value: -42.93055
       objectReference: {fileID: 0}
     - target: {fileID: 6923640177245583778, guid: e8809d6988f148142893804b581589c0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -64099,7 +64099,7 @@ PrefabInstance:
     - target: {fileID: 8333424986176356319, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
       propertyPath: OptionsSectionsList.Array.data[1].sectionGameObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8333424985941486787}
     - target: {fileID: 8333424986176356319, guid: 3b75085f5713d8645a8dd3b300225282, type: 3}
       propertyPath: OptionsSectionsList.Array.data[2].sectionGameObject
       value: 
