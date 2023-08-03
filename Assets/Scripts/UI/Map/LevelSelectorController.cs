@@ -130,6 +130,7 @@ public class LevelSelectorController : MonoBehaviour
     /// </summary>
     public void OnUnlockAllLevels()
     {
+        return ;
         if(ctrlPressed)
         {
             GameProgressManager.instance.UnlockAllLevels();
