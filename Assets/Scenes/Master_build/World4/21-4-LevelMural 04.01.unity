@@ -60211,6 +60211,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3346032906812388117, guid: 1b055d2870796d44e9e212db5f55b917, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622608278028965324, guid: 1b055d2870796d44e9e212db5f55b917, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4290339114198884551, guid: 1b055d2870796d44e9e212db5f55b917, type: 3}
       propertyPath: OptionCanvas
       value: 
@@ -60482,7 +60490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6923640177245583778, guid: e8809d6988f148142893804b581589c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.035965
+      value: -45.052773
       objectReference: {fileID: 0}
     - target: {fileID: 6923640177245583778, guid: e8809d6988f148142893804b581589c0, type: 3}
       propertyPath: m_LocalPosition.y
